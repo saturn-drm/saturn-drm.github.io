@@ -1,42 +1,15 @@
 ---
-layout: articles
-titles:
-  # @start locale config
-  en      : &EN       Home
-  en-GB   : *EN
-  en-US   : *EN
-  en-CA   : *EN
-  en-AU   : *EN
-  zh-Hans : &ZH_HANS  主页
-  zh      : *ZH_HANS
-  zh-CN   : *ZH_HANS
-  zh-SG   : *ZH_HANS
-  zh-Hant : &ZH_HANT  主頁
-  zh-TW   : *ZH_HANT
-  zh-HK   : *ZH_HANT
-  ko      : &KO       홈
-  ko-KR   : *KO
-  fr      : &FR       Accueil
-  fr-BE   : *FR
-  fr-CA   : *FR
-  fr-CH   : *FR
-  fr-FR   : *FR
-  fr-LU   : *FR
-  # @end locale config
-show_title: false
-articles:
-  data_source: paginator.posts
-  article_type: BlogPosting
-  show_cover: false
-  show_excerpt: true
-  show_readmore: true
-  show_info: true
+layout: default
 ---
-<div class="layout--home">
-  {%- include paginator.html -%}
+{%- assign _sections = site.sections | sort: 'order' -%}
+{%- include header.html scrolly_nav=_sections -%}
+<!-- Main -->
+<div id="main">
+	{%- if page.content != "" -%}
+		{%- include section.html title=page.title photo=page.cover-photo photo-alt=page.cover-photo-alt auto-header=page.auto-header content=page.content -%}
+	{%- endif -%}
+	<!-- Sections -->
+	{%- for _section in _sections -%}
+		{%- include section.html title=_section.title photo=_section.cover-photo photo-alt=_section.cover-photo-alt auto-header=_section.auto-header content=_section.content -%}
+	{%- endfor -%}
 </div>
-<script>
-  {%- include scripts/home.js -%}
-</script>
-
-{{ content }}

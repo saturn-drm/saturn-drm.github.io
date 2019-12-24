@@ -5,12 +5,12 @@ layout: default
 
 <!-- Main -->
 <div id="main">
-	<!-- Page -->
+	<!-- Post -->
 	<article class="shade-two">
 	  <div class="container">
 			<header>
 				<h2>{{- page.title -}}</h2>
-				{%- if page.subtitle -%}<p>{{- page.subtitle -}}</p>{%- endif -%}
+				<p>{% if page.author %}{{ page.author }}, {% endif %}{{- page.date | date_to_long_string -}}</p>
 			</header>
 	    {{- content -}}
 	  </div>
