@@ -1,6 +1,6 @@
 {
-    "name": "ZMEI",
-    "short_name": "ZMEI",
+    "name": "",
+    "short_name": "",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -14,5 +14,6 @@
         }
     ],
     "theme_color": "#2c3e50",
-    "background_color": "#2c3e50"
+    "background_color": "#2c3e50",
+    "display": "standalone"
 }
