@@ -22,12 +22,12 @@ url     : # the base hostname & protocol for your site e.g. https://www.someone.
 baseurl : # does not include hostname
 title   : Zihan Mei's Personal Site
 description: > # this means to ignore newlines until "Language & timezone"
-  Welcome to my website!
+  Welcome to my website! The site contains my projects and the research during 2014-2019, from the Bachelor of Architecture in Tsinghua University to the Master of Architecture in Urban Design in Harvard GSD.
 
 
 ## => Language and Timezone
 ##############################
-lang: # the language of your site, default as "en"
+lang: en # the language of your site, default as "en"
 timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
 
 
