@@ -21,7 +21,7 @@ highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "t
 url     : # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl : # does not include hostname
 title   : Zihan Mei's Personal Site
-description: # this means to ignore newlines until "Language & timezone"
+description: > # this means to ignore newlines until "Language & timezone"
   Welcome to my website! The site contains my projects and the research during 2014-2019, from the Bachelor of Architecture in Tsinghua University to the Master of Architecture in Urban Design in Harvard GSD.
 
 
@@ -35,11 +35,11 @@ timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for
 ##############################
 author:
   type      : # "person" (default), "organization"
-  name      : Your Name
+  name      : Zihan Mei
   url       :
   avatar    : # path or url of avatar image (square)
   bio       : I am an amazing person.
-  email     :
+  email     : meizihanyx@gmail.com
   facebook  : # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
   twitter   : # "user_name" the last part of your profile url, e.g. https://twitter.com/user_name
   weibo     : # "user_id"   the last part of your profile url, e.g. https://www.weibo.com/user_id/profile?...
