@@ -22,7 +22,7 @@ header:
       fr-FR   : *FR
       fr-LU   : *FR
       # @end locale config
-    url: /layouts/home.html
+    url: /index.html
 
   - titles:
       # @start locale config
