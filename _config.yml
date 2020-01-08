@@ -203,6 +203,8 @@ exclude:
 
 # collections_dir: /
 collections:
+  /:
+    output: true
   posts:
     output: true
   essays:
