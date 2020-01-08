@@ -205,13 +205,13 @@ exclude:
 collections:
   /:
     output: true
-  00archive:
+  archive:
     output: true
-  01projects:
+  posts:
     output: true
-  02essays:
+  essays:
     output: true
-  03photography:
+  photography:
     output: true
 
 defaults:
@@ -224,7 +224,7 @@ defaults:
   ## archive
   - scope:
       path: ""
-      type: 00archive
+      type: archive
     values:
       layout: article
       sharing: true
@@ -239,7 +239,7 @@ defaults:
   ## projects
   - scope:
       path: ""
-      type: 01projects
+      type: posts
     values:
       layout: article
       sharing: true
@@ -254,7 +254,7 @@ defaults:
   ## essays
   - scope:
       path: ""
-      type: 02essays
+      type: essays
     values:
       layout: article
       sharing: true
@@ -269,7 +269,7 @@ defaults:
   ## photography
   - scope:
       path: ""
-      type: 03photography
+      type: photography
     values:
       layout: article
       sharing: true
