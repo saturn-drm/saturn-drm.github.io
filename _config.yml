@@ -205,7 +205,7 @@ exclude:
 collections:
   /:
     output: true
-  archive:
+  projects:
     output: true
   posts:
     output: true
@@ -228,7 +228,7 @@ defaults:
   ## archive
   - scope:
       path: ""
-      type: archive
+      type: projects
     values:
       layout: article
       sharing: true
