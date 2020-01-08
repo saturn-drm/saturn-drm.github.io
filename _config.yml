@@ -205,6 +205,8 @@ exclude:
 collections:
   /:
     output: true
+  archive:
+    output: true
   posts:
     output: true
   essays:
@@ -219,6 +221,21 @@ defaults:
 #     values:
 #       articles:
 #         excerpt_type: html
+  ## archive
+  - scope:
+      path: ""
+      type: archive
+    values:
+      layout: article
+      sharing: true
+      license: true
+      category: post
+      aside:
+        toc: true
+      show_edit_on_github: true
+      show_subscribe: true
+      pageview: true
+      # lightbox: true
   ## projects
   - scope:
       path: ""
