@@ -201,14 +201,13 @@ exclude:
   - /test
   - /vendor
 
-collections_dir: /
-collections:
-  /:
-    output: true
-  posts:
-    output: true
-  essays:
-    output: true
+# collections_dir: /
+# collections:
+#   /: true
+#   posts:
+#     output: true
+#   projects:
+#     output: true
 
 defaults:
 #   ## home
@@ -217,7 +216,7 @@ defaults:
 #     values:
 #       articles:
 #         excerpt_type: html
-  ## projects
+#   ## posts
   - scope:
       path: ""
       type: posts
@@ -232,21 +231,11 @@ defaults:
       show_subscribe: true
       pageview: true
       # lightbox: true
-  ## essays
-  - scope:
-      path: ""
-      type: essays
-    values:
-      layout: article
-      sharing: true
-      license: true
-      category: post
-      aside:
-        toc: true
-      show_edit_on_github: true
-      show_subscribe: true
-      pageview: true
-      # lightbox: true
+#   ## projects
+#   - scope:
+#       path: ""
+#       type: projects
+#       # lightbox: true
 
 
 
