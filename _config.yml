@@ -201,6 +201,7 @@ exclude:
   - /test
   - /vendor
 
+collections_dir: /
 collections:
   /:
     output: true
