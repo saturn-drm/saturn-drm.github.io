@@ -212,7 +212,7 @@ collections:
 defaults:
   ## home
   - scope:
-      path: /
+      path: ""
     values:
       articles:
         excerpt_type: html
