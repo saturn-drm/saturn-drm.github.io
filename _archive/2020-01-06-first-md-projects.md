@@ -1,20 +1,17 @@
 ---
-layout: article
-title: First MD Post
+title: First MD Post - Projects
 tags: Test
 cover: https://i.loli.net/2020/01/08/IDs5oq2Pu1NCleL.png
 article_header:
-  type: overlay
-  theme: dark
-  align: center
-  background_image:
+  type: cover
+  image:
     src: https://i.loli.net/2020/01/07/nz42me7DRFi96tO.png
 show_author_profile: true
 show_subscribe: true
 sharing: true
-modify_date: 2020-01-08
+modify_date: 2020-01-09
 license: false
-key: test-01overlay
+key: test-02cover
 ---
 
 This is the First MD Post.
