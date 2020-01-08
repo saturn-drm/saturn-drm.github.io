@@ -14,6 +14,9 @@ header:
   - title: Hand Drawing
     url: /handdrawing.html
 
+  - title: testtesttest
+    url: /testtesttest.html
+
   - titles:
       # @start locale config
       en      : &EN       Archive
