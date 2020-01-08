@@ -1,5 +1,7 @@
 ---
-layout: home
+layout: page
+title: Projects
+permalink: /projects.html
 articles:
   data_source: site.projects
   show_cover: true
@@ -10,3 +12,9 @@ articles:
   show_info: true
 comment: false
 ---
+<div class="layout--articles">
+  <section class="my-5">
+    <header><h2 id="page-layout">Projects</h2></header>
+    {%- include article-list.html articles=site.projects type='item' -%}
+  </section>
+</div>
