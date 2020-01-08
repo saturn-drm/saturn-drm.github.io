@@ -209,6 +209,8 @@ collections:
     output: true
   essays:
     output: true
+  photography:
+    output: true
 
 defaults:
 #   ## home
