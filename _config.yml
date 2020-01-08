@@ -202,6 +202,7 @@ exclude:
   - /vendor
 
 defaults:
+  ## posts
   - scope:
       path: ""
       type: posts
@@ -209,11 +210,29 @@ defaults:
       layout: article
       sharing: true
       license: true
+      category: post
       aside:
         toc: true
       show_edit_on_github: true
       show_subscribe: true
       pageview: true
+      # lightbox: true
+  ## projects
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: article
+      sharing: true
+      license: true
+      category: post
+      aside:
+        toc: true
+      show_edit_on_github: true
+      show_subscribe: true
+      pageview: true
+      # lightbox: true
+
 
 
 ## => Plugins
