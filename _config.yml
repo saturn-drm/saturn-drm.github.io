@@ -203,12 +203,19 @@ exclude:
 
 collections_dir: /
 collections:
+  /: true
   posts:
     output: true
   projects:
     output: true
 
 defaults:
+  ## home
+  - scope:
+      path: /
+    values:
+      articles:
+        excerpt_type: html
   ## posts
   - scope:
       path: ""
