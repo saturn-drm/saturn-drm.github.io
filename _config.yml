@@ -201,6 +201,14 @@ exclude:
   - /test
   - /vendor
 
+collections:
+  /:
+    output: true
+  posts:
+    output: true
+  projects:
+    output: true
+
 defaults:
   ## posts
   - scope:
