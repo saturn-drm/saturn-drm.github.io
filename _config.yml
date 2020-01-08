@@ -209,7 +209,7 @@ exclude:
 #   projects:
 #     output: true
 
-# defaults:
+defaults:
 #   ## home
 #   - scope:
 #       path: /
@@ -217,20 +217,20 @@ exclude:
 #       articles:
 #         excerpt_type: html
 #   ## posts
-#   - scope:
-#       path: ""
-#       type: posts
-#     values:
-#       layout: article
-#       sharing: true
-#       license: true
-#       category: post
-#       aside:
-#         toc: true
-#       show_edit_on_github: true
-#       show_subscribe: true
-#       pageview: true
-#       # lightbox: true
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: article
+      sharing: true
+      license: true
+      category: post
+      aside:
+        toc: true
+      show_edit_on_github: true
+      show_subscribe: true
+      pageview: true
+      # lightbox: true
 #   ## projects
 #   - scope:
 #       path: ""
