@@ -1,8 +1,8 @@
 ---
 layout: article
-title:                                          Welcome to My Site.                    
+title: Welcome to My Site.
 mode: immersive
-show_title: true
+show_title: false
 show_edit_on_github: true
 show_date: false
 show_tags: false
