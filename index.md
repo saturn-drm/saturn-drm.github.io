@@ -1,6 +1,7 @@
 ---
 layout: article
 title: Home
+home
 mode: normal
 show_title: true
 show_edit_on_github: false
@@ -19,6 +20,6 @@ article_header:
     src: https://i.loli.net/2020/01/09/dLjMeDHsXNm1E2T.jpg
 show_subscribe: true
 license: false
-sharing: true
-show_author_profile: true
+sharing: false
+show_author_profile: false
 ---
