@@ -2,8 +2,8 @@
 layout: article
 title: Welcome to My Site.
 mode: immersive
-show_title: true
-show_edit_on_github: true
+show_title: false
+show_edit_on_github: false
 show_date: false
 show_tags: false
 comment: false
@@ -11,15 +11,13 @@ lightbox: true
 header:
   theme: dark
 article_header:
-  type: overlay
+  type: cover
   theme: dark
   align: center
-  background_image:
+  image:
     src: https://i.loli.net/2020/01/09/l8wR9juCtIHfLm6.jpg
 show_subscribe: true
 license: false
+sharing: true
+show_author_profile: true
 ---
-
-Selected Projects 2014-2019  |  Research  |  Photography  |  Guitar  |  Hand Drawing
-
-<!--more-->
