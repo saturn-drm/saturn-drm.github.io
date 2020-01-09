@@ -9,13 +9,13 @@ show_tags: false
 comment: false
 lightbox: true
 header:
-  theme: light
+  theme: dark
 article_header:
   type: overlay
-  theme: light
+  theme: dark
   align: center
   background_image:
-    src: https://i.loli.net/2020/01/09/5M7FRPHbqsJxDfV.jpg
+    src: https://i.loli.net/2020/01/09/WPe24YmRh1wxrcT.jpg
 show_subscribe: true
 license: false
 ---
