@@ -15,7 +15,7 @@ article_header:
   type: overlay
   theme: dark
   align: center
-  image:
+  background_image:
     src: https://i.loli.net/2020/01/09/dLjMeDHsXNm1E2T.jpg
 show_subscribe: true
 license: false
