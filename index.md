@@ -1,7 +1,7 @@
 ---
 layout: article
 title: Home
-mode: immersive
+mode: normal
 show_title: false
 show_edit_on_github: false
 show_date: false
