@@ -10,7 +10,7 @@ comment: false
 lightbox: false
 header:
   theme: dark
-  background: 'rgba(32, 48, 40, .7)'
+  background: 'rgba(32, 48, 40, .5)'
 article_header:
   type: cover
   theme: dark
