@@ -1,9 +1,8 @@
 ---
 layout: article
 title: Home
-       home
 mode: normal
-show_title: true
+show_title: false
 show_edit_on_github: false
 show_date: false
 show_tags: false
@@ -13,10 +12,10 @@ header:
   theme: dark
   background: 'rgba(32, 48, 40, .4)'
 article_header:
-  type: overlay
+  type: cover
   theme: dark
   align: center
-  background_image:
+  image:
     src: https://i.loli.net/2020/01/09/dLjMeDHsXNm1E2T.jpg
 show_subscribe: true
 license: false
