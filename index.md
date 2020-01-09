@@ -20,4 +20,6 @@ show_subscribe: true
 license: false
 ---
 
-# Selected Projects 2014-2019  |  Research  |  Photography  |  Guitar  |  Hand Drawing
+Selected Projects 2014-2019  |  Research  |  Photography  |  Guitar  |  Hand Drawing
+
+<!--more-->
