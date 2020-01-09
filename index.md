@@ -1,7 +1,7 @@
 ---
 layout: article
 title: Home
-home
+       home
 mode: normal
 show_title: true
 show_edit_on_github: false
