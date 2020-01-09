@@ -7,10 +7,10 @@ show_edit_on_github: false
 show_date: false
 show_tags: false
 comment: false
-lightbox: true
+lightbox: false
 header:
   theme: dark
-  background: 'rgba(32, 48, 40, .4)'
+  background: 'rgba(32, 48, 40, .7)'
 article_header:
   type: cover
   theme: dark
