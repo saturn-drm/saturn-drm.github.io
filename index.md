@@ -12,7 +12,7 @@ header:
   theme: dark
   background: 'rgba(32, 48, 40, .4)'
 article_header:
-  type: cover
+  type: overlay
   theme: dark
   align: center
   image:
