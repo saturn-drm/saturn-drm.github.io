@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Welcome to My Site.
+title: Home
 mode: immersive
 show_title: false
 show_edit_on_github: false
