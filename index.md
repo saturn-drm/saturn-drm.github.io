@@ -2,7 +2,7 @@
 layout: article
 title: Home
 mode: normal
-show_title: false
+show_title: true
 show_edit_on_github: false
 show_date: false
 show_tags: false
