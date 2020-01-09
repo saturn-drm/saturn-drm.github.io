@@ -5,14 +5,11 @@ header:
   - title: Essays
     url: /essays.html
 
-  - title: Photography
-    url: /photography.html
+  - title: Image
+    url: /image.html
 
   - title: Guitar
     url: /guitar.html
-  
-  - title: Hand Drawing
-    url: /handdrawing.html
 
   - titles:
       # @start locale config

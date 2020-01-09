@@ -211,11 +211,9 @@ collections:
     output: true
   essays:
     output: true
-  photography:
+  image:
     output: true
   guitar:
-    output: true
-  handdrawing:
     output: true
 
 defaults:
@@ -270,10 +268,10 @@ defaults:
       show_subscribe: true
       pageview: true
       # lightbox: true
-  ## photography
+  ## image
   - scope:
       path: ""
-      type: photography
+      type: image
     values:
       layout: article
       sharing: true
@@ -289,21 +287,6 @@ defaults:
   - scope:
       path: ""
       type: guitar
-    values:
-      layout: article
-      sharing: true
-      license: true
-      category: post
-      aside:
-        toc: true
-      show_edit_on_github: true
-      show_subscribe: true
-      pageview: true
-      # lightbox: true
-  ## handdrawing
-  - scope:
-      path: ""
-      type: handdrawing
     values:
       layout: article
       sharing: true
