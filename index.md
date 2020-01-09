@@ -9,11 +9,11 @@ show_tags: false
 comment: false
 lightbox: false
 header:
-  theme: light
-  background: 'rgba(32, 48, 40, .2)'
+  theme: dark
+  background: 'rgba(32, 48, 40, .4)'
 article_header:
   type: cover
-  theme: light
+  theme: dark
   align: center
   image:
     src: https://i.loli.net/2020/01/09/dLjMeDHsXNm1E2T.jpg
