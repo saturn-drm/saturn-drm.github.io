@@ -14,6 +14,7 @@ article_header:
   type: cover
   theme: dark
   align: center
+  background_color_: '#2c3e50'
   image:
     src: https://i.loli.net/2020/01/09/l8wR9juCtIHfLm6.jpg
 show_subscribe: true
