@@ -2,7 +2,7 @@
 layout: article
 title: Welcome to My Site.
 mode: immersive
-show_title: false
+show_title: true
 show_edit_on_github: true
 show_date: false
 show_tags: false
@@ -19,3 +19,5 @@ article_header:
 show_subscribe: true
 license: false
 ---
+
+# Selected Projects 2014-2019  |  Research  |  Photography  |  Guitar  |  Hand Drawing
