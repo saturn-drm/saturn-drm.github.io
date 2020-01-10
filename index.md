@@ -12,10 +12,10 @@ header:
   theme: dark
   background: 'rgba(32, 48, 40, .4)'
 article_header:
-  type: cover
+  type: overlay
   theme: dark
   align: center
-  image:
+  background_image:
     src: https://i.loli.net/2020/01/09/dLjMeDHsXNm1E2T.jpg
 show_subscribe: true
 license: false
