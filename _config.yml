@@ -46,8 +46,8 @@ author:
   googleplus: meizihanyx # "user_id"   the last part of your profile url, e.g. https://plus.google.com/u/0/user_id
   telegram  : Zephaniah_Mei # "user_name" the last part of your profile url, e.g. https://t.me/user_name
   medium    : # "user_name" the last part of your profile url, e.g. https://medium.com/user_name
-  zhihu     : mzh14 # "user_name" the last part of your profile url, e.g. https://www.zhihu.com/people/user_name
-  douban    : 139195504 # "user_name" the last part of your profile url, e.g. https://www.douban.com/people/user_name
+  zhihu     : #mzh14 # "user_name" the last part of your profile url, e.g. https://www.zhihu.com/people/user_name
+  douban    : #139195504 # "user_name" the last part of your profile url, e.g. https://www.douban.com/people/user_name
   linkedin  : zihan-mei-616b8b162 # "user_name" the last part of your profile url, e.g. https://www.linkedin.com/in/user_name
   github    : saturn-drm # "user_name" the last part of your profile url, e.g. https://github.com/user_name
   npm       : # "user_name" the last part of your profile url, e.g. https://www.npmjs.com/~user_name
