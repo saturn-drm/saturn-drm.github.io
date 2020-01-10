@@ -11,10 +11,19 @@ layout: none
       {%- include scripts/utils/utils.js -%}
       {%- include scripts/lib/throttle.js -%}
       {%- include scripts/lib/lazyload.js -%}
+      {%- include scripts/audiojs/audio.min.js -%}
     </script>
     {%- include scripts/variables.html -%}
+    <script>
+      audiojs.events.ready(function() {
+        var as = audiojs.createAll();
+      });
+    </script>
   </head>
   <body>
+    <audio src="/assets/music/childhood-dream.mp3"
+       autoplay>
+    </audio>
     <div class="root" data-is-touch="false">
       {{ content }}
     </div>
