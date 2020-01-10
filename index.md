@@ -10,7 +10,7 @@ comment: false
 lightbox: false
 header:
   theme: dark
-  background: 'rgba(32, 48, 40, .4)'
+  background: 'linear-gradient(0deg, rgba(17, 24, 31), rgba(99, 45, 42))'
 article_header:
   type: overlay
   theme: dark
