@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Home
+title: Welcome to My Website!
 mode: normal
 show_title: true
 show_edit_on_github: false
