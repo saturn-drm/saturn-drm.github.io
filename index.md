@@ -16,7 +16,7 @@ article_header:
   theme: dark
   align: center
   background_image:
-    src: https://i.loli.net/2020/01/09/dLjMeDHsXNm1E2T.jpg
+    src: https://i.loli.net/2020/01/10/QOeG5trjSn8WDp1.jpg
 show_subscribe: true
 license: false
 sharing: false
