@@ -10,13 +10,13 @@ comment: false
 lightbox: false
 header:
   theme: dark
-  background: 'linear-gradient(0deg, rgba(17, 24, 31), rgba(99, 45, 42))'
+  background: 'linear-gradient(180deg, rgba(17, 24, 31), rgba(99, 45, 42))'
 article_header:
   type: overlay
   theme: dark
   align: center
   background_image:
-    gradient: 'linear-gradient(0deg, rgba(17, 24, 31, .4), rgba(99, 45, 42, .4))'
+    gradient: 'linear-gradient(180deg, rgba(17, 24, 31, .4), rgba(99, 45, 42, .4))'
     src: https://i.loli.net/2020/01/10/V6J2jU5lZeGITN4.jpg
 show_subscribe: true
 license: false
