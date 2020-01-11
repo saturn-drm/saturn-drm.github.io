@@ -1,6 +1,6 @@
 ---
-title: First MD Post - Guitar
-tags: Test
+title: 奇跡の山 Miracle Mountain
+tags: [Guitar, Masaaki Kishibe]
 cover: https://i.loli.net/2020/01/08/IDs5oq2Pu1NCleL.png
 article_header:
   type: overlay
@@ -13,7 +13,7 @@ show_subscribe: true
 sharing: true
 modify_date: 2020-01-09
 license: false
-key: Test-guitar
+key: Guitar01MiracleMountain
 ---
 
 This is the First MD Post.
