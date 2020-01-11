@@ -1,4 +1,4 @@
-#backtop { /* back to top button */
+#backtop a { /* back to top button */
   text-align: center;
   line-height: 50px;
   font-size: 16px;
@@ -19,7 +19,7 @@
   box-shadow:0 1px 2px rgba(0,0,0,.15), 0 1px 0 #ffffff inset;
 }
 
-#backtop:hover { /* 小按钮上有鼠标悬停时 */
+#backtop a:hover { /* 小按钮上有鼠标悬停时 */
   background: rgba(64,120,192,0.8); /* 小按钮的底色 */
   color: #fff; /* 文字颜色 */
 }
