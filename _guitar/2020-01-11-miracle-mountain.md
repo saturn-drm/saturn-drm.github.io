@@ -21,8 +21,6 @@ chart: true
 lightbox: true
 aside:
   toc: true
-sidebar:
-  nav: 
 show_author_profile: true
 show_subscribe: true
 sharing: true
