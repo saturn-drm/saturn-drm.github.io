@@ -1,17 +1,17 @@
 ---
 title: 奇跡の山 Miracle Mountain
 tags: [Guitar, Masaaki Kishibe]
-cover: https://i.loli.net/2020/01/08/IDs5oq2Pu1NCleL.png
+cover: https://i.loli.net/2020/01/11/S8CqX1UxdLtpsWO.jpg
 article_header:
   type: overlay
   theme: dark
   align: center
   background_image:
-    src: https://i.loli.net/2020/01/07/nz42me7DRFi96tO.png
+    src: https://i.loli.net/2020/01/11/S8CqX1UxdLtpsWO.jpg
 show_author_profile: true
 show_subscribe: true
 sharing: true
-modify_date: 2020-01-09
+modify_date: 2020-01-11
 license: false
 key: Guitar01MiracleMountain
 ---
