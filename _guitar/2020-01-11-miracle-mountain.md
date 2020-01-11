@@ -33,9 +33,16 @@ key: Guitar01MiracleMountain
 ---
 
 # 奇跡の山 Miracle Mountain
+## INFO
+* Orig. 岸部眞明 (Masaaki Kishibe)
+* Played by: Zihan Mei
 * Guitar: Yamaha FG830
 * Pickup: Samsung Note 3 Recorder
 * Date recorded: 2018-4-21
+* Learned fingerstyle acoustic guitar by myself since 2017.
+
+## SoundCloud
+<div>{%- include extensions/soundcloud.html id='741224251' -%}</div>
 
 This is the First MD Post.
 <!--more-->
