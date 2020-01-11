@@ -216,6 +216,8 @@ collections:
     output: true
   guitar:
     output: true
+  zhfiles:
+    outpur: true
 
 defaults:
 #   ## home
@@ -286,7 +288,8 @@ defaults:
       # lightbox: true
   ## guitar
   - scope:
-      path: "_guitar/en"
+      path: ""
+      type: guitar
     values:
       layout: article
       sharing: true
@@ -298,8 +301,10 @@ defaults:
       show_subscribe: true
       pageview: true
       # lightbox: true
-    - scope:
-      path: "_guitar/zh"
+  ## zh
+  - scope:
+      path: ""
+      type: zhfiles
     values:
       layout: article
       sharing: true
