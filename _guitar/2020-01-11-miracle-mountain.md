@@ -8,6 +8,7 @@ article_header:
   align: center
   image:
     src: https://i.loli.net/2020/01/11/MtQEk62pmjzvT98.jpg
+mode: immersive
 show_title: true
 show_edit_on_github: false
 show_date: true
