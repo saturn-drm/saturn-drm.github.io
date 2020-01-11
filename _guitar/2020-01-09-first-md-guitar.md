@@ -7,7 +7,22 @@ article_header:
   theme: dark
   align: center
   image:
-    src: https://i.loli.net/2020/01/11/YnkHfmLpSoR1VuT.jpg
+    src: https://i.loli.net/2020/01/11/MtQEk62pmjzvT98.jpg
+show_title: true
+show_edit_on_github: false
+show_date: true
+show_tags: true
+pageview: true
+comment: true
+mathjax: true
+mathjax_autoNumber: true
+mermaid: true
+chart: true
+lightbox: true
+aside:
+  toc: true
+sidebar:
+  nav: 
 show_author_profile: true
 show_subscribe: true
 sharing: true
