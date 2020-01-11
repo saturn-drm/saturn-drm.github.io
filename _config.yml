@@ -216,6 +216,8 @@ collections:
     output: true
   guitar:
     output: true
+  zh:
+    output: true
 
 defaults:
 #   ## home
@@ -301,22 +303,7 @@ defaults:
       # lightbox: true
   ## guitar
   - scope:
-      path: "_guitar/en"
-      type: en
-    values:
-      layout: article
-      sharing: true
-      license: true
-      category: post
-      aside:
-        toc: true
-      show_edit_on_github: true
-      show_subscribe: true
-      pageview: true
-      # lightbox: true
-  ## guitarzh
-  - scope:
-      path: "_guitar/zh"
+      path: ""
       type: zh
     values:
       layout: article
