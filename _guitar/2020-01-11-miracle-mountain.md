@@ -11,7 +11,7 @@ article_header:
   image:
     src: https://i.loli.net/2020/01/11/MtQEk62pmjzvT98.jpg
 mode: immersive
-show_title: true
+show_title: false
 show_edit_on_github: false
 show_date: true
 show_tags: true
@@ -31,6 +31,11 @@ modify_date: 2020-01-11
 license: false
 key: Guitar01MiracleMountain
 ---
+
+# 奇跡の山 Miracle Mountain
+* Guitar: Yamaha FG830
+* Pickup: Samsung Note 3 Recorder
+* Date recorded: 2018-4-21
 
 This is the First MD Post.
 <!--more-->
