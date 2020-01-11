@@ -200,6 +200,7 @@ exclude:
   - /screenshots
   - /test
   - /vendor
+  - /specialfolder
 
 # collections_dir: /
 collections:
