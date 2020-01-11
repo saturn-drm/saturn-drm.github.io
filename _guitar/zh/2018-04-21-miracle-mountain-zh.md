@@ -30,6 +30,7 @@ sharing: true
 modify_date: 2020-01-11
 license: false
 key: Guitar01MiracleMountain
+lang: zh
 ---
 
 ![MiracleMountainCover](https://i.loli.net/2020/01/11/bQuzxqp7B8gySmJ.jpg)
@@ -53,4 +54,4 @@ key: Guitar01MiracleMountain
 # Tabs
 Bought a copy on the concert. No digital files.
 
-[中文](../_zhfiles/2018-04-21-miracle-mountain-zh.md)
+[English](../en/2018-04-21-miracle-mountain.md)
