@@ -30,7 +30,10 @@ sharing: true
 modify_date: 2020-01-11
 license: false
 key: Guitar01MiracleMountain
+lang: zh
 ---
+
+![MiracleMountainCover](https://i.loli.net/2020/01/11/bQuzxqp7B8gySmJ.jpg)
 
 # INFO
 * Orig. 岸部眞明 (Masaaki Kishibe)
@@ -38,7 +41,7 @@ key: Guitar01MiracleMountain
 * Played by: Zihan Mei
 * Guitar: Yamaha FG830
 * Pickup: Samsung Note 3 Recorder
-* Date recorded: 2018-4-21
+* Date recorded: 2018-04-21
 * Learned fingerstyle acoustic guitar by myself since 2017.
 
 # Resources
@@ -51,4 +54,4 @@ key: Guitar01MiracleMountain
 # Tabs
 Bought a copy on the concert. No digital files.
 
-Here is the [test linked url](https://zmei.moe) to the homepage.
+[English](../_guitar/2018-04-21-miracle-mountain.md)
