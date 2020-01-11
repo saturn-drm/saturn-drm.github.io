@@ -15,7 +15,7 @@ show_title: true
 show_edit_on_github: false
 show_date: true
 show_tags: true
-pageview: true
+pageview: false
 comment: true
 mathjax: true
 mathjax_autoNumber: true
