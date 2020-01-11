@@ -286,6 +286,21 @@ defaults:
       # lightbox: true
   ## guitar
   - scope:
+      path: ""
+      type: guitar
+    values:
+      layout: article
+      sharing: true
+      license: true
+      category: post
+      aside:
+        toc: true
+      show_edit_on_github: true
+      show_subscribe: true
+      pageview: true
+      # lightbox: true
+  ## guitar
+  - scope:
       path: "_guitar/en"
       type: en
     values:
