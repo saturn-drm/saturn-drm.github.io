@@ -301,7 +301,7 @@ defaults:
       show_subscribe: true
       pageview: true
       # lightbox: true
-  ## guitar
+  ## zh
   - scope:
       path: ""
       type: zh
