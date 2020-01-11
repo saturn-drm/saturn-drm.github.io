@@ -286,8 +286,8 @@ defaults:
       # lightbox: true
   ## guitar
   - scope:
-      path: ""
-      type: guitar
+      path: "_guitar/en"
+      type: en
     values:
       layout: article
       sharing: true

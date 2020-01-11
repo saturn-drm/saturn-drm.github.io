@@ -54,4 +54,4 @@ lang: zh
 # Tabs
 Bought a copy on the concert. No digital files.
 
-[English](../2018-04-21-miracle-mountain.html)
+[English](../en/2018-04-21-miracle-mountain.html)

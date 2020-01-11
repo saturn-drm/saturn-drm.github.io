@@ -53,4 +53,4 @@ key: Guitar01MiracleMountain
 # Tabs
 Bought a copy on the concert. No digital files.
 
-[中文](./zh/2018-04-21-miracle-mountain-zh.html)
+[中文](../zh/2018-04-21-miracle-mountain-zh.html)
