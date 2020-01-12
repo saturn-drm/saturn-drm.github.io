@@ -37,9 +37,9 @@ layout: page
 
     {%- if _type == 'grid' -%}
       {%- if page.articles.size == 'sm' -%}
-        {%- include article-list.html articles=_articles type='grid' size='sm' -%}
+        {%- include article-list.html articles=_articles type='grid' size='sm' reverse=true -%}
       {%- else -%}
-        {%- include article-list.html articles=_articles type='grid' -%}
+        {%- include article-list.html articles=_articles type='grid' reverse=true -%}
       {%- endif -%}
 
     {%- elsif _type == 'brief' -%}
