@@ -80,4 +80,4 @@ lang: zh
 ## PDF Tabs
 [Click to Download](../assets/images/guitar/2018-02-26枫叶城/city-of-maple-leaf.pdf)
 
-[中文](../guitar/2018-02-26-city-of-maple-leaf.html)
+[English](../guitar/2018-02-26-city-of-maple-leaf.html)

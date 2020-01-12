@@ -69,4 +69,4 @@ lang: zh
 
 [Click to Download](../assets/images/guitar/2018-11-11theendoftheworld/TheEndofTheWorld.pdf)
 
-[中文](../zh/2018-11-11-the-end-of-the-world.html)
+[English](../zh/2018-11-11-the-end-of-the-world.html)
