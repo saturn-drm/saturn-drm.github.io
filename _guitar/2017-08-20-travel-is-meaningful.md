@@ -1,7 +1,7 @@
 ---
-title: 奇跡の山 Miracle Mountain
-tags: [Guitar, Masaaki Kishibe]
-cover: https://i.loli.net/2020/01/11/bQuzxqp7B8gySmJ.jpg
+title: 旅行的意义 Travel is Meaningful
+tags: [Guitar]
+cover: https://i.loli.net/2020/01/12/t3ObZyKqoBjw79F.jpg
 header:
   theme: light
 article_header:
@@ -27,31 +27,30 @@ aside:
 show_author_profile: true
 show_subscribe: true
 sharing: true
-modify_date: 2020-01-11
+modify_date: 2020-01-12
 license: false
-key: Guitar01MiracleMountain-zh
-lang: zh
+key: Guitar03TravelisMeaningful
 ---
 
-![MiracleMountainCover](https://i.loli.net/2020/01/11/bQuzxqp7B8gySmJ.jpg)
+![TravelIsMeaningfulCover](https://i.loli.net/2020/01/12/t3ObZyKqoBjw79F.jpg)
 
 # INFO
-* Orig. 岸部眞明 (Masaaki Kishibe)
+* Orig. 陳綺貞 Cheer Chen
 <!--more-->
 * Played by: Zihan Mei
 * Guitar: Yamaha FG830
 * Pickup: Samsung Note 3 Recorder
-* Date recorded: 2018-04-21
+* Date recorded: 2017-08-20
 * Learned fingerstyle acoustic guitar by myself since 2017.
 
 # Resources
 ## SoundCloud
-<div>{%- include extensions/soundcloud.html id='741224251' -%}</div>
+<div>{%- include extensions/soundcloud.html id='741228013' -%}</div>
 
 ## NetEase Music
-<div>{%- include extensions/netease-cloud-music.html id='1368969498' -%}</div>
+<div>{%- include extensions/netease-cloud-music.html id='1370547478' -%}</div>
 
 # Tabs
-Bought a copy on the concert. No digital files.
+> [Click to View](http://www.tan8.com/jitapu-54151.html) at 弹琴吧tan8.com
 
-[English](../guitar/2018-04-21-miracle-mountain.html)
+[中文](../zh/2017-08-20-travel-is-meaningful-zh.html)
