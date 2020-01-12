@@ -1,7 +1,7 @@
 ---
 title: 旅行的意义 Travel is Meaningful
 tags: [Guitar]
-cover: https://i.loli.net/2020/01/12/t3ObZyKqoBjw79F.jpg
+cover: https://i.loli.net/2020/01/12/TxNPEdAzyRCo8Yi.jpg
 header:
   theme: light
 article_header:
@@ -33,7 +33,7 @@ key: Guitar03TravelisMeaningful
 lang: zh
 ---
 
-![TravelIsMeaningfulCover](https://i.loli.net/2020/01/12/t3ObZyKqoBjw79F.jpg)
+![TravelIsMeaningfulCover](https://i.loli.net/2020/01/12/TxNPEdAzyRCo8Yi.jpg)
 
 # INFO
 * Orig. 陳綺貞 Cheer Chen
