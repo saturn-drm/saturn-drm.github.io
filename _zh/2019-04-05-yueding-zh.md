@@ -72,4 +72,4 @@ lang: zh
 
 * [Version 02](../assets/images/guitar/2019-04-05-约定/约定冻结の光.gp5) (By 冻结の光)
 
-[English](../guitar/2018-11-11-the-end-of-the-world.html)
+[English](../guitar/2019-04-05-yueding.html)
