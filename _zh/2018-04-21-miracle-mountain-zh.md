@@ -9,7 +9,7 @@ article_header:
   theme: dark
   align: center
   image:
-    src: https://i.loli.net/2020/01/11/MtQEk62pmjzvT98.jpg
+    src: https://i.loli.net/2020/01/13/LiPMU5TsQmw9ntW.jpg
 mode: immersive
 show_title: true
 show_edit_on_github: false
