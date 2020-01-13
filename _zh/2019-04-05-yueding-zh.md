@@ -3,7 +3,8 @@ title: 约定
 tags: [Guitar]
 cover: https://i.loli.net/2020/01/12/odAnKhXksaIPJ2R.jpg
 header:
-  theme: light
+  theme: dark
+  background: 'rgba(32, 48, 40, .4)'
 article_header:
   type: cover
   theme: dark

@@ -3,7 +3,8 @@ title: 奇跡の山 Miracle Mountain
 tags: [Guitar, Masaaki Kishibe]
 cover: https://i.loli.net/2020/01/11/bQuzxqp7B8gySmJ.jpg
 header:
-  theme: light
+  theme: dark
+  background: 'rgba(32, 48, 40, .4)'
 article_header:
   type: cover
   theme: dark

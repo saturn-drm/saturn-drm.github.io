@@ -3,7 +3,8 @@ title: The End of the World
 tags: [Guitar, Masaaki Kishibe]
 cover: https://i.loli.net/2020/01/12/JMg3oLiT1rABzmF.png
 header:
-  theme: light
+  theme: dark
+  background: 'rgba(32, 48, 40, .4)'
 article_header:
   type: cover
   theme: dark

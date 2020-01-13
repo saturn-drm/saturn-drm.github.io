@@ -3,7 +3,8 @@ title: 少年の梦 Childhood Dream
 tags: [Guitar, Masaaki Kishibe]
 cover: https://i.loli.net/2020/01/13/rl3vBn6IOLcmNkK.jpg
 header:
-  theme: light
+  theme: dark
+  background: 'rgba(32, 48, 40, .4)'
 article_header:
   type: cover
   theme: dark

@@ -3,7 +3,8 @@ title: 枫叶城 City of Maple Leaf
 tags: [Guitar, 杨昊昆]
 cover: https://i.loli.net/2020/01/12/wIJT3dDobUCNWlO.png
 header:
-  theme: light
+  theme: dark
+  background: 'rgba(32, 48, 40, .4)'
 article_header:
   type: cover
   theme: dark
