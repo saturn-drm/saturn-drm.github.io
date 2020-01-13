@@ -1,7 +1,7 @@
 ---
 layout: article
 title: Welcome to My Website!
-mode: normal
+mode: immersive
 show_title: true
 show_edit_on_github: false
 show_date: false
