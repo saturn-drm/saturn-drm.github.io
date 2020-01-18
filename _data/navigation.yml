@@ -11,6 +11,9 @@ header:
   - title: Guitar
     url: /guitar.html
 
+  - title: Blog
+    url: /blog.html
+
   - titles:
       # @start locale config
       en      : &EN       Archive
@@ -38,7 +41,7 @@ header:
 
   - titles:
       # @start locale config
-      en      : &EN       About Me
+      en      : &EN       About
       en-GB   : *EN
       en-US   : *EN
       en-CA   : *EN
