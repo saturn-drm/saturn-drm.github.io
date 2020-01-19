@@ -3,40 +3,40 @@
     margin: 0;
     & > li > {
       .mail-button {
-        @include clickable($text-color-1, $mail-color);
+        @include clickable($text-color-1, #000);
       }
       .facebook-button {
-        @include clickable($text-color-1, $facebook-color);
+        @include clickable($text-color-1, #000);
       }
       .twitter-button {
-        @include clickable($text-color-1, $twitter-color);
+        @include clickable($text-color-1, #000);
       }
       .weibo-button {
-        @include clickable($text-color-1, $weibo-color);
+        @include clickable($text-color-1, #000);
       }
       .googlepluse-button {
-        @include clickable($text-color-1, $google-plus-color);
+        @include clickable($text-color-1, #000);
       }
       .telegram-button {
-        @include clickable($text-color-1, $telegram-color);
+        @include clickable($text-color-1, #000);
       }
       .medium-button {
-        @include clickable($text-color-1, $medium-color);
+        @include clickable($text-color-1, #000);
       }
       .zhihu-button {
-        @include clickable($text-color-1, $zhihu-color);
+        @include clickable($text-color-1, #000);
       }
       .douban-button {
-        @include clickable($text-color-1, $douban-color);
+        @include clickable($text-color-1, #000);
       }
       .linkedin-button {
-        @include clickable($text-color-1, $linkedin-color);
+        @include clickable($text-color-1, #000);
       }
       .github-button {
-        @include clickable($text-color-1, $github-color);
+        @include clickable($text-color-1, #000);
       }
       .npm-button {
-        @include clickable($text-color-1, $npm-color);
+        @include clickable($text-color-1, #000);
       }
     }
   }
