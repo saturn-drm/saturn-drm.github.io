@@ -68,6 +68,14 @@ side-blog:
   - title:      Digest
     children:
       - title:  神女赋-宋玉
-        url:    /docs/en/quick-start
+        url:    /blog/2020-01-22-神女赋
       - title:  放言五首（并序）-白居易
+        url:    /docs/en/structure
+      - title:  两晋南北朝史·两晋卷-吕思勉
+        url:    /docs/en/structure
+      - title:  讨贼檄文-陈琳
+        url:    /docs/en/structure
+      - title:  资治通鉴-司马光
+        url:    /docs/en/structure
+      - title:  其他
         url:    /docs/en/structure
