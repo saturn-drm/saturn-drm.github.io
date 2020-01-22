@@ -49,7 +49,7 @@ lang: zh
 ## SoundCloud
 <div>{%- include extensions/soundcloud.html id='746912935' -%}</div>
 
-## NetEase Music
+## 网易云音乐
 <div>{%- include extensions/netease-cloud-music.html id='2065011836' -%}</div>
 
 # Tabs
