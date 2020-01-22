@@ -63,3 +63,11 @@ header:
       fr-LU   : *FR
       # @end locale config
     url: /about.html
+
+side-blog:
+  - title:      Digest
+    children:
+      - title:  神女赋-宋玉
+        url:    /docs/en/quick-start
+      - title:  放言五首（并序）-白居易
+        url:    /docs/en/structure
