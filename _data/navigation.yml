@@ -11,8 +11,8 @@ header:
   - title: Guitar
     url: /guitar.html
 
-  - title: Blog
-    url: /blog.html
+  # - title: Blog
+  #   url: /blog.html
 
   - titles:
       # @start locale config
