@@ -24,17 +24,17 @@ $main-color-theme-dark:  rgba(#fff, .9);
 $background-color: #fff;
 
 // text colors
-$text-color-theme-light-d: #2c3e50;
-$text-color-theme-light:   #2c3e50;
-$text-color-theme-light-l: #2c3e50;
+$text-color-theme-light-d: #000;
+$text-color-theme-light:   #222;
+$text-color-theme-light-l: #888;
 
 $text-color-theme-dark-d:  #fff;
 $text-color-theme-dark:    rgba(#fff, .95);
 $text-color-theme-dark-l:  rgba(#fff, .85);
 
-$text-color-d:     $text-color-theme-light-d;
-$text-color:       $text-color-theme-light;
-$text-color-l:     $text-color-theme-light-l;
+$text-color-d:    $theme-color-2;
+$text-color:      $theme-color-2;
+$text-color-l:    $theme-color-2;
 
 $text-background-color: rgba(#000, .05);
 
@@ -46,10 +46,10 @@ $footer-text-color: $text-color-3;
 $footer-background: $main-color-3;
 
 // border and shadow colors
-$border-color:     mix(#000, $background-color, 20%);
-$border-color-l:   mix(#000, $background-color, 10%);
-$decorate-color:   rgba(#000, .1);
-$mask-color:       rgba(#000, .9);
+$border-color:     mix(#2c3e50, $background-color, 20%);
+$border-color-l:   mix(#2c3e50, $background-color, 10%);
+$decorate-color:   rgba(#2c3e50, .1);
+$mask-color:       rgba(#2c3e50, .9);
 $select-color:     rgba($main-color-1, 1);
 
 // function colors
