@@ -32,9 +32,9 @@ $text-color-theme-dark-d:  #fff;
 $text-color-theme-dark:    rgba(#fff, .95);
 $text-color-theme-dark-l:  rgba(#fff, .85);
 
-$text-color-d:    $theme-color-2;
-$text-color:      $theme-color-2;
-$text-color-l:    $theme-color-2;
+$text-color-d:    rgba($theme-color-2, .8);
+$text-color:      rgba($theme-color-2, .8);
+$text-color-l:    rgba($theme-color-2, .8);
 
 $text-background-color: rgba(#000, .05);
 
