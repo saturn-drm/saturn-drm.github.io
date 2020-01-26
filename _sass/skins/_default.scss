@@ -14,8 +14,8 @@ $text-color-2:     #fff;
 $main-color-3:     #f2f2f2;
 $text-color-3:     #333;
 
-$theme-color-1:    #fd746c;
-$theme-color-2:    #2c3e50;
+$theme-color-light:    #fd746c;
+$theme-color-dark:    #2c3e50;
 
 $main-color-theme-light: rgba(#000, .9);
 $main-color-theme-dark:  rgba(#fff, .9);
@@ -32,18 +32,18 @@ $text-color-theme-dark-d:  #fff;
 $text-color-theme-dark:    rgba(#fff, .95);
 $text-color-theme-dark-l:  rgba(#fff, .85);
 
-$text-color-d:    rgba($theme-color-2, .9);
-$text-color:      rgba($theme-color-2, .9);
-$text-color-l:    rgba($theme-color-2, .9);
+$text-color-d:    rgba($theme-color-dark, .9);
+$text-color:      rgba($theme-color-dark, .9);
+$text-color-l:    rgba($theme-color-dark, .9);
 
 $text-background-color: rgba(#000, .05);
 
 // header and footer colors
-$header-text-color: rgba($theme-color-1, .2);
-$header-background: $theme-color-2;
+$header-text-color: $theme-color-light;
+$header-background: rgba($theme-color-dark, .2);
 
-$footer-text-color: rgba($theme-color-1, .2);
-$footer-background: $theme-color-2;
+$footer-text-color: $theme-color-light;
+$footer-background: rgba($theme-color-dark, .2);
 
 // border and shadow colors
 $border-color:     mix(#2c3e50, $background-color, 20%);
