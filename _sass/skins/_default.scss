@@ -39,11 +39,11 @@ $text-color-l:    rgba($theme-color-dark, .9);
 $text-background-color: rgba(#000, .05);
 
 // header and footer colors
-$header-text-color: $theme-color-light;
-$header-background: rgba($theme-color-dark, .2);
+$header-text-color: $theme-color-dark;
+$header-background: rgba($theme-color-light, .2);
 
-$footer-text-color: $theme-color-light;
-$footer-background: rgba($theme-color-dark, .2);
+$footer-text-color: $theme-color-dark;
+$footer-background: rgba($theme-color-light, .2);
 
 // border and shadow colors
 $border-color:     mix(#2c3e50, $background-color, 20%);
