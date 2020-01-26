@@ -1,6 +1,6 @@
 ---
 title: Add the Site to Google Search Console
-tags: APP
+tags: Website
 cover: https://i.loli.net/2020/01/08/IDs5oq2Pu1NCleL.png
 mode: immersive
 article_header:
@@ -18,7 +18,7 @@ sharing: true
 modify_date: 2020-01-26
 license: false
 pageview: true
-key: blog201022
+key: blog200122
 ---
 
 2020-01-26-13:04更新：

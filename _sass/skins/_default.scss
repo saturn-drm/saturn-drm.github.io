@@ -39,8 +39,8 @@ $text-color-l:    rgba($theme-color-2, .9);
 $text-background-color: rgba(#000, .05);
 
 // header and footer colors
-$header-text-color: $text-color-3;
-$header-background: $main-color-3;
+$header-text-color: $theme-color-2;
+$header-background: rgba($theme-color-1, .2);
 
 $footer-text-color: $theme-color-2;
 $footer-background: rgba($theme-color-1, .2);
