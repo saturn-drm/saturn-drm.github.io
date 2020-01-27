@@ -54,20 +54,20 @@ Size | 0.5 km², around 4,300 households
 
 ## Risk And Potential
 
-Like other areas in Boston, the site faces the risks of rising sea level and annual flood. By the year 2070, half of the site will be submerged. Besides, there are some industry relics on the site, including the brownfields that used to be oil tanks and the power plant.![03-1](https://i.loli.net/2020/01/27/6aA5L7vK92T1dxr.jpg)
+Like other areas in Boston, the site faces the risks of rising sea level and annual flood. By the year 2070, half of the site will be submerged. Besides, there are some industry relics on the site, including the brownfields that used to be oil tanks and the power plant.![03-1.jpg](https://i.loli.net/2020/01/27/LETVFZaUtKruWoI.jpg)
 
 ![03-3](https://i.loli.net/2020/01/27/rwR1FPqUYKlzAfH.jpg)The project is proposed as an extension of the existing grid in South Boston neighborhood and as the connection to the MBTA transit system.
 The road and infrastructure system overrides the flooding area in the future to make room for housing, with the walk lanes going over the water between the housing area.
 
-![03-2](https://i.loli.net/2020/01/27/GsFhQIWidgEPXDO.jpg)
+![03-2.jpg](https://i.loli.net/2020/01/27/zj6hOE7dqweXSWt.jpg)
 
 ## Zoning Strategy
 
-Zoning strategies are based on risks of sea level rise, concerns on sunlight, and treatment of brownfields.In the areas facing fewer risks of sea-level rise, the density tends to be higher with more towers in the north row, to make the community more accessible to the marsh parks.The power plant is partly reserved as the MBTA transit center and the commercial area. On the site of brownfields, there should be public buildings as the brownfields being treated gradually.
+> Zoning Strategy Based On Risks Of Sea Level Rise, Concerns On Sunlight, And Treatment Of BrownfieldsIn the areas facing fewer risks of sea-level rise, the density tends to be higher with more towers in the north row, to make the community more accessible to the marsh parks.The power plant is partly reserved as the MBTA transit center and the commercial area. On the site of brownfields, there should be public buildings as the brownfields being treated gradually.
 
-![zoning](https://i.loli.net/2020/01/27/gkVKAbQ7BL35fdR.jpg)
+![04-1.jpg](https://i.loli.net/2020/01/27/Y4pDTbVSiUwRalt.jpg)
 
-## Housing Types And Scenarios* Row houses with gardens - The low-density houses from the South Boston neighborhood.
+## Housing Types & Scenarios* Row houses with gardens - The low-density houses from the South Boston neighborhood.
 * Towers - The high-density houses from downtown Boston.
 * Bar buildings - The medium-density houses from downtown Boston.Basically, in concern with the sunlight, each west-east main district contains two rows of housing buildings - the 3-floor row houses with gardens on the south and the towers or bar buildings on the north.
 
@@ -75,9 +75,11 @@ Zoning strategies are based on risks of sea level rise, concerns on sunlight, an
 
 ![scenario](https://i.loli.net/2020/01/27/SItmwCLcn7aRQMv.jpg)
 
-![plan](https://i.loli.net/2020/01/27/8QbBTe3UdsA5pwM.jpg)
+![04-2plan.jpg](https://i.loli.net/2020/01/27/Ui1PJWsoFXmv5Qf.jpg)
 
-## Chronological Design Of Housing And Brownfields
+## Chronological Design
+
+> Chronological Design Of Housing And Progressive Design With The Brownfields
 
 ![06-1](https://i.loli.net/2020/01/27/FgPE528AJepN9lj.jpg)
 
@@ -85,8 +87,12 @@ Zoning strategies are based on risks of sea level rise, concerns on sunlight, an
 
 ![06-4.jpg](https://i.loli.net/2020/01/27/J12HOvzfUXeAMQi.jpg)
 
-## Detail Design Of The Core Area And The InfrastructureThe power plant is partly reserved and redesigned as the transit center for MBTA, the commercial center of the site, and the outdoor green space. Other industry relics are developed as the library and museum.The bar buildings around the core area are treated differently, considering the commercial space and landscape.The infrastructure network goes with the main roads inside the platforms, including electricity, gas, and water.
+## Detail Design
 
-![07-1GFP.jpg](https://i.loli.net/2020/01/27/fE3RChb4w9qGxJD.jpg)
+> Detail Design Of The Core Area Near The Transportation System And The InfrastructureThe power plant is partly reserved and redesigned as the transit center for MBTA, the commercial center of the site, and the outdoor green space. Other industry relics are developed as the library and museum.The bar buildings around the core area are treated differently, considering the commercial space and landscape.The infrastructure network goes with the main roads inside the platforms, including electricity, gas, and water.
 
-![07-1SEC.jpg](https://i.loli.net/2020/01/27/CwGqs97HUy5udRx.jpg)
+![07-1GFP.jpg](https://i.loli.net/2020/01/27/AYJ5jilsoUbw61e.jpg)
+
+![07-1SEC.jpg](https://i.loli.net/2020/01/27/4REuIHWGCXp1Tdg.jpg)
+
+---
