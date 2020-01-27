@@ -20,7 +20,8 @@
 
 .article__header--overlay {
   .overlay {
-    min-height: 60rem;
+    min-height: 100vh;
+    min-width: 100vw;
     padding-top: map-get($spacers, 5) * 2;
     padding-bottom: map-get($spacers, 5) * 2;
     @include media-breakpoint-down(md) {
