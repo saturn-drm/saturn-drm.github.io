@@ -30,9 +30,9 @@ key: southbostonhousing
 
 # Abstract
 
-* The project is an extension of the existing grid and transportation system, which overrides the mostly underwater site in the future.* It deals with the risks of rising sea level and annual flood by chronological design in the short-medium-long term.* It contains a mixture of three house types from the local, which are arranged according to the site condition facing the risks of rising sea level and annual flood chronologically.* The housing buildings show a transition in demography from the South Boston neighborhood to downtown Boston.* Public buildings are proposed and reserved according to the distribution of existing brownfields, which also contains the progressive design with the brownfields being treated gradually.
+* The project is an extension of the existing grid and transportation system, which overrides the mostly underwater site in the future.
 
-<!--more-->
+<!--more-->* It deals with the risks of rising sea level and annual flood by chronological design in the short-medium-long term.* It contains a mixture of three house types from the local, which are arranged according to the site condition facing the risks of rising sea level and annual flood chronologically.* The housing buildings show a transition in demography from the South Boston neighborhood to downtown Boston.* Public buildings are proposed and reserved according to the distribution of existing brownfields, which also contains the progressive design with the brownfields being treated gradually.
 
 ![model1](https://i.loli.net/2020/01/27/pmjAJcLBrPnqt94.jpg)
 
