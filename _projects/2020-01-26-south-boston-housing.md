@@ -1,6 +1,6 @@
 ---
-title: First MD Post - cover
-tags: Test
+title: HOUSING IN URBAN CORES
+tags: [Housing, Boston, GSD, Urban design]
 cover: https://i.loli.net/2020/01/27/BGSa34K5cFJ6RXp.jpg
 mode: immersive
 header:
@@ -8,7 +8,7 @@ header:
 article_header:
   type: cover
   image:
-    src: https://i.loli.net/2020/01/27/aP5G9KJs8rtR1Ml.jpg
+    src: https://i.loli.net/2020/01/27/tojlS8v9TKkYCVi.jpg
 show_title: true
 show_edit_on_github: false
 show_date: true
@@ -28,7 +28,13 @@ license: false
 key: southbostonhousing
 ---
 
-This is the First MD Post.
+#Basic Info
+
+---- | ----
+Category | Professional work of urban design
+Location | South Boston, MA
+
+
 <!--more-->
 
 Here is the [test linked url](https://zmei.moe) to the homepage.
