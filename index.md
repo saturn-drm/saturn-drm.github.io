@@ -8,6 +8,8 @@ show_date: false
 show_tags: false
 comment: false
 lightbox: false
+header:
+  theme: light
 article_header:
   type: overlay
   theme: dark
