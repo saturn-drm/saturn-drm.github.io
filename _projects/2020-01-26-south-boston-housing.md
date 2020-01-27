@@ -48,6 +48,8 @@ Tutor | Peter Rowe, Yun Fu
 Collaborator | Cadence Bayley
 Size | 0.5 km², around 4,300 households
 
+---
+
 # Design Stages
 
 ## Risk And Potential
@@ -77,4 +79,14 @@ Zoning strategies are based on risks of sea level rise, concerns on sunlight, an
 
 ## Chronological Design Of Housing And Brownfields
 
-* Short term: Before 2030, there should be the first row of towers and bar buildings in the northernmost end of the site because of the best view to the sea and the easiest access to downtown Boston by cars.* Mid term: Before 2050, with the brownfields appropriately treated and the sea level rising, swamp parks are developed between the new city grids. With the site connected to the MBTA transit system, more people should move in, and most houses are built to hold the growing population.* Long term: Before 2070, on the sites of brownfields, there will be public buildings offering service to the community, and the row houses will also be built.
+![06-1](https://i.loli.net/2020/01/27/FgPE528AJepN9lj.jpg)
+
+* Short term: Before 2030, there should be the first row of towers and bar buildings in the northernmost end of the site because of the best view to the sea and the easiest access to downtown Boston by cars.![06-2.jpg](https://i.loli.net/2020/01/27/NPd2BXusOWhbARi.jpg)* Mid term: Before 2050, with the brownfields appropriately treated and the sea level rising, swamp parks are developed between the new city grids. With the site connected to the MBTA transit system, more people should move in, and most houses are built to hold the growing population.![06-3.jpg](https://i.loli.net/2020/01/27/x8fKk1IOsZ7B3uX.jpg)* Long term: Before 2070, on the sites of brownfields, there will be public buildings offering service to the community, and the row houses will also be built.
+
+![06-4.jpg](https://i.loli.net/2020/01/27/J12HOvzfUXeAMQi.jpg)
+
+## Detail Design Of The Core Area And The InfrastructureThe power plant is partly reserved and redesigned as the transit center for MBTA, the commercial center of the site, and the outdoor green space. Other industry relics are developed as the library and museum.The bar buildings around the core area are treated differently, considering the commercial space and landscape.The infrastructure network goes with the main roads inside the platforms, including electricity, gas, and water.
+
+![07-1GFP.jpg](https://i.loli.net/2020/01/27/fE3RChb4w9qGxJD.jpg)
+
+![07-1SEC.jpg](https://i.loli.net/2020/01/27/CwGqs97HUy5udRx.jpg)
