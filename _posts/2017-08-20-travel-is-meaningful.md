@@ -2,16 +2,7 @@
 title: 旅行的意义 Travel is Meaningful
 tags: [Guitar]
 cover: https://i.loli.net/2020/01/12/TxNPEdAzyRCo8Yi.jpg
-header:
-  theme: dark
-  background: 'rgba(32, 48, 40, .4)'
-article_header:
-  type: cover
-  theme: dark
-  align: center
-  image:
-    src: https://i.loli.net/2020/01/13/LiPMU5TsQmw9ntW.jpg
-mode: immersive
+mode: normal
 show_title: true
 show_edit_on_github: false
 show_date: true
