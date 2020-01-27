@@ -63,3 +63,18 @@ Like other areas in Boston, the site faces the risks of rising sea level and ann
 
 Zoning strategies are based on risks of sea level rise, concerns on sunlight, and treatment of brownfields.In the areas facing fewer risks of sea-level rise, the density tends to be higher with more towers in the north row, to make the community more accessible to the marsh parks.The power plant is partly reserved as the MBTA transit center and the commercial area. On the site of brownfields, there should be public buildings as the brownfields being treated gradually.
 
+![zoning](https://i.loli.net/2020/01/27/gkVKAbQ7BL35fdR.jpg)
+
+## Housing Types And Scenarios* Row houses with gardens - The low-density houses from the South Boston neighborhood.
+* Towers - The high-density houses from downtown Boston.
+* Bar buildings - The medium-density houses from downtown Boston.Basically, in concern with the sunlight, each west-east main district contains two rows of housing buildings - the 3-floor row houses with gardens on the south and the towers or bar buildings on the north.
+
+![type](https://i.loli.net/2020/01/27/9wUleI2WVLDG6JE.jpg)
+
+![scenario](https://i.loli.net/2020/01/27/SItmwCLcn7aRQMv.jpg)
+
+![plan](https://i.loli.net/2020/01/27/8QbBTe3UdsA5pwM.jpg)
+
+## Chronological Design Of Housing And Brownfields
+
+* Short term: Before 2030, there should be the first row of towers and bar buildings in the northernmost end of the site because of the best view to the sea and the easiest access to downtown Boston by cars.* Mid term: Before 2050, with the brownfields appropriately treated and the sea level rising, swamp parks are developed between the new city grids. With the site connected to the MBTA transit system, more people should move in, and most houses are built to hold the growing population.* Long term: Before 2070, on the sites of brownfields, there will be public buildings offering service to the community, and the row houses will also be built.
