@@ -22,3 +22,4 @@ comment: false
 ---
 
 The content is consist of some digests from daily reading as well as some coding and technology tips.
+{:.info}
