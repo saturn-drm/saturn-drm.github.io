@@ -11,7 +11,7 @@ article_header:
     src: https://i.loli.net/2020/01/27/tojlS8v9TKkYCVi.jpg
 show_title: true
 show_edit_on_github: false
-show_date: true
+show_date: false
 show_tags: true
 pageview: false
 comment: true
