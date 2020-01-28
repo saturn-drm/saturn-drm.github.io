@@ -1,7 +1,7 @@
 ---
 title: CONCENTRATION & REACHING-OUT - HIGH-TECH CAMPUS
 tags: [Campus, Boston, GSD, Urban design]
-cover: https://i.loli.net/2020/01/28/ixoWRV1juOTGKIv.jpg
+cover: https://i.loli.net/2020/01/28/9wK7sML53h4xJcd.jpg
 mode: immersive
 header:
   theme: light
