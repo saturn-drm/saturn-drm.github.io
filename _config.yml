@@ -218,8 +218,10 @@ collections:
     output: true
   zh:
     output: true
-  blog:
+  digest:
     output: true
+  coding:
+    outpur: true
 
 defaults:
 #   ## home
@@ -318,10 +320,25 @@ defaults:
       show_subscribe: true
       pageview: true
       # lightbox: true
-  ## blog
+  ## digest
   - scope:
       path: ""
-      type: blog
+      type: digest
+    values:
+      layout: article
+      sharing: true
+      license: true
+      category: post
+      aside:
+        toc: true
+      show_edit_on_github: true
+      show_subscribe: true
+      pageview: true
+      # lightbox: true
+  ## coding
+  - scope:
+      path: ""
+      type: coding
     values:
       layout: article
       sharing: true
