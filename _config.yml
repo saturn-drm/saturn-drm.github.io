@@ -221,7 +221,7 @@ collections:
   digest:
     output: true
   coding:
-    outpur: true
+    output: true
 
 defaults:
 #   ## home
