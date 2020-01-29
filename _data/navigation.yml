@@ -70,12 +70,18 @@ side-blog:
       - title:  神女赋-宋玉
         url:    /digest/2020-01-22-神女赋
       - title:  放言五首（并序）-白居易
-        url:    /404.html
+        url:    /digest/2020-01-23-放言五首
       - title:  两晋南北朝史·两晋卷-吕思勉
-        url:    /404.html
+        url:    /digest/2020-01-24-两晋南北朝史-两晋卷
       - title:  讨贼檄文-陈琳
-        url:    /404.html
+        url:    /digest/2020-01-25-讨贼檄文
       - title:  资治通鉴-司马光
-        url:    /404.html
+        url:    /digest/2020-01-26-资治通鉴
       - title:  其他
-        url:    /404.html
+        url:    /digest/2020-01-21-其他
+  - title:      Coding & Tech
+    children:
+      - title:  Google Search Console
+        url:    /coding/2020-01-26-add-to-google-search
+      - title:  App List
+        url:    /coding/2020-01-19-app-list
