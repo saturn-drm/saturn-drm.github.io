@@ -222,6 +222,8 @@ collections:
     output: true
   coding:
     output: true
+  posts:
+    output: true
 
 defaults:
 #   ## home
@@ -339,6 +341,21 @@ defaults:
   - scope:
       path: ""
       type: coding
+    values:
+      layout: article
+      sharing: true
+      license: true
+      category: post
+      aside:
+        toc: true
+      show_edit_on_github: true
+      show_subscribe: true
+      pageview: true
+      # lightbox: true
+  ## posts
+  - scope:
+      path: ""
+      type: posts
     values:
       layout: article
       sharing: true
