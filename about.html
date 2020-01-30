@@ -34,9 +34,24 @@ lightbox: false
 comment: false
 ---
 
+<section class="info">
+  <h1 id="page_title">About Me</h1>
+
+  <div class="author_profile">
+    {%- assign _author = site.author -%}
+    {%- include article/footer/author-profile.html author=_author -%}
+  </div>
+
+</section>
+
+<script>
+  {%- include scripts/jquery-1.7.1.min.js -%}
+</script>
+
+<script>
+  {%- include scripts/jquery.media.js -%}
+</script>
+
+{{ content }}
 
 
-<div class="author_profile">
-  {%- assign _author = site.author -%}
-  {%- include article/footer/author-profile.html author=_author -%}
-</div>
