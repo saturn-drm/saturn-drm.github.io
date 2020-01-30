@@ -235,7 +235,7 @@ defaults:
   ## archive
   - scope:
       path: ""
-      type: projects
+      type: posts
     values:
       layout: article
       sharing: true
@@ -250,7 +250,7 @@ defaults:
   ## projects
   - scope:
       path: ""
-      type: posts
+      type: projects
     values:
       layout: article
       sharing: true
@@ -341,21 +341,6 @@ defaults:
   - scope:
       path: ""
       type: coding
-    values:
-      layout: article
-      sharing: true
-      license: true
-      category: post
-      aside:
-        toc: true
-      show_edit_on_github: true
-      show_subscribe: true
-      pageview: true
-      # lightbox: true
-  ## posts
-  - scope:
-      path: ""
-      type: posts
     values:
       layout: article
       sharing: true
