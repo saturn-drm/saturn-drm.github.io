@@ -46,6 +46,7 @@ section {
 
 .one {
   background-image: url(https://source.unsplash.com/1920x1080?nature);
+  width: 100vw;
 }
 
 .one .wrapper:before {
@@ -54,6 +55,7 @@ section {
 
 .two {
   background-image: url(https://source.unsplash.com/1920x1080?landscape);
+  width: 100vw;
 }
 
 .two .wrapper:before {
@@ -63,6 +65,7 @@ section {
 
 .three {
   background-image: url(https://source.unsplash.com/1920x1080?portrait);
+  width: 100vw;
 }
 
 .three .wrapper:before {
@@ -72,6 +75,7 @@ section {
 
 .four {
   background-image: url(https://source.unsplash.com/1920x1080?stars);
+  width: 100vw;
 }
 
 .four .wrapper:before {
