@@ -81,6 +81,8 @@ side-blog:
         url:    /digest/2020-01-21-其他
   - title:      Coding & Tech
     children:
+      - title:  Compile scss/sass File to css
+        url:    /coding/2020-01-27-compile-scss
       - title:  Google Search Console
         url:    /coding/2020-01-26-add-to-google-search
       - title:  App List
