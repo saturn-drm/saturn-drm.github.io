@@ -47,13 +47,15 @@
     </div>
       
     <script>
-    {%- raw -%}
-    {%- include scripts/lib/swiper.js -%}
-      var SOURCES = window.TEXT_VARIABLES.sources;
-      window.Lazyload.js(SOURCES.jquery, function() {
-        $('.swiper-demo').swiper();
-      });
-    {% endraw %}
+        {%- include scripts/lib/swiper.js -%}
+        var SOURCES = window.TEXT_VARIABLES.sources;
+        window.Lazyload.js(SOURCES.jquery, function() {
+          $('.swiper-demo--0').swiper();
+          $('.swiper-demo--1').swiper();
+          $('.swiper-demo--2').swiper();
+          $('.swiper-demo--3').swiper();
+          $('.swiper-demo--4').swiper({ animation: false });
+        });
     </script>
     
 </body>
