@@ -1,0 +1,50 @@
+---
+title: Test Style
+tags: Website
+mode: normal
+sidebar:
+  nav: side-blog
+show_title: false
+show_edit_on_github: false
+show_date: false
+show_tags: true
+pageview: false
+comment: false
+mathjax: false
+mathjax_autoNumber: false
+mermaid: false
+chart: false
+lightbox: false
+show_author_profile: false
+show_subscribe: false
+sharing: false
+modify_date: 2020-01-30
+license: false
+key: test-style
+---
+
+<!--more-->
+
+.swiper-demo {
+  height: 220px;
+}
+
+<div class="swiper my-3 swiper-demo swiper-demo--image swiper-demo--3">
+  <div class="swiper__wrapper">
+    <div class="swiper__slide"><img class="lightbox-ignore" src="https://tianqi.name/jekyll-TeXt-theme/docs/assets/images/cover3.jpg"/></div>
+    <div class="swiper__slide"><img class="lightbox-ignore" src="https://tianqi.name/jekyll-TeXt-theme/docs/assets/images/cover2.jpg"/></div>
+    <div class="swiper__slide"><img class="lightbox-ignore" src="https://tianqi.name/jekyll-TeXt-theme/docs/assets/images/cover3.jpg"/></div>
+    <div class="swiper__slide"><img class="lightbox-ignore" src="https://tianqi.name/jekyll-TeXt-theme/docs/assets/images/cover2.jpg"/></div>
+    <div class="swiper__slide"><img class="lightbox-ignore" src="https://tianqi.name/jekyll-TeXt-theme/docs/assets/images/cover3.jpg"/></div>
+    <div class="swiper__slide"><img class="lightbox-ignore" src="https://tianqi.name/jekyll-TeXt-theme/docs/assets/images/cover2.jpg"/></div>
+    <div class="swiper__slide"><img class="lightbox-ignore" src="https://tianqi.name/jekyll-TeXt-theme/docs/assets/images/cover3.jpg"/></div>
+  </div>
+  <div class="swiper__button swiper__button--prev fas fa-chevron-left"></div>
+  <div class="swiper__button swiper__button--next fas fa-chevron-right"></div>
+</div>
+
+{%- include scripts/lib/swiper.js -%}
+var SOURCES = window.TEXT_VARIABLES.sources;
+window.Lazyload.js(SOURCES.jquery, function() {
+  $('.swiper-demo').swiper();
+});
