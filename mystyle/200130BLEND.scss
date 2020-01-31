@@ -47,7 +47,7 @@ section {
 
 .wrapper {
   // Hides box (&:before) outside of section
-  clip: rect(auto auto auto auto);
+  clip: rect(0 100vw 100vh 0);
   
   // Clip works only on positions absolute or fixed
   position: absolute; 

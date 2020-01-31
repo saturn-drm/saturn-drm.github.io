@@ -31,7 +31,7 @@ section {
 }
 
 .wrapper {
-  clip: rect(auto auto auto auto);
+  clip: rect(0 100vw 100vh 0);
   position: absolute;
   top: 0;
   right: 0;
