@@ -23,6 +23,8 @@ license: false
 key: test-style
 ---
 
+# Style 1
+
 [Click to the Test Style Page](../zh/test-page.html)
 
 <!--more-->
