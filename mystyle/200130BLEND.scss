@@ -40,8 +40,8 @@ section {
   position: relative;
   
   // Height not required. Can be left as auto
-  height: 100vh;
-  padding: 1em;
+  width: 100vw;
+  padding: 0em;
 }
 
 .wrapper {
@@ -72,7 +72,6 @@ section {
 .one {
   // Section background image
   background-image: url(https://source.unsplash.com/1920x1080?nature);
-  width: 100vw;
   
   .wrapper:before {
     // Box background color
@@ -82,7 +81,6 @@ section {
 
 .two {
   background-image: url(https://source.unsplash.com/1920x1080?landscape);
-  width: 100vw;
   
   .wrapper:before {
     background: #faaa54;
@@ -92,7 +90,6 @@ section {
 
 .three {
   background-image: url(https://source.unsplash.com/1920x1080?portrait);
-  width: 100vw;
   
   .wrapper:before {
     background: #6c320a;
@@ -102,7 +99,6 @@ section {
 
 .four {
   background-image: url(https://source.unsplash.com/1920x1080?stars);
-  width: 100vw;
   
   .wrapper:before {
     background: #e4135d;
