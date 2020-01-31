@@ -26,7 +26,7 @@ section {
   isolation: isolate;
   position: relative;
   width: 100vw;
-  padding: 0em;
+  padding: 1em;
 }
 
 .wrapper {
