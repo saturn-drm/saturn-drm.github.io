@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <style>
+        .swiper-demo {
+          height: 220px;
+        }
+        .swiper-demo .swiper__slide {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 3rem;
+          color: #fff;
+        }
+        .swiper-demo .swiper__slide:nth-child(even) {
+          background-color: #ff69b4;
+        }
+        .swiper-demo .swiper__slide:nth-child(odd) {
+          background-color: #2593fc;
+        }
+        .swiper-demo--dark .swiper__slide:nth-child(even) {
+          background-color: #312;
+        }
+        .swiper-demo--dark .swiper__slide:nth-child(odd) {
+          background-color: #123;
+        }
+        .swiper-demo--image .swiper__slide:nth-child(n) {
+          background-color: #000;
+        }
+    </style>
+
+    <div class="swiper my-3 swiper-demo swiper-demo--image swiper-demo--3">
+        <div class="swiper__wrapper">
+        <div class="swiper__slide"><img class="lightbox-ignore" src="https://tianqi.name/jekyll-TeXt-theme/docs/assets/images/cover3.jpg"/></div>
+        <div class="swiper__slide"><img class="lightbox-ignore" src="https://tianqi.name/jekyll-TeXt-theme/docs/assets/images/cover2.jpg"/></div>
+        <div class="swiper__slide"><img class="lightbox-ignore" src="https://tianqi.name/jekyll-TeXt-theme/docs/assets/images/cover3.jpg"/></div>
+        <div class="swiper__slide"><img class="lightbox-ignore" src="https://tianqi.name/jekyll-TeXt-theme/docs/assets/images/cover2.jpg"/></div>
+        <div class="swiper__slide"><img class="lightbox-ignore" src="https://tianqi.name/jekyll-TeXt-theme/docs/assets/images/cover3.jpg"/></div>
+        <div class="swiper__slide"><img class="lightbox-ignore" src="https://tianqi.name/jekyll-TeXt-theme/docs/assets/images/cover2.jpg"/></div>
+        <div class="swiper__slide"><img class="lightbox-ignore" src="https://tianqi.name/jekyll-TeXt-theme/docs/assets/images/cover3.jpg"/></div>
+        </div>
+        <div class="swiper__button swiper__button--prev fas fa-chevron-left"></div>
+        <div class="swiper__button swiper__button--next fas fa-chevron-right"></div>
+    </div>
+      
+    <script>
+    {%- raw -%}
+    {%- include scripts/lib/swiper.js -%}
+      var SOURCES = window.TEXT_VARIABLES.sources;
+      window.Lazyload.js(SOURCES.jquery, function() {
+        $('.swiper-demo').swiper();
+      });
+    {% endraw %}
+    </script>
+    
+</body>
+</html>
