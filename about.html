@@ -44,17 +44,12 @@ comment: false
 
 </section>
 
-<script type="text/javascript" src="_includes/scripts/jquery-1.7.1.min.js"></script>  
-<script type="text/javascript" src="_includes/scripts/jquery.media.js"></script>
+<body>
+  <script type="text/javascript" src="/_includes/scripts/PDFObject-master/pdfobject.min.js"></script>
 
-<script type="text/javascript">
-  $(function() {
-      $('a.media').media({width:'100%', height:900px;});
-  });
-</script>
-
-<div class="panel-body">
-  <a class="media" href="https://www.zmei.moe/assets/ZihanMEI_Resume.pdf"></a>
-</div>
+  <script>
+    PDFObject.embed("/assets/ZihanMEI_Resume.pdf");
+  </script>
+</body>
 
 {{ content }}
