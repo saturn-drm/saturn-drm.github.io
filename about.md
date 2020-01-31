@@ -44,8 +44,6 @@ comment: false
 
 </section>
 
-<script type="text/javascript" src="/_includes/scripts/PDFObject-master/pdfobject.min.js"></script>
+[My Resume](./assets/ZihanMEI_Resume.pdf)
 
-<script>
-  PDFObject.embed("/assets/ZihanMEI_Resume.pdf");
-</script>
+[My Portfolio](./assets/ZihanMEI_Portfolio.pdf)
