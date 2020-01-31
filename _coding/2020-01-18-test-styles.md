@@ -23,6 +23,6 @@ license: false
 key: test-style
 ---
 
-[Click to the Test Style Page](https://www.zmei.moe/test-style.html)
+[Click to the Test Style Page](../test-style.html)
 
 <!--more-->
