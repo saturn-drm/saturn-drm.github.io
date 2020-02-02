@@ -35,6 +35,12 @@ Click to [Style Blend](../zh/test-page.html)
 
 # Anime.js
 
+## Practice - Targets
+
+### CSS Selector
+
+Click to [ANIME WITH CSS SELECTOR](../zh/anime-css-selector.html)
+
 ## Test I
 
 Click to [SVG LINE DRAWING](../zh/test-anime-2.html)
