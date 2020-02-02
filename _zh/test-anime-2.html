@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/mystyle/200202anime-2.css" />
+    </head>
+    <!-- Optional content you want to persist between sections -->
+    
+    <script src="../_includes/scripts/anime-master/lib/anime.min.js"></script>
+
+    <svg id="图层_1" data-name="图层 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 175.37 49.59"><title>test-page-2</title><path d="M897.71,526.55l24.71-29.77H898.87V486H939v10.27l-23.39,28.56h25.08l-1.59,10.77H897.71Z" transform="translate(-897.71 -486.01)"/><path d="M988.54,519.42c0-7.74.17-17.73.38-23.62h-.38c-2.08,10.63-5.41,25.36-9,39.81H967.87c-2.85-14-6.11-28.77-8-39.8h-.44c.41,5.83.68,15.51.68,24v15.79H947.13V486h20.92c2.44,10,5.3,24.59,6.41,31.92h.25c1.28-8,4.58-21.14,7.47-31.92h20.32v49.6h-14Z" transform="translate(-897.71 -486.01)"/><path d="M1049.3,515.54h-22.59v9.3h25.21l-1.62,10.77h-37.58V486h37.53v10.77h-23.54v8h22.59Z" transform="translate(-897.71 -486.01)"/><path d="M1073.08,486v49.6h-14.57V486Z" transform="translate(-897.71 -486.01)"/></svg>
+
+    <body>
+      <script class="anime">
+        anime({
+          targets: '.line-drawing-demo .lines path',
+          strokeDashoffset: [anime.setDashoffset, 0],
+          easing: 'easeInOutSine',
+          duration: 1500,
+          delay: function(el, i) { return i * 250 },
+          direction: 'alternate',
+          loop: true
+        });
+      </script> 
+    </body>
+</html>
