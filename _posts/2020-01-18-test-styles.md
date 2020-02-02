@@ -35,6 +35,14 @@ Click to [Style Blend](../zh/test-page.html)
 
 # Anime.js
 
+## Practice - Targets
+
+### CSS Selector
+
+![anime01-css-selector.gif](https://i.loli.net/2020/02/03/OoDMXtlkySvuZBe.gif)
+
+Click to [ANIME WITH CSS SELECTOR](../zh/anime-css-selector.html)
+
 ## Test I
 
 Click to [SVG LINE DRAWING](../zh/test-anime-2.html)
