@@ -10,21 +10,26 @@ comment: false
 lightbox: false
 comment: false
 ---
-<div class="note" style="background-color: #ddd; text-align: center; padding: 0.8rem; border-radius: 15px; margin-top: 3rem;">
+<!-- <div class="note" style="background-color: #ddd; text-align: center; padding: 0.8rem; border-radius: 15px; margin-top: 3rem;">
   <div class="note_content">
     <p>The content is consist of some digests from daily reading as well as some coding and technology tips.</p>
   </div>
-</div>
+</div> -->
 
 <div class="blog">
-  <section class="my-5">
-    <header><h1 id="digest">Digest</h1></header>
-    {%- include article-list.html articles=site.digest type='item' show_cover=false show_excerpt=true excerpt_type='text' show_readmore=true show_info=true reverse=true -%}
-  </section>
-
+  
   <section class="my-5">
     <header><h1 id="coding">Coding</h1></header>
     {%- include article-list.html articles=site.coding type='item' show_cover=false show_excerpt=true excerpt_type='html' show_readmore=true show_info=true reverse=true -%}
   </section>
 
+  <section class="my-5">
+    <header><h1 id="digest">Digest</h1></header>
+    {%- include article-list.html articles=site.digest type='item' show_cover=false show_excerpt=true excerpt_type='text' show_readmore=true show_info=true reverse=true -%}
+  </section>
+
 </div>
+
+<script>
+  window.alert("The content is consist of some digests from daily reading as well as some coding and technology tips.");
+</script>
