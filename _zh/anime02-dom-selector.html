@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/mystyle/200202anime02-dom-selector.css" />
+    </head>
+    <!-- Optional content you want to persist between sections -->
+    
+    <script src="../myjs/anime-master/lib/anime.min.js"></script>
+
+    <body>
+
+      <div class="blocks">
+        <div class="small-block a"></div>
+        <div class="small-block b"></div>
+        <div class="small-block c"></div>
+      </div>
+
+      <script class="anime">
+        var elements = document.querySelectorAll('.small-block');
+        // window.alert(elements.length);
+        var animation = anime({
+          targets: elements,
+          translateX: '50vw',
+          loop: true
+        });
+      </script> 
+
+    </body>
+</html>

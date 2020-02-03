@@ -41,7 +41,7 @@ Click to [Style Blend](../zh/test-page.html)
 
 ![anime01-css-selector.gif](https://i.loli.net/2020/02/03/OoDMXtlkySvuZBe.gif)
 
-Click to [ANIME WITH CSS SELECTOR](../zh/anime-css-selector.html)
+Click to [ANIME WITH CSS SELECTOR](../zh/anime01-css-selector.html)
 
 ## Test I
 
