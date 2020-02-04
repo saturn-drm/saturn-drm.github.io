@@ -145,7 +145,7 @@ Click to [ANIME WITH DOM SELECTOR](../zh/anime02-dom-selector.html)
 
 ```html
 <div class="main">
-	<p class="battery-log"></p>
+  <p class="battery-log"></p>
 </div>
 ```
 
