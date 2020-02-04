@@ -18,7 +18,7 @@ lightbox: false
 show_author_profile: false
 show_subscribe: false
 sharing: false
-modify_date: 2020-02-02
+modify_date: 2020-02-04
 license: false
 key: test-style
 ---
@@ -174,24 +174,70 @@ Click to [ANIME WITH DOM SELECTOR](../zh/anime02-dom-selector.html)
 var logEL = document.querySelector('.battery-log');
 
 var battery = {
-	charged: '0%',
-	cycles: 120   
+  charged: '0%',
+  cycles: 120   
 }
 
 var animation = anime({
-	targets: battery,
-	charged: '100%',
-	cycles: 130,
-	round: 1,
-	loop: true,
-	easing: 'linear',
-	update: function(){
-		logEL.innerHTML = JSON.stringify(battery);
-	}
+  targets: battery,
+  charged: '100%',
+  cycles: 130,
+  round: 1,
+  loop: true,
+  easing: 'linear',
+  update: function(){
+    logEL.innerHTML = JSON.stringify(battery);
+  }
 });
 ```
 
 Click to [ANIME WITH JAVSCRIPT OBJECT](../zh/anime03-js-selector.html)
+
+## Practice - Proporties
+
+### CSS Proporties
+
+> Most CSS properties will cause layout changes or repaint, and will result in choppy animation. Prioritize opacity and CSS transforms as much as possible.
+
+![anime04-css-proporties.gif](https://i.loli.net/2020/02/04/2usOtHAhaVNj9Pw.gif)
+
+* HTML
+
+```html
+<div class="main"></div>
+```
+
+* CSS
+
+```css
+.main {
+  position: relative;
+  justify-content: center;
+  text-align: center;
+  left: 20vw;
+  top: 50vh;
+  width: 5vw;
+  height: 5vw;
+  border: 0rem;
+  background-color: #2c3e50;
+}
+```
+
+* Javascript
+
+```js
+anime({
+  targets: '.main',
+  translateX: ['0', '60vw'],
+  // start from the original position to 60vw right of the original
+  backgroundColor: '#fee3e1',
+  borderRadius: ['0%', '50%'],
+  easing: 'easeInOutQuad',
+ loop: true
+});
+```
+
+Click to [ANIME WITH CSS PROPORTIES](../zh/anime04-css-proporties.html)
 
 ## Test I
 
