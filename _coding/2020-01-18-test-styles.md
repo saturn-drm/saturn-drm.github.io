@@ -137,6 +137,62 @@ var animation = anime({
 
 Click to [ANIME WITH DOM SELECTOR](../zh/anime02-dom-selector.html)
 
+### Javascript Object
+
+![anime03-js-selector.gif](https://i.loli.net/2020/02/04/pAjoGtaxfkinMlq.gif)
+
+* HTML
+
+```html
+<div class="main">
+	<p class="battery-log"></p>
+</div>
+```
+
+* CSS
+
+```css
+.main {
+  position: relative;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  text-align: center;
+  left: 50vw;
+  top: 50vh;
+}
+
+.battery-log {
+  font-size: 2rem;
+  color: #2c3e50;
+}
+```
+
+* Javascript
+
+```js
+var logEL = document.querySelector('.battery-log');
+
+var battery = {
+	charged: '0%',
+	cycles: 120   
+}
+
+var animation = anime({
+	targets: battery,
+	charged: '100%',
+	cycles: 130,
+	round: 1,
+	loop: true,
+	easing: 'linear',
+	update: function(){
+		logEL.innerHTML = JSON.stringify(battery);
+	}
+});
+```
+
+Click to [ANIME WITH JAVSCRIPT OBJECT](../zh/anime03-js-selector.html)
+
 ## Test I
 
 Click to [SVG LINE DRAWING](../zh/test-anime-2.html)
