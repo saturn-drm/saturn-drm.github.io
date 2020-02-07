@@ -239,6 +239,117 @@ anime({
 
 Click to [ANIME WITH CSS PROPORTIES](../zh/anime04-css-proporties.html)
 
+### CSS Transforms
+
+![anime05-css-transforms.gif](https://i.loli.net/2020/02/07/dv624nVpQutkDRN.gif)
+
+* HTML
+
+```html
+<div class="main">
+  <div class="transform" id="translate"></div>
+  <p>translateX:&nbsp;'60vw'</p>
+  <div class="transform" id="translatescale"></div>
+  <p>translateX:&nbsp;'60vw'</p>
+  <p>scaleY:&nbsp;2</p>
+  <div class="transform" id="translateskew"></div>
+  <p>translateX:&nbsp;'60vw'</p>
+  <p>skewY:&nbsp;30&nbsp;(default:&nbsp;deg)</p>
+  <div class="transform" id="translaterotate"></div>
+  <p>translateX:&nbsp;'60vw'</p>
+  <p>rotate:&nbsp;'1turn'&nbsp;(default:&nbsp;deg)</p>
+  <div class="transform" id="perspective"></div>
+  <p>perspective:&nbsp;20&nbsp;(default:&nbsp;px)</p>
+</div>
+```
+
+* CSS
+
+```css
+.main {
+  position: relative;
+  left: 20vw;
+  top: 5vh;
+  justify-content: center;
+  text-align: left;
+  color: #2c3e50;
+}
+
+.transform {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 3rem;
+  height: 3rem;
+  border: 0rem;
+  background-color: #2c3e50;
+}
+
+p {
+  position: relative;
+  left: 0;
+}
+```
+
+* Javascript
+
+```js
+<script class="anime">
+  anime({
+    targets: document.querySelector('#translate'),
+    translateX: '60vw',
+    easing: 'easeOutElastic(1, 0.5)',
+    duration: 2000,
+    loop: true
+  });
+</script> 
+
+<script class="anime">
+  anime({
+    targets: document.querySelector('#translatescale'),
+    translateX: '60vw',
+    scaleY: 2,
+    easing: 'easeOutElastic(1, 0.5)',
+    duration: 2000,
+    loop: true
+  })
+</script>
+
+<script class="anime">
+  anime({
+    targets: document.querySelector('#translateskew'),
+    translateX: '60vw',
+    skewY: 30,
+    easing: 'easeOutElastic(1, 0.5)',
+    duration: 2000,
+    loop: true
+  })
+</script>
+
+<script class="anime">
+  anime({
+    targets: document.querySelector('#translaterotate'),
+    translateX: '60vw',
+    rotate: '1turn',
+    easing: 'easeOutElastic(1, 0.5)',
+    duration: 2000,
+    loop: true
+  })
+</script>
+
+<script class="anime">
+  anime({
+    targets: document.querySelector('#perspective'),
+    perspective: 100,
+    easing: 'easeOutElastic(1, 0.5)',
+    duration: 2000,
+    loop: true
+  })
+</script>
+```
+
+Click to [ANIME WITH CSS TRANSFORMS](../zh/anime05-css-transforms.html)
+
 ## Test I
 
 Click to [SVG LINE DRAWING](../zh/test-anime-2.html)
