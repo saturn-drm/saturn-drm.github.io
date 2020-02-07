@@ -25,6 +25,10 @@
         <p>perspective:&nbsp;20&nbsp;(default:&nbsp;px)</p>
       </div>
 
+      <div class="domattributes" id="domblock">
+        <input class="input" value="0">
+      </div>
+
       <script class="anime">
         anime({
           targets: document.querySelector('#translate'),
@@ -74,6 +78,17 @@
           perspective: 100,
           easing: 'easeOutElastic(1, 0.5)',
           duration: 2000,
+          loop: true
+        })
+      </script>
+
+      <script class="anime">
+        anime({
+          targets: document.querySelector('.input'),
+          value: [1,1000],
+          easing: 'linear',
+          duration: 2000,
+          round: 1,
           loop: true
         })
       </script>

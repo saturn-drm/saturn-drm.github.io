@@ -239,9 +239,9 @@ anime({
 
 Click to [ANIME WITH CSS PROPORTIES](../zh/anime04-css-proporties.html)
 
-### CSS Transforms
+### CSS Transforms & DOM Attributes
 
-![anime05-css-transforms.gif](https://i.loli.net/2020/02/07/dv624nVpQutkDRN.gif)
+![anime05-css-transforms.gif](https://i.loli.net/2020/02/08/EjtCdQRN6iLB2Ka.gif)
 
 * HTML
 
@@ -260,6 +260,10 @@ Click to [ANIME WITH CSS PROPORTIES](../zh/anime04-css-proporties.html)
   <p>rotate:&nbsp;'1turn'&nbsp;(default:&nbsp;deg)</p>
   <div class="transform" id="perspective"></div>
   <p>perspective:&nbsp;20&nbsp;(default:&nbsp;px)</p>
+</div>
+
+<div class="domattributes" id="domblock">
+  <input class="input" value="0">
 </div>
 ```
 
@@ -288,6 +292,34 @@ Click to [ANIME WITH CSS PROPORTIES](../zh/anime04-css-proporties.html)
 p {
   position: relative;
   left: 0;
+}
+
+.domattributes {
+  position: relative;
+  position: relative;
+  left: 20vw;
+  top: 5vh;
+  justify-content: center;
+}
+
+.input {
+  position: relative;
+  left: 30vw;
+  top: 5vh;
+  width: 30vw;
+  height: 4vh;
+  background-color: transparent;
+  border-top-color: #2c3e50;
+  border-top-width: 1px;
+  border-bottom-color: #2c3e50;
+  border-bottom-width: 1px;
+  border-left-color: #2c3e50;
+  border-left-width: 1px;
+  border-right-color: #2c3e50;
+  border-right-width: 1px;
+  text-align: center;
+  font-size: 3vh;
+  color: #2c3e50;
 }
 ```
 
@@ -343,6 +375,17 @@ p {
     perspective: 100,
     easing: 'easeOutElastic(1, 0.5)',
     duration: 2000,
+    loop: true
+  })
+</script>
+
+<script class="anime">
+  anime({
+    targets: document.querySelector('.input'),
+    value: [1,1000],
+    easing: 'linear',
+    duration: 2000,
+    round: 1,
     loop: true
   })
 </script>
