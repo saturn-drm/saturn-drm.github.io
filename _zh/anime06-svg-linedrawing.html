@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/mystyle/anime06-svg-linedrawing.css" />
+    </head>
+    <!-- Optional content you want to persist between sections -->
+    
+    <script src="../myjs/anime-master/lib/anime.min.js"></script>
+
+    <body>
+
+      <div class="main">
+        <svg id="图层_1" data-name="图层 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="386.32" height="368.69" viewBox="0 0 386.32 368.69">
+          <defs>
+            <style>.cls-1,.cls-3,.cls-4{fill:none;}.cls-2{clip-path:url(#clip-path);}.cls-3,.cls-4{stroke:#fd746c;}.cls-3{stroke-linecap:round;stroke-linejoin:bevel;stroke-width:2px;}.cls-4{stroke-miterlimit:10;stroke-width:2px;}</style>
+            <clipPath id="clip-path" transform="translate(-762.28 -336.79)">
+              <path id="SVGID" class="cls-1" d="M1069.68,470.75a111.5,111.5,0,1,0-217.1,8.35,107.52,107.52,0,0,0,3.91,11.73,111.5,111.5,0,0,0,213.19-20.12Z"/>
+            </clipPath>
+          </defs>
+          <title>200207title</title>
+          <path fill=none stroke="#fd746c" stroke-width="1px" d="M762.28,687.61l61.21-64.34H765.25V604.06h89.21v19.29l-60,62.93h64.82l-2.74,19.2H762.28Z" transform="translate(-762.28 -336.79)"/>
+          <path fill=none stroke="#fd746c" stroke-width="1px" d="M967.89,666.64c0-17.48.13-35.68.7-46.92h-.14c-5,18.74-14.58,48.49-26.52,85.76H920.26c-9.29-32.69-20-66.52-25.33-85.74h-.14c.75,11.79,1.67,31.5,1.67,48.78v37H874.29V604.06h35.57c10.18,31.41,19.54,59,22.56,72.84h.15c4.29-16,13.45-42.64,23.32-72.84h35.72V705.48H967.89Z" transform="translate(-762.28 -336.79)"/>
+          <path fill=none stroke="#fd746c" stroke-width="1px" d="M1099.36,662.69h-56.6v23.09h62.93l-2.83,19.7h-84.71V604.06h84.27v19.71h-59.66V643h56.6Z" transform="translate(-762.28 -336.79)"/>
+          <path fill=none stroke="#fd746c" stroke-width="1px" d="M1148.6,604.06V705.48H1124V604.06Z" transform="translate(-762.28 -336.79)"/>
+          <g id="putline">
+            <g class="cls-2">
+              <path class="cls-3" d="M783.66,516.33h0c42.64-14.17,67.57-24.64,104-51" transform="translate(-762.28 -336.79)"/>
+              <path class="cls-3" d="M1018.66,450.33c41,27.92,73.43,39.52,121.36,52.29" transform="translate(-762.28 -336.79)"/>
+              <path class="cls-3" d="M902.94,455.21a437.59,437.59,0,0,0,57.32-49.56" transform="translate(-762.28 -336.79)"/>
+              <line class="cls-3" x1="188.14" y1="142.74" x2="243.38" y2="104.37"/>
+              <line class="cls-3" x1="197.98" y1="68.86" x2="188.14" y2="142.74"/>
+            </g>
+            <path class="cls-4" d="M1069.68,470.75a111.5,111.5,0,1,0-217.1,8.35,107.52,107.52,0,0,0,3.91,11.73,111.5,111.5,0,0,0,213.19-20.12Z" transform="translate(-762.28 -336.79)"/>
+          </g>
+        </svg>
+
+      </div>
+
+      <script class="anime">
+        anime({
+          targets: 'div svg path, div svg line',
+          strokeDashoffset: [anime.setDashoffset, 0],
+          easing: 'easeInOutSine',
+          duration: 2000,
+          delay: function(el, i) { return i * 100 },
+          direction: 'alternate',
+          loop: true
+        });
+      </script>
+
+    </body>
+</html>
