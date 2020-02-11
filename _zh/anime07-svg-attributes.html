@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/mystyle/anime07-svg-attributes.css" />
+    </head>
+    <!-- Optional content you want to persist between sections -->
+    
+    <script src="../myjs/anime-master/lib/anime.min.js"></script>
+
+    <body>
+
+      <div class="main">
+        <svg width="128" height="128" viewBox="0 0 128 128">
+          <filter id="displacementFilter">
+            <feTurbulence type="turbulence" baseFrequency="0" numOctaves="2" result="turbulence" style="transform: scale(1);"></feTurbulence>
+            <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="1" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap>
+          </filter>
+          <polygon points="64 128 8.574 96 8.574 32 64 0 119.426 32 119.426 96" style="filter: url(&quot;#displacementFilter&quot;); transform: scale(1);" fill="#fd746c"></polygon>
+        </svg>
+      </div>
+
+      <script class="anime">
+        var svgAttr = function() {
+        var polyEl = document.querySelector('.main polygon');
+        var feTurbulenceEl = document.querySelector('feTurbulence');
+        var feDisplacementMap = document.querySelector('feDisplacementMap');
+        polyEl.setAttribute('points', '64 68.64 8.574 100 63.446 67.68 64 4 64.554 67.68 119.426 100');
+        feTurbulenceEl.setAttribute('baseFrequency', '.05');
+        feDisplacementMap.setAttribute('scale', '15');
+        anime({
+          targets: ['.main polygon', 'feTurbulence', 'feDisplacementMap'],
+          points: '64 128 8.574 96 8.574 32 64 0 119.426 32 119.426 96',
+          baseFrequency: 0,
+          scale: 1,
+          loop: true,
+          direction: 'alternate',
+          easing: 'easeInOutExpo'
+        });
+        }
+      </script>
+
+    </body>
+</html>

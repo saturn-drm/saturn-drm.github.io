@@ -393,6 +393,10 @@ p {
 
 Click to [ANIME WITH CSS TRANSFORMS](../zh/anime05-css-transforms.html)
 
+### SVG Attributes
+
+Click to [ANIME WITH SVG ATTRIBUTES](../zh/anime07-svg-attributes.html) (Currently unfinished)
+
 ## Practice - SVG
 
 ### SVG Line Drawing
