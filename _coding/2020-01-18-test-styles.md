@@ -663,7 +663,3 @@ anime({
 ```
 
 Click to [ANIME WITH SVG LINE DRAWING](../zh/anime06-svg-linedrawing.html)
-
-## Test I
-
-Click to [SVG LINE DRAWING](../zh/test-anime-2.html)
