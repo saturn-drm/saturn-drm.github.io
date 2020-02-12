@@ -397,6 +397,202 @@ Click to [ANIME WITH CSS TRANSFORMS](../zh/anime05-css-transforms.html)
 
 Click to [ANIME WITH SVG ATTRIBUTES](../zh/anime07-svg-attributes.html) (Currently unfinished)
 
+## Practice - Property Parameters
+
+![anime08-property-parameters.gif](https://i.loli.net/2020/02/12/BGg9maVdxsF7IlW.gif)
+
+* HTML
+
+```html
+<div class="main">
+  <p class="title">Duration</p>
+  <p class="info">duration:&nbsp;1000</p>
+  <div class="duration"></div>
+  <p class="info">duration:&nbsp;2000</p>
+  <div class="duration"></div>
+
+  <p class="title">Delay</p>
+  <p class="info">delay:&nbsp;1000</p>
+  <div class="delay"></div>
+  <p class="info">delay:&nbsp;2000</p>
+  <div class="delay"></div>
+
+  <p class="title">End Delay</p>
+  <p class="info">end&nbsp;delay:&nbsp;1000</p>
+  <div class="end-delay" id="enddelaya"></div>
+  <p class="info">end&nbsp;delay:&nbsp;2000</p>
+  <div class="end-delay" id="enddelayb"></div>
+
+  <p class="title">Round</p>
+  <p class="info">round:&nbsp;1000</p>
+  <pre class="round" id="rounda"></pre>
+  <p class="info">round:&nbsp;2000</p>
+  <pre class="round" id="roundb"></pre>
+
+  <p class="title">Specific&nbsp;Property&nbsp;Parameters</p>
+  <div class="specific"></div>
+
+</div>
+```
+
+* CSS
+
+```css
+.main {
+  position: relative;
+  left: 20vw;
+  top: 5vh;
+  justify-content: center;
+  text-align: left;
+  color: #2c3e50;
+}
+
+.duration, .delay, .end-delay, .specific {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 2rem;
+  height: 2rem;
+  border: 0rem;
+  background-color: #2c3e50;
+}
+
+.round {
+  position: relative;
+  left: 0;
+  right: 0;
+  color: #2c3e50;
+  font-size: 1rem;
+  text-align: center;
+  left: 30vw;
+}
+
+.title {
+  position: relative;
+  left: 0;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.info {
+  position: relative;
+  left: 0;
+  font-size: 0.9rem;
+  font-weight: 200;
+}
+```
+
+### Duration + Function Based Parameters
+
+* Javascript
+
+```js
+<script class="anime">
+  anime({
+    targets: '.duration',
+    translateX: '60vw',
+    duration: function(el, i){
+      return (i + 1) * 1000;
+    },
+    loop: true
+  });
+</script>
+```
+
+### Delay + Function Based Parameters
+
+* Javascript
+
+```js
+<script class="anime">
+  anime({
+    targets: '.delay',
+    translateX: '60vw',
+    delay: function(el, i){
+      return (i + 1) * 1000;
+    },
+    loop: true
+  });
+</script>
+```
+
+### End Delay
+
+* Javascript
+
+```js
+<script class="anime">
+  animationa = anime({
+    targets: document.querySelector('#enddelaya'),
+    translateX: '60vw',
+    endDelay: 1000,
+    direction: 'alternate',
+    loop: true
+  });
+  animationb = anime({
+    targets: document.querySelector('#enddelayb'),
+    translateX: '60vw',
+    endDelay: 2000,
+    direction: 'alternate',
+    loop: true
+  });
+</script>
+```
+
+### Round
+
+* Javascript
+
+```js
+<script class="anime">
+  animationa = anime({
+    targets: document.querySelectorAll('#rounda'),
+    innerHTML: [0,100],
+    easing: 'linear',
+    round: 1,
+    loop: true
+  })
+  animationb = anime({
+    targets: document.querySelectorAll('#roundb'),
+    innerHTML: [0,100],
+    easing: 'linear',
+    round: 10,
+    loop: true
+  })
+</script>
+```
+
+### Specific Property Parameters
+
+* Javascript
+
+```js
+<script class="anime">
+  anime({
+    targets: '.specific',
+    translateX: {
+      value: '60vw',
+      duration: 800
+    },
+    rotate: {
+      value: 360,
+      duration: 1800,
+      easing: 'easeInOutSine'
+    },
+    scale: {
+      value: 2,
+      duration: 1600,
+      delay: 800,
+      easing: 'easeInOutQuart'
+    },
+    delay: 250,
+    loop: true
+  });
+</script>
+```
+
+Click to [ANIME WITH PROPERTY PARAMETERS](../zh/anime08-property-parameters.html)
+
 ## Practice - SVG
 
 ### SVG Line Drawing

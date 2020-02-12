@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/mystyle/anime08-property-parameters.css" />
+    </head>
+    <!-- Optional content you want to persist between sections -->
+    
+    <script src="../myjs/anime-master/lib/anime.min.js"></script>
+
+    <body>
+
+      <div class="main">
+        <p class="title">Duration</p>
+        <p class="info">duration:&nbsp;1000</p>
+        <div class="duration"></div>
+        <p class="info">duration:&nbsp;2000</p>
+        <div class="duration"></div>
+
+        <p class="title">Delay</p>
+        <p class="info">delay:&nbsp;1000</p>
+        <div class="delay"></div>
+        <p class="info">delay:&nbsp;2000</p>
+        <div class="delay"></div>
+
+        <p class="title">End Delay</p>
+        <p class="info">end&nbsp;delay:&nbsp;1000</p>
+        <div class="end-delay" id="enddelaya"></div>
+        <p class="info">end&nbsp;delay:&nbsp;2000</p>
+        <div class="end-delay" id="enddelayb"></div>
+
+        <p class="title">Round</p>
+        <p class="info">round:&nbsp;1000</p>
+        <pre class="round" id="rounda"></pre>
+        <p class="info">round:&nbsp;2000</p>
+        <pre class="round" id="roundb"></pre>
+
+        <p class="title">Specific&nbsp;Property&nbsp;Parameters</p>
+        <div class="specific"></div>
+
+      </div>
+
+      <script class="anime">
+        anime({
+          targets: '.duration',
+          translateX: '60vw',
+          duration: function(el, i){
+            return (i + 1) * 1000;
+          },
+          loop: true
+        });
+      </script>
+
+      <script class="anime">
+        anime({
+          targets: '.delay',
+          translateX: '60vw',
+          delay: function(el, i){
+            return (i + 1) * 1000;
+          },
+          loop: true
+        });
+      </script>
+
+      <script class="anime">
+        animationa = anime({
+          targets: document.querySelector('#enddelaya'),
+          translateX: '60vw',
+          endDelay: 1000,
+          direction: 'alternate',
+          loop: true
+        });
+        animationb = anime({
+          targets: document.querySelector('#enddelayb'),
+          translateX: '60vw',
+          endDelay: 2000,
+          direction: 'alternate',
+          loop: true
+        });
+      </script>
+
+      <script class="anime">
+        animationa = anime({
+          targets: document.querySelectorAll('#rounda'),
+          innerHTML: [0,100],
+          easing: 'linear',
+          round: 1,
+          loop: true
+        })
+        animationb = anime({
+          targets: document.querySelectorAll('#roundb'),
+          innerHTML: [0,100],
+          easing: 'linear',
+          round: 10,
+          loop: true
+        })
+      </script>
+
+      <script class="anime">
+        anime({
+          targets: '.specific',
+          translateX: {
+            value: '60vw',
+            duration: 800
+          },
+          rotate: {
+            value: 360,
+            duration: 1800,
+            easing: 'easeInOutSine'
+          },
+          scale: {
+            value: 2,
+            duration: 1600,
+            delay: 800,
+            easing: 'easeInOutQuart'
+          },
+          delay: 250,
+          loop: true
+        });
+      </script>
+
+    </body>
+</html>
