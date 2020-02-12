@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/mystyle/anime03-js-selector.css" />
+    </head>
+    <!-- Optional content you want to persist between sections -->
+    
+    <script src="../myjs/anime-master/lib/anime.min.js"></script>
+
+    <body>
+
+      <div class="main">
+        <p class="battery-log"></p>
+      </div>
+
+      <script class="anime">
+        var logEL = document.querySelector('.battery-log');
+
+        var battery = {
+          charged: '0%',
+          cycles: 120   
+        }
+
+        var animation = anime({
+          targets: battery,
+          charged: '100%',
+          cycles: 130,
+          round: 1,
+          loop: true,
+          easing: 'linear',
+          update: function(){
+            logEL.innerHTML = JSON.stringify(battery);
+          }
+        });
+      </script> 
+
+    </body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/mystyle/anime05-css-transforms.css" />
+    </head>
+    <!-- Optional content you want to persist between sections -->
+    
+    <script src="../myjs/anime-master/lib/anime.min.js"></script>
+
+    <body>
+
+      <div class="main">
+        <div class="transform" id="translate"></div>
+        <p>translateX:&nbsp;'60vw'</p>
+        <div class="transform" id="translatescale"></div>
+        <p>translateX:&nbsp;'60vw'</p>
+        <p>scaleY:&nbsp;2</p>
+        <div class="transform" id="translateskew"></div>
+        <p>translateX:&nbsp;'60vw'</p>
+        <p>skewY:&nbsp;30&nbsp;(default:&nbsp;deg)</p>
+        <div class="transform" id="translaterotate"></div>
+        <p>translateX:&nbsp;'60vw'</p>
+        <p>rotate:&nbsp;'1turn'&nbsp;(default:&nbsp;deg)</p>
+        <div class="transform" id="perspective"></div>
+        <p>perspective:&nbsp;20&nbsp;(default:&nbsp;px)</p>
+      </div>
+
+      <div class="domattributes" id="domblock">
+        <input class="input" value="0">
+      </div>
+
+      <script class="anime">
+        anime({
+          targets: document.querySelector('#translate'),
+          translateX: '60vw',
+          easing: 'easeOutElastic(1, 0.5)',
+          duration: 2000,
+          loop: true
+        });
+      </script> 
+
+      <script class="anime">
+        anime({
+          targets: document.querySelector('#translatescale'),
+          translateX: '60vw',
+          scaleY: 2,
+          easing: 'easeOutElastic(1, 0.5)',
+          duration: 2000,
+          loop: true
+        })
+      </script>
+
+      <script class="anime">
+        anime({
+          targets: document.querySelector('#translateskew'),
+          translateX: '60vw',
+          skewY: 30,
+          easing: 'easeOutElastic(1, 0.5)',
+          duration: 2000,
+          loop: true
+        })
+      </script>
+
+      <script class="anime">
+        anime({
+          targets: document.querySelector('#translaterotate'),
+          translateX: '60vw',
+          rotate: '1turn',
+          easing: 'easeOutElastic(1, 0.5)',
+          duration: 2000,
+          loop: true
+        })
+      </script>
+
+      <script class="anime">
+        anime({
+          targets: document.querySelector('#perspective'),
+          perspective: 100,
+          easing: 'easeOutElastic(1, 0.5)',
+          duration: 2000,
+          loop: true
+        })
+      </script>
+
+      <script class="anime">
+        anime({
+          targets: document.querySelector('.input'),
+          value: [1,1000],
+          easing: 'linear',
+          duration: 2000,
+          round: 1,
+          loop: true
+        })
+      </script>
+
+    </body>
+</html>

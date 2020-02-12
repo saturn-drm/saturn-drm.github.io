@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/mystyle/anime04-css-proporties.css" />
+    </head>
+    <!-- Optional content you want to persist between sections -->
+    
+    <script src="../myjs/anime-master/lib/anime.min.js"></script>
+
+    <body>
+
+      <div class="main"></div>
+
+      <script class="anime">
+        anime({
+          targets: '.main',
+          translateX: ['0', '60vw'], // start from the original position to 60vw right of the original
+          backgroundColor: '#fee3e1',
+          borderRadius: ['0%', '50%'],
+          easing: 'easeInOutQuad',
+          loop: true
+        });
+      </script> 
+
+    </body>
+</html>

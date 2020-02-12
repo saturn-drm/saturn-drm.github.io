@@ -1,0 +1,25 @@
+body,
+html{
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 100vw;
+  max-height: 100vh;
+  background-color: #fd746c;
+}
+
+.main {
+  position: relative;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  text-align: center;
+  left: 50vw;
+  top: 50vh;
+}
+
+.battery-log {
+  font-size: 2rem;
+  color: #2c3e50;
+}

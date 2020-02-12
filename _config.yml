@@ -201,6 +201,7 @@ exclude:
   - /test
   - /vendor
   - /specialfolder
+  - /_site
 
 # collections_dir: /
 collections:
