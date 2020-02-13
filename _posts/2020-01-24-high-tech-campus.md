@@ -1,5 +1,5 @@
 ---
-title: CONCENTRATION & REACHING-OUT - HIGH-TECH CAMPUS
+title: HIGH-TECH CAMPUS IN SUBURBAN
 tags: [Campus, Boston, GSD, Urban design]
 cover: https://i.loli.net/2020/01/28/9wK7sML53h4xJcd.jpg
 mode: immersive
@@ -31,9 +31,10 @@ key: hightechcampus
 # Abstract
 
 The campus focused on outdoor gear industry, which is one of the largest economic sectors in the states. The site and neighbor form an attractive leisure landscape thanks to the combination of the natural resource and its strong transportation infrastructure.
-The campus acted as a catalyst for reconfiguration of the surrounding suburban landscape by overlaying green infrastructure and concentrated campus core.
 
-<!--more-->There are two frameworks in the suburban environment:* The relation/isolation between the nature and the developed built environment;* An overdriven rationality about life, work and leisure.
+<!--more-->
+The campus acted as a catalyst for reconfiguration of the surrounding suburban landscape by overlaying green infrastructure and concentrated campus core.
+There are two frameworks in the suburban environment:* The relation/isolation between the nature and the developed built environment;* An overdriven rationality about life, work and leisure.
 
 ---
 
