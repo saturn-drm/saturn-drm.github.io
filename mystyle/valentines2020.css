@@ -12,6 +12,7 @@ html{
 .container {
   position: relative;
   height: 900px;
+  margin: 0 auto;
   justify-content: center;
   text-align: left;
   color: #2c3e50;
@@ -21,7 +22,6 @@ html{
   position: absolute;
   width: auto;
   height: auto;
-  left: calc(50vw - 600px);
   overflow: hidden;
 }
 

@@ -8,7 +8,10 @@ function initComparisons() {
       compareImages(x[i]);
     }
     function compareImages(img) {
-      var slider, img, clicked = 0, w, h;
+      var slider, img, clicked = 0, w, h, w0, h0;
+      /* Convert the 1vh, 1vw to px */
+      w0 = document.documentElement.clientWidth / 100;
+      h0 = document.documentElement.clientHeight / 100;
       /* Get the width and height of the img element */
       w = img.offsetWidth;
       h = img.offsetHeight;
