@@ -81,6 +81,12 @@ Based on these thinkings, the topic is focused on the existing urban space - the
 
 ![05voids.jpg](https://i.loli.net/2020/02/13/WDaT361NOlZJUVt.jpg)
 
+## Layout And Scenarios
+
+![06layout.jpg](https://i.loli.net/2020/02/13/spjbP6HFia1Xu8k.jpg)
+
+![07scenarios.jpg](https://i.loli.net/2020/02/13/VJtU4KDW8o65OaM.jpg)
+
 ## Programs
 
 ![08programs.jpg](https://i.loli.net/2020/02/13/x8flWhEpTQCb9FV.jpg)
