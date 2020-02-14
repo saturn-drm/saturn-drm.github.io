@@ -667,9 +667,9 @@ Click to [ANIME WITH SVG LINE DRAWING](../zh/anime06-svg-linedrawing.html)
 # IMG Before-After
 
 > For test;
-
+> 
 > The layout need refurbishing, as well as the convertor.
-
+> 
 > For Valentine's Day 2020.
 
 ![valentines2020.gif](https://i.loli.net/2020/02/14/dK8lnEBcMtwIW9i.gif)
