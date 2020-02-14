@@ -9,13 +9,11 @@ html{
   background-color: #fd746c;
 }
 
-.container {
+* {box-sizing: border-box;}
+
+.img-comp-container {
   position: relative;
-  height: 900px;
-  margin: 0 auto;
-  justify-content: center;
-  text-align: left;
-  color: #2c3e50;
+  height: 900px; /*should be the same height as the images*/
 }
 
 .img-comp-img {
@@ -23,6 +21,16 @@ html{
   width: auto;
   height: auto;
   overflow: hidden;
+}
+
+#group-1 {
+  position: absolute;
+  top: 0;
+}
+
+#group-2 {
+  position: absolute;
+  top: 900px;
 }
 
 .img-comp-img img {
@@ -34,9 +42,8 @@ html{
   position: absolute;
   z-index: 9;
   cursor: ew-resize;
-  /*set the appearance of the slider:*/
   background: url(/assets/svg/valentines2020.svg);
+  /*set the appearance of the slider:*/
   width: 40px;
   height: 900px;
-  /* opacity: 0.7; */
 }
