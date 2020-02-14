@@ -33,6 +33,16 @@ html{
   top: 900px;
 }
 
+#group-3 {
+  position: absolute;
+  top: 1800px;
+}
+
+#group-4 {
+  position: absolute;
+  top: 2700px;
+}
+
 .img-comp-img img {
   display: block;
   vertical-align: middle;
