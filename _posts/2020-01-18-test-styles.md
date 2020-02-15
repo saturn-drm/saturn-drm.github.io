@@ -675,3 +675,68 @@ Click to [ANIME WITH SVG LINE DRAWING](../zh/anime06-svg-linedrawing.html)
 ![valentines2020.gif](https://i.loli.net/2020/02/14/dK8lnEBcMtwIW9i.gif)
 
 Click to [IMG BEFORE-AFTER](../zh/valentines2020.html)
+
+# Back-To-Top Button
+
+![backtotop.gif](https://i.loli.net/2020/02/15/PqFwYArd1ISbi9H.gif)
+
+* HTML
+
+```html
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+```
+
+* CSS
+
+```css
+html {
+  scroll-behavior: smooth;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  height: 40px;
+  width: 40px;
+  bottom: 20px;
+  left: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #fd746c;
+  color: #2c3e50;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+#myBtn:hover {
+  background-color: #2c3e50;
+  color: #fd746c;
+  transition-duration: 0.5s;
+}
+```
+
+* Javascript
+
+```js
+<script>
+  var mybutton = document.getElementById("myBtn");
+  
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+  
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+</script>
+```
+
+Click to [BACK-TO-TOP](../zh/valentines2020.html)

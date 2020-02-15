@@ -979,6 +979,74 @@
 <p><img src="https://i.loli.net/2020/02/14/dK8lnEBcMtwIW9i.gif" alt="valentines2020.gif" /></p>
 
 <p>Click to <a href="../zh/valentines2020.html">IMG BEFORE-AFTER</a></p>
+
+<h1 id="back-to-top-button">Back-To-Top Button</h1>
+
+<p><img src="https://i.loli.net/2020/02/15/PqFwYArd1ISbi9H.gif" alt="backtotop.gif" /></p>
+
+<ul>
+  <li>HTML</li>
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;button</span> <span class="na">onclick=</span><span class="s">"topFunction()"</span> <span class="na">id=</span><span class="s">"myBtn"</span> <span class="na">title=</span><span class="s">"Go to top"</span><span class="nt">&gt;</span>Top<span class="nt">&lt;/button&gt;</span>
+</code></pre></div></div>
+
+<ul>
+  <li>CSS</li>
+</ul>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">html</span> <span class="p">{</span>
+  <span class="py">scroll-behavior</span><span class="p">:</span> <span class="n">smooth</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nf">#myBtn</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+  <span class="nl">position</span><span class="p">:</span> <span class="nb">fixed</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">40px</span><span class="p">;</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">40px</span><span class="p">;</span>
+  <span class="nl">bottom</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+  <span class="nl">left</span><span class="p">:</span> <span class="m">30px</span><span class="p">;</span>
+  <span class="nl">z-index</span><span class="p">:</span> <span class="m">99</span><span class="p">;</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+  <span class="nl">outline</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="m">#fd746c</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="m">#2c3e50</span><span class="p">;</span>
+  <span class="nl">cursor</span><span class="p">:</span> <span class="nb">pointer</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nf">#myBtn</span><span class="nd">:hover</span> <span class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="m">#2c3e50</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="m">#fd746c</span><span class="p">;</span>
+  <span class="nl">transition-duration</span><span class="p">:</span> <span class="m">0.5s</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Javascript</li>
+</ul>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
+  <span class="kd">var</span> <span class="nx">mybutton</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">myBtn</span><span class="dl">"</span><span class="p">);</span>
+  
+  <span class="nb">window</span><span class="p">.</span><span class="nx">onscroll</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span><span class="nx">scrollFunction</span><span class="p">()};</span>
+  
+  <span class="kd">function</span> <span class="nx">scrollFunction</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">scrollTop</span> <span class="o">&gt;</span> <span class="mi">20</span> <span class="o">||</span> <span class="nb">document</span><span class="p">.</span><span class="nx">documentElement</span><span class="p">.</span><span class="nx">scrollTop</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">mybutton</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">block</span><span class="dl">"</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="nx">mybutton</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">none</span><span class="dl">"</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  
+  <span class="kd">function</span> <span class="nx">topFunction</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">scrollTop</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">documentElement</span><span class="p">.</span><span class="nx">scrollTop</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span></code></pre></div></div>
+
+<p>Click to <a href="../zh/valentines2020.html">BACK-TO-TOP</a></p>
 </div><div class="d-print-none"><footer class="article__footer"><span>Last updated
       <time itemprop="dateModified" datetime="2020-02-04T00:00:00-05:00">Feb 04, 2020</time>
     </span><!-- start custom article footer snippet -->
