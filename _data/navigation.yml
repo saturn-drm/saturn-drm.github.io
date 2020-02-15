@@ -62,7 +62,7 @@ header:
       fr-FR   : *FR
       fr-LU   : *FR
       # @end locale config
-    url: /zh/screen-slide-demo.html
+    url: /about.html
 
 side-blog:
   
