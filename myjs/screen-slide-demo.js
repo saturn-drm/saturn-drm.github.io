@@ -31,9 +31,7 @@ goToSlide($currentSlide);
  *   Adding event listeners
  * */
 
-$(document).on('touchmove', function () {
-    $(document).trigger('mousewheel');
-});
+$document.on("touchmove", ontouchmove)
 $window.on("resize", onResize).resize();
 $window.on("mousewheel DOMMouseScroll", onMouseWheel);
 $document.on("keydown", onKeyDown);
@@ -98,6 +96,17 @@ function onMouseWheel(event) {
     }
 
     event.preventDefault();
+}
+
+function ontouchmove(event) {
+    var y = event.touches[0].clientY;
+    var dy = document.documentElement.clientHeight;
+    if (y < dy / 2) {
+        goToNextSlide();
+    }
+    else if (y > dy / 2) {
+        goToPrevSlide();
+    }
 }
 
 /*
