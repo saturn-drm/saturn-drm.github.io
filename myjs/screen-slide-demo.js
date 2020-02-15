@@ -32,13 +32,13 @@ goToSlide($currentSlide);
  * */
 
 $window.on("resize", onResize).resize();
-$window.on("mousewheel DOMMouseScroll", onMouseWheel);
+$window.on("mousewheel DOMMouseScroll touchmove", onMouseWheel);
 $document.on("keydown", onKeyDown);
 $navButtons.on("click", onNavButtonClick);
 $navGoPrev.on("click", goToPrevSlide);
 $navGoNext.on("click", goToNextSlide);
 
-Draggable.create(".slide", { type: "scrollTop", edgeResistance: 0.5 });
+// Draggable.create(".slide", { type: "scrollTop", edgeResistance: 0.5 });
 
 /*
  *   Internal functions
