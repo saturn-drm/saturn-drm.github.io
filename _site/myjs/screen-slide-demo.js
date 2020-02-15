@@ -31,12 +31,15 @@ goToSlide($currentSlide);
  *   Adding event listeners
  * */
 
+$window.on("touchmove", ontouchmove);
 $window.on("resize", onResize).resize();
 $window.on("mousewheel DOMMouseScroll", onMouseWheel);
 $document.on("keydown", onKeyDown);
 $navButtons.on("click", onNavButtonClick);
 $navGoPrev.on("click", goToPrevSlide);
 $navGoNext.on("click", goToNextSlide);
+
+// Draggable.create(".slide", { type: "scrollTop", edgeResistance: 0.5 });
 
 /*
  *   Internal functions
@@ -93,6 +96,17 @@ function onMouseWheel(event) {
     }
 
     event.preventDefault();
+}
+
+function ontouchmove(event) {
+    var y = event.targetTouches[0].pageY;
+    var dy = document.documentElement.clientHeight;
+    if (y < dy / 2) {
+        goToNextSlide();
+    }
+    else if (y > dy / 2) {
+        goToPrevSlide();
+    }
 }
 
 /*
