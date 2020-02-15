@@ -31,8 +31,11 @@ goToSlide($currentSlide);
  *   Adding event listeners
  * */
 
+$(document).on('touchmove', function () {
+    $(document).trigger('mousewheel');
+});
 $window.on("resize", onResize).resize();
-$window.on("mousewheel DOMMouseScroll touchmove", onMouseWheel);
+$window.on("mousewheel DOMMouseScroll", onMouseWheel);
 $document.on("keydown", onKeyDown);
 $navButtons.on("click", onNavButtonClick);
 $navGoPrev.on("click", goToPrevSlide);
