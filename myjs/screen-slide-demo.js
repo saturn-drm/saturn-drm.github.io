@@ -99,7 +99,7 @@ function onMouseWheel(event) {
 }
 
 function ontouchmove(event) {
-    var y = event.touches[0].clientY;
+    var y = event.targetTouches[0].pageY;
     var dy = document.documentElement.clientHeight;
     if (y < dy / 2) {
         goToNextSlide();
