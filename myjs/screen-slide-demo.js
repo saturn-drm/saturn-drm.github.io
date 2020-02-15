@@ -31,7 +31,7 @@ goToSlide($currentSlide);
  *   Adding event listeners
  * */
 
-$document.on("touchmove", ontouchmove)
+$window.on("touchmove", ontouchmove)
 $window.on("resize", onResize).resize();
 $window.on("mousewheel DOMMouseScroll", onMouseWheel);
 $document.on("keydown", onKeyDown);
