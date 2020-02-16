@@ -36,6 +36,8 @@ The modules are in the list with the command
 
 ![200216.png](https://i.loli.net/2020/02/16/uObRqny8eEG4w3Q.png)
 
+<!--more-->
+
 However, when debugged in VSCode
 
 ```python
@@ -51,7 +53,5 @@ there is the error of
 When installing the modules, use the command
 
 `sudo -H python -m pip install pandas / IPython`
-
-<!--more-->
 
 ---
