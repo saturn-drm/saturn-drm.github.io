@@ -70,6 +70,8 @@ side-blog:
     children:
       - title:  Test Style
         url:    /coding/2020-01-18-test-styles
+      - title:  Failed to Import Module Installed through PIP
+        url:    /coding/2020-02-16-fail-to-import-python-module
       - title:  Compile scss/sass File to css
         url:    /coding/2020-01-27-compile-scss
       - title:  Google Search Console
