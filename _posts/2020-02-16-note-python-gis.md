@@ -128,4 +128,13 @@ polygon area at index 3 is: 87.461
 polygon area at index 4 is: 0.001
 ```
 
+## Function groupby()
+
+The function gives an object called `DataFrameGroupBy`, similar to list of keys and values (in a dictionary) that we can iterate over.
+
+```python
+grouped = data.groupby('BINOMIAL')
+for key, values in grouped:
+    individual_fish = values
+```
 ---
