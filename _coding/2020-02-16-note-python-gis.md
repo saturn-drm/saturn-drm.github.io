@@ -60,4 +60,37 @@ print (poly_type3)
 >> <class 'shapely.geometry.polygon.Polygon'>
 ```
 
+## polygon with hole
+
+The output of `print (polygon)` is `POLYGON ((2.2 4.2, 7.2 -25.1, 9.26 -2.456, 2.2 4.2))`, which has double parentheses. That's because the polygon can contain holes.
+
+### create the polygon with a hole
+
+```python
+# the points list of exterior polygon
+points_exterior = [(-180, 90), (-180, -90), (180, -90), (180, 90)]
+
+# the points list of hole polygon
+# there could be multiple holes, thus input a list of holes
+points_hole = [[(-170, 80), (-170, -80), (170, -80), (170, 80)]]
+
+# syntax of the exterior polygon
+polygon_exterior = Polygon(shell=points_exterior)
+
+# syntax of the polygon with hole
+polygon_with_hole = Polygon(shell=points_exterior, holes=points_hole)
+
+print (polygon_exterior)
+print (polygon_with_hole)
+print (type(polygon_with_hole))
+```
+
+### output
+
+```python
+POLYGON ((-180 90, -180 -90, 180 -90, 180 90, -180 90))
+POLYGON ((-180 90, -180 -90, 180 -90, 180 90, -180 90), (-170 80, -170 -80, 170 -80, 170 80, -170 80))
+<class 'shapely.geometry.polygon.Polygon'>
+```
+
 ---
