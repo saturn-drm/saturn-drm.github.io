@@ -19,7 +19,7 @@ lightbox: false
 show_author_profile: true
 show_subscribe: true
 sharing: true
-modify_date: 2020-02-16
+modify_date: 2020-02-17
 license: false
 key: blogGISNote
 ---
@@ -91,6 +91,41 @@ print (type(polygon_with_hole))
 POLYGON ((-180 90, -180 -90, 180 -90, 180 90, -180 90))
 POLYGON ((-180 90, -180 -90, 180 -90, 180 90, -180 90), (-170 80, -170 -80, 170 -80, 170 80, -170 80))
 <class 'shapely.geometry.polygon.Polygon'>
+```
+
+# Geopandas
+
+## Reading and Plotting a SHP
+
+```python
+import geopandas
+import matplotlib.pyplot as plt
+
+data = geopandas.read_file('./DataLesson2/DAMSELFISH_distributions.shp')
+
+data.plot()
+plt.show()
+```
+
+## Loop with Function iterrows()
+
+### usage
+
+The function iterrows() returns the index of each row, in addition to an object containing the row itself.
+
+```python
+for index, row in selection1.iterrows():
+    poly_area = row['geometry'].area
+    print('polygon area at index %i is: %.3f' %(index, poly_area))
+```
+
+### output
+```python
+polygon area at index 0 is: 19.396
+polygon area at index 1 is: 6.146
+polygon area at index 2 is: 2.697
+polygon area at index 3 is: 87.461
+polygon area at index 4 is: 0.001
 ```
 
 ---
