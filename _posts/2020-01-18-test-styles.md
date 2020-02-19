@@ -199,7 +199,7 @@ Click to [ANIME WITH JAVSCRIPT OBJECT](../zh/anime03-js-selector.html)
 
 > Most CSS properties will cause layout changes or repaint, and will result in choppy animation. Prioritize opacity and CSS transforms as much as possible.
 
-![anime04-css-proporties.gif](https://i.loli.net/2020/02/04/2usOtHAhaVNj9Pw.gif)
+![anime04-css-proporties.gif](../assets/images/blog/anime04-css-proporties.gif)
 
 * HTML
 
