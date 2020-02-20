@@ -13,10 +13,10 @@
       },
       h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
     })(document);
-  </script><title>神女赋 - Zihan Mei's Personal Site</title>
+  </script><title>Notes in Python GIS - Zihan Mei's Personal Site</title>
 
-<meta name="description" content="作者：宋玉楚襄王与宋玉游于云梦之浦，使玉赋高唐之事。其夜玉寝，果梦与神女遇，其状甚丽，玉异之。明日，以白王。王曰：“其梦若何？”玉对曰：“晡夕之后，精神恍忽，若有所喜，纷纷扰扰，未知何意？目色仿佛，乍若有记：见一妇人，状甚奇异。寐而梦之，寤不自识；罔兮不乐，怅然失志。于是抚心定气，复见所梦。”王曰：“状何如也？”...">
-<link rel="canonical" href="http://localhost:4000/digest/2020-01-22-%E7%A5%9E%E5%A5%B3%E8%B5%8B.html"><link rel="alternate" type="application/rss+xml" title="Zihan Mei's Personal Site" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="manifest" href="/site.webmanifest"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="shortcut icon" href="/favicon.ico">
+<meta name="description" content="ShapelyMethods to access Geometry Typeshapely function - type  stringpoly_type1 = poly1.typeprint (poly_type1)&gt;&gt; Polygon">
+<link rel="canonical" href="http://localhost:4000/post/2020/02/16/note-python-gis.html"><link rel="alternate" type="application/rss+xml" title="Zihan Mei's Personal Site" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="manifest" href="/site.webmanifest"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="shortcut icon" href="/favicon.ico">
 
 <meta name="msapplication-TileColor" content="#da532c"><meta name="msapplication-config" content="/browserconfig.xml">
 
@@ -290,22 +290,141 @@
 
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 
-<!-- end custom main top snippet --><article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>神女赋</h1></header></div><meta itemprop="headline" content="神女赋"><div class="article__info clearfix"><ul class="left-col menu"><li>
+<!-- end custom main top snippet --><article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>Notes in Python GIS</h1></header></div><meta itemprop="headline" content="Notes in Python GIS"><div class="article__info clearfix"><ul class="left-col menu"><li>
               <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=Digest">Digest</a>
+                href="/archive.html?tag=Python">Python</a>
             </li><li>
               <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=Classical+Chinese+Literature">Classical Chinese Literature</a>
-            </li></ul></div><meta itemprop="author" content="Zihan Mei"/><meta itemprop="datePublished" content="2020-01-22T00:00:00-05:00">
-    <meta itemprop="keywords" content="Digest,Classical Chinese Literature"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
+                href="/archive.html?tag=GIS">GIS</a>
+            </li></ul></div><meta itemprop="author" content="Zihan Mei"/><meta itemprop="datePublished" content="2020-02-16T00:00:00-05:00">
+    <meta itemprop="keywords" content="Python,GIS"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
-<!-- end custom article top snippet --><div class="article__content" itemprop="articleBody"><p>作者：宋玉</p>
+<!-- end custom article top snippet --><div class="article__content" itemprop="articleBody"><h1 id="shapely">Shapely</h1>
 
-<p>楚襄王与宋玉游于云梦之浦，使玉赋高唐之事。其夜玉寝，果梦与神女遇，其状甚丽，玉异之。明日，以白王。王曰：“其梦若何？”玉对曰：“晡夕之后，精神恍忽，若有所喜，纷纷扰扰，未知何意？目色仿佛，乍若有记：见一妇人，状甚奇异。寐而梦之，寤不自识；罔兮不乐，怅然失志。于是抚心定气，复见所梦。”王曰：“状何如也？”玉曰：“茂矣美矣，诸好备矣。盛矣丽矣，难测究矣。上古既无，世所未见，瑰姿玮态，不可胜赞。其始来也，耀乎若白日初出照屋梁；其少进也，皎若明月舒其光。须臾之间，美貌横生：晔兮如华，温乎如莹。五色并驰，不可殚形。详而视之，夺人目精。其盛饰也，则罗纨绮绩盛文章，极服妙采照万方。振绣衣，被袿裳，秾不短，纤不长，步裔裔兮曜殿堂，忽兮改容，婉若游龙乘云翔。嫷披服，侻薄装，沐兰泽，含若芳。性合适，宜侍旁，顺序卑，调心肠。”王曰：“若此盛矣，试为寡人赋之。”玉曰：“唯唯。”</p>
+<h2 id="methods-to-access-geometry-type">Methods to access Geometry Type</h2>
 
-<p>夫何神女之姣丽兮，含阴阳之渥饰。披华藻之可好兮，若翡翠之奋翼。其象无双，其美无极；毛嫱鄣袂，不足程式；西施掩面，比之无色。近之既妖，远之有望，骨法多奇，应君之相，视之盈目，孰者克尚。私心独悦，乐之无量；交希恩疏，不可尽畅。他人莫睹，王览其状。其状峨峨，何可极言。貌丰盈以庄姝兮，苞温润之玉颜。眸子炯其精朗兮，瞭多美而可视。眉联娟以蛾扬兮，朱唇的其若丹。素质干之醲实兮，志解泰而体闲。既姽婳于幽静兮，又婆娑乎人间。宜高殿以广意兮，翼故纵而绰宽。动雾以徐步兮，拂声之珊珊。望余帷而延视兮，若流波之将澜。奋长袖以正衽兮，立踯躅而不安。澹清静其愔嫕兮，性沉详而不烦。时容与以微动兮，志未可乎得原。意似近而既远兮，若将来而复旋。褰余帷而请御兮，愿尽心之惓惓。怀贞亮之洁清兮，卒与我兮相难。陈嘉辞而云对兮，吐芬芳其若兰。精交接以来往兮，心凯康以乐欢。神独亨而未结兮，魂茕茕以无端。含然诺其不分兮，扬音而哀叹！薄怒以自持兮，曾不可乎犯干。</p>
+<h3 id="shapely-function---type">shapely function - type</h3>
 
-<p>于是摇佩饰，鸣玉鸾；奁衣服，敛容颜；顾女师，命太傅。欢情未接，将辞而去；迁延引身，不可亲附。似逝未行，中若相首；目略微眄，精采相授。志态横出，不可胜记。意离未绝，神心怖覆；礼不遑讫，辞不及究；愿假须臾，神女称遽。徊肠伤气，颠倒失据，黯然而暝，忽不知处。情独私怀，谁者可语？惆怅垂涕，求之至曙。</p>
+<blockquote>
+  <p>string</p>
+</blockquote>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">poly_type1</span> <span class="o">=</span> <span class="n">poly1</span><span class="o">.</span><span class="nb">type</span>
+<span class="k">print</span> <span class="p">(</span><span class="n">poly_type1</span><span class="p">)</span>
+<span class="o">&gt;&gt;</span> <span class="n">Polygon</span>
+</code></pre></div></div>
+
+<!--more-->
+
+<h3 id="shapely-function---geom_type">shapely function - geom_type</h3>
+
+<blockquote>
+  <p>string</p>
+</blockquote>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">poly_type2</span> <span class="o">=</span> <span class="n">poly1</span><span class="o">.</span><span class="n">geom_type</span>
+<span class="k">print</span> <span class="p">(</span><span class="n">poly_type2</span><span class="p">)</span>
+<span class="o">&gt;&gt;</span> <span class="n">Polygon</span>
+</code></pre></div></div>
+
+<h3 id="python-function---type">Python function - type</h3>
+
+<blockquote>
+  <p>Python class format</p>
+</blockquote>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">poly_type3</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="n">poly1</span><span class="p">)</span>
+<span class="k">print</span> <span class="p">(</span><span class="n">poly_type3</span><span class="p">)</span>
+<span class="o">&gt;&gt;</span> <span class="o">&lt;</span><span class="k">class</span> <span class="err">'</span><span class="nc">shapely</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">polygon</span><span class="o">.</span><span class="n">Polygon</span><span class="s">'&gt;</span><span class="err">
+</span></code></pre></div></div>
+
+<h2 id="polygon-with-hole">polygon with hole</h2>
+
+<p>The output of <code class="highlighter-rouge">print (polygon)</code> is <code class="highlighter-rouge">POLYGON ((2.2 4.2, 7.2 -25.1, 9.26 -2.456, 2.2 4.2))</code>, which has double parentheses. That’s because the polygon can contain holes.</p>
+
+<h3 id="create-the-polygon-with-a-hole">create the polygon with a hole</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># the points list of exterior polygon
+</span><span class="n">points_exterior</span> <span class="o">=</span> <span class="p">[(</span><span class="o">-</span><span class="mi">180</span><span class="p">,</span> <span class="mi">90</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">180</span><span class="p">,</span> <span class="o">-</span><span class="mi">90</span><span class="p">),</span> <span class="p">(</span><span class="mi">180</span><span class="p">,</span> <span class="o">-</span><span class="mi">90</span><span class="p">),</span> <span class="p">(</span><span class="mi">180</span><span class="p">,</span> <span class="mi">90</span><span class="p">)]</span>
+
+<span class="c1"># the points list of hole polygon
+# there could be multiple holes, thus input a list of holes
+</span><span class="n">points_hole</span> <span class="o">=</span> <span class="p">[[(</span><span class="o">-</span><span class="mi">170</span><span class="p">,</span> <span class="mi">80</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">170</span><span class="p">,</span> <span class="o">-</span><span class="mi">80</span><span class="p">),</span> <span class="p">(</span><span class="mi">170</span><span class="p">,</span> <span class="o">-</span><span class="mi">80</span><span class="p">),</span> <span class="p">(</span><span class="mi">170</span><span class="p">,</span> <span class="mi">80</span><span class="p">)]]</span>
+
+<span class="c1"># syntax of the exterior polygon
+</span><span class="n">polygon_exterior</span> <span class="o">=</span> <span class="n">Polygon</span><span class="p">(</span><span class="n">shell</span><span class="o">=</span><span class="n">points_exterior</span><span class="p">)</span>
+
+<span class="c1"># syntax of the polygon with hole
+</span><span class="n">polygon_with_hole</span> <span class="o">=</span> <span class="n">Polygon</span><span class="p">(</span><span class="n">shell</span><span class="o">=</span><span class="n">points_exterior</span><span class="p">,</span> <span class="n">holes</span><span class="o">=</span><span class="n">points_hole</span><span class="p">)</span>
+
+<span class="k">print</span> <span class="p">(</span><span class="n">polygon_exterior</span><span class="p">)</span>
+<span class="k">print</span> <span class="p">(</span><span class="n">polygon_with_hole</span><span class="p">)</span>
+<span class="k">print</span> <span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">polygon_with_hole</span><span class="p">))</span>
+</code></pre></div></div>
+
+<h3 id="output">output</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">POLYGON</span> <span class="p">((</span><span class="o">-</span><span class="mi">180</span> <span class="mi">90</span><span class="p">,</span> <span class="o">-</span><span class="mi">180</span> <span class="o">-</span><span class="mi">90</span><span class="p">,</span> <span class="mi">180</span> <span class="o">-</span><span class="mi">90</span><span class="p">,</span> <span class="mi">180</span> <span class="mi">90</span><span class="p">,</span> <span class="o">-</span><span class="mi">180</span> <span class="mi">90</span><span class="p">))</span>
+<span class="n">POLYGON</span> <span class="p">((</span><span class="o">-</span><span class="mi">180</span> <span class="mi">90</span><span class="p">,</span> <span class="o">-</span><span class="mi">180</span> <span class="o">-</span><span class="mi">90</span><span class="p">,</span> <span class="mi">180</span> <span class="o">-</span><span class="mi">90</span><span class="p">,</span> <span class="mi">180</span> <span class="mi">90</span><span class="p">,</span> <span class="o">-</span><span class="mi">180</span> <span class="mi">90</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">170</span> <span class="mi">80</span><span class="p">,</span> <span class="o">-</span><span class="mi">170</span> <span class="o">-</span><span class="mi">80</span><span class="p">,</span> <span class="mi">170</span> <span class="o">-</span><span class="mi">80</span><span class="p">,</span> <span class="mi">170</span> <span class="mi">80</span><span class="p">,</span> <span class="o">-</span><span class="mi">170</span> <span class="mi">80</span><span class="p">))</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">'</span><span class="nc">shapely</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">polygon</span><span class="o">.</span><span class="n">Polygon</span><span class="s">'&gt;</span><span class="err">
+</span></code></pre></div></div>
+
+<h1 id="geopandas">Geopandas</h1>
+
+<h2 id="reading-and-plotting-a-shp">Reading and Plotting a SHP</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">geopandas</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">geopandas</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s">'./DataLesson2/DAMSELFISH_distributions.shp'</span><span class="p">)</span>
+
+<span class="n">data</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h2 id="loop-with-function-iterrows">Loop with Function iterrows()</h2>
+
+<h3 id="usage">usage</h3>
+
+<p>The function iterrows() returns the index of each row, in addition to an object containing the row itself.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">selection1</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="n">poly_area</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s">'geometry'</span><span class="p">]</span><span class="o">.</span><span class="n">area</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'polygon area at index </span><span class="si">%</span><span class="s">i is: </span><span class="si">%.3</span><span class="s">f'</span> <span class="o">%</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">poly_area</span><span class="p">))</span>
+</code></pre></div></div>
+
+<h3 id="output-1">output</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">polygon</span> <span class="n">area</span> <span class="n">at</span> <span class="n">index</span> <span class="mi">0</span> <span class="ow">is</span><span class="p">:</span> <span class="mf">19.396</span>
+<span class="n">polygon</span> <span class="n">area</span> <span class="n">at</span> <span class="n">index</span> <span class="mi">1</span> <span class="ow">is</span><span class="p">:</span> <span class="mf">6.146</span>
+<span class="n">polygon</span> <span class="n">area</span> <span class="n">at</span> <span class="n">index</span> <span class="mi">2</span> <span class="ow">is</span><span class="p">:</span> <span class="mf">2.697</span>
+<span class="n">polygon</span> <span class="n">area</span> <span class="n">at</span> <span class="n">index</span> <span class="mi">3</span> <span class="ow">is</span><span class="p">:</span> <span class="mf">87.461</span>
+<span class="n">polygon</span> <span class="n">area</span> <span class="n">at</span> <span class="n">index</span> <span class="mi">4</span> <span class="ow">is</span><span class="p">:</span> <span class="mf">0.001</span>
+</code></pre></div></div>
+
+<h2 id="function-groupby">Function groupby()</h2>
+
+<p>The function gives an object called <code class="highlighter-rouge">DataFrameGroupBy</code>, similar to list of keys and values (in a dictionary) that we can iterate over.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">grouped</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s">'BINOMIAL'</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">values</span> <span class="ow">in</span> <span class="n">grouped</span><span class="p">:</span>
+    <span class="n">individual_fish</span> <span class="o">=</span> <span class="n">values</span>
+</code></pre></div></div>
+
+<h1 id="osmnx">OSMnx</h1>
+
+<h2 id="documententation">Documententation</h2>
+
+<h3 id="osmnxplotplot_graph">osmnx.plot.plot_graph</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Parameters:
+G, bbox=None, fig_height=6, fig_width=None, margin=0.02, axis_off=True, equal_aspect=False, bgcolor='w', show=True, save=False, close=True, file_format='png', filename='temp', dpi=300, annotate=False, node_color='#66ccff', node_size=15, node_alpha=1, node_edgecolor='none', node_zorder=1, edge_color='#999999', edge_linewidth=1, edge_alpha=1, use_geom=True
+</code></pre></div></div>
+
+<p><strong>Returns: fig, ax</strong></p>
+
+<p>Return type: tuple</p>
+
+<p><a href="https://osmnx.readthedocs.io/en/stable/osmnx.html#osmnx.plot.plot_graph">Documentation page</a></p>
 
 <hr />
 </div><section class="article__sharing d-print-none"><!-- AddToAny BEGIN -->
@@ -318,7 +437,7 @@
 </div>
 <script async src="https://static.addtoany.com/menu/page.js"></script>
 <!-- AddToAny END --></section><div class="d-print-none"><footer class="article__footer"><span>Last updated
-      <time itemprop="dateModified" datetime="2020-01-29T00:00:00-05:00">Jan 29, 2020</time>
+      <time itemprop="dateModified" datetime="2020-02-17T00:00:00-05:00">Feb 17, 2020</time>
     </span><!-- start custom article footer snippet -->
 
 <!-- end custom article footer snippet --><div itemscope itemtype="http://schema.org/Person" class="author-profile card card--flat item"><img class="author-profile__avatar" itemprop="image" src="https://i.loli.net/2020/01/07/O5TDCs9NzyRwMYF.jpg" /><div class="item__content"><meta itemprop="name" content="Zihan Mei">
@@ -365,7 +484,7 @@
 </div> -->
 
     </div>
-</div><div class="article__subscribe"><div class="subscribe"><i class="fas fa-rss"></i> <a type="application/rss+xml" href="/feed.xml">Subscribe</a></div></div></footer><div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/digest/2020-01-21-其他">其他</a></div></div></div>
+</div><div class="article__subscribe"><div class="subscribe"><i class="fas fa-rss"></i> <a type="application/rss+xml" href="/feed.xml">Subscribe</a></div></div></footer><div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/digest/2020-01-21-其他">其他</a></div><div class="next"><span>NEXT</span><a href="/post/2020/02/16/fail-to-import-python-module.html">Failed to Import Module Installed through PIP</a></div></div></div>
 
 </div>
 

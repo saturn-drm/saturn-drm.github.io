@@ -1,4 +1,4 @@
-I"Ã<h1 id="pure-css-styles">Pure CSS Styles</h1>
+I"Â<h1 id="pure-css-styles">Pure CSS Styles</h1>
 
 <h2 id="blend">Blend</h2>
 
@@ -187,7 +187,7 @@
   <p>Most CSS properties will cause layout changes or repaint, and will result in choppy animation. Prioritize opacity and CSS transforms as much as possible.</p>
 </blockquote>
 
-<p><img src="https://i.loli.net/2020/02/04/2usOtHAhaVNj9Pw.gif" alt="anime04-css-proporties.gif" /></p>
+<p><img src="../assets/images/blog/anime04-css-proporties.gif" alt="anime04-css-proporties.gif" /></p>
 
 <ul>
   <li>HTML</li>

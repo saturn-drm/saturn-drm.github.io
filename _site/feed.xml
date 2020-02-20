@@ -1,5 +1,161 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-02-15T18:54:45-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Zihan Mei’s Personal Site</title><subtitle>Welcome to my website! The site contains my projects and the research during 2014-2019, from the Bachelor of Architecture in Tsinghua University to the Master of Architecture in Urban Design in Harvard GSD.
-</subtitle><author><name>Zihan Mei</name><email>meizihanyx@gmail.com</email></author><entry><title type="html">Study On The Development Of TOD</title><link href="http://localhost:4000/post/2020/01/28/study-on-tod.html" rel="alternate" type="text/html" title="Study On The Development Of TOD" /><published>2020-01-28T00:00:00-05:00</published><updated>2020-01-28T00:00:00-05:00</updated><id>http://localhost:4000/post/2020/01/28/study-on-tod</id><content type="html" xml:base="http://localhost:4000/post/2020/01/28/study-on-tod.html">&lt;h1 id=&quot;basic-info&quot;&gt;Basic Info&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-02-20T11:10:58-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Zihan Mei’s Personal Site</title><subtitle>Welcome to my website! The site contains my projects and the research during 2014-2019, from the Bachelor of Architecture in Tsinghua University to the Master of Architecture in Urban Design in Harvard GSD.
+</subtitle><author><name>Zihan Mei</name><email>meizihanyx@gmail.com</email></author><entry><title type="html">Notes in Python GIS</title><link href="http://localhost:4000/post/2020/02/16/note-python-gis.html" rel="alternate" type="text/html" title="Notes in Python GIS" /><published>2020-02-16T00:00:00-05:00</published><updated>2020-02-16T00:00:00-05:00</updated><id>http://localhost:4000/post/2020/02/16/note-python-gis</id><content type="html" xml:base="http://localhost:4000/post/2020/02/16/note-python-gis.html">&lt;h1 id=&quot;shapely&quot;&gt;Shapely&lt;/h1&gt;
+
+&lt;h2 id=&quot;methods-to-access-geometry-type&quot;&gt;Methods to access Geometry Type&lt;/h2&gt;
+
+&lt;h3 id=&quot;shapely-function---type&quot;&gt;shapely function - type&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;string&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;poly_type1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;poly1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;poly_type1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Polygon&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;shapely-function---geom_type&quot;&gt;shapely function - geom_type&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;string&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;poly_type2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;poly1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;geom_type&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;poly_type2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Polygon&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;python-function---type&quot;&gt;Python function - type&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Python class format&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;poly_type3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;poly1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;poly_type3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;shapely&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;geometry&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;polygon&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Polygon&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&amp;gt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;polygon-with-hole&quot;&gt;polygon with hole&lt;/h2&gt;
+
+&lt;p&gt;The output of &lt;code class=&quot;highlighter-rouge&quot;&gt;print (polygon)&lt;/code&gt; is &lt;code class=&quot;highlighter-rouge&quot;&gt;POLYGON ((2.2 4.2, 7.2 -25.1, 9.26 -2.456, 2.2 4.2))&lt;/code&gt;, which has double parentheses. That’s because the polygon can contain holes.&lt;/p&gt;
+
+&lt;h3 id=&quot;create-the-polygon-with-a-hole&quot;&gt;create the polygon with a hole&lt;/h3&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# the points list of exterior polygon
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;points_exterior&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;180&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;90&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;180&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;90&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;180&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;90&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;180&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;90&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# the points list of hole polygon
+# there could be multiple holes, thus input a list of holes
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;points_hole&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;170&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;80&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;170&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;80&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;170&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;80&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;170&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;80&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]]&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# syntax of the exterior polygon
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;polygon_exterior&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Polygon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shell&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;points_exterior&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# syntax of the polygon with hole
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;polygon_with_hole&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Polygon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shell&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;points_exterior&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;holes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;points_hole&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;polygon_exterior&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;polygon_with_hole&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;polygon_with_hole&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;output&quot;&gt;output&lt;/h3&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;POLYGON&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;180&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;90&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;180&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;90&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;180&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;90&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;180&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;90&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;180&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;90&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;POLYGON&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;180&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;90&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;180&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;90&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;180&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;90&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;180&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;90&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;180&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;90&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;170&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;80&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;170&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;80&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;170&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;80&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;170&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;80&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;170&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;80&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;shapely&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;geometry&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;polygon&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Polygon&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&amp;gt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;geopandas&quot;&gt;Geopandas&lt;/h1&gt;
+
+&lt;h2 id=&quot;reading-and-plotting-a-shp&quot;&gt;Reading and Plotting a SHP&lt;/h2&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;geopandas&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;geopandas&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read_file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'./DataLesson2/DAMSELFISH_distributions.shp'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;loop-with-function-iterrows&quot;&gt;Loop with Function iterrows()&lt;/h2&gt;
+
+&lt;h3 id=&quot;usage&quot;&gt;usage&lt;/h3&gt;
+
+&lt;p&gt;The function iterrows() returns the index of each row, in addition to an object containing the row itself.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;selection1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;iterrows&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;poly_area&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'geometry'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;area&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'polygon area at index &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;i is: &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%.3&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;f'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;poly_area&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;output-1&quot;&gt;output&lt;/h3&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;polygon&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;area&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;is&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;19.396&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;polygon&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;area&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;is&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;6.146&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;polygon&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;area&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;is&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;2.697&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;polygon&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;area&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;is&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;87.461&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;polygon&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;area&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;is&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.001&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;function-groupby&quot;&gt;Function groupby()&lt;/h2&gt;
+
+&lt;p&gt;The function gives an object called &lt;code class=&quot;highlighter-rouge&quot;&gt;DataFrameGroupBy&lt;/code&gt;, similar to list of keys and values (in a dictionary) that we can iterate over.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;grouped&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;groupby&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'BINOMIAL'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;values&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;grouped&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;individual_fish&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;values&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;osmnx&quot;&gt;OSMnx&lt;/h1&gt;
+
+&lt;h2 id=&quot;documententation&quot;&gt;Documententation&lt;/h2&gt;
+
+&lt;h3 id=&quot;osmnxplotplot_graph&quot;&gt;osmnx.plot.plot_graph&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Parameters:
+G, bbox=None, fig_height=6, fig_width=None, margin=0.02, axis_off=True, equal_aspect=False, bgcolor='w', show=True, save=False, close=True, file_format='png', filename='temp', dpi=300, annotate=False, node_color='#66ccff', node_size=15, node_alpha=1, node_edgecolor='none', node_zorder=1, edge_color='#999999', edge_linewidth=1, edge_alpha=1, use_geom=True
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Returns: fig, ax&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Return type: tuple&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://osmnx.readthedocs.io/en/stable/osmnx.html#osmnx.plot.plot_graph&quot;&gt;Documentation page&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;</content><author><name>Zihan Mei</name><email>meizihanyx@gmail.com</email></author><category term="post" /><category term="Python" /><category term="GIS" /><summary type="html">Shapely Methods to access Geometry Type shapely function - type string poly_type1 = poly1.type print (poly_type1) &amp;gt;&amp;gt; Polygon</summary></entry><entry><title type="html">Failed to Import Module Installed through PIP</title><link href="http://localhost:4000/post/2020/02/16/fail-to-import-python-module.html" rel="alternate" type="text/html" title="Failed to Import Module Installed through PIP" /><published>2020-02-16T00:00:00-05:00</published><updated>2020-02-16T00:00:00-05:00</updated><id>http://localhost:4000/post/2020/02/16/fail-to-import-python-module</id><content type="html" xml:base="http://localhost:4000/post/2020/02/16/fail-to-import-python-module.html">&lt;h1 id=&quot;question&quot;&gt;Question&lt;/h1&gt;
+
+&lt;p&gt;I installed pandas and IPython with the command&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;sudo pip3 install pandas / IPython&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;The modules are in the list with the command&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;pip3 list&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/02/16/uObRqny8eEG4w3Q.png&quot; alt=&quot;200216.png&quot; /&gt;&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;However, when debugged in VSCode&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;IPython&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;there is the error of&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ModuleNotFoundError: No module named 'IPython'&lt;/code&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;solution&quot;&gt;Solution&lt;/h1&gt;
+
+&lt;p&gt;When installing the modules, use the command&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;sudo -H python -m pip install pandas / IPython&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr /&gt;</content><author><name>Zihan Mei</name><email>meizihanyx@gmail.com</email></author><category term="post" /><category term="Python" /><summary type="html">Question I installed pandas and IPython with the command sudo pip3 install pandas / IPython The modules are in the list with the command pip3 list</summary></entry><entry><title type="html">Study On The Development Of TOD</title><link href="http://localhost:4000/post/2020/01/28/study-on-tod.html" rel="alternate" type="text/html" title="Study On The Development Of TOD" /><published>2020-01-28T00:00:00-05:00</published><updated>2020-01-28T00:00:00-05:00</updated><id>http://localhost:4000/post/2020/01/28/study-on-tod</id><content type="html" xml:base="http://localhost:4000/post/2020/01/28/study-on-tod.html">&lt;h1 id=&quot;basic-info&quot;&gt;Basic Info&lt;/h1&gt;
 
 &lt;table&gt;
   &lt;tbody&gt;
@@ -64,9 +220,75 @@
 
 &lt;!--more--&gt;
 
-&lt;hr /&gt;</content><author><name>Zihan Mei</name><email>meizihanyx@gmail.com</email></author><category term="post" /><category term="Website" /><summary type="html">VSCode 插件 Easy Sass</summary></entry><entry><title type="html">资治通鉴</title><link href="http://localhost:4000/post/2020/01/26/%E8%B5%84%E6%B2%BB%E9%80%9A%E9%89%B4.html" rel="alternate" type="text/html" title="资治通鉴" /><published>2020-01-26T00:00:00-05:00</published><updated>2020-01-26T00:00:00-05:00</updated><id>http://localhost:4000/post/2020/01/26/%E8%B5%84%E6%B2%BB%E9%80%9A%E9%89%B4</id><content type="html" xml:base="http://localhost:4000/post/2020/01/26/%E8%B5%84%E6%B2%BB%E9%80%9A%E9%89%B4.html">&lt;p&gt;作者：司马光&lt;/p&gt;
+&lt;hr /&gt;</content><author><name>Zihan Mei</name><email>meizihanyx@gmail.com</email></author><category term="post" /><category term="Website" /><summary type="html">VSCode 插件 Easy Sass</summary></entry><entry><title type="html">Add the Site to Google Search Console</title><link href="http://localhost:4000/post/2020/01/26/add-to-google-search.html" rel="alternate" type="text/html" title="Add the Site to Google Search Console" /><published>2020-01-26T00:00:00-05:00</published><updated>2020-01-26T00:00:00-05:00</updated><id>http://localhost:4000/post/2020/01/26/add-to-google-search</id><content type="html" xml:base="http://localhost:4000/post/2020/01/26/add-to-google-search.html">&lt;p&gt;2020-01-26-13:04更新：&lt;/p&gt;
 
-&lt;hr /&gt;</content><author><name>Zihan Mei</name><email>meizihanyx@gmail.com</email></author><category term="post" /><category term="Digest" /><category term="Classical Chinese Literature" /><summary type="html">作者：司马光</summary></entry><entry><title type="html">HOUSING IN URBAN CORES</title><link href="http://localhost:4000/post/2020/01/26/south-boston-housing.html" rel="alternate" type="text/html" title="HOUSING IN URBAN CORES" /><published>2020-01-26T00:00:00-05:00</published><updated>2020-01-26T00:00:00-05:00</updated><id>http://localhost:4000/post/2020/01/26/south-boston-housing</id><content type="html" xml:base="http://localhost:4000/post/2020/01/26/south-boston-housing.html">&lt;h1 id=&quot;abstract&quot;&gt;Abstract&lt;/h1&gt;
+&lt;p&gt;中午起来验证成功。
+&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;说出来你可能不信，今天晚上我给网站添加了google analytics之后试图再把自己的站点添加到google search console中，但是在修改了DNS之后，出现了&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;输入网址能在Mac的chrome和安卓的chrome以及安卓的默认浏览器打开，不能用Safari打开，google能搜到我的网站，能在手机默认浏览器上打开不能在chrome里打开&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;的情况。&lt;/p&gt;
+
+&lt;p&gt;牺牲了2小时的睡眠折腾到凌晨5:30之后，我把网站从google search console中移除了（但是现在还搜得到好像还要保留90天），但是DNS仍然没动。&lt;/p&gt;
+
+&lt;p&gt;暂时还没找到原因，各浏览器测试也不太稳定。&lt;/p&gt;
+
+&lt;p&gt;&lt;del&gt;并且现在chrome标签页不显示我的favicon了，但愿只是缓存问题&lt;/del&gt;&lt;/p&gt;
+
+&lt;p&gt;日后再测。&lt;/p&gt;
+
+&lt;hr /&gt;</content><author><name>Zihan Mei</name><email>meizihanyx@gmail.com</email></author><category term="post" /><category term="Website" /><summary type="html">2020-01-26-13:04更新： 中午起来验证成功。</summary></entry><entry><title type="html">资治通鉴</title><link href="http://localhost:4000/post/2020/01/26/%E8%B5%84%E6%B2%BB%E9%80%9A%E9%89%B4.html" rel="alternate" type="text/html" title="资治通鉴" /><published>2020-01-26T00:00:00-05:00</published><updated>2020-01-26T00:00:00-05:00</updated><id>http://localhost:4000/post/2020/01/26/%E8%B5%84%E6%B2%BB%E9%80%9A%E9%89%B4</id><content type="html" xml:base="http://localhost:4000/post/2020/01/26/%E8%B5%84%E6%B2%BB%E9%80%9A%E9%89%B4.html">&lt;p&gt;作者：司马光&lt;/p&gt;
+
+&lt;h1 id=&quot;第一卷&quot;&gt;第一卷&lt;/h1&gt;
+
+&lt;h2 id=&quot;智伯之亡&quot;&gt;智伯之亡&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;2020-01-21更新&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;臣光曰：智伯之亡也，才胜德也。夫才与德异，而世俗莫之能辨，通谓之贤，此其所以失人也。夫聪察强毅之谓才，正直中和之谓德。才者，德之资也；德者，才之帅也。云梦之竹，天下之劲也；然而不矫揉，不羽括，则不能以入坚。棠之金，天下之利也；然而不熔范，不砥砺，则不能以击强。是故才德全尽谓之“圣人”，才德兼亡谓之“愚人”；德胜才谓之“君子”，才胜德谓之“小人”。凡取人之术，苟不得圣人、君子而与之，与其得小人，不若得愚人。何则？君子挟才以为善，小人挟才以为恶。挟才以为善者，善无不至矣；挟才以为恶者，恶亦无不至矣。愚者虽欲为不善，智不能周，力不能胜，譬如乳狗搏人，人得而制之。小人智足以遂其奸，勇足以决其暴，是虎而翼者也，其为害岂不多哉！夫德者人之所严，而才者人之所爱；爱者易亲，严者易疏，是以察者多蔽于才而遗于德。自古昔以来，国之乱臣，家之败子，才有馀而德不足，以至于颠覆者多矣，岂特智伯哉！故为国为家者苟能审于才德之分而知所先后，又何失人之足患哉！&lt;/p&gt;
+
+&lt;h2 id=&quot;吴起奔楚&quot;&gt;吴起奔楚&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;2020-01-21更新&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;久之，魏相公叔尚主而害吴起。公叔之仆曰：“起易去也。起为人刚劲自喜。子先言于君曰：‘吴起，贤人也，而君之国小，臣恐起之无留心也。君盍试延以女，起无留心，则必辞矣。’子因与起归而使公主辱子，起见公主之贱子也，必辞，则子之计中矣。”公叔从之，吴起果辞公主。魏武侯疑之而未信，起惧诛，遂奔楚。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;第二卷&quot;&gt;第二卷&lt;/h1&gt;
+
+&lt;h2 id=&quot;商鞅变法&quot;&gt;商鞅变法&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;2020-02-13更新&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;卫鞅欲变法，秦人不悦。卫鞅言于秦孝公曰：“夫民不可与虑始，而可与乐成。论至德者不和于俗，成大功者不谋于众。是以圣人苟可以强国，不法其故。”甘龙曰：“不然，缘法而治者，吏习而民安之。”卫鞅曰：“常人安于故俗，学者溺于所闻，以此两者，居官守法可也，非所与论于法之外也。智者作法，愚者制焉；贤者更礼，不肖者拘焉。”公曰：“善。”以卫鞅为左庶长。卒定变法之令。令民为什伍而相收司、连坐，告奸者与斩敌首同赏，不告奸者与降敌同罚。有军功者，各以率受上爵；为私斗者，各以轻重被刑大小。力本业，耕织致粟帛多者，复其身；事末利及怠而贫者，举以为收孥。宗室非有军功论，不得为属籍。明尊卑爵秩等级，各以差次名田宅、臣妾、衣服。有功者显荣，无功者虽富无所芬华。&lt;/p&gt;
+
+&lt;p&gt;令既具未布，恐民之不信，乃立三丈之木于国都市南门，募民有能徙置北门者予十金。民怪之，莫敢徙。复曰：“能徙者予五十金！”有一人徙之，辄予五十金。乃下令。&lt;/p&gt;
+
+&lt;p&gt;令行期年，秦民之国都言新令之不便者以千数。于是太子犯法。卫鞅曰：“法之不行，自上犯之。”太子，君嗣也，不可施刑，刑其傅公子虔，黥其师公孙贾。明日，秦人皆趋令。行之十年，秦国道不拾遗，山无盗贼，民勇于公战，怯于私斗，乡邑大治。秦民初言令不便者，有来言令便。卫鞅曰：“此皆乱法之民也！”尽迁之于边。其后民莫敢议令。&lt;/p&gt;
+
+&lt;p&gt;臣光曰：夫信者，人君之大宝也。国保于民，民保于信；非信无以使民，非民无以守国。是故古之王者不欺四海，霸者不欺四邻，善为国者不欺其民，善为家者不欺其亲。不善者反之，欺其邻国，欺其百姓，甚者欺其兄弟，欺其父子。上不信下，下不信上，上下离心，以至于败。所利不能药其所伤，所获不能补其所亡，岂不哀哉！昔齐桓公不背曹沫之盟，晋文公不贪伐原之利，魏文侯不弃虞人之期，秦孝公不废徙木之赏。此四君者道非粹白，而商君尤称刻薄，又处战攻之世，天下趋于诈力，犹且不敢忘信以畜其民，况为四海治平之政者哉！&lt;/p&gt;
+
+&lt;h2 id=&quot;围魏救赵&quot;&gt;围魏救赵&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;2020-02-13更新&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;田忌欲引兵之赵。孙子曰：“夫解杂乱纷纠者不控拳，救斗者不搏，批亢捣虚，形格势禁，则自为解耳。今梁、赵相攻，轻兵锐卒必竭于外，老弱疲于内；子不若引兵疾走魏都，据其街路，冲其方虚，彼必释赵以自救：是我一举解赵之围而收弊于魏也。”田忌从之。十月，邯郸降魏。魏师还，与齐战于桂陵，魏师大败。&lt;/p&gt;
+
+&lt;hr /&gt;</content><author><name>Zihan Mei</name><email>meizihanyx@gmail.com</email></author><category term="post" /><category term="Digest" /><category term="Classical Chinese Literature" /><summary type="html">作者：司马光 第一卷 智伯之亡 2020-01-21更新 臣光曰：智伯之亡也，才胜德也。夫才与德异，而世俗莫之能辨，通谓之贤，此其所以失人也。夫聪察强毅之谓才，正直中和之谓德。才者，德之资也；德者，才之帅也。云梦之竹，天下之劲也；然而不矫揉，不羽括，则不能以入坚。棠之金，天下之利也；然而不熔范，不砥砺，则不能以击强。是故才德全尽谓之“圣人”，才德兼亡谓之“愚人”；德胜才谓之“君子”，才胜德谓之“小人”。凡取人之术，苟不得圣人、君子而与之，与其得小人，不若得愚人。何则？君子挟才以为善，小人挟才以为恶。挟才以为善者，善无不至矣；挟才以为恶者，恶亦无不至矣。愚者虽欲为不善，智不能周，力不能胜，譬如乳狗搏人，人得而制之。小人智足以遂其奸，勇足以决其暴，是虎而翼者也，其为害岂不多哉！夫德者人之所严，而才者人之所爱；爱者易亲，严者易疏，是以察者多蔽于才而遗于德。自古昔以来，国之乱臣，家之败子，才有馀而德不足，以至于颠覆者多矣，岂特智伯哉！故为国为家者苟能审于才德之分而知所先后，又何失人之足患哉！ 吴起奔楚 2020-01-21更新 久之，魏相公叔尚主而害吴起。公叔之仆曰：“起易去也。起为人刚劲自喜。子先言于君曰：‘吴起，贤人也，而君之国小，臣恐起之无留心也。君盍试延以女，起无留心，则必辞矣。’子因与起归而使公主辱子，起见公主之贱子也，必辞，则子之计中矣。”公叔从之，吴起果辞公主。魏武侯疑之而未信，起惧诛，遂奔楚。 第二卷 商鞅变法 2020-02-13更新 卫鞅欲变法，秦人不悦。卫鞅言于秦孝公曰：“夫民不可与虑始，而可与乐成。论至德者不和于俗，成大功者不谋于众。是以圣人苟可以强国，不法其故。”甘龙曰：“不然，缘法而治者，吏习而民安之。”卫鞅曰：“常人安于故俗，学者溺于所闻，以此两者，居官守法可也，非所与论于法之外也。智者作法，愚者制焉；贤者更礼，不肖者拘焉。”公曰：“善。”以卫鞅为左庶长。卒定变法之令。令民为什伍而相收司、连坐，告奸者与斩敌首同赏，不告奸者与降敌同罚。有军功者，各以率受上爵；为私斗者，各以轻重被刑大小。力本业，耕织致粟帛多者，复其身；事末利及怠而贫者，举以为收孥。宗室非有军功论，不得为属籍。明尊卑爵秩等级，各以差次名田宅、臣妾、衣服。有功者显荣，无功者虽富无所芬华。 令既具未布，恐民之不信，乃立三丈之木于国都市南门，募民有能徙置北门者予十金。民怪之，莫敢徙。复曰：“能徙者予五十金！”有一人徙之，辄予五十金。乃下令。 令行期年，秦民之国都言新令之不便者以千数。于是太子犯法。卫鞅曰：“法之不行，自上犯之。”太子，君嗣也，不可施刑，刑其傅公子虔，黥其师公孙贾。明日，秦人皆趋令。行之十年，秦国道不拾遗，山无盗贼，民勇于公战，怯于私斗，乡邑大治。秦民初言令不便者，有来言令便。卫鞅曰：“此皆乱法之民也！”尽迁之于边。其后民莫敢议令。 臣光曰：夫信者，人君之大宝也。国保于民，民保于信；非信无以使民，非民无以守国。是故古之王者不欺四海，霸者不欺四邻，善为国者不欺其民，善为家者不欺其亲。不善者反之，欺其邻国，欺其百姓，甚者欺其兄弟，欺其父子。上不信下，下不信上，上下离心，以至于败。所利不能药其所伤，所获不能补其所亡，岂不哀哉！昔齐桓公不背曹沫之盟，晋文公不贪伐原之利，魏文侯不弃虞人之期，秦孝公不废徙木之赏。此四君者道非粹白，而商君尤称刻薄，又处战攻之世，天下趋于诈力，犹且不敢忘信以畜其民，况为四海治平之政者哉！ 围魏救赵 2020-02-13更新 田忌欲引兵之赵。孙子曰：“夫解杂乱纷纠者不控拳，救斗者不搏，批亢捣虚，形格势禁，则自为解耳。今梁、赵相攻，轻兵锐卒必竭于外，老弱疲于内；子不若引兵疾走魏都，据其街路，冲其方虚，彼必释赵以自救：是我一举解赵之围而收弊于魏也。”田忌从之。十月，邯郸降魏。魏师还，与齐战于桂陵，魏师大败。</summary></entry><entry><title type="html">HOUSING IN URBAN CORES</title><link href="http://localhost:4000/post/2020/01/26/south-boston-housing.html" rel="alternate" type="text/html" title="HOUSING IN URBAN CORES" /><published>2020-01-26T00:00:00-05:00</published><updated>2020-01-26T00:00:00-05:00</updated><id>http://localhost:4000/post/2020/01/26/south-boston-housing</id><content type="html" xml:base="http://localhost:4000/post/2020/01/26/south-boston-housing.html">&lt;h1 id=&quot;abstract&quot;&gt;Abstract&lt;/h1&gt;
 
 &lt;ul&gt;
   &lt;li&gt;The project is an extension of the existing grid and transportation system, which overrides the mostly underwater site in the future.&lt;/li&gt;
@@ -220,29 +442,7 @@
 
 &lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/01/27/4REuIHWGCXp1Tdg.jpg&quot; alt=&quot;07-1SEC.jpg&quot; /&gt;&lt;/p&gt;
 
-&lt;hr /&gt;</content><author><name>Zihan Mei</name><email>meizihanyx@gmail.com</email></author><category term="post" /><category term="Housing" /><category term="Boston" /><category term="GSD" /><category term="Urban design" /><summary type="html">Abstract The project is an extension of the existing grid and transportation system, which overrides the mostly underwater site in the future.</summary></entry><entry><title type="html">Add the Site to Google Search Console</title><link href="http://localhost:4000/post/2020/01/26/add-to-google-search.html" rel="alternate" type="text/html" title="Add the Site to Google Search Console" /><published>2020-01-26T00:00:00-05:00</published><updated>2020-01-26T00:00:00-05:00</updated><id>http://localhost:4000/post/2020/01/26/add-to-google-search</id><content type="html" xml:base="http://localhost:4000/post/2020/01/26/add-to-google-search.html">&lt;p&gt;2020-01-26-13:04更新：&lt;/p&gt;
-
-&lt;p&gt;中午起来验证成功。
-&lt;!--more--&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;说出来你可能不信，今天晚上我给网站添加了google analytics之后试图再把自己的站点添加到google search console中，但是在修改了DNS之后，出现了&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;输入网址能在Mac的chrome和安卓的chrome以及安卓的默认浏览器打开，不能用Safari打开，google能搜到我的网站，能在手机默认浏览器上打开不能在chrome里打开&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;的情况。&lt;/p&gt;
-
-&lt;p&gt;牺牲了2小时的睡眠折腾到凌晨5:30之后，我把网站从google search console中移除了（但是现在还搜得到好像还要保留90天），但是DNS仍然没动。&lt;/p&gt;
-
-&lt;p&gt;暂时还没找到原因，各浏览器测试也不太稳定。&lt;/p&gt;
-
-&lt;p&gt;&lt;del&gt;并且现在chrome标签页不显示我的favicon了，但愿只是缓存问题&lt;/del&gt;&lt;/p&gt;
-
-&lt;p&gt;日后再测。&lt;/p&gt;
-
-&lt;hr /&gt;</content><author><name>Zihan Mei</name><email>meizihanyx@gmail.com</email></author><category term="post" /><category term="Website" /><summary type="html">2020-01-26-13:04更新： 中午起来验证成功。</summary></entry><entry><title type="html">讨贼檄文</title><link href="http://localhost:4000/post/2020/01/25/%E8%AE%A8%E8%B4%BC%E6%AA%84%E6%96%87.html" rel="alternate" type="text/html" title="讨贼檄文" /><published>2020-01-25T00:00:00-05:00</published><updated>2020-01-25T00:00:00-05:00</updated><id>http://localhost:4000/post/2020/01/25/%E8%AE%A8%E8%B4%BC%E6%AA%84%E6%96%87</id><content type="html" xml:base="http://localhost:4000/post/2020/01/25/%E8%AE%A8%E8%B4%BC%E6%AA%84%E6%96%87.html">&lt;p&gt;作者：陈琳&lt;/p&gt;
+&lt;hr /&gt;</content><author><name>Zihan Mei</name><email>meizihanyx@gmail.com</email></author><category term="post" /><category term="Housing" /><category term="Boston" /><category term="GSD" /><category term="Urban design" /><summary type="html">Abstract The project is an extension of the existing grid and transportation system, which overrides the mostly underwater site in the future.</summary></entry><entry><title type="html">讨贼檄文</title><link href="http://localhost:4000/post/2020/01/25/%E8%AE%A8%E8%B4%BC%E6%AA%84%E6%96%87.html" rel="alternate" type="text/html" title="讨贼檄文" /><published>2020-01-25T00:00:00-05:00</published><updated>2020-01-25T00:00:00-05:00</updated><id>http://localhost:4000/post/2020/01/25/%E8%AE%A8%E8%B4%BC%E6%AA%84%E6%96%87</id><content type="html" xml:base="http://localhost:4000/post/2020/01/25/%E8%AE%A8%E8%B4%BC%E6%AA%84%E6%96%87.html">&lt;p&gt;作者：陈琳&lt;/p&gt;
 
 &lt;p&gt;盖闻明主图危以制变，忠臣虑难以立权。是以有非常之人，然后有非常之事；有非常之事，然后立非常之功。夫非常者，固非常人所拟也。曩者，强秦弱主，赵高执柄，专制朝权，威福由己；时人迫胁，莫敢正言；终有望夷之败，祖宗焚灭，污辱至今，永为世鉴。及臻吕后季年，产禄专政，内兼二军，外统赵梁；擅断万机，决事省禁；下陵上替，海内寒心。于是绛侯朱虚兴兵奋怒，诛夷逆暴，尊立太宗，故能王道兴隆，光明显融：此则大臣立权之明表也。&lt;/p&gt;
 
@@ -250,7 +450,45 @@
 
 &lt;p&gt;此乃忠臣肝脑涂地之秋，烈士立功之会，可不勖哉！操又矫命称制，遣使发兵。恐边远州郡，过听给与，违众旅叛，举以丧名，为天下笑，则明哲不取也。即日幽并青冀四州并进。书到荆州，便勒现兵，与建忠将军协同声势。州郡各整义兵，罗落境界，举武扬威，并匡社稷：则非常之功于是乎著。其得操首者，封五千户侯，赏钱五千万。部曲偏裨将校诸吏降者，勿有所问。广宜恩信，班扬符赏，布告天下，咸使知圣朝有拘迫之难。如律令！&lt;/p&gt;
 
-&lt;hr /&gt;</content><author><name>Zihan Mei</name><email>meizihanyx@gmail.com</email></author><category term="post" /><category term="Digest" /><category term="Classical Chinese Literature" /><summary type="html">作者：陈琳 盖闻明主图危以制变，忠臣虑难以立权。是以有非常之人，然后有非常之事；有非常之事，然后立非常之功。夫非常者，固非常人所拟也。曩者，强秦弱主，赵高执柄，专制朝权，威福由己；时人迫胁，莫敢正言；终有望夷之败，祖宗焚灭，污辱至今，永为世鉴。及臻吕后季年，产禄专政，内兼二军，外统赵梁；擅断万机，决事省禁；下陵上替，海内寒心。于是绛侯朱虚兴兵奋怒，诛夷逆暴，尊立太宗，故能王道兴隆，光明显融：此则大臣立权之明表也。 司空曹操：祖父中常侍腾，与左棺、徐璜并作妖孽，饕餮放横，伤化虐民；父嵩，乞匄携养，因赃假位，舆金辇璧，输货权门，窃盗鼎司，倾覆重器。操赘阉遗丑，本无懿德，犭票狡锋协，好乱乐祸。幕府董统鹰扬，扫除凶逆；续遇董卓，侵官暴国。于是提剑挥鼓，发命东夏，收罗英雄，弃瑕取用；故遂与操同谘合谋，授以裨师，谓其鹰犬之才，爪牙可任。至乃愚佻短略，轻进易退，伤夷折衄，数丧师徒；幕府辄复分兵命锐，修完补辑，表行东郡，领兖州刺史，被以虎文，奖蹙威柄，冀获秦师一克之报。而操遂承资跋扈，恣行凶忒，割剥元元，残贤害善。故九江太守边让，英才俊伟，天下知名；直言正色，论不阿谄；身首被枭悬之诛，妻孥受灰灭之咎。自是士林愤痛，民怨弥重；一夫奋臂，举州同声。故躬破于徐方，地夺于吕布；彷徨东裔，蹈据无所。幕府惟强干弱枝之义，且不登叛人之党，故复援旌擐甲，席卷起征，金鼓响振，布众奔沮；拯其死亡之患，复其方伯之位：则幕府无德于兖土之民，而有大造于操也。后会銮驾返旆，群虏寇攻。时冀州方有北鄙之警，匪遑离局；故使从事中郎徐勋，就发遣操，使缮修郊庙，翊卫幼主。操便放志：专行胁迁，当御省禁；卑侮王室，败法乱纪；坐领三台，专制朝政；爵赏由心，弄戮在口；所爱光五宗，所恶灭三族；群谈者受显诛，腹议者蒙隐戮；百僚钳口，道路以目；尚书记朝会，公卿充员品而已。故太尉杨彪，典历二司，享国极位。操因缘眦睚，被以非罪；榜楚参并，五毒备至；触情任忒，不顾宪纲。又议郎赵彦，忠谏直言，义有可纳，是以圣朝含听，改容加饰。操欲迷夺时明，杜绝言路，擅收立杀，不俟报国。又梁孝王，先帝母昆，坟陵尊显；桑梓松柏，犹宜肃恭。而操帅将吏士，亲临发掘，破棺裸尸，掠取金宝。至令圣朝流涕，士民伤怀！操又特置发丘中郎将、摸金校尉，所过隳突，无骸不露。身处三公之位，而行桀虏之态，污国害民，毒施人鬼！加其细致惨苛，科防互设；罾缴充蹊，坑阱塞路；举手挂网罗，动足触机陷：是以兖、豫有无聊之民，帝都有吁嗟之怨。历观载籍，无道之臣，贪残酷烈，于操为甚！幕府方诘外奸，未及整训；加绪含容，冀可弥缝。而操豺狼野心，潜包祸谋，乃欲摧挠栋梁，孤弱汉室，除灭忠正，专为袅雄。往者伐鼓北征公孙瓒，强寇桀逆，拒围一年。操因其未破，阴交书命，外助王师，内相掩袭。会其行人发露，瓒亦枭夷，故使锋芒挫缩，厥图不果。今乃屯据敷仓，阻河为固，欲以螳螂之斧，御隆车之隧。幕府奉汉威灵，折冲宇宙；长戟百万，胡骑千群；奋中黄育获之士，骋良弓劲弩之势；并州越太行，青州涉济漯；大军泛黄河而角其前，荆州下宛叶而掎其后：雷震虎步，若举炎火以焫飞蓬，覆沧海以沃[火票]炭，有何不灭者哉？又操军吏士，其可战者，皆出自幽冀，或故营部曲，咸怨旷思归，流涕北顾。其余兖豫之民，及吕布张杨之余众，覆亡迫胁，权时苟从；各被创夷，人为仇敌。若回旆方徂，登高冈而击鼓吹，扬素挥以启降路，必土崩瓦解，不俟血刃。方今汉室陵迟，纲维弛绝；圣朝无一介之辅，股肱无折冲之势。方畿之内，简练之臣，皆垂头□翼，莫所凭恃；虽有忠义之佐，胁于暴虐之臣，焉能展其节？又操持部曲精兵七百，围守宫阙，外托宿卫，内实拘执。惧其篡逆之萌，因斯而作。 此乃忠臣肝脑涂地之秋，烈士立功之会，可不勖哉！操又矫命称制，遣使发兵。恐边远州郡，过听给与，违众旅叛，举以丧名，为天下笑，则明哲不取也。即日幽并青冀四州并进。书到荆州，便勒现兵，与建忠将军协同声势。州郡各整义兵，罗落境界，举武扬威，并匡社稷：则非常之功于是乎著。其得操首者，封五千户侯，赏钱五千万。部曲偏裨将校诸吏降者，勿有所问。广宜恩信，班扬符赏，布告天下，咸使知圣朝有拘迫之难。如律令！</summary></entry><entry><title type="html">HIGH-TECH CAMPUS IN SUBURBAN</title><link href="http://localhost:4000/post/2020/01/24/high-tech-campus.html" rel="alternate" type="text/html" title="HIGH-TECH CAMPUS IN SUBURBAN" /><published>2020-01-24T00:00:00-05:00</published><updated>2020-01-24T00:00:00-05:00</updated><id>http://localhost:4000/post/2020/01/24/high-tech-campus</id><content type="html" xml:base="http://localhost:4000/post/2020/01/24/high-tech-campus.html">&lt;h1 id=&quot;abstract&quot;&gt;Abstract&lt;/h1&gt;
+&lt;hr /&gt;</content><author><name>Zihan Mei</name><email>meizihanyx@gmail.com</email></author><category term="post" /><category term="Digest" /><category term="Classical Chinese Literature" /><summary type="html">作者：陈琳 盖闻明主图危以制变，忠臣虑难以立权。是以有非常之人，然后有非常之事；有非常之事，然后立非常之功。夫非常者，固非常人所拟也。曩者，强秦弱主，赵高执柄，专制朝权，威福由己；时人迫胁，莫敢正言；终有望夷之败，祖宗焚灭，污辱至今，永为世鉴。及臻吕后季年，产禄专政，内兼二军，外统赵梁；擅断万机，决事省禁；下陵上替，海内寒心。于是绛侯朱虚兴兵奋怒，诛夷逆暴，尊立太宗，故能王道兴隆，光明显融：此则大臣立权之明表也。 司空曹操：祖父中常侍腾，与左棺、徐璜并作妖孽，饕餮放横，伤化虐民；父嵩，乞匄携养，因赃假位，舆金辇璧，输货权门，窃盗鼎司，倾覆重器。操赘阉遗丑，本无懿德，犭票狡锋协，好乱乐祸。幕府董统鹰扬，扫除凶逆；续遇董卓，侵官暴国。于是提剑挥鼓，发命东夏，收罗英雄，弃瑕取用；故遂与操同谘合谋，授以裨师，谓其鹰犬之才，爪牙可任。至乃愚佻短略，轻进易退，伤夷折衄，数丧师徒；幕府辄复分兵命锐，修完补辑，表行东郡，领兖州刺史，被以虎文，奖蹙威柄，冀获秦师一克之报。而操遂承资跋扈，恣行凶忒，割剥元元，残贤害善。故九江太守边让，英才俊伟，天下知名；直言正色，论不阿谄；身首被枭悬之诛，妻孥受灰灭之咎。自是士林愤痛，民怨弥重；一夫奋臂，举州同声。故躬破于徐方，地夺于吕布；彷徨东裔，蹈据无所。幕府惟强干弱枝之义，且不登叛人之党，故复援旌擐甲，席卷起征，金鼓响振，布众奔沮；拯其死亡之患，复其方伯之位：则幕府无德于兖土之民，而有大造于操也。后会銮驾返旆，群虏寇攻。时冀州方有北鄙之警，匪遑离局；故使从事中郎徐勋，就发遣操，使缮修郊庙，翊卫幼主。操便放志：专行胁迁，当御省禁；卑侮王室，败法乱纪；坐领三台，专制朝政；爵赏由心，弄戮在口；所爱光五宗，所恶灭三族；群谈者受显诛，腹议者蒙隐戮；百僚钳口，道路以目；尚书记朝会，公卿充员品而已。故太尉杨彪，典历二司，享国极位。操因缘眦睚，被以非罪；榜楚参并，五毒备至；触情任忒，不顾宪纲。又议郎赵彦，忠谏直言，义有可纳，是以圣朝含听，改容加饰。操欲迷夺时明，杜绝言路，擅收立杀，不俟报国。又梁孝王，先帝母昆，坟陵尊显；桑梓松柏，犹宜肃恭。而操帅将吏士，亲临发掘，破棺裸尸，掠取金宝。至令圣朝流涕，士民伤怀！操又特置发丘中郎将、摸金校尉，所过隳突，无骸不露。身处三公之位，而行桀虏之态，污国害民，毒施人鬼！加其细致惨苛，科防互设；罾缴充蹊，坑阱塞路；举手挂网罗，动足触机陷：是以兖、豫有无聊之民，帝都有吁嗟之怨。历观载籍，无道之臣，贪残酷烈，于操为甚！幕府方诘外奸，未及整训；加绪含容，冀可弥缝。而操豺狼野心，潜包祸谋，乃欲摧挠栋梁，孤弱汉室，除灭忠正，专为袅雄。往者伐鼓北征公孙瓒，强寇桀逆，拒围一年。操因其未破，阴交书命，外助王师，内相掩袭。会其行人发露，瓒亦枭夷，故使锋芒挫缩，厥图不果。今乃屯据敷仓，阻河为固，欲以螳螂之斧，御隆车之隧。幕府奉汉威灵，折冲宇宙；长戟百万，胡骑千群；奋中黄育获之士，骋良弓劲弩之势；并州越太行，青州涉济漯；大军泛黄河而角其前，荆州下宛叶而掎其后：雷震虎步，若举炎火以焫飞蓬，覆沧海以沃[火票]炭，有何不灭者哉？又操军吏士，其可战者，皆出自幽冀，或故营部曲，咸怨旷思归，流涕北顾。其余兖豫之民，及吕布张杨之余众，覆亡迫胁，权时苟从；各被创夷，人为仇敌。若回旆方徂，登高冈而击鼓吹，扬素挥以启降路，必土崩瓦解，不俟血刃。方今汉室陵迟，纲维弛绝；圣朝无一介之辅，股肱无折冲之势。方畿之内，简练之臣，皆垂头□翼，莫所凭恃；虽有忠义之佐，胁于暴虐之臣，焉能展其节？又操持部曲精兵七百，围守宫阙，外托宿卫，内实拘执。惧其篡逆之萌，因斯而作。 此乃忠臣肝脑涂地之秋，烈士立功之会，可不勖哉！操又矫命称制，遣使发兵。恐边远州郡，过听给与，违众旅叛，举以丧名，为天下笑，则明哲不取也。即日幽并青冀四州并进。书到荆州，便勒现兵，与建忠将军协同声势。州郡各整义兵，罗落境界，举武扬威，并匡社稷：则非常之功于是乎著。其得操首者，封五千户侯，赏钱五千万。部曲偏裨将校诸吏降者，勿有所问。广宜恩信，班扬符赏，布告天下，咸使知圣朝有拘迫之难。如律令！</summary></entry><entry><title type="html">两晋南北朝史·两晋卷</title><link href="http://localhost:4000/post/2020/01/24/%E4%B8%A4%E6%99%8B%E5%8D%97%E5%8C%97%E6%9C%9D%E5%8F%B2-%E4%B8%A4%E6%99%8B%E5%8D%B7.html" rel="alternate" type="text/html" title="两晋南北朝史·两晋卷" /><published>2020-01-24T00:00:00-05:00</published><updated>2020-01-24T00:00:00-05:00</updated><id>http://localhost:4000/post/2020/01/24/%E4%B8%A4%E6%99%8B%E5%8D%97%E5%8C%97%E6%9C%9D%E5%8F%B2-%E4%B8%A4%E6%99%8B%E5%8D%B7</id><content type="html" xml:base="http://localhost:4000/post/2020/01/24/%E4%B8%A4%E6%99%8B%E5%8D%97%E5%8C%97%E6%9C%9D%E5%8F%B2-%E4%B8%A4%E6%99%8B%E5%8D%B7.html">&lt;p&gt;作者：吕思勉&lt;/p&gt;
+
+&lt;h1 id=&quot;第一章-总论&quot;&gt;【第一章 总论】&lt;/h1&gt;
+
+&lt;p&gt;夫党群既分，则与异族为敌者，实非举国之民，特其操治理之权者耳…其覆亡也，固亦与寻常一姓之覆亡无异，特覆之者非本族而为异族人耳…多数人民与异族之相角，于何见之？其胜负于何决之？曰:视其文化之兴替。两族相遇，文化必有不同，观其孰替孰兴，而文化之优劣分，而民族之存亡，亦由之而判矣。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;第二章-晋初情势&quot;&gt;【第二章 晋初情势】&lt;/h1&gt;
+
+&lt;h2 id=&quot;第一节-政俗之敝&quot;&gt;第一节 政俗之敝&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;2020-02-01更新&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;振领总纲，要在三条：凡政欲静，静在息役，息役在无为。仓廪欲实，实在利农，利农在平粜。为政欲著信，著信在简贤，简贤在官久。&lt;/p&gt;
+
+&lt;p&gt;…君子务能，小人伐技；风颓于上，俗弊于下，祸结而恨争也不强，患至而悔伐之未辩。大者倾国丧家，次则覆身灭祀。其故何邪？岂不始于私欲，而终于争伐哉？&lt;/p&gt;
+
+&lt;p&gt;民间风俗，历代迁变甚微，政事之隆窳，所以致一时之治乱者，实其士大夫之群及朝贵之执政权者为之。&lt;/p&gt;
+
+&lt;p&gt;…古之圣明，原始以要终，体本以正末，故忧法度之不当，而不忧人物之失所，忧人物之失所，而不忧灾害之流行。其有日月之眚，水旱之灾，则反听内视，求其所由。远观诸物，近验诸身。于物无忤，于人无尤，此则阴阳之事，非吉凶所在也。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;第三章-西晋乱亡&quot;&gt;【第三章 西晋乱亡】&lt;/h1&gt;
+
+&lt;h2 id=&quot;第一节-齐献王争立&quot;&gt;第一节 齐献王争立&lt;/h2&gt;
+
+&lt;h3 id=&quot;一&quot;&gt;一&lt;/h3&gt;
+
+&lt;p&gt;然朋党之祸，往往乘在上者之宽仁而起…当时为朋党者多权威，非下士，此其所以难破。然欲破朋党，断不能以其为权威而遂多顾忌也。&lt;/p&gt;
+
+&lt;h3 id=&quot;二&quot;&gt;二&lt;/h3&gt;
+
+&lt;p&gt;世及为礼之世，往往以一人一家之私，诒累及于政事，凡在势者皆然，正不必南面之尊而后尔，君子是以穆然于大同之世也。&lt;/p&gt;
+
+&lt;hr /&gt;</content><author><name>Zihan Mei</name><email>meizihanyx@gmail.com</email></author><category term="post" /><category term="Digest" /><category term="Classical Chinese Literature" /><summary type="html">作者：吕思勉 【第一章 总论】 夫党群既分，则与异族为敌者，实非举国之民，特其操治理之权者耳…其覆亡也，固亦与寻常一姓之覆亡无异，特覆之者非本族而为异族人耳…多数人民与异族之相角，于何见之？其胜负于何决之？曰:视其文化之兴替。两族相遇，文化必有不同，观其孰替孰兴，而文化之优劣分，而民族之存亡，亦由之而判矣。 【第二章 晋初情势】 第一节 政俗之敝 2020-02-01更新 振领总纲，要在三条：凡政欲静，静在息役，息役在无为。仓廪欲实，实在利农，利农在平粜。为政欲著信，著信在简贤，简贤在官久。 …君子务能，小人伐技；风颓于上，俗弊于下，祸结而恨争也不强，患至而悔伐之未辩。大者倾国丧家，次则覆身灭祀。其故何邪？岂不始于私欲，而终于争伐哉？ 民间风俗，历代迁变甚微，政事之隆窳，所以致一时之治乱者，实其士大夫之群及朝贵之执政权者为之。 …古之圣明，原始以要终，体本以正末，故忧法度之不当，而不忧人物之失所，忧人物之失所，而不忧灾害之流行。其有日月之眚，水旱之灾，则反听内视，求其所由。远观诸物，近验诸身。于物无忤，于人无尤，此则阴阳之事，非吉凶所在也。 【第三章 西晋乱亡】 第一节 齐献王争立 一 然朋党之祸，往往乘在上者之宽仁而起…当时为朋党者多权威，非下士，此其所以难破。然欲破朋党，断不能以其为权威而遂多顾忌也。 二 世及为礼之世，往往以一人一家之私，诒累及于政事，凡在势者皆然，正不必南面之尊而后尔，君子是以穆然于大同之世也。</summary></entry><entry><title type="html">HIGH-TECH CAMPUS IN SUBURBAN</title><link href="http://localhost:4000/post/2020/01/24/high-tech-campus.html" rel="alternate" type="text/html" title="HIGH-TECH CAMPUS IN SUBURBAN" /><published>2020-01-24T00:00:00-05:00</published><updated>2020-01-24T00:00:00-05:00</updated><id>http://localhost:4000/post/2020/01/24/high-tech-campus</id><content type="html" xml:base="http://localhost:4000/post/2020/01/24/high-tech-campus.html">&lt;h1 id=&quot;abstract&quot;&gt;Abstract&lt;/h1&gt;
 
 &lt;p&gt;The campus focused on outdoor gear industry, which is one of the largest economic sectors in the states. The site and neighbor form an attractive leisure landscape thanks to the combination of the natural resource and its strong transportation infrastructure.&lt;/p&gt;
 
@@ -401,110 +639,4 @@
 
 &lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/01/28/X3bBwFcnr5IYpz8.jpg&quot; alt=&quot;11sec.jpg&quot; /&gt;&lt;/p&gt;
 
-&lt;hr /&gt;</content><author><name>Zihan Mei</name><email>meizihanyx@gmail.com</email></author><category term="post" /><category term="Campus" /><category term="Boston" /><category term="GSD" /><category term="Urban design" /><summary type="html">Abstract The campus focused on outdoor gear industry, which is one of the largest economic sectors in the states. The site and neighbor form an attractive leisure landscape thanks to the combination of the natural resource and its strong transportation infrastructure.</summary></entry><entry><title type="html">两晋南北朝史·两晋卷</title><link href="http://localhost:4000/post/2020/01/24/%E4%B8%A4%E6%99%8B%E5%8D%97%E5%8C%97%E6%9C%9D%E5%8F%B2-%E4%B8%A4%E6%99%8B%E5%8D%B7.html" rel="alternate" type="text/html" title="两晋南北朝史·两晋卷" /><published>2020-01-24T00:00:00-05:00</published><updated>2020-01-24T00:00:00-05:00</updated><id>http://localhost:4000/post/2020/01/24/%E4%B8%A4%E6%99%8B%E5%8D%97%E5%8C%97%E6%9C%9D%E5%8F%B2-%E4%B8%A4%E6%99%8B%E5%8D%B7</id><content type="html" xml:base="http://localhost:4000/post/2020/01/24/%E4%B8%A4%E6%99%8B%E5%8D%97%E5%8C%97%E6%9C%9D%E5%8F%B2-%E4%B8%A4%E6%99%8B%E5%8D%B7.html">&lt;p&gt;作者：吕思勉&lt;/p&gt;
-
-&lt;h1 id=&quot;第一章-总论&quot;&gt;【第一章 总论】&lt;/h1&gt;
-
-&lt;p&gt;夫党群既分，则与异族为敌者，实非举国之民，特其操治理之权者耳…其覆亡也，固亦与寻常一姓之覆亡无异，特覆之者非本族而为异族人耳…多数人民与异族之相角，于何见之？其胜负于何决之？曰:视其文化之兴替。两族相遇，文化必有不同，观其孰替孰兴，而文化之优劣分，而民族之存亡，亦由之而判矣。&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;第二章-晋初情势&quot;&gt;【第二章 晋初情势】&lt;/h1&gt;
-
-&lt;h2 id=&quot;第一节-政俗之敝&quot;&gt;第一节 政俗之敝&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;2020-02-01更新&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;振领总纲，要在三条：凡政欲静，静在息役，息役在无为。仓廪欲实，实在利农，利农在平粜。为政欲著信，著信在简贤，简贤在官久。&lt;/p&gt;
-
-&lt;p&gt;…君子务能，小人伐技；风颓于上，俗弊于下，祸结而恨争也不强，患至而悔伐之未辩。大者倾国丧家，次则覆身灭祀。其故何邪？岂不始于私欲，而终于争伐哉？&lt;/p&gt;
-
-&lt;p&gt;民间风俗，历代迁变甚微，政事之隆窳，所以致一时之治乱者，实其士大夫之群及朝贵之执政权者为之。&lt;/p&gt;
-
-&lt;p&gt;…古之圣明，原始以要终，体本以正末，故忧法度之不当，而不忧人物之失所，忧人物之失所，而不忧灾害之流行。其有日月之眚，水旱之灾，则反听内视，求其所由。远观诸物，近验诸身。于物无忤，于人无尤，此则阴阳之事，非吉凶所在也。&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;第三章-西晋乱亡&quot;&gt;【第三章 西晋乱亡】&lt;/h1&gt;
-
-&lt;h2 id=&quot;第一节-齐献王争立&quot;&gt;第一节 齐献王争立&lt;/h2&gt;
-
-&lt;h3 id=&quot;一&quot;&gt;一&lt;/h3&gt;
-
-&lt;p&gt;然朋党之祸，往往乘在上者之宽仁而起…当时为朋党者多权威，非下士，此其所以难破。然欲破朋党，断不能以其为权威而遂多顾忌也。&lt;/p&gt;
-
-&lt;h3 id=&quot;二&quot;&gt;二&lt;/h3&gt;
-
-&lt;p&gt;世及为礼之世，往往以一人一家之私，诒累及于政事，凡在势者皆然，正不必南面之尊而后尔，君子是以穆然于大同之世也。&lt;/p&gt;
-
-&lt;hr /&gt;</content><author><name>Zihan Mei</name><email>meizihanyx@gmail.com</email></author><category term="post" /><category term="Digest" /><category term="Classical Chinese Literature" /><summary type="html">作者：吕思勉 【第一章 总论】 夫党群既分，则与异族为敌者，实非举国之民，特其操治理之权者耳…其覆亡也，固亦与寻常一姓之覆亡无异，特覆之者非本族而为异族人耳…多数人民与异族之相角，于何见之？其胜负于何决之？曰:视其文化之兴替。两族相遇，文化必有不同，观其孰替孰兴，而文化之优劣分，而民族之存亡，亦由之而判矣。 【第二章 晋初情势】 第一节 政俗之敝 2020-02-01更新 振领总纲，要在三条：凡政欲静，静在息役，息役在无为。仓廪欲实，实在利农，利农在平粜。为政欲著信，著信在简贤，简贤在官久。 …君子务能，小人伐技；风颓于上，俗弊于下，祸结而恨争也不强，患至而悔伐之未辩。大者倾国丧家，次则覆身灭祀。其故何邪？岂不始于私欲，而终于争伐哉？ 民间风俗，历代迁变甚微，政事之隆窳，所以致一时之治乱者，实其士大夫之群及朝贵之执政权者为之。 …古之圣明，原始以要终，体本以正末，故忧法度之不当，而不忧人物之失所，忧人物之失所，而不忧灾害之流行。其有日月之眚，水旱之灾，则反听内视，求其所由。远观诸物，近验诸身。于物无忤，于人无尤，此则阴阳之事，非吉凶所在也。 【第三章 西晋乱亡】 第一节 齐献王争立 一 然朋党之祸，往往乘在上者之宽仁而起…当时为朋党者多权威，非下士，此其所以难破。然欲破朋党，断不能以其为权威而遂多顾忌也。 二 世及为礼之世，往往以一人一家之私，诒累及于政事，凡在势者皆然，正不必南面之尊而后尔，君子是以穆然于大同之世也。</summary></entry><entry><title type="html">放言五首</title><link href="http://localhost:4000/post/2020/01/23/%E6%94%BE%E8%A8%80%E4%BA%94%E9%A6%96.html" rel="alternate" type="text/html" title="放言五首" /><published>2020-01-23T00:00:00-05:00</published><updated>2020-01-23T00:00:00-05:00</updated><id>http://localhost:4000/post/2020/01/23/%E6%94%BE%E8%A8%80%E4%BA%94%E9%A6%96</id><content type="html" xml:base="http://localhost:4000/post/2020/01/23/%E6%94%BE%E8%A8%80%E4%BA%94%E9%A6%96.html">&lt;p&gt;作者：白居易&lt;/p&gt;
-
-&lt;p align=&quot;center&quot;&gt;&lt;b&gt;【其一】&lt;/b&gt;&lt;/p&gt;
-
-&lt;p align=&quot;center&quot;&gt;朝真暮伪何人辨，古往今来底事无。&lt;/p&gt;
-
-&lt;p align=&quot;center&quot;&gt;但爱臧生能诈圣，可知甯子解佯愚。&lt;/p&gt;
-
-&lt;p align=&quot;center&quot;&gt;草萤有耀终非火，荷露虽团岂是珠。&lt;/p&gt;
-
-&lt;p align=&quot;center&quot;&gt;不取燔柴兼照乘，可怜光彩亦何殊。&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p align=&quot;center&quot;&gt;&lt;b&gt;【其二】&lt;/b&gt;&lt;/p&gt;
-
-&lt;p align=&quot;center&quot;&gt;世途倚伏都无定，尘网牵缠卒未休。&lt;/p&gt;
-
-&lt;p align=&quot;center&quot;&gt;祸福回还车转毂，荣枯反覆手藏钩。&lt;/p&gt;
-
-&lt;p align=&quot;center&quot;&gt;龟灵未免刳肠患，马失应无折足忧。&lt;/p&gt;
-
-&lt;p align=&quot;center&quot;&gt;不信君看弈棋者，输赢须待局终头。&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p align=&quot;center&quot;&gt;&lt;b&gt;【其三】&lt;/b&gt;&lt;/p&gt;
-
-&lt;p align=&quot;center&quot;&gt;赠君一法决狐疑，不用钻龟与祝蓍。&lt;/p&gt;
-
-&lt;p align=&quot;center&quot;&gt;试玉要烧三日满，辨材须待七年期。&lt;/p&gt;
-
-&lt;p align=&quot;center&quot;&gt;周公恐惧流言日，王莽谦恭未篡时。&lt;/p&gt;
-
-&lt;p align=&quot;center&quot;&gt;向使当初身便死，一生真伪复谁知。&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p align=&quot;center&quot;&gt;&lt;b&gt;【其四】&lt;/b&gt;&lt;/p&gt;
-
-&lt;p align=&quot;center&quot;&gt;谁家第宅成还破，何处亲宾哭复歌。&lt;/p&gt;
-
-&lt;p align=&quot;center&quot;&gt;昨日屋头堪炙手，今朝门外好张罗。&lt;/p&gt;
-
-&lt;p align=&quot;center&quot;&gt;北邙未省留闲地，东海何曾有定波。&lt;/p&gt;
-
-&lt;p align=&quot;center&quot;&gt;莫笑贱贫夸富贵，共成枯骨两如何。&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p align=&quot;center&quot;&gt;&lt;b&gt;【其五】&lt;/b&gt;&lt;/p&gt;
-
-&lt;p align=&quot;center&quot;&gt;泰山不要欺毫末，颜子无心羡老彭。&lt;/p&gt;
-
-&lt;p align=&quot;center&quot;&gt;松树千年终是朽，槿花一日自为荣。&lt;/p&gt;
-
-&lt;p align=&quot;center&quot;&gt;何须恋世常忧死，亦莫嫌身漫厌生。&lt;/p&gt;
-
-&lt;p align=&quot;center&quot;&gt;生去死来都是幻，幻人哀乐繫何情。&lt;/p&gt;
-
-&lt;hr /&gt;</content><author><name>Zihan Mei</name><email>meizihanyx@gmail.com</email></author><category term="post" /><category term="Digest" /><category term="Classical Chinese Literature" /><summary type="html">作者：白居易 【其一】 朝真暮伪何人辨，古往今来底事无。 但爱臧生能诈圣，可知甯子解佯愚。 草萤有耀终非火，荷露虽团岂是珠。 不取燔柴兼照乘，可怜光彩亦何殊。 【其二】 世途倚伏都无定，尘网牵缠卒未休。 祸福回还车转毂，荣枯反覆手藏钩。 龟灵未免刳肠患，马失应无折足忧。 不信君看弈棋者，输赢须待局终头。 【其三】 赠君一法决狐疑，不用钻龟与祝蓍。 试玉要烧三日满，辨材须待七年期。 周公恐惧流言日，王莽谦恭未篡时。 向使当初身便死，一生真伪复谁知。 【其四】 谁家第宅成还破，何处亲宾哭复歌。 昨日屋头堪炙手，今朝门外好张罗。 北邙未省留闲地，东海何曾有定波。 莫笑贱贫夸富贵，共成枯骨两如何。 【其五】 泰山不要欺毫末，颜子无心羡老彭。 松树千年终是朽，槿花一日自为荣。 何须恋世常忧死，亦莫嫌身漫厌生。 生去死来都是幻，幻人哀乐繫何情。</summary></entry><entry><title type="html">神女赋</title><link href="http://localhost:4000/post/2020/01/22/%E7%A5%9E%E5%A5%B3%E8%B5%8B.html" rel="alternate" type="text/html" title="神女赋" /><published>2020-01-22T00:00:00-05:00</published><updated>2020-01-22T00:00:00-05:00</updated><id>http://localhost:4000/post/2020/01/22/%E7%A5%9E%E5%A5%B3%E8%B5%8B</id><content type="html" xml:base="http://localhost:4000/post/2020/01/22/%E7%A5%9E%E5%A5%B3%E8%B5%8B.html">&lt;p&gt;作者：宋玉&lt;/p&gt;
-
-&lt;p&gt;楚襄王与宋玉游于云梦之浦，使玉赋高唐之事。其夜玉寝，果梦与神女遇，其状甚丽，玉异之。明日，以白王。王曰：“其梦若何？”玉对曰：“晡夕之后，精神恍忽，若有所喜，纷纷扰扰，未知何意？目色仿佛，乍若有记：见一妇人，状甚奇异。寐而梦之，寤不自识；罔兮不乐，怅然失志。于是抚心定气，复见所梦。”王曰：“状何如也？”玉曰：“茂矣美矣，诸好备矣。盛矣丽矣，难测究矣。上古既无，世所未见，瑰姿玮态，不可胜赞。其始来也，耀乎若白日初出照屋梁；其少进也，皎若明月舒其光。须臾之间，美貌横生：晔兮如华，温乎如莹。五色并驰，不可殚形。详而视之，夺人目精。其盛饰也，则罗纨绮绩盛文章，极服妙采照万方。振绣衣，被袿裳，秾不短，纤不长，步裔裔兮曜殿堂，忽兮改容，婉若游龙乘云翔。嫷披服，侻薄装，沐兰泽，含若芳。性合适，宜侍旁，顺序卑，调心肠。”王曰：“若此盛矣，试为寡人赋之。”玉曰：“唯唯。”&lt;/p&gt;
-
-&lt;p&gt;夫何神女之姣丽兮，含阴阳之渥饰。披华藻之可好兮，若翡翠之奋翼。其象无双，其美无极；毛嫱鄣袂，不足程式；西施掩面，比之无色。近之既妖，远之有望，骨法多奇，应君之相，视之盈目，孰者克尚。私心独悦，乐之无量；交希恩疏，不可尽畅。他人莫睹，王览其状。其状峨峨，何可极言。貌丰盈以庄姝兮，苞温润之玉颜。眸子炯其精朗兮，瞭多美而可视。眉联娟以蛾扬兮，朱唇的其若丹。素质干之醲实兮，志解泰而体闲。既姽婳于幽静兮，又婆娑乎人间。宜高殿以广意兮，翼故纵而绰宽。动雾以徐步兮，拂声之珊珊。望余帷而延视兮，若流波之将澜。奋长袖以正衽兮，立踯躅而不安。澹清静其愔嫕兮，性沉详而不烦。时容与以微动兮，志未可乎得原。意似近而既远兮，若将来而复旋。褰余帷而请御兮，愿尽心之惓惓。怀贞亮之洁清兮，卒与我兮相难。陈嘉辞而云对兮，吐芬芳其若兰。精交接以来往兮，心凯康以乐欢。神独亨而未结兮，魂茕茕以无端。含然诺其不分兮，扬音而哀叹！薄怒以自持兮，曾不可乎犯干。&lt;/p&gt;
-
-&lt;p&gt;于是摇佩饰，鸣玉鸾；奁衣服，敛容颜；顾女师，命太傅。欢情未接，将辞而去；迁延引身，不可亲附。似逝未行，中若相首；目略微眄，精采相授。志态横出，不可胜记。意离未绝，神心怖覆；礼不遑讫，辞不及究；愿假须臾，神女称遽。徊肠伤气，颠倒失据，黯然而暝，忽不知处。情独私怀，谁者可语？惆怅垂涕，求之至曙。&lt;/p&gt;
-
-&lt;hr /&gt;</content><author><name>Zihan Mei</name><email>meizihanyx@gmail.com</email></author><category term="post" /><category term="Digest" /><category term="Classical Chinese Literature" /><summary type="html">作者：宋玉 楚襄王与宋玉游于云梦之浦，使玉赋高唐之事。其夜玉寝，果梦与神女遇，其状甚丽，玉异之。明日，以白王。王曰：“其梦若何？”玉对曰：“晡夕之后，精神恍忽，若有所喜，纷纷扰扰，未知何意？目色仿佛，乍若有记：见一妇人，状甚奇异。寐而梦之，寤不自识；罔兮不乐，怅然失志。于是抚心定气，复见所梦。”王曰：“状何如也？”玉曰：“茂矣美矣，诸好备矣。盛矣丽矣，难测究矣。上古既无，世所未见，瑰姿玮态，不可胜赞。其始来也，耀乎若白日初出照屋梁；其少进也，皎若明月舒其光。须臾之间，美貌横生：晔兮如华，温乎如莹。五色并驰，不可殚形。详而视之，夺人目精。其盛饰也，则罗纨绮绩盛文章，极服妙采照万方。振绣衣，被袿裳，秾不短，纤不长，步裔裔兮曜殿堂，忽兮改容，婉若游龙乘云翔。嫷披服，侻薄装，沐兰泽，含若芳。性合适，宜侍旁，顺序卑，调心肠。”王曰：“若此盛矣，试为寡人赋之。”玉曰：“唯唯。” 夫何神女之姣丽兮，含阴阳之渥饰。披华藻之可好兮，若翡翠之奋翼。其象无双，其美无极；毛嫱鄣袂，不足程式；西施掩面，比之无色。近之既妖，远之有望，骨法多奇，应君之相，视之盈目，孰者克尚。私心独悦，乐之无量；交希恩疏，不可尽畅。他人莫睹，王览其状。其状峨峨，何可极言。貌丰盈以庄姝兮，苞温润之玉颜。眸子炯其精朗兮，瞭多美而可视。眉联娟以蛾扬兮，朱唇的其若丹。素质干之醲实兮，志解泰而体闲。既姽婳于幽静兮，又婆娑乎人间。宜高殿以广意兮，翼故纵而绰宽。动雾以徐步兮，拂声之珊珊。望余帷而延视兮，若流波之将澜。奋长袖以正衽兮，立踯躅而不安。澹清静其愔嫕兮，性沉详而不烦。时容与以微动兮，志未可乎得原。意似近而既远兮，若将来而复旋。褰余帷而请御兮，愿尽心之惓惓。怀贞亮之洁清兮，卒与我兮相难。陈嘉辞而云对兮，吐芬芳其若兰。精交接以来往兮，心凯康以乐欢。神独亨而未结兮，魂茕茕以无端。含然诺其不分兮，扬音而哀叹！薄怒以自持兮，曾不可乎犯干。 于是摇佩饰，鸣玉鸾；奁衣服，敛容颜；顾女师，命太傅。欢情未接，将辞而去；迁延引身，不可亲附。似逝未行，中若相首；目略微眄，精采相授。志态横出，不可胜记。意离未绝，神心怖覆；礼不遑讫，辞不及究；愿假须臾，神女称遽。徊肠伤气，颠倒失据，黯然而暝，忽不知处。情独私怀，谁者可语？惆怅垂涕，求之至曙。</summary></entry></feed>
+&lt;hr /&gt;</content><author><name>Zihan Mei</name><email>meizihanyx@gmail.com</email></author><category term="post" /><category term="Campus" /><category term="Boston" /><category term="GSD" /><category term="Urban design" /><summary type="html">Abstract The campus focused on outdoor gear industry, which is one of the largest economic sectors in the states. The site and neighbor form an attractive leisure landscape thanks to the combination of the natural resource and its strong transportation infrastructure.</summary></entry></feed>

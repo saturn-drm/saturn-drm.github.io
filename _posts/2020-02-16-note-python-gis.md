@@ -137,4 +137,22 @@ grouped = data.groupby('BINOMIAL')
 for key, values in grouped:
     individual_fish = values
 ```
+
+# OSMnx
+
+## Documententation
+
+### osmnx.plot.plot_graph
+
+```
+Parameters:
+G, bbox=None, fig_height=6, fig_width=None, margin=0.02, axis_off=True, equal_aspect=False, bgcolor='w', show=True, save=False, close=True, file_format='png', filename='temp', dpi=300, annotate=False, node_color='#66ccff', node_size=15, node_alpha=1, node_edgecolor='none', node_zorder=1, edge_color='#999999', edge_linewidth=1, edge_alpha=1, use_geom=True
+```
+
+**Returns: fig, ax**
+
+Return type: tuple
+
+[Documentation page](https://osmnx.readthedocs.io/en/stable/osmnx.html#osmnx.plot.plot_graph)
+
 ---
