@@ -93,7 +93,7 @@ POLYGON ((-180 90, -180 -90, 180 -90, 180 90, -180 90), (-170 80, -170 -80, 170 
 <class 'shapely.geometry.polygon.Polygon'>
 ```
 
-# Geopandas
+# Geopandas / pandas
 
 ## Reading and Plotting a SHP
 
@@ -136,6 +136,23 @@ The function gives an object called `DataFrameGroupBy`, similar to list of keys 
 grouped = data.groupby('BINOMIAL')
 for key, values in grouped:
     individual_fish = values
+```
+
+## Function value_counts()
+
+[Official Documentations](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Index.value_counts.html?highlight=value_counts#pandas.Index.value_counts)
+
+### value_counts() in a column
+
+```python
+print(acc['Suitable_area'].value_counts())
+#type(acc) = geodataframe
+```
+
+### Output
+```python
+0    13011
+1        9
 ```
 
 # OSMnx
