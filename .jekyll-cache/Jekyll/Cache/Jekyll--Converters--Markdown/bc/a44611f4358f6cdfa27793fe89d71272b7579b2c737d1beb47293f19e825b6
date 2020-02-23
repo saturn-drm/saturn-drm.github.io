@@ -1,4 +1,4 @@
-I"30<h1 id="shapely">Shapely</h1>
+I"4<h1 id="shapely">Shapely</h1>
 
 <h2 id="methods-to-access-geometry-type">Methods to access Geometry Type</h2>
 
@@ -68,7 +68,7 @@
 <span class="o">&lt;</span><span class="k">class</span> <span class="err">'</span><span class="nc">shapely</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">polygon</span><span class="o">.</span><span class="n">Polygon</span><span class="s">'&gt;</span><span class="err">
 </span></code></pre></div></div>
 
-<h1 id="geopandas">Geopandas</h1>
+<h1 id="geopandas--pandas">Geopandas / pandas</h1>
 
 <h2 id="reading-and-plotting-a-shp">Reading and Plotting a SHP</h2>
 
@@ -109,15 +109,32 @@
     <span class="n">individual_fish</span> <span class="o">=</span> <span class="n">values</span>
 </code></pre></div></div>
 
+<h2 id="function-value_counts">Function value_counts()</h2>
+
+<p><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Index.value_counts.html?highlight=value_counts#pandas.Index.value_counts">Official Documentations</a></p>
+
+<h3 id="value_counts-in-a-column">value_counts() in a column</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">acc</span><span class="p">[</span><span class="s">'Suitable_area'</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">())</span>
+<span class="c1">#type(acc) = geodataframe
+</span></code></pre></div></div>
+
+<h3 id="output-2">Output</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mi">0</span>    <span class="mi">13011</span>
+<span class="mi">1</span>        <span class="mi">9</span>
+</code></pre></div></div>
+
 <h1 id="osmnx">OSMnx</h1>
 
 <h2 id="documententation">Documententation</h2>
 
 <h3 id="osmnxplotplot_graph">osmnx.plot.plot_graph</h3>
 
-<p><code class="highlighter-rouge">Parameters: G, bbox=None, fig_height=6, fig_width=None, margin=0.02, axis_off=True, equal_aspect=False, bgcolor='w', show=True, save=False, close=True, file_format='png', filename='temp', dpi=300, annotate=False, node_color='#66ccff', node_size=15, node_alpha=1, node_edgecolor='none', node_zorder=1, edge_color='#999999', edge_linewidth=1, edge_alpha=1, use_geom=True
-</code>
-<strong>Returns: fig, ax</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Parameters:
+G, bbox=None, fig_height=6, fig_width=None, margin=0.02, axis_off=True, equal_aspect=False, bgcolor='w', show=True, save=False, close=True, file_format='png', filename='temp', dpi=300, annotate=False, node_color='#66ccff', node_size=15, node_alpha=1, node_edgecolor='none', node_zorder=1, edge_color='#999999', edge_linewidth=1, edge_alpha=1, use_geom=True
+</code></pre></div></div>
+
+<p><strong>Returns: fig, ax</strong></p>
 
 <p>Return type: tuple</p>
 

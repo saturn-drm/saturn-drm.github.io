@@ -70,6 +70,8 @@ side-blog:
     children:
       - title:  Test Style
         url:    /coding/2020-01-18-test-styles
+      - title:  Enable Jupyter in VSCode
+        url:    /coding/2020-02-22-vscode-jupyter
       - title:  Notes in Python GIS
         url:    /coding/2020-02-16-note-python-gis
       - title:  Failed to Import Module Installed through PIP

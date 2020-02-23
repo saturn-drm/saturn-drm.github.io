@@ -1,0 +1,40 @@
+I"<h1 id="usage">Usage</h1>
+
+<h2 id="start-jupyter-in-vscode">Start Jupyter in VSCode</h2>
+
+<p><img src="../assets/images/blog/jupyter-1.png" alt="jupyter-1" /></p>
+
+<!--more-->
+
+<p>Add <code class="highlighter-rouge">#%%</code> to the first line of py file. The <strong>Run Cell</strong>, <strong>Run Below</strong>, and <strong>Debug Cell</strong> function will be added to VSCode.</p>
+
+<p><strong>Example</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># %%
+</span><span class="kn">import</span> <span class="nn">osmnx</span>
+<span class="kn">import</span> <span class="nn">pandas</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span>
+<span class="kn">import</span> <span class="nn">geopandas</span>
+</code></pre></div></div>
+
+<h2 id="python-interactive">Python Interactive</h2>
+
+<p>Use <strong>Shift + Enter</strong> or command <strong>Run Cell</strong> to start Python Interactive.</p>
+
+<p><img src="../assets/images/blog/jupyter-2.png" alt="jupyter-2" /></p>
+
+<hr />
+
+<h1 id="problem-in-setting">Problem in Setting</h1>
+
+<p>Python Interactive shows error of <strong>Jupyter Server: Unconnected</strong>.</p>
+
+<h2 id="solution">Solution</h2>
+
+<p>Install module of <strong>notebook</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sudo</span> <span class="n">pip3</span> <span class="n">install</span> <span class="n">notebook</span>
+</code></pre></div></div>
+
+<hr />
+:ET

@@ -1,5 +1,72 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-02-20T11:10:58-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Zihan Mei’s Personal Site</title><subtitle>Welcome to my website! The site contains my projects and the research during 2014-2019, from the Bachelor of Architecture in Tsinghua University to the Master of Architecture in Urban Design in Harvard GSD.
-</subtitle><author><name>Zihan Mei</name><email>meizihanyx@gmail.com</email></author><entry><title type="html">Notes in Python GIS</title><link href="http://localhost:4000/post/2020/02/16/note-python-gis.html" rel="alternate" type="text/html" title="Notes in Python GIS" /><published>2020-02-16T00:00:00-05:00</published><updated>2020-02-16T00:00:00-05:00</updated><id>http://localhost:4000/post/2020/02/16/note-python-gis</id><content type="html" xml:base="http://localhost:4000/post/2020/02/16/note-python-gis.html">&lt;h1 id=&quot;shapely&quot;&gt;Shapely&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-02-22T23:50:15-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Zihan Mei’s Personal Site</title><subtitle>Welcome to my website! The site contains my projects and the research during 2014-2019, from the Bachelor of Architecture in Tsinghua University to the Master of Architecture in Urban Design in Harvard GSD.
+</subtitle><author><name>Zihan Mei</name><email>meizihanyx@gmail.com</email></author><entry><title type="html">Enable Jupyter in VSCode</title><link href="http://localhost:4000/post/2020/02/22/vscode-jupyter.html" rel="alternate" type="text/html" title="Enable Jupyter in VSCode" /><published>2020-02-22T00:00:00-05:00</published><updated>2020-02-22T00:00:00-05:00</updated><id>http://localhost:4000/post/2020/02/22/vscode-jupyter</id><content type="html" xml:base="http://localhost:4000/post/2020/02/22/vscode-jupyter.html">&lt;h1 id=&quot;usage&quot;&gt;Usage&lt;/h1&gt;
+
+&lt;h2 id=&quot;start-jupyter-in-vscode&quot;&gt;Start Jupyter in VSCode&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/blog/jupyter-1.png&quot; alt=&quot;jupyter-1&quot; /&gt;&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Add &lt;code class=&quot;highlighter-rouge&quot;&gt;#%%&lt;/code&gt; to the first line of py file. The &lt;strong&gt;Run Cell&lt;/strong&gt;, &lt;strong&gt;Run Below&lt;/strong&gt;, and &lt;strong&gt;Debug Cell&lt;/strong&gt; function will be added to VSCode.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# %%
+&lt;/span&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;osmnx&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pandas&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;geopandas&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;python-interactive&quot;&gt;Python Interactive&lt;/h2&gt;
+
+&lt;p&gt;Use &lt;strong&gt;Shift + Enter&lt;/strong&gt; or command &lt;strong&gt;Run Cell&lt;/strong&gt; to start Python Interactive.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/blog/jupyter-2.png&quot; alt=&quot;jupyter-2&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;problem-in-setting&quot;&gt;Problem in Setting&lt;/h1&gt;
+
+&lt;p&gt;Python Interactive shows error of &lt;strong&gt;Jupyter Server: Unconnected&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
+
+&lt;p&gt;Install module of &lt;strong&gt;notebook&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pip3&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;notebook&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;</content><author><name>Zihan Mei</name><email>meizihanyx@gmail.com</email></author><category term="post" /><category term="Python" /><summary type="html">Usage Start Jupyter in VSCode</summary></entry><entry><title type="html">Failed to Import Module Installed through PIP</title><link href="http://localhost:4000/post/2020/02/16/fail-to-import-python-module.html" rel="alternate" type="text/html" title="Failed to Import Module Installed through PIP" /><published>2020-02-16T00:00:00-05:00</published><updated>2020-02-16T00:00:00-05:00</updated><id>http://localhost:4000/post/2020/02/16/fail-to-import-python-module</id><content type="html" xml:base="http://localhost:4000/post/2020/02/16/fail-to-import-python-module.html">&lt;h1 id=&quot;question&quot;&gt;Question&lt;/h1&gt;
+
+&lt;p&gt;I installed pandas and IPython with the command&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;sudo pip3 install pandas / IPython&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;The modules are in the list with the command&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;pip3 list&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/02/16/uObRqny8eEG4w3Q.png&quot; alt=&quot;200216.png&quot; /&gt;&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;However, when debugged in VSCode&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;IPython&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;there is the error of&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ModuleNotFoundError: No module named 'IPython'&lt;/code&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;solution&quot;&gt;Solution&lt;/h1&gt;
+
+&lt;p&gt;When installing the modules, use the command&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;sudo -H python -m pip install pandas / IPython&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr /&gt;</content><author><name>Zihan Mei</name><email>meizihanyx@gmail.com</email></author><category term="post" /><category term="Python" /><summary type="html">Question I installed pandas and IPython with the command sudo pip3 install pandas / IPython The modules are in the list with the command pip3 list</summary></entry><entry><title type="html">Notes in Python GIS</title><link href="http://localhost:4000/post/2020/02/16/note-python-gis.html" rel="alternate" type="text/html" title="Notes in Python GIS" /><published>2020-02-16T00:00:00-05:00</published><updated>2020-02-16T00:00:00-05:00</updated><id>http://localhost:4000/post/2020/02/16/note-python-gis</id><content type="html" xml:base="http://localhost:4000/post/2020/02/16/note-python-gis.html">&lt;h1 id=&quot;shapely&quot;&gt;Shapely&lt;/h1&gt;
 
 &lt;h2 id=&quot;methods-to-access-geometry-type&quot;&gt;Methods to access Geometry Type&lt;/h2&gt;
 
@@ -69,7 +136,7 @@
 &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;shapely&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;geometry&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;polygon&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Polygon&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&amp;gt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h1 id=&quot;geopandas&quot;&gt;Geopandas&lt;/h1&gt;
+&lt;h1 id=&quot;geopandas--pandas&quot;&gt;Geopandas / pandas&lt;/h1&gt;
 
 &lt;h2 id=&quot;reading-and-plotting-a-shp&quot;&gt;Reading and Plotting a SHP&lt;/h2&gt;
 
@@ -110,6 +177,21 @@
     &lt;span class=&quot;n&quot;&gt;individual_fish&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;values&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
+&lt;h2 id=&quot;function-value_counts&quot;&gt;Function value_counts()&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Index.value_counts.html?highlight=value_counts#pandas.Index.value_counts&quot;&gt;Official Documentations&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;value_counts-in-a-column&quot;&gt;value_counts() in a column&lt;/h3&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;acc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Suitable_area'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value_counts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#type(acc) = geodataframe
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;output-2&quot;&gt;Output&lt;/h3&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;    &lt;span class=&quot;mi&quot;&gt;13011&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;        &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 &lt;h1 id=&quot;osmnx&quot;&gt;OSMnx&lt;/h1&gt;
 
 &lt;h2 id=&quot;documententation&quot;&gt;Documententation&lt;/h2&gt;
@@ -126,36 +208,7 @@ G, bbox=None, fig_height=6, fig_width=None, margin=0.02, axis_off=True, equal_as
 
 &lt;p&gt;&lt;a href=&quot;https://osmnx.readthedocs.io/en/stable/osmnx.html#osmnx.plot.plot_graph&quot;&gt;Documentation page&lt;/a&gt;&lt;/p&gt;
 
-&lt;hr /&gt;</content><author><name>Zihan Mei</name><email>meizihanyx@gmail.com</email></author><category term="post" /><category term="Python" /><category term="GIS" /><summary type="html">Shapely Methods to access Geometry Type shapely function - type string poly_type1 = poly1.type print (poly_type1) &amp;gt;&amp;gt; Polygon</summary></entry><entry><title type="html">Failed to Import Module Installed through PIP</title><link href="http://localhost:4000/post/2020/02/16/fail-to-import-python-module.html" rel="alternate" type="text/html" title="Failed to Import Module Installed through PIP" /><published>2020-02-16T00:00:00-05:00</published><updated>2020-02-16T00:00:00-05:00</updated><id>http://localhost:4000/post/2020/02/16/fail-to-import-python-module</id><content type="html" xml:base="http://localhost:4000/post/2020/02/16/fail-to-import-python-module.html">&lt;h1 id=&quot;question&quot;&gt;Question&lt;/h1&gt;
-
-&lt;p&gt;I installed pandas and IPython with the command&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;sudo pip3 install pandas / IPython&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;The modules are in the list with the command&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;pip3 list&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/02/16/uObRqny8eEG4w3Q.png&quot; alt=&quot;200216.png&quot; /&gt;&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;However, when debugged in VSCode&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;IPython&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;there is the error of&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ModuleNotFoundError: No module named 'IPython'&lt;/code&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;solution&quot;&gt;Solution&lt;/h1&gt;
-
-&lt;p&gt;When installing the modules, use the command&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;sudo -H python -m pip install pandas / IPython&lt;/code&gt;&lt;/p&gt;
-
-&lt;hr /&gt;</content><author><name>Zihan Mei</name><email>meizihanyx@gmail.com</email></author><category term="post" /><category term="Python" /><summary type="html">Question I installed pandas and IPython with the command sudo pip3 install pandas / IPython The modules are in the list with the command pip3 list</summary></entry><entry><title type="html">Study On The Development Of TOD</title><link href="http://localhost:4000/post/2020/01/28/study-on-tod.html" rel="alternate" type="text/html" title="Study On The Development Of TOD" /><published>2020-01-28T00:00:00-05:00</published><updated>2020-01-28T00:00:00-05:00</updated><id>http://localhost:4000/post/2020/01/28/study-on-tod</id><content type="html" xml:base="http://localhost:4000/post/2020/01/28/study-on-tod.html">&lt;h1 id=&quot;basic-info&quot;&gt;Basic Info&lt;/h1&gt;
+&lt;hr /&gt;</content><author><name>Zihan Mei</name><email>meizihanyx@gmail.com</email></author><category term="post" /><category term="Python" /><category term="GIS" /><summary type="html">Shapely Methods to access Geometry Type shapely function - type string poly_type1 = poly1.type print (poly_type1) &amp;gt;&amp;gt; Polygon</summary></entry><entry><title type="html">Study On The Development Of TOD</title><link href="http://localhost:4000/post/2020/01/28/study-on-tod.html" rel="alternate" type="text/html" title="Study On The Development Of TOD" /><published>2020-01-28T00:00:00-05:00</published><updated>2020-01-28T00:00:00-05:00</updated><id>http://localhost:4000/post/2020/01/28/study-on-tod</id><content type="html" xml:base="http://localhost:4000/post/2020/01/28/study-on-tod.html">&lt;h1 id=&quot;basic-info&quot;&gt;Basic Info&lt;/h1&gt;
 
 &lt;table&gt;
   &lt;tbody&gt;
@@ -220,75 +273,7 @@ G, bbox=None, fig_height=6, fig_width=None, margin=0.02, axis_off=True, equal_as
 
 &lt;!--more--&gt;
 
-&lt;hr /&gt;</content><author><name>Zihan Mei</name><email>meizihanyx@gmail.com</email></author><category term="post" /><category term="Website" /><summary type="html">VSCode 插件 Easy Sass</summary></entry><entry><title type="html">Add the Site to Google Search Console</title><link href="http://localhost:4000/post/2020/01/26/add-to-google-search.html" rel="alternate" type="text/html" title="Add the Site to Google Search Console" /><published>2020-01-26T00:00:00-05:00</published><updated>2020-01-26T00:00:00-05:00</updated><id>http://localhost:4000/post/2020/01/26/add-to-google-search</id><content type="html" xml:base="http://localhost:4000/post/2020/01/26/add-to-google-search.html">&lt;p&gt;2020-01-26-13:04更新：&lt;/p&gt;
-
-&lt;p&gt;中午起来验证成功。
-&lt;!--more--&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;说出来你可能不信，今天晚上我给网站添加了google analytics之后试图再把自己的站点添加到google search console中，但是在修改了DNS之后，出现了&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;输入网址能在Mac的chrome和安卓的chrome以及安卓的默认浏览器打开，不能用Safari打开，google能搜到我的网站，能在手机默认浏览器上打开不能在chrome里打开&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;的情况。&lt;/p&gt;
-
-&lt;p&gt;牺牲了2小时的睡眠折腾到凌晨5:30之后，我把网站从google search console中移除了（但是现在还搜得到好像还要保留90天），但是DNS仍然没动。&lt;/p&gt;
-
-&lt;p&gt;暂时还没找到原因，各浏览器测试也不太稳定。&lt;/p&gt;
-
-&lt;p&gt;&lt;del&gt;并且现在chrome标签页不显示我的favicon了，但愿只是缓存问题&lt;/del&gt;&lt;/p&gt;
-
-&lt;p&gt;日后再测。&lt;/p&gt;
-
-&lt;hr /&gt;</content><author><name>Zihan Mei</name><email>meizihanyx@gmail.com</email></author><category term="post" /><category term="Website" /><summary type="html">2020-01-26-13:04更新： 中午起来验证成功。</summary></entry><entry><title type="html">资治通鉴</title><link href="http://localhost:4000/post/2020/01/26/%E8%B5%84%E6%B2%BB%E9%80%9A%E9%89%B4.html" rel="alternate" type="text/html" title="资治通鉴" /><published>2020-01-26T00:00:00-05:00</published><updated>2020-01-26T00:00:00-05:00</updated><id>http://localhost:4000/post/2020/01/26/%E8%B5%84%E6%B2%BB%E9%80%9A%E9%89%B4</id><content type="html" xml:base="http://localhost:4000/post/2020/01/26/%E8%B5%84%E6%B2%BB%E9%80%9A%E9%89%B4.html">&lt;p&gt;作者：司马光&lt;/p&gt;
-
-&lt;h1 id=&quot;第一卷&quot;&gt;第一卷&lt;/h1&gt;
-
-&lt;h2 id=&quot;智伯之亡&quot;&gt;智伯之亡&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;2020-01-21更新&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;臣光曰：智伯之亡也，才胜德也。夫才与德异，而世俗莫之能辨，通谓之贤，此其所以失人也。夫聪察强毅之谓才，正直中和之谓德。才者，德之资也；德者，才之帅也。云梦之竹，天下之劲也；然而不矫揉，不羽括，则不能以入坚。棠之金，天下之利也；然而不熔范，不砥砺，则不能以击强。是故才德全尽谓之“圣人”，才德兼亡谓之“愚人”；德胜才谓之“君子”，才胜德谓之“小人”。凡取人之术，苟不得圣人、君子而与之，与其得小人，不若得愚人。何则？君子挟才以为善，小人挟才以为恶。挟才以为善者，善无不至矣；挟才以为恶者，恶亦无不至矣。愚者虽欲为不善，智不能周，力不能胜，譬如乳狗搏人，人得而制之。小人智足以遂其奸，勇足以决其暴，是虎而翼者也，其为害岂不多哉！夫德者人之所严，而才者人之所爱；爱者易亲，严者易疏，是以察者多蔽于才而遗于德。自古昔以来，国之乱臣，家之败子，才有馀而德不足，以至于颠覆者多矣，岂特智伯哉！故为国为家者苟能审于才德之分而知所先后，又何失人之足患哉！&lt;/p&gt;
-
-&lt;h2 id=&quot;吴起奔楚&quot;&gt;吴起奔楚&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;2020-01-21更新&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;久之，魏相公叔尚主而害吴起。公叔之仆曰：“起易去也。起为人刚劲自喜。子先言于君曰：‘吴起，贤人也，而君之国小，臣恐起之无留心也。君盍试延以女，起无留心，则必辞矣。’子因与起归而使公主辱子，起见公主之贱子也，必辞，则子之计中矣。”公叔从之，吴起果辞公主。魏武侯疑之而未信，起惧诛，遂奔楚。&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;第二卷&quot;&gt;第二卷&lt;/h1&gt;
-
-&lt;h2 id=&quot;商鞅变法&quot;&gt;商鞅变法&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;2020-02-13更新&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;卫鞅欲变法，秦人不悦。卫鞅言于秦孝公曰：“夫民不可与虑始，而可与乐成。论至德者不和于俗，成大功者不谋于众。是以圣人苟可以强国，不法其故。”甘龙曰：“不然，缘法而治者，吏习而民安之。”卫鞅曰：“常人安于故俗，学者溺于所闻，以此两者，居官守法可也，非所与论于法之外也。智者作法，愚者制焉；贤者更礼，不肖者拘焉。”公曰：“善。”以卫鞅为左庶长。卒定变法之令。令民为什伍而相收司、连坐，告奸者与斩敌首同赏，不告奸者与降敌同罚。有军功者，各以率受上爵；为私斗者，各以轻重被刑大小。力本业，耕织致粟帛多者，复其身；事末利及怠而贫者，举以为收孥。宗室非有军功论，不得为属籍。明尊卑爵秩等级，各以差次名田宅、臣妾、衣服。有功者显荣，无功者虽富无所芬华。&lt;/p&gt;
-
-&lt;p&gt;令既具未布，恐民之不信，乃立三丈之木于国都市南门，募民有能徙置北门者予十金。民怪之，莫敢徙。复曰：“能徙者予五十金！”有一人徙之，辄予五十金。乃下令。&lt;/p&gt;
-
-&lt;p&gt;令行期年，秦民之国都言新令之不便者以千数。于是太子犯法。卫鞅曰：“法之不行，自上犯之。”太子，君嗣也，不可施刑，刑其傅公子虔，黥其师公孙贾。明日，秦人皆趋令。行之十年，秦国道不拾遗，山无盗贼，民勇于公战，怯于私斗，乡邑大治。秦民初言令不便者，有来言令便。卫鞅曰：“此皆乱法之民也！”尽迁之于边。其后民莫敢议令。&lt;/p&gt;
-
-&lt;p&gt;臣光曰：夫信者，人君之大宝也。国保于民，民保于信；非信无以使民，非民无以守国。是故古之王者不欺四海，霸者不欺四邻，善为国者不欺其民，善为家者不欺其亲。不善者反之，欺其邻国，欺其百姓，甚者欺其兄弟，欺其父子。上不信下，下不信上，上下离心，以至于败。所利不能药其所伤，所获不能补其所亡，岂不哀哉！昔齐桓公不背曹沫之盟，晋文公不贪伐原之利，魏文侯不弃虞人之期，秦孝公不废徙木之赏。此四君者道非粹白，而商君尤称刻薄，又处战攻之世，天下趋于诈力，犹且不敢忘信以畜其民，况为四海治平之政者哉！&lt;/p&gt;
-
-&lt;h2 id=&quot;围魏救赵&quot;&gt;围魏救赵&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;2020-02-13更新&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;田忌欲引兵之赵。孙子曰：“夫解杂乱纷纠者不控拳，救斗者不搏，批亢捣虚，形格势禁，则自为解耳。今梁、赵相攻，轻兵锐卒必竭于外，老弱疲于内；子不若引兵疾走魏都，据其街路，冲其方虚，彼必释赵以自救：是我一举解赵之围而收弊于魏也。”田忌从之。十月，邯郸降魏。魏师还，与齐战于桂陵，魏师大败。&lt;/p&gt;
-
-&lt;hr /&gt;</content><author><name>Zihan Mei</name><email>meizihanyx@gmail.com</email></author><category term="post" /><category term="Digest" /><category term="Classical Chinese Literature" /><summary type="html">作者：司马光 第一卷 智伯之亡 2020-01-21更新 臣光曰：智伯之亡也，才胜德也。夫才与德异，而世俗莫之能辨，通谓之贤，此其所以失人也。夫聪察强毅之谓才，正直中和之谓德。才者，德之资也；德者，才之帅也。云梦之竹，天下之劲也；然而不矫揉，不羽括，则不能以入坚。棠之金，天下之利也；然而不熔范，不砥砺，则不能以击强。是故才德全尽谓之“圣人”，才德兼亡谓之“愚人”；德胜才谓之“君子”，才胜德谓之“小人”。凡取人之术，苟不得圣人、君子而与之，与其得小人，不若得愚人。何则？君子挟才以为善，小人挟才以为恶。挟才以为善者，善无不至矣；挟才以为恶者，恶亦无不至矣。愚者虽欲为不善，智不能周，力不能胜，譬如乳狗搏人，人得而制之。小人智足以遂其奸，勇足以决其暴，是虎而翼者也，其为害岂不多哉！夫德者人之所严，而才者人之所爱；爱者易亲，严者易疏，是以察者多蔽于才而遗于德。自古昔以来，国之乱臣，家之败子，才有馀而德不足，以至于颠覆者多矣，岂特智伯哉！故为国为家者苟能审于才德之分而知所先后，又何失人之足患哉！ 吴起奔楚 2020-01-21更新 久之，魏相公叔尚主而害吴起。公叔之仆曰：“起易去也。起为人刚劲自喜。子先言于君曰：‘吴起，贤人也，而君之国小，臣恐起之无留心也。君盍试延以女，起无留心，则必辞矣。’子因与起归而使公主辱子，起见公主之贱子也，必辞，则子之计中矣。”公叔从之，吴起果辞公主。魏武侯疑之而未信，起惧诛，遂奔楚。 第二卷 商鞅变法 2020-02-13更新 卫鞅欲变法，秦人不悦。卫鞅言于秦孝公曰：“夫民不可与虑始，而可与乐成。论至德者不和于俗，成大功者不谋于众。是以圣人苟可以强国，不法其故。”甘龙曰：“不然，缘法而治者，吏习而民安之。”卫鞅曰：“常人安于故俗，学者溺于所闻，以此两者，居官守法可也，非所与论于法之外也。智者作法，愚者制焉；贤者更礼，不肖者拘焉。”公曰：“善。”以卫鞅为左庶长。卒定变法之令。令民为什伍而相收司、连坐，告奸者与斩敌首同赏，不告奸者与降敌同罚。有军功者，各以率受上爵；为私斗者，各以轻重被刑大小。力本业，耕织致粟帛多者，复其身；事末利及怠而贫者，举以为收孥。宗室非有军功论，不得为属籍。明尊卑爵秩等级，各以差次名田宅、臣妾、衣服。有功者显荣，无功者虽富无所芬华。 令既具未布，恐民之不信，乃立三丈之木于国都市南门，募民有能徙置北门者予十金。民怪之，莫敢徙。复曰：“能徙者予五十金！”有一人徙之，辄予五十金。乃下令。 令行期年，秦民之国都言新令之不便者以千数。于是太子犯法。卫鞅曰：“法之不行，自上犯之。”太子，君嗣也，不可施刑，刑其傅公子虔，黥其师公孙贾。明日，秦人皆趋令。行之十年，秦国道不拾遗，山无盗贼，民勇于公战，怯于私斗，乡邑大治。秦民初言令不便者，有来言令便。卫鞅曰：“此皆乱法之民也！”尽迁之于边。其后民莫敢议令。 臣光曰：夫信者，人君之大宝也。国保于民，民保于信；非信无以使民，非民无以守国。是故古之王者不欺四海，霸者不欺四邻，善为国者不欺其民，善为家者不欺其亲。不善者反之，欺其邻国，欺其百姓，甚者欺其兄弟，欺其父子。上不信下，下不信上，上下离心，以至于败。所利不能药其所伤，所获不能补其所亡，岂不哀哉！昔齐桓公不背曹沫之盟，晋文公不贪伐原之利，魏文侯不弃虞人之期，秦孝公不废徙木之赏。此四君者道非粹白，而商君尤称刻薄，又处战攻之世，天下趋于诈力，犹且不敢忘信以畜其民，况为四海治平之政者哉！ 围魏救赵 2020-02-13更新 田忌欲引兵之赵。孙子曰：“夫解杂乱纷纠者不控拳，救斗者不搏，批亢捣虚，形格势禁，则自为解耳。今梁、赵相攻，轻兵锐卒必竭于外，老弱疲于内；子不若引兵疾走魏都，据其街路，冲其方虚，彼必释赵以自救：是我一举解赵之围而收弊于魏也。”田忌从之。十月，邯郸降魏。魏师还，与齐战于桂陵，魏师大败。</summary></entry><entry><title type="html">HOUSING IN URBAN CORES</title><link href="http://localhost:4000/post/2020/01/26/south-boston-housing.html" rel="alternate" type="text/html" title="HOUSING IN URBAN CORES" /><published>2020-01-26T00:00:00-05:00</published><updated>2020-01-26T00:00:00-05:00</updated><id>http://localhost:4000/post/2020/01/26/south-boston-housing</id><content type="html" xml:base="http://localhost:4000/post/2020/01/26/south-boston-housing.html">&lt;h1 id=&quot;abstract&quot;&gt;Abstract&lt;/h1&gt;
+&lt;hr /&gt;</content><author><name>Zihan Mei</name><email>meizihanyx@gmail.com</email></author><category term="post" /><category term="Website" /><summary type="html">VSCode 插件 Easy Sass</summary></entry><entry><title type="html">HOUSING IN URBAN CORES</title><link href="http://localhost:4000/post/2020/01/26/south-boston-housing.html" rel="alternate" type="text/html" title="HOUSING IN URBAN CORES" /><published>2020-01-26T00:00:00-05:00</published><updated>2020-01-26T00:00:00-05:00</updated><id>http://localhost:4000/post/2020/01/26/south-boston-housing</id><content type="html" xml:base="http://localhost:4000/post/2020/01/26/south-boston-housing.html">&lt;h1 id=&quot;abstract&quot;&gt;Abstract&lt;/h1&gt;
 
 &lt;ul&gt;
   &lt;li&gt;The project is an extension of the existing grid and transportation system, which overrides the mostly underwater site in the future.&lt;/li&gt;
@@ -442,7 +427,75 @@ G, bbox=None, fig_height=6, fig_width=None, margin=0.02, axis_off=True, equal_as
 
 &lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/01/27/4REuIHWGCXp1Tdg.jpg&quot; alt=&quot;07-1SEC.jpg&quot; /&gt;&lt;/p&gt;
 
-&lt;hr /&gt;</content><author><name>Zihan Mei</name><email>meizihanyx@gmail.com</email></author><category term="post" /><category term="Housing" /><category term="Boston" /><category term="GSD" /><category term="Urban design" /><summary type="html">Abstract The project is an extension of the existing grid and transportation system, which overrides the mostly underwater site in the future.</summary></entry><entry><title type="html">讨贼檄文</title><link href="http://localhost:4000/post/2020/01/25/%E8%AE%A8%E8%B4%BC%E6%AA%84%E6%96%87.html" rel="alternate" type="text/html" title="讨贼檄文" /><published>2020-01-25T00:00:00-05:00</published><updated>2020-01-25T00:00:00-05:00</updated><id>http://localhost:4000/post/2020/01/25/%E8%AE%A8%E8%B4%BC%E6%AA%84%E6%96%87</id><content type="html" xml:base="http://localhost:4000/post/2020/01/25/%E8%AE%A8%E8%B4%BC%E6%AA%84%E6%96%87.html">&lt;p&gt;作者：陈琳&lt;/p&gt;
+&lt;hr /&gt;</content><author><name>Zihan Mei</name><email>meizihanyx@gmail.com</email></author><category term="post" /><category term="Housing" /><category term="Boston" /><category term="GSD" /><category term="Urban design" /><summary type="html">Abstract The project is an extension of the existing grid and transportation system, which overrides the mostly underwater site in the future.</summary></entry><entry><title type="html">Add the Site to Google Search Console</title><link href="http://localhost:4000/post/2020/01/26/add-to-google-search.html" rel="alternate" type="text/html" title="Add the Site to Google Search Console" /><published>2020-01-26T00:00:00-05:00</published><updated>2020-01-26T00:00:00-05:00</updated><id>http://localhost:4000/post/2020/01/26/add-to-google-search</id><content type="html" xml:base="http://localhost:4000/post/2020/01/26/add-to-google-search.html">&lt;p&gt;2020-01-26-13:04更新：&lt;/p&gt;
+
+&lt;p&gt;中午起来验证成功。
+&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;说出来你可能不信，今天晚上我给网站添加了google analytics之后试图再把自己的站点添加到google search console中，但是在修改了DNS之后，出现了&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;输入网址能在Mac的chrome和安卓的chrome以及安卓的默认浏览器打开，不能用Safari打开，google能搜到我的网站，能在手机默认浏览器上打开不能在chrome里打开&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;的情况。&lt;/p&gt;
+
+&lt;p&gt;牺牲了2小时的睡眠折腾到凌晨5:30之后，我把网站从google search console中移除了（但是现在还搜得到好像还要保留90天），但是DNS仍然没动。&lt;/p&gt;
+
+&lt;p&gt;暂时还没找到原因，各浏览器测试也不太稳定。&lt;/p&gt;
+
+&lt;p&gt;&lt;del&gt;并且现在chrome标签页不显示我的favicon了，但愿只是缓存问题&lt;/del&gt;&lt;/p&gt;
+
+&lt;p&gt;日后再测。&lt;/p&gt;
+
+&lt;hr /&gt;</content><author><name>Zihan Mei</name><email>meizihanyx@gmail.com</email></author><category term="post" /><category term="Website" /><summary type="html">2020-01-26-13:04更新： 中午起来验证成功。</summary></entry><entry><title type="html">资治通鉴</title><link href="http://localhost:4000/post/2020/01/26/%E8%B5%84%E6%B2%BB%E9%80%9A%E9%89%B4.html" rel="alternate" type="text/html" title="资治通鉴" /><published>2020-01-26T00:00:00-05:00</published><updated>2020-01-26T00:00:00-05:00</updated><id>http://localhost:4000/post/2020/01/26/%E8%B5%84%E6%B2%BB%E9%80%9A%E9%89%B4</id><content type="html" xml:base="http://localhost:4000/post/2020/01/26/%E8%B5%84%E6%B2%BB%E9%80%9A%E9%89%B4.html">&lt;p&gt;作者：司马光&lt;/p&gt;
+
+&lt;h1 id=&quot;第一卷&quot;&gt;第一卷&lt;/h1&gt;
+
+&lt;h2 id=&quot;智伯之亡&quot;&gt;智伯之亡&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;2020-01-21更新&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;臣光曰：智伯之亡也，才胜德也。夫才与德异，而世俗莫之能辨，通谓之贤，此其所以失人也。夫聪察强毅之谓才，正直中和之谓德。才者，德之资也；德者，才之帅也。云梦之竹，天下之劲也；然而不矫揉，不羽括，则不能以入坚。棠之金，天下之利也；然而不熔范，不砥砺，则不能以击强。是故才德全尽谓之“圣人”，才德兼亡谓之“愚人”；德胜才谓之“君子”，才胜德谓之“小人”。凡取人之术，苟不得圣人、君子而与之，与其得小人，不若得愚人。何则？君子挟才以为善，小人挟才以为恶。挟才以为善者，善无不至矣；挟才以为恶者，恶亦无不至矣。愚者虽欲为不善，智不能周，力不能胜，譬如乳狗搏人，人得而制之。小人智足以遂其奸，勇足以决其暴，是虎而翼者也，其为害岂不多哉！夫德者人之所严，而才者人之所爱；爱者易亲，严者易疏，是以察者多蔽于才而遗于德。自古昔以来，国之乱臣，家之败子，才有馀而德不足，以至于颠覆者多矣，岂特智伯哉！故为国为家者苟能审于才德之分而知所先后，又何失人之足患哉！&lt;/p&gt;
+
+&lt;h2 id=&quot;吴起奔楚&quot;&gt;吴起奔楚&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;2020-01-21更新&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;久之，魏相公叔尚主而害吴起。公叔之仆曰：“起易去也。起为人刚劲自喜。子先言于君曰：‘吴起，贤人也，而君之国小，臣恐起之无留心也。君盍试延以女，起无留心，则必辞矣。’子因与起归而使公主辱子，起见公主之贱子也，必辞，则子之计中矣。”公叔从之，吴起果辞公主。魏武侯疑之而未信，起惧诛，遂奔楚。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;第二卷&quot;&gt;第二卷&lt;/h1&gt;
+
+&lt;h2 id=&quot;商鞅变法&quot;&gt;商鞅变法&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;2020-02-13更新&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;卫鞅欲变法，秦人不悦。卫鞅言于秦孝公曰：“夫民不可与虑始，而可与乐成。论至德者不和于俗，成大功者不谋于众。是以圣人苟可以强国，不法其故。”甘龙曰：“不然，缘法而治者，吏习而民安之。”卫鞅曰：“常人安于故俗，学者溺于所闻，以此两者，居官守法可也，非所与论于法之外也。智者作法，愚者制焉；贤者更礼，不肖者拘焉。”公曰：“善。”以卫鞅为左庶长。卒定变法之令。令民为什伍而相收司、连坐，告奸者与斩敌首同赏，不告奸者与降敌同罚。有军功者，各以率受上爵；为私斗者，各以轻重被刑大小。力本业，耕织致粟帛多者，复其身；事末利及怠而贫者，举以为收孥。宗室非有军功论，不得为属籍。明尊卑爵秩等级，各以差次名田宅、臣妾、衣服。有功者显荣，无功者虽富无所芬华。&lt;/p&gt;
+
+&lt;p&gt;令既具未布，恐民之不信，乃立三丈之木于国都市南门，募民有能徙置北门者予十金。民怪之，莫敢徙。复曰：“能徙者予五十金！”有一人徙之，辄予五十金。乃下令。&lt;/p&gt;
+
+&lt;p&gt;令行期年，秦民之国都言新令之不便者以千数。于是太子犯法。卫鞅曰：“法之不行，自上犯之。”太子，君嗣也，不可施刑，刑其傅公子虔，黥其师公孙贾。明日，秦人皆趋令。行之十年，秦国道不拾遗，山无盗贼，民勇于公战，怯于私斗，乡邑大治。秦民初言令不便者，有来言令便。卫鞅曰：“此皆乱法之民也！”尽迁之于边。其后民莫敢议令。&lt;/p&gt;
+
+&lt;p&gt;臣光曰：夫信者，人君之大宝也。国保于民，民保于信；非信无以使民，非民无以守国。是故古之王者不欺四海，霸者不欺四邻，善为国者不欺其民，善为家者不欺其亲。不善者反之，欺其邻国，欺其百姓，甚者欺其兄弟，欺其父子。上不信下，下不信上，上下离心，以至于败。所利不能药其所伤，所获不能补其所亡，岂不哀哉！昔齐桓公不背曹沫之盟，晋文公不贪伐原之利，魏文侯不弃虞人之期，秦孝公不废徙木之赏。此四君者道非粹白，而商君尤称刻薄，又处战攻之世，天下趋于诈力，犹且不敢忘信以畜其民，况为四海治平之政者哉！&lt;/p&gt;
+
+&lt;h2 id=&quot;围魏救赵&quot;&gt;围魏救赵&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;2020-02-13更新&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;田忌欲引兵之赵。孙子曰：“夫解杂乱纷纠者不控拳，救斗者不搏，批亢捣虚，形格势禁，则自为解耳。今梁、赵相攻，轻兵锐卒必竭于外，老弱疲于内；子不若引兵疾走魏都，据其街路，冲其方虚，彼必释赵以自救：是我一举解赵之围而收弊于魏也。”田忌从之。十月，邯郸降魏。魏师还，与齐战于桂陵，魏师大败。&lt;/p&gt;
+
+&lt;hr /&gt;</content><author><name>Zihan Mei</name><email>meizihanyx@gmail.com</email></author><category term="post" /><category term="Digest" /><category term="Classical Chinese Literature" /><summary type="html">作者：司马光 第一卷 智伯之亡 2020-01-21更新 臣光曰：智伯之亡也，才胜德也。夫才与德异，而世俗莫之能辨，通谓之贤，此其所以失人也。夫聪察强毅之谓才，正直中和之谓德。才者，德之资也；德者，才之帅也。云梦之竹，天下之劲也；然而不矫揉，不羽括，则不能以入坚。棠之金，天下之利也；然而不熔范，不砥砺，则不能以击强。是故才德全尽谓之“圣人”，才德兼亡谓之“愚人”；德胜才谓之“君子”，才胜德谓之“小人”。凡取人之术，苟不得圣人、君子而与之，与其得小人，不若得愚人。何则？君子挟才以为善，小人挟才以为恶。挟才以为善者，善无不至矣；挟才以为恶者，恶亦无不至矣。愚者虽欲为不善，智不能周，力不能胜，譬如乳狗搏人，人得而制之。小人智足以遂其奸，勇足以决其暴，是虎而翼者也，其为害岂不多哉！夫德者人之所严，而才者人之所爱；爱者易亲，严者易疏，是以察者多蔽于才而遗于德。自古昔以来，国之乱臣，家之败子，才有馀而德不足，以至于颠覆者多矣，岂特智伯哉！故为国为家者苟能审于才德之分而知所先后，又何失人之足患哉！ 吴起奔楚 2020-01-21更新 久之，魏相公叔尚主而害吴起。公叔之仆曰：“起易去也。起为人刚劲自喜。子先言于君曰：‘吴起，贤人也，而君之国小，臣恐起之无留心也。君盍试延以女，起无留心，则必辞矣。’子因与起归而使公主辱子，起见公主之贱子也，必辞，则子之计中矣。”公叔从之，吴起果辞公主。魏武侯疑之而未信，起惧诛，遂奔楚。 第二卷 商鞅变法 2020-02-13更新 卫鞅欲变法，秦人不悦。卫鞅言于秦孝公曰：“夫民不可与虑始，而可与乐成。论至德者不和于俗，成大功者不谋于众。是以圣人苟可以强国，不法其故。”甘龙曰：“不然，缘法而治者，吏习而民安之。”卫鞅曰：“常人安于故俗，学者溺于所闻，以此两者，居官守法可也，非所与论于法之外也。智者作法，愚者制焉；贤者更礼，不肖者拘焉。”公曰：“善。”以卫鞅为左庶长。卒定变法之令。令民为什伍而相收司、连坐，告奸者与斩敌首同赏，不告奸者与降敌同罚。有军功者，各以率受上爵；为私斗者，各以轻重被刑大小。力本业，耕织致粟帛多者，复其身；事末利及怠而贫者，举以为收孥。宗室非有军功论，不得为属籍。明尊卑爵秩等级，各以差次名田宅、臣妾、衣服。有功者显荣，无功者虽富无所芬华。 令既具未布，恐民之不信，乃立三丈之木于国都市南门，募民有能徙置北门者予十金。民怪之，莫敢徙。复曰：“能徙者予五十金！”有一人徙之，辄予五十金。乃下令。 令行期年，秦民之国都言新令之不便者以千数。于是太子犯法。卫鞅曰：“法之不行，自上犯之。”太子，君嗣也，不可施刑，刑其傅公子虔，黥其师公孙贾。明日，秦人皆趋令。行之十年，秦国道不拾遗，山无盗贼，民勇于公战，怯于私斗，乡邑大治。秦民初言令不便者，有来言令便。卫鞅曰：“此皆乱法之民也！”尽迁之于边。其后民莫敢议令。 臣光曰：夫信者，人君之大宝也。国保于民，民保于信；非信无以使民，非民无以守国。是故古之王者不欺四海，霸者不欺四邻，善为国者不欺其民，善为家者不欺其亲。不善者反之，欺其邻国，欺其百姓，甚者欺其兄弟，欺其父子。上不信下，下不信上，上下离心，以至于败。所利不能药其所伤，所获不能补其所亡，岂不哀哉！昔齐桓公不背曹沫之盟，晋文公不贪伐原之利，魏文侯不弃虞人之期，秦孝公不废徙木之赏。此四君者道非粹白，而商君尤称刻薄，又处战攻之世，天下趋于诈力，犹且不敢忘信以畜其民，况为四海治平之政者哉！ 围魏救赵 2020-02-13更新 田忌欲引兵之赵。孙子曰：“夫解杂乱纷纠者不控拳，救斗者不搏，批亢捣虚，形格势禁，则自为解耳。今梁、赵相攻，轻兵锐卒必竭于外，老弱疲于内；子不若引兵疾走魏都，据其街路，冲其方虚，彼必释赵以自救：是我一举解赵之围而收弊于魏也。”田忌从之。十月，邯郸降魏。魏师还，与齐战于桂陵，魏师大败。</summary></entry><entry><title type="html">讨贼檄文</title><link href="http://localhost:4000/post/2020/01/25/%E8%AE%A8%E8%B4%BC%E6%AA%84%E6%96%87.html" rel="alternate" type="text/html" title="讨贼檄文" /><published>2020-01-25T00:00:00-05:00</published><updated>2020-01-25T00:00:00-05:00</updated><id>http://localhost:4000/post/2020/01/25/%E8%AE%A8%E8%B4%BC%E6%AA%84%E6%96%87</id><content type="html" xml:base="http://localhost:4000/post/2020/01/25/%E8%AE%A8%E8%B4%BC%E6%AA%84%E6%96%87.html">&lt;p&gt;作者：陈琳&lt;/p&gt;
 
 &lt;p&gt;盖闻明主图危以制变，忠臣虑难以立权。是以有非常之人，然后有非常之事；有非常之事，然后立非常之功。夫非常者，固非常人所拟也。曩者，强秦弱主，赵高执柄，专制朝权，威福由己；时人迫胁，莫敢正言；终有望夷之败，祖宗焚灭，污辱至今，永为世鉴。及臻吕后季年，产禄专政，内兼二军，外统赵梁；擅断万机，决事省禁；下陵上替，海内寒心。于是绛侯朱虚兴兵奋怒，诛夷逆暴，尊立太宗，故能王道兴隆，光明显融：此则大臣立权之明表也。&lt;/p&gt;
 
@@ -488,155 +541,4 @@ G, bbox=None, fig_height=6, fig_width=None, margin=0.02, axis_off=True, equal_as
 
 &lt;p&gt;世及为礼之世，往往以一人一家之私，诒累及于政事，凡在势者皆然，正不必南面之尊而后尔，君子是以穆然于大同之世也。&lt;/p&gt;
 
-&lt;hr /&gt;</content><author><name>Zihan Mei</name><email>meizihanyx@gmail.com</email></author><category term="post" /><category term="Digest" /><category term="Classical Chinese Literature" /><summary type="html">作者：吕思勉 【第一章 总论】 夫党群既分，则与异族为敌者，实非举国之民，特其操治理之权者耳…其覆亡也，固亦与寻常一姓之覆亡无异，特覆之者非本族而为异族人耳…多数人民与异族之相角，于何见之？其胜负于何决之？曰:视其文化之兴替。两族相遇，文化必有不同，观其孰替孰兴，而文化之优劣分，而民族之存亡，亦由之而判矣。 【第二章 晋初情势】 第一节 政俗之敝 2020-02-01更新 振领总纲，要在三条：凡政欲静，静在息役，息役在无为。仓廪欲实，实在利农，利农在平粜。为政欲著信，著信在简贤，简贤在官久。 …君子务能，小人伐技；风颓于上，俗弊于下，祸结而恨争也不强，患至而悔伐之未辩。大者倾国丧家，次则覆身灭祀。其故何邪？岂不始于私欲，而终于争伐哉？ 民间风俗，历代迁变甚微，政事之隆窳，所以致一时之治乱者，实其士大夫之群及朝贵之执政权者为之。 …古之圣明，原始以要终，体本以正末，故忧法度之不当，而不忧人物之失所，忧人物之失所，而不忧灾害之流行。其有日月之眚，水旱之灾，则反听内视，求其所由。远观诸物，近验诸身。于物无忤，于人无尤，此则阴阳之事，非吉凶所在也。 【第三章 西晋乱亡】 第一节 齐献王争立 一 然朋党之祸，往往乘在上者之宽仁而起…当时为朋党者多权威，非下士，此其所以难破。然欲破朋党，断不能以其为权威而遂多顾忌也。 二 世及为礼之世，往往以一人一家之私，诒累及于政事，凡在势者皆然，正不必南面之尊而后尔，君子是以穆然于大同之世也。</summary></entry><entry><title type="html">HIGH-TECH CAMPUS IN SUBURBAN</title><link href="http://localhost:4000/post/2020/01/24/high-tech-campus.html" rel="alternate" type="text/html" title="HIGH-TECH CAMPUS IN SUBURBAN" /><published>2020-01-24T00:00:00-05:00</published><updated>2020-01-24T00:00:00-05:00</updated><id>http://localhost:4000/post/2020/01/24/high-tech-campus</id><content type="html" xml:base="http://localhost:4000/post/2020/01/24/high-tech-campus.html">&lt;h1 id=&quot;abstract&quot;&gt;Abstract&lt;/h1&gt;
-
-&lt;p&gt;The campus focused on outdoor gear industry, which is one of the largest economic sectors in the states. The site and neighbor form an attractive leisure landscape thanks to the combination of the natural resource and its strong transportation infrastructure.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;The campus acted as a catalyst for reconfiguration of the surrounding suburban landscape by overlaying green infrastructure and concentrated campus core.&lt;/p&gt;
-
-&lt;p&gt;There are two frameworks in the suburban environment:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;The relation/isolation between the nature and the developed built environment;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;An overdriven rationality about life, work and leisure.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;basic-info&quot;&gt;Basic Info&lt;/h1&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Category&lt;/td&gt;
-      &lt;td&gt;Professional work of urban design&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Location&lt;/td&gt;
-      &lt;td&gt;Westwood, MA&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Date of design&lt;/td&gt;
-      &lt;td&gt;Oct 2019 - Dec 2019&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Tutor&lt;/td&gt;
-      &lt;td&gt;Peter Rowe, Yun Fu&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Collaborator&lt;/td&gt;
-      &lt;td&gt;Yuki Takata&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;design-stages&quot;&gt;Design Stages&lt;/h1&gt;
-
-&lt;h2 id=&quot;conceptual-design&quot;&gt;Conceptual Design&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Strategy of Concentration and Reaching-out&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Potentially there are three office campuses including the original site.&lt;/p&gt;
-
-&lt;p&gt;Instead of thinking them separately, we decided to treat three campuses as a larger compound.&lt;/p&gt;
-
-&lt;p&gt;The compund forms a three-leaf-clover shape, each leaf of which functions together within three concentric circles with different characters.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/01/28/Sk5OoGTKUxy9j7u.jpg&quot; alt=&quot;02-1L.jpg&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/01/28/9wK7sML53h4xJcd.jpg&quot; alt=&quot;02-2M.jpg&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/01/28/FKUNWa3CQGOXdBw.jpg&quot; alt=&quot;02-3.jpg&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;understanding-suburban&quot;&gt;Understanding Suburban&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Two Frameworks in the Suburban Environment&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;One perspective is the relation/isolation between the nature and the developed built environment. Typically, the greenery behaves as an untouchable “sea” and it divides and isolates suburban city “islands” each other barely connected with infrastructural bridges.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;The other is an overdriven rationality about life, work and leisure. The ideal lifestyle once modernists dreamed has somehow realized with nostalgic flavor and cut-and-paste.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;To overcome the homogeneity, we superimposed concentric green onto city center and redefined the suburban landscape as more coherent diversified livelihood with more organically linked relation between housing, office and recreational beyond functional separation.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/01/28/oE8TN9Hw3kBrbxR.jpg&quot; alt=&quot;03-1S.jpg&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;developing-scenarios&quot;&gt;Developing Scenarios&lt;/h2&gt;
-
-&lt;h3 id=&quot;area-i&quot;&gt;Area I&lt;/h3&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Shared Campus Center&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The shared campus center made by dense but lower and smaller grains. It is all mixed-use including office, retail and housing. Green walkway and small public spaces are interwoven.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/01/28/I1PgfaVnUNGL36H.jpg&quot; alt=&quot;04areas.jpg&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;area-ii&quot;&gt;Area II&lt;/h3&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Body Of Campus With Test Fields&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The Body of the campus is composed of relatively larger buildings by conserving the existing buildings. This zone also has various kinds of alpha test fields for research and development of outdoor gear.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/01/28/gHN6eFLdGS7VYmf.jpg&quot; alt=&quot;04areas2.jpg&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;area-iii&quot;&gt;Area III&lt;/h3&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Factory With Experimental Fields&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Surrounding the body of the campus is the factory area with experimental fields, serving as manufacture center and provide space for outdoor gear industry at the same time.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/01/28/2KsAYL79e4H6nyt.jpg&quot; alt=&quot;04areas3.jpg&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;area-iv&quot;&gt;Area IV&lt;/h3&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Bike Lane Connecting Neighbor&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;A green bike lane reached out residential neighbor, which enables workers to commute 20-minute bike ride. At the end the lane is connected to the existing hiking trail and other surrounding natural resource.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/01/28/acQHRzG2eo6tB1y.jpg&quot; alt=&quot;04areas4.jpg&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;detail-design&quot;&gt;Detail Design&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;The Core And The Eco-Link&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The campus visualizes its concept with a symbolic green bridge across the campus core and the roofed bazaar-like plaza. The eco-link from West to East connecting the two parts of green area provides possible paths for wild animals.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/01/28/LMk86E1qv7sAgQj.jpg&quot; alt=&quot;03-2SS.jpg&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/01/28/Z4sCzLiFxIpba5q.jpg&quot; alt=&quot;10explosive.jpg&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Here the enormous economic activity recovers the ecological connectivity, and the active intervention by the developing force provides the possibility of more sustainable reservation of the nature.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/01/28/vIOazKbujYgZC61.jpg&quot; alt=&quot;11model.jpg&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The all possible suburban infrastructure such as river, car, train, energy lines and the greenery are vertically accumulated into one concentrated area. In-between the interwoven campus core, people and animals will meet the alternative suburbia.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/01/28/X3bBwFcnr5IYpz8.jpg&quot; alt=&quot;11sec.jpg&quot; /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;</content><author><name>Zihan Mei</name><email>meizihanyx@gmail.com</email></author><category term="post" /><category term="Campus" /><category term="Boston" /><category term="GSD" /><category term="Urban design" /><summary type="html">Abstract The campus focused on outdoor gear industry, which is one of the largest economic sectors in the states. The site and neighbor form an attractive leisure landscape thanks to the combination of the natural resource and its strong transportation infrastructure.</summary></entry></feed>
+&lt;hr /&gt;</content><author><name>Zihan Mei</name><email>meizihanyx@gmail.com</email></author><category term="post" /><category term="Digest" /><category term="Classical Chinese Literature" /><summary type="html">作者：吕思勉 【第一章 总论】 夫党群既分，则与异族为敌者，实非举国之民，特其操治理之权者耳…其覆亡也，固亦与寻常一姓之覆亡无异，特覆之者非本族而为异族人耳…多数人民与异族之相角，于何见之？其胜负于何决之？曰:视其文化之兴替。两族相遇，文化必有不同，观其孰替孰兴，而文化之优劣分，而民族之存亡，亦由之而判矣。 【第二章 晋初情势】 第一节 政俗之敝 2020-02-01更新 振领总纲，要在三条：凡政欲静，静在息役，息役在无为。仓廪欲实，实在利农，利农在平粜。为政欲著信，著信在简贤，简贤在官久。 …君子务能，小人伐技；风颓于上，俗弊于下，祸结而恨争也不强，患至而悔伐之未辩。大者倾国丧家，次则覆身灭祀。其故何邪？岂不始于私欲，而终于争伐哉？ 民间风俗，历代迁变甚微，政事之隆窳，所以致一时之治乱者，实其士大夫之群及朝贵之执政权者为之。 …古之圣明，原始以要终，体本以正末，故忧法度之不当，而不忧人物之失所，忧人物之失所，而不忧灾害之流行。其有日月之眚，水旱之灾，则反听内视，求其所由。远观诸物，近验诸身。于物无忤，于人无尤，此则阴阳之事，非吉凶所在也。 【第三章 西晋乱亡】 第一节 齐献王争立 一 然朋党之祸，往往乘在上者之宽仁而起…当时为朋党者多权威，非下士，此其所以难破。然欲破朋党，断不能以其为权威而遂多顾忌也。 二 世及为礼之世，往往以一人一家之私，诒累及于政事，凡在势者皆然，正不必南面之尊而后尔，君子是以穆然于大同之世也。</summary></entry></feed>
