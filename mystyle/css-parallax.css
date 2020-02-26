@@ -1,0 +1,14 @@
+body, html {
+    height: 100%;
+}
+  
+.bgimg-1 {
+    background-image: url("../assets/images/covers/maincover1.jpg");
+  
+    height: 100%;
+  
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
