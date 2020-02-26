@@ -1,14 +1,56 @@
 body, html {
-    height: 100%;
+    margin: 0;
+    padding: 0;
 }
   
 .bgimg-1 {
     background-image: url("../assets/images/covers/maincover1.jpg");
   
-    height: 100%;
-  
+    height: 100vh;
+
+    position: relative;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    top: 0;
+    left: 0;
+}
+
+.bgimg-2 {
+    background-image: url("../assets/images/covers/02essayslarge.jpg");
+  
+    height: calc(100vw * 900 / 2880);
+
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    top: 0;
+    left: 0;
+}
+
+.bgimg--1 {
+    background-image: url("../assets/images/covers/maincover1.jpg");
+  
+    height: 100vh;
+
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    left: 0;
+}
+
+.text {
+    color: #777;
+    background-color: white;
+    text-align: center;
+    padding: 50px 80px;
+    text-align: justify;
+    z-index: 99;
+    /* top: 100vh; */
 }
