@@ -1,5 +1,8 @@
 body, html {
-    margin: 0;
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 0;
     padding: 0;
 }
   
@@ -51,6 +54,24 @@ body, html {
     text-align: center;
     padding: 50px 80px;
     text-align: justify;
-    z-index: 99;
     /* top: 100vh; */
+}
+
+svg {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+}
+
+.main-anime {
+    background-color: #2c3e50;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    display: flex;
+}
+
+.loader {
+    z-index: 99;
 }
