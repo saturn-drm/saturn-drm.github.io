@@ -19,7 +19,7 @@ lightbox: false
 show_author_profile: true
 show_subscribe: true
 sharing: true
-modify_date: 2020-02-17
+modify_date: 2020-02-29
 license: false
 key: blogGISNote
 ---
@@ -153,6 +153,74 @@ print(acc['Suitable_area'].value_counts())
 ```python
 0    13011
 1        9
+```
+
+## Slices in pandas
+
+```python
+pop2014 = pd.Series([100,99.3,95.5,93.5,92.4,84.8,84.5,78.9,74.3,72.8],
+                    index=['Java','C','C++','Python','C#','PHP','JavaScript','Ruby','R','Matlab'])
+```
+
+### slice with index
+
+```python
+pop2014[0]
+>>> 100.0
+
+pop2014[0:2]
+>>> Java    100.0
+    C        99.3
+    dtype: float64
+```
+
+### slice with key
+
+```python
+pop2014['Python]
+>>> 93.5
+
+pop2014['C++':'C#']
+>>> C++       95.5
+    Python    93.5
+    C#        92.4
+    dtype: float64
+```
+
+### specify index with iloc
+
+```python
+pop2014.iloc[0:2]
+>>> Java    100.0
+    C        99.3
+    dtype: float64
+```
+
+### specify key with loc
+
+```python
+pop2014.loc[:'Ruby]
+>>> Java          100.0
+    C              99.3
+    C++            95.5
+    Python         93.5
+    C#             92.4
+    PHP            84.8
+    JavaScript     84.5
+    Ruby           78.9
+    dtype: float64
+```
+
+### slice with condition
+
+```python
+pop2014[pop2014 > 90]
+>>> Java      100.0
+    C          99.3
+    C++        95.5
+    Python     93.5
+    C#         92.4
+    dtype: float64
 ```
 
 # OSMnx
