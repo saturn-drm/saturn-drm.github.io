@@ -187,7 +187,7 @@ pop2014['C++':'C#']
     dtype: float64
 ```
 
-### specify index with iloc
+### iloc for numeric indices
 
 ```python
 pop2014.iloc[0:2]
@@ -196,7 +196,7 @@ pop2014.iloc[0:2]
     dtype: float64
 ```
 
-### specify key with loc
+### loc for explicit values
 
 ```python
 pop2014.loc[:'Ruby]
