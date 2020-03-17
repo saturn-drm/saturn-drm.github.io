@@ -70,6 +70,8 @@ side-blog:
     children:
       - title:  Test Style
         url:    /coding/2020-01-18-test-styles
+      - title:  Scroll Smooth in Safari
+        url:    /coding/2020-03-17-scroll-smooth
       - title:  Things to Complete in the Site
         url:    /coding/2020-03-16-new-site-todo
       - title:  Enable Jupyter in VSCode
