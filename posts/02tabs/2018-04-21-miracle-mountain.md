@@ -18,11 +18,12 @@ head image: /assets/img/covers/literaturecover.jpg
 
 # Resources
 ## SoundCloud
+
 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/741224251&color=%23fd746c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
 
 ## NetEase Music
 
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=420 height=86 src="//music.163.com/outchain/player?type=3&id=1368969498&auto=0&height=66"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=420 height=86 src="https://music.163.com/outchain/player?type=3&id=1368969498&auto=0&height=66"></iframe>
 
 # Tabs
 Bought a copy on the concert. No digital files.
