@@ -1,35 +1,280 @@
----
-layout: page
-title: Blog
-permalink: /blog.html
-show_title: true
-show_edit_on_github: false
-show_date: false
-show_tags: false
-comment: false
-lightbox: false
-comment: false
----
-<div class="note" style="background-color: #ddd; text-align: center; padding: 0.8rem; border-radius: 15px; margin-top: 3rem;">
-  <div class="note_content">
-    <p>The content is consist of some digests from daily reading as well as some coding and technology tips.</p>
-  </div>
-</div>
+<!DOCTYPE html>
+<html>
 
-<div class="blog">
-  
-  <section class="my-5">
-    <header><h1 id="coding">Coding</h1></header>
-    {%- include article-list.html articles=site.coding type='item' show_cover=false show_excerpt=true excerpt_type='html' show_readmore=true show_info=true reverse=true -%}
-  </section>
+<head>
+    <link rel="stylesheet" type="text/css" href="/assets/css/blog.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/scrollbar.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/selection.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/backtotop.css" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Blog - Zihan MEI's Site</title>
+    <meta name="description" content="Welcome to My Personal Site!">
+    <meta name="author" content="Zihan Zephaniah MEI">
 
-  <section class="my-5">
-    <header><h1 id="digest">Digest</h1></header>
-    {%- include article-list.html articles=site.digest type='item' show_cover=false show_excerpt=true excerpt_type='text' show_readmore=true show_info=true reverse=true -%}
-  </section>
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,600&display=swap" rel="stylesheet">
+    <script>
+        (function (d) {
+            var config = {
+                kitId: 'cmi7aqt',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
+    <!-- end fonts -->
 
-</div>
-<!-- 
-<script>
-  window.alert("The content is consist of some digests from daily reading as well as some coding and technology tips.");
-</script> -->
+    <!-- start favicons snippet, use https://realfavicongenerator.net/ -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#2c3e50">
+    <link rel="shortcut icon" href="/favicon/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="ZMei.moe">
+    <meta name="application-name" content="ZMei.moe">
+    <meta name="msapplication-TileColor" content="#fee3e1">
+    <meta name="msapplication-config" content="/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <!-- end favicons snippet -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156998560-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-156998560-1');
+    </script>
+
+    <!-- anime-master -->
+    <script src="/assets/js/anime-master/lib/anime.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script type='text/javascript'>
+        $(document).ready(function () {
+            $("#header").load("/components/header-blog.html");
+            $("#footer").load("/components/footer.html");
+        });
+    </script>
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <!-- back to top icon -->
+    <a id="backtotop">
+        <svg id="layer2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.85 35.95">
+            <defs>
+                <style>
+                    .cls-1 {
+                        fill: none;
+                        stroke-miterlimit: 10;
+                    }
+                </style>
+            </defs>
+            <title>backtotop</title>
+            <polyline class="cls-1" points="0.43 13.95 8.43 0.95 16.43 13.95" />
+            <line class="cls-1" x1="8.43" y1="25.95" x2="8.43" y2="0.95" />
+            <line class="cls-1" x1="0.43" y1="0.95" x2="16.43" y2="0.95" />
+        </svg>
+    </a>
+    <!-- end back to top icon -->
+
+    <div id="offsetheader"></div>
+    <div id="content">
+        <section id="coding">
+            <h1 class="sectiontitle">Coding</h1>
+            <div class="article" id="a1">
+                <a class="titlehref" href="/postshtml/01blog/00coding/2020-03-17-scroll-smooth.html">
+                    <h1>Scroll Smooth in Safari</h1>
+                </a>
+                <h2>Updated On: 2020-03-17</h2>
+                <p><strong>Question</strong><br>When editing my website, I wanted to scroll smoothly between sections,
+                    and when scrolling
+                    to top.<br><strong>Solution 1</strong><br>Basically, I found the simply way to achieve this with CSS
+                    properties:<br>&emsp;scroll-behavior: smooth;<br>However, I noticed that Safari didn’t support the
+                    CSS property “scroll-behavior”. So I need a special way to achieve this.<br><br><strong>Solution
+                        2</strong><br>I
+                    found the jQuery script to achieve such design.</p>
+                <a class="readmore" href="/postshtml/01blog/00coding/2020-03-17-scroll-smooth.html">Read
+                    More</a>
+                <hr>
+            </div>
+
+            <div class="article" id="a2">
+                <a class="titlehref" href="/postshtml/01blog/00coding/2020-02-22-vscode-jupyter.html">
+                    <h1>Enable Jupyter in VSCode</h1>
+                </a>
+                <h2>Updated On: 2020-02-22</h2>
+                <p><strong>Usage</strong><br>Start Jupyter in VSCode<br>Add #%% to the first line of py file. The Run
+                    Cell, Run Below, and Debug Cell function will be added to VSCode.</p>
+                <a class="readmore" href="/postshtml/01blog/00coding/2020-02-22-vscode-jupyter.html">Read More</a>
+                <hr>
+            </div>
+
+            <div class="article" id="a3">
+                <a class="titlehref" href="/postshtml/01blog/00coding/2020-02-16-note-python-gis.html">
+                    <h1>Notes in Python GIS</h1>
+                </a>
+                <h2>Updated On: 2020-02-29</h2>
+                <p><strong>Python Module:</strong><br>Shapely<br>Geopandas / pandas<br>OSMnx<br></p>
+                <a class="readmore" href="/postshtml/01blog/00coding/2020-02-16-note-python-gis.html">Read More</a>
+                <hr>
+            </div>
+
+            <div class="article" id="a4">
+                <a class="titlehref" href="/postshtml/01blog/00coding/2020-02-16-fail-to-import-python-module.html">
+                    <h1>Failed to Import Module Installed through PIP</h1>
+                </a>
+                <h2>Updated On: 2020-02-16</h2>
+                <p>I installed pandas and IPython with the command<br>sudo pip3 install pandas / IPython<br>The modules
+                    are in the list with the command<br>pip3 list</p>
+                <a class="readmore" href="/postshtml/01blog/00coding/2020-02-16-fail-to-import-python-module.html">Read
+                    More</a>
+                <hr>
+            </div>
+
+            <div class="article" id="a5">
+                <a class="titlehref" href="/postshtml/01blog/00coding/2020-01-27-compile-scss.html">
+                    <h1>Compile scss/sass File to css</h1>
+                </a>
+                <h2>Updated On: 2020-01-31</h2>
+                <p><img src="/assets/img/01coding/200131.png" /></p>
+                <a class="readmore" href="/postshtml/01blog/00coding/2020-01-27-compile-scss.html">Read More</a>
+                <hr>
+            </div>
+
+            <div class="article" id="a6">
+                <a class="titlehref" href="/postshtml/01blog/00coding/2020-01-26-add-to-google-search.html">
+                    <h1>Add the Site to Google Search Console</h1>
+                </a>
+                <h2>Updated On: 2020-01-29</h2>
+                <p></p>
+                <a class="readmore" href="/postshtml/01blog/00coding/2020-01-26-add-to-google-search.html">Read
+                    More</a>
+                <hr>
+            </div>
+
+            <div class="article" id="a0">
+                <a class="titlehref" href="/postshtml/01blog/00coding/2020-01-18-test-styles.html">
+                    <h1>Some Demo on CSS Style</h1>
+                </a>
+                <h2>Updated On: 2020-02-04</h2>
+                <p><img src="/assets/img/01coding/anime08-property-parameters.gif" /></p>
+                <a class="readmore" href="/postshtml/01blog/00coding/2020-01-18-test-styles.html">Read More</a>
+                <hr>
+            </div>
+        </section>
+
+        <section id="digest">
+            <h1 class="sectiontitle">Digest</h1>
+            <div class="article" id="b1">
+                <a class="titlehref" href="/postshtml/01blog/01digest/2020-01-22-神女赋.html">
+                    <h1>神女赋</h1>
+                </a>
+                <h2>Updated On: 2020-01-29</h2>
+                <p>楚襄王与宋玉游于云梦之浦，使玉赋高唐之事。其夜玉寝，果梦与神女遇，其状甚丽，玉异之。明日，以白王。王曰：“其梦若何？”玉对曰：“晡夕之后，精神恍忽，若有所喜，纷纷扰扰，未知何意？目色仿佛，乍若有记：见一妇人，状甚奇异。寐而梦之，寤不自识；罔兮不乐，怅然失志。于是抚心定气，复见所梦。”王曰：“状何如也？”玉曰：“茂矣美矣，诸好备矣。盛矣丽矣，难测究矣。上古既无，世所未见，瑰姿玮态，不可胜赞。其始来也，耀乎若白日初出照屋梁；其少进也，皎若明月舒其光。须臾之间，美貌横生：晔兮如华，温乎如莹。五色并驰，不可殚形。详而视之，夺人目精。其盛饰也，则罗纨绮绩盛文章，极服妙采照万方。振绣衣，被袿裳，秾不短，纤不长，步裔裔兮曜殿堂，忽兮改容，婉若游龙乘云翔。嫷披服，侻薄装，沐兰泽，含若芳。性合适，宜侍旁，顺序卑，调心肠。”王曰：“若此盛矣，试为寡人赋之。”玉曰：“唯唯。”
+                </p>
+                <a class="readmore"
+                    href="/postshtml/01blog/01digest/2020-01-22-神女赋.html">Read More</a>
+                <hr>
+            </div>
+
+            <div class="article" id="b2">
+                <a class="titlehref"
+                    href="/postshtml/01blog/01digest/2020-01-23-放言五首.html">
+                    <h1>放言五首</h1>
+                </a>
+                <h2>Updated On: 2020-01-29</h2>
+                <p>朝真暮伪何人辨，古往今来底事无。<br>但爱臧生能诈圣，可知甯子解佯愚。<br>草萤有耀终非火，荷露虽团岂是珠。<br>不取燔柴兼照乘，可怜光彩亦何殊。</p>
+                <a class="readmore"
+                    href="/postshtml/01blog/01digest/2020-01-23-放言五首.html">Read
+                    More</a>
+                <hr>
+            </div>
+
+            <div class="article" id="b3">
+                <a class="titlehref"
+                    href="/postshtml/01blog/01digest/2020-01-24-两晋南北朝史-两晋卷.html">
+                    <h1>两晋南北朝史·两晋卷</h1>
+                </a>
+                <h2>Updated On: 2020-02-01</h2>
+                <p>夫党群既分，则与异族为敌者，实非举国之民，特其操治理之权者耳…其覆亡也，固亦与寻常一姓之覆亡无异，特覆之者非本族而为异族人耳…多数人民与异族之相角，于何见之？其胜负于何决之？曰:视其文化之兴替。两族相遇，文化必有不同，观其孰替孰兴，而文化之优劣分，而民族之存亡，亦由之而判矣。
+                </p>
+                <a class="readmore"
+                    href="/postshtml/01blog/01digest/2020-01-24-两晋南北朝史-两晋卷.html">Read
+                    More</a>
+                <hr>
+            </div>
+
+            <div class="article" id="b4">
+                <a class="titlehref"
+                    href="/postshtml/01blog/01digest/2020-01-25-讨贼檄文.html">
+                    <h1>讨贼檄文</h1>
+                </a>
+                <h2>Updated On: 2020-01-29</h2>
+                <p>盖闻明主图危以制变，忠臣虑难以立权。是以有非常之人，然后有非常之事；有非常之事，然后立非常之功。夫非常者，固非常人所拟也。曩者，强秦弱主，赵高执柄，专制朝权，威福由己；时人迫胁，莫敢正言；终有望夷之败，祖宗焚灭，污辱至今，永为世鉴。及臻吕后季年，产禄专政，内兼二军，外统赵梁；擅断万机，决事省禁；下陵上替，海内寒心。于是绛侯朱虚兴兵奋怒，诛夷逆暴，尊立太宗，故能王道兴隆，光明显融：此则大臣立权之明表也。
+                </p>
+                <a class="readmore"
+                    href="/postshtml/01blog/01digest/2020-01-25-讨贼檄文.html">Read
+                    More</a>
+                <hr>
+            </div>
+
+            <div class="article" id="b5">
+                <a class="titlehref"
+                    href="/postshtml/01blog/01digest/2020-01-26-资治通鉴.html">
+                    <h1>资治通鉴</h1>
+                </a>
+                <h2>Updated On: 2020-20-20</h2>
+                <p>臣光曰：智伯之亡也，才胜德也。夫才与德异，而世俗莫之能辨，通谓之贤，此其所以失人也。夫聪察强毅之谓才，正直中和之谓德。才者，德之资也；德者，才之帅也。云梦之竹，天下之劲也；然而不矫揉，不羽括，则不能以入坚。棠之金，天下之利也；然而不熔范，不砥砺，则不能以击强。是故才德全尽谓之“圣人”，才德兼亡谓之“愚人”；德胜才谓之“君子”，才胜德谓之“小人”。
+                </p>
+                <a class="readmore"
+                    href="/postshtml/01blog/01digest/2020-01-26-资治通鉴.html">Read
+                    More</a>
+                <hr>
+            </div>
+
+            <div class="article" id="b6">
+                <a class="titlehref" href="/postshtml/01blog/01digest/2020-01-21-其他.html">
+                    <h1>其他摘录</h1>
+                </a>
+                <h2>Updated On: 2020-01-29</h2>
+                <p><strong>韩非子·亡徵</strong><br>国小而不处卑，力少而不畏强，无理而侮大邻，贪愎而拙交者，可亡也。</p>
+                <a class="readmore" href="/postshtml/01blog/01digest/2020-01-21-其他.html">Read
+                    More</a>
+                <hr>
+            </div>
+        </section>
+    </div>
+    <div id="footer"></div>
+
+    <!-- back to top -->
+    <script class="backtotop">
+        var btn = $('#backtotop');
+
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 300) {
+                btn.addClass('show');
+            } else {
+                btn.removeClass('show');
+            }
+        });
+
+        btn.on('click', function (e) {
+            e.preventDefault();
+            $('html, body').animate({ scrollTop: 0 }, '300');
+        });
+    </script>
+    <!-- end back to top -->
+</body>
+
+</html>

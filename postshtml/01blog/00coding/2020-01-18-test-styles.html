@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<link href="/assets/css/articlecontent.css" rel="stylesheet" type="text/css"/>
+<link href="/assets/css/scrollbar.css" rel="stylesheet" type="text/css"/>
+<link href="/assets/css/selection.css" rel="stylesheet" type="text/css"/>
+<link href="/assets/css/backtotop.css" rel="stylesheet" type="text/css"/>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport"/>
+<title>Test Style</title>
+<meta content="Welcome to My Personal Site!" name="description"/>
+<meta content="Zihan Zephaniah MEI" name="author"/>
+<!-- fonts -->
+<link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,600&amp;display=swap" rel="stylesheet"/>
+<script>
+        (function (d) {
+            var config = {
+                kitId: 'cmi7aqt',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
+<!-- end fonts -->
+<!-- start favicons snippet, use https://realfavicongenerator.net/ -->
+<link href="/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/favicon/site.webmanifest" rel="manifest"/>
+<link color="#2c3e50" href="/favicon/safari-pinned-tab.svg" rel="mask-icon"/>
+<link href="/favicon/favicon.ico" rel="shortcut icon"/>
+<meta content="ZMei.moe" name="apple-mobile-web-app-title"/>
+<meta content="ZMei.moe" name="application-name"/>
+<meta content="#fee3e1" name="msapplication-TileColor"/>
+<meta content="/favicon/browserconfig.xml" name="msapplication-config"/>
+<meta content="#ffffff" name="theme-color"/>
+<!-- end favicons snippet -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-156998560-1"></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-156998560-1');
+    </script>
+<!-- anime-master -->
+<script src="/assets/js/anime-master/lib/anime.min.js"></script>
+<!-- jQuery -->
+<script crossorigin="anonymous" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<!-- fontawesome -->
+<!-- <script src="https://kit.fontawesome.com/d61407055c.js" crossorigin="anonymous"></script> -->
+<script type="text/javascript">
+        $(document).ready(function () {
+            $("#header").load("/components/header.html");
+            $("#footer").load("/components/footer.html");
+        });
+    </script>
+<link href="/assets/js/highlight/atom-one-light-edit.css" rel="stylesheet"/>
+<script src="/assets/js/highlight/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+<div id="header"></div>
+<!-- back to top icon -->
+<a id="backtotop">
+<svg id="layer2" viewbox="0 0 16.85 35.95" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<style>
+                    .cls-1 {
+                        fill: none;
+                        stroke-miterlimit: 10;
+                    }
+                </style>
+</defs>
+<title>backtotop</title>
+<polyline class="cls-1" points="0.43 13.95 8.43 0.95 16.43 13.95"></polyline>
+<line class="cls-1" x1="8.43" x2="8.43" y1="25.95" y2="0.95"></line>
+<line class="cls-1" x1="0.43" x2="16.43" y1="0.95" y2="0.95"></line>
+</svg>
+</a>
+<!-- end back to top icon -->
+<div id="offsetheader">
+<img src="/assets/img/covers/codingcover.jpg"/>
+</div>
+<!-- <a class="tocicon" onclick="toc()">
+        <i class="fa fa-bars"></i>
+    </a> -->
+<div id="toc"><div class="toc">
+<ul>
+<li><a href="#pure-css-styles">Pure CSS Styles</a><ul>
+<li><a href="#blend">Blend</a></li>
+</ul>
+</li>
+<li><a href="#animejs">Anime.js</a><ul>
+<li><a href="#practice-targets">Practice - Targets</a><ul>
+<li><a href="#css-selector">CSS Selector</a></li>
+<li><a href="#dom-list-selector">DOM List Selector</a></li>
+<li><a href="#javascript-object">Javascript Object</a></li>
+</ul>
+</li>
+<li><a href="#practice-proporties">Practice - Proporties</a><ul>
+<li><a href="#css-proporties">CSS Proporties</a></li>
+<li><a href="#css-transforms-dom-attributes">CSS Transforms &amp; DOM Attributes</a></li>
+<li><a href="#svg-attributes">SVG Attributes</a></li>
+</ul>
+</li>
+<li><a href="#practice-property-parameters">Practice - Property Parameters</a><ul>
+<li><a href="#duration-function-based-parameters">Duration + Function Based Parameters</a></li>
+<li><a href="#delay-function-based-parameters">Delay + Function Based Parameters</a></li>
+<li><a href="#end-delay">End Delay</a></li>
+<li><a href="#round">Round</a></li>
+<li><a href="#specific-property-parameters">Specific Property Parameters</a></li>
+</ul>
+</li>
+<li><a href="#practice-svg">Practice - SVG</a><ul>
+<li><a href="#svg-line-drawing">SVG Line Drawing</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#img-before-after">IMG Before-After</a></li>
+<li><a href="#back-to-top-button">Back-To-Top Button</a></li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div id="post"><h1 style="color: #fd746c;">Test Style</h1><blockquote>
+<p>Modify date: 2020-02-04</p>
+</blockquote>
+<h1 class="anchor" id="pure-css-styles">Pure CSS Styles</h1>
+<h2 class="anchor" id="blend">Blend</h2>
+<p><img alt="style-blend.gif" src="../../../assets/img/01coding/style-blend.gif"/></p>
+<!--more-->
+<p>Click to <a href="https://www.zmei.moe/assets/html/test-page.html">Style Blend</a></p>
+<h1 class="anchor" id="animejs">Anime.js</h1>
+<h2 class="anchor" id="practice-targets">Practice - Targets</h2>
+<h3 class="anchor" id="css-selector">CSS Selector</h3>
+<p><img alt="anime01-css-selector.gif" src="../../../assets/img/01coding/anime01-css-selector.gif"/></p>
+<ul>
+<li>HTML</li>
+</ul>
+<pre><code class="html">&lt;div class="small-block-1"&gt;&lt;/div&gt;
+</code></pre>
+<ul>
+<li>CSS</li>
+</ul>
+<pre><code class="css">div.small-block-1{
+  position: absolute;
+  left: 22.5vw;
+  top: calc(50vh - 2.5vw);
+  width: 5vw;
+  height: 5vw;
+  border: 0rem;
+  border-radius: 1vw;
+  background-color: #2c3e50;
+}
+</code></pre>
+<ul>
+<li>Javascript</li>
+</ul>
+<pre><code class="js">var animation = anime({
+  targets: ['.small-block-1'],
+  translateX: '50vw',
+  loop: true
+});
+</code></pre>
+<p>Click to <a href="https://www.zmei.moe/assets/html/anime01-css-selector.html">ANIME WITH CSS SELECTOR</a></p>
+<h3 class="anchor" id="dom-list-selector">DOM List Selector</h3>
+<p><img alt="anime02-mod-selector.gif" src="../../../assets/img/01coding/anime02-mod-selector.gif"/></p>
+<blockquote>
+<p>DOM Node</p>
+</blockquote>
+<pre><code class="js">targets: el.querySelector('.item')
+</code></pre>
+<blockquote>
+<p>Node List</p>
+</blockquote>
+<pre><code class="js">targets: el.querySelectorAll('.item')
+</code></pre>
+<ul>
+<li>HTML</li>
+</ul>
+<pre><code class="html">&lt;div class="small-block a"&gt;&lt;/div&gt;
+&lt;div class="small-block b"&gt;&lt;/div&gt;
+&lt;div class="small-block c"&gt;&lt;/div&gt;
+</code></pre>
+<ul>
+<li>CSS</li>
+</ul>
+<pre><code class="css">.small-block{
+  position: absolute;
+  left: 22.5vw;
+  width: 5vw;
+  height: 5vw;
+  border: 0rem;
+  border-radius: 1vw;
+  background-color: #2c3e50;
+}
+
+.a {
+  top: calc(50vh - 2.5vw - 6vw);
+}
+
+.b {
+  top: calc(50vh - 2.5vw);
+}
+
+.c {
+  top: calc(50vh - 2.5vw + 6vw);
+}
+</code></pre>
+<ul>
+<li>Javascript</li>
+</ul>
+<pre><code class="js">var elements = document.querySelectorAll('.small-block');
+var animation = anime({
+  targets: elements,
+  translateX: '50vw',
+  loop: true
+});
+</code></pre>
+<p>Click to <a href="https://www.zmei.moe/assets/html/anime02-dom-selector.html">ANIME WITH DOM SELECTOR</a></p>
+<h3 class="anchor" id="javascript-object">Javascript Object</h3>
+<p><img alt="anime03-js-selector.gif" src="../../../assets/img/01coding/anime03-js-selector.gif"/></p>
+<ul>
+<li>HTML</li>
+</ul>
+<pre><code class="html">&lt;div class="main"&gt;
+  &lt;p class="battery-log"&gt;&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<ul>
+<li>CSS</li>
+</ul>
+<pre><code class="css">.main {
+  position: relative;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  text-align: center;
+  left: 50vw;
+  top: 50vh;
+}
+
+.battery-log {
+  font-size: 2rem;
+  color: #2c3e50;
+}
+</code></pre>
+<ul>
+<li>Javascript</li>
+</ul>
+<pre><code class="js">var logEL = document.querySelector('.battery-log');
+
+var battery = {
+  charged: '0%',
+  cycles: 120   
+}
+
+var animation = anime({
+  targets: battery,
+  charged: '100%',
+  cycles: 130,
+  round: 1,
+  loop: true,
+  easing: 'linear',
+  update: function(){
+    logEL.innerHTML = JSON.stringify(battery);
+  }
+});
+</code></pre>
+<p>Click to <a href="https://www.zmei.moe/assets/html/anime03-js-selector.html">ANIME WITH JAVSCRIPT OBJECT</a></p>
+<h2 class="anchor" id="practice-proporties">Practice - Proporties</h2>
+<h3 class="anchor" id="css-proporties">CSS Proporties</h3>
+<blockquote>
+<p>Most CSS properties will cause layout changes or repaint, and will result in choppy animation. Prioritize opacity and CSS transforms as much as possible.</p>
+</blockquote>
+<p><img alt="anime04-css-proporties.gif" src="../../../assets/img/01coding/anime04-css-proporties.gif"/></p>
+<ul>
+<li>HTML</li>
+</ul>
+<pre><code class="html">&lt;div class="main"&gt;&lt;/div&gt;
+</code></pre>
+<ul>
+<li>CSS</li>
+</ul>
+<pre><code class="css">.main {
+  position: relative;
+  justify-content: center;
+  text-align: center;
+  left: 20vw;
+  top: 50vh;
+  width: 5vw;
+  height: 5vw;
+  border: 0rem;
+  background-color: #2c3e50;
+}
+</code></pre>
+<ul>
+<li>Javascript</li>
+</ul>
+<pre><code class="js">anime({
+  targets: '.main',
+  translateX: ['0', '60vw'],
+  // start from the original position to 60vw right of the original
+  backgroundColor: '#fee3e1',
+  borderRadius: ['0%', '50%'],
+  easing: 'easeInOutQuad',
+ loop: true
+});
+</code></pre>
+<p>Click to <a href="https://www.zmei.moe/assets/html/anime04-css-proporties.html">ANIME WITH CSS PROPORTIES</a></p>
+<h3 class="anchor" id="css-transforms-dom-attributes">CSS Transforms &amp; DOM Attributes</h3>
+<p><img alt="anime05-css-transforms.gif" src="../../../assets/img/01coding/anime05-css-transforms.gif"/></p>
+<ul>
+<li>HTML</li>
+</ul>
+<pre><code class="html">&lt;div class="main"&gt;
+  &lt;div class="transform" id="translate"&gt;&lt;/div&gt;
+  &lt;p&gt;translateX:&amp;nbsp;'60vw'&lt;/p&gt;
+  &lt;div class="transform" id="translatescale"&gt;&lt;/div&gt;
+  &lt;p&gt;translateX:&amp;nbsp;'60vw'&lt;/p&gt;
+  &lt;p&gt;scaleY:&amp;nbsp;2&lt;/p&gt;
+  &lt;div class="transform" id="translateskew"&gt;&lt;/div&gt;
+  &lt;p&gt;translateX:&amp;nbsp;'60vw'&lt;/p&gt;
+  &lt;p&gt;skewY:&amp;nbsp;30&amp;nbsp;(default:&amp;nbsp;deg)&lt;/p&gt;
+  &lt;div class="transform" id="translaterotate"&gt;&lt;/div&gt;
+  &lt;p&gt;translateX:&amp;nbsp;'60vw'&lt;/p&gt;
+  &lt;p&gt;rotate:&amp;nbsp;'1turn'&amp;nbsp;(default:&amp;nbsp;deg)&lt;/p&gt;
+  &lt;div class="transform" id="perspective"&gt;&lt;/div&gt;
+  &lt;p&gt;perspective:&amp;nbsp;20&amp;nbsp;(default:&amp;nbsp;px)&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="domattributes" id="domblock"&gt;
+  &lt;input class="input" value="0"&gt;
+&lt;/div&gt;
+</code></pre>
+<ul>
+<li>CSS</li>
+</ul>
+<pre><code class="css">.main {
+  position: relative;
+  left: 20vw;
+  top: 5vh;
+  justify-content: center;
+  text-align: left;
+  color: #2c3e50;
+}
+
+.transform {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 3rem;
+  height: 3rem;
+  border: 0rem;
+  background-color: #2c3e50;
+}
+
+p {
+  position: relative;
+  left: 0;
+}
+
+.domattributes {
+  position: relative;
+  position: relative;
+  left: 20vw;
+  top: 5vh;
+  justify-content: center;
+}
+
+.input {
+  position: relative;
+  left: 30vw;
+  top: 5vh;
+  width: 30vw;
+  height: 4vh;
+  background-color: transparent;
+  border-top-color: #2c3e50;
+  border-top-width: 1px;
+  border-bottom-color: #2c3e50;
+  border-bottom-width: 1px;
+  border-left-color: #2c3e50;
+  border-left-width: 1px;
+  border-right-color: #2c3e50;
+  border-right-width: 1px;
+  text-align: center;
+  font-size: 3vh;
+  color: #2c3e50;
+}
+</code></pre>
+<ul>
+<li>Javascript</li>
+</ul>
+<pre><code class="js">&lt;script class="anime"&gt;
+  anime({
+    targets: document.querySelector('#translate'),
+    translateX: '60vw',
+    easing: 'easeOutElastic(1, 0.5)',
+    duration: 2000,
+    loop: true
+  });
+&lt;/script&gt; 
+
+&lt;script class="anime"&gt;
+  anime({
+    targets: document.querySelector('#translatescale'),
+    translateX: '60vw',
+    scaleY: 2,
+    easing: 'easeOutElastic(1, 0.5)',
+    duration: 2000,
+    loop: true
+  })
+&lt;/script&gt;
+
+&lt;script class="anime"&gt;
+  anime({
+    targets: document.querySelector('#translateskew'),
+    translateX: '60vw',
+    skewY: 30,
+    easing: 'easeOutElastic(1, 0.5)',
+    duration: 2000,
+    loop: true
+  })
+&lt;/script&gt;
+
+&lt;script class="anime"&gt;
+  anime({
+    targets: document.querySelector('#translaterotate'),
+    translateX: '60vw',
+    rotate: '1turn',
+    easing: 'easeOutElastic(1, 0.5)',
+    duration: 2000,
+    loop: true
+  })
+&lt;/script&gt;
+
+&lt;script class="anime"&gt;
+  anime({
+    targets: document.querySelector('#perspective'),
+    perspective: 100,
+    easing: 'easeOutElastic(1, 0.5)',
+    duration: 2000,
+    loop: true
+  })
+&lt;/script&gt;
+
+&lt;script class="anime"&gt;
+  anime({
+    targets: document.querySelector('.input'),
+    value: [1,1000],
+    easing: 'linear',
+    duration: 2000,
+    round: 1,
+    loop: true
+  })
+&lt;/script&gt;
+</code></pre>
+<p>Click to <a href="https://www.zmei.moe/assets/html/anime05-css-transforms.html">ANIME WITH CSS TRANSFORMS</a></p>
+<h3 class="anchor" id="svg-attributes">SVG Attributes</h3>
+<p>Click to <a href="https://www.zmei.moe/assets/html/anime07-svg-attributes.html">ANIME WITH SVG ATTRIBUTES</a> (Currently unfinished)</p>
+<h2 class="anchor" id="practice-property-parameters">Practice - Property Parameters</h2>
+<p><img alt="anime08-property-parameters.gif" src="../../../assets/img/01coding/anime08-property-parameters.gif"/></p>
+<ul>
+<li>HTML</li>
+</ul>
+<pre><code class="html">&lt;div class="main"&gt;
+  &lt;p class="title"&gt;Duration&lt;/p&gt;
+  &lt;p class="info"&gt;duration:&amp;nbsp;1000&lt;/p&gt;
+  &lt;div class="duration"&gt;&lt;/div&gt;
+  &lt;p class="info"&gt;duration:&amp;nbsp;2000&lt;/p&gt;
+  &lt;div class="duration"&gt;&lt;/div&gt;
+
+  &lt;p class="title"&gt;Delay&lt;/p&gt;
+  &lt;p class="info"&gt;delay:&amp;nbsp;1000&lt;/p&gt;
+  &lt;div class="delay"&gt;&lt;/div&gt;
+  &lt;p class="info"&gt;delay:&amp;nbsp;2000&lt;/p&gt;
+  &lt;div class="delay"&gt;&lt;/div&gt;
+
+  &lt;p class="title"&gt;End Delay&lt;/p&gt;
+  &lt;p class="info"&gt;end&amp;nbsp;delay:&amp;nbsp;1000&lt;/p&gt;
+  &lt;div class="end-delay" id="enddelaya"&gt;&lt;/div&gt;
+  &lt;p class="info"&gt;end&amp;nbsp;delay:&amp;nbsp;2000&lt;/p&gt;
+  &lt;div class="end-delay" id="enddelayb"&gt;&lt;/div&gt;
+
+  &lt;p class="title"&gt;Round&lt;/p&gt;
+  &lt;p class="info"&gt;round:&amp;nbsp;1000&lt;/p&gt;
+  &lt;pre class="round" id="rounda"&gt;&lt;/pre&gt;
+  &lt;p class="info"&gt;round:&amp;nbsp;2000&lt;/p&gt;
+  &lt;pre class="round" id="roundb"&gt;&lt;/pre&gt;
+
+  &lt;p class="title"&gt;Specific&amp;nbsp;Property&amp;nbsp;Parameters&lt;/p&gt;
+  &lt;div class="specific"&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+</code></pre>
+<ul>
+<li>CSS</li>
+</ul>
+<pre><code class="css">.main {
+  position: relative;
+  left: 20vw;
+  top: 5vh;
+  justify-content: center;
+  text-align: left;
+  color: #2c3e50;
+}
+
+.duration, .delay, .end-delay, .specific {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 2rem;
+  height: 2rem;
+  border: 0rem;
+  background-color: #2c3e50;
+}
+
+.round {
+  position: relative;
+  left: 0;
+  right: 0;
+  color: #2c3e50;
+  font-size: 1rem;
+  text-align: center;
+  left: 30vw;
+}
+
+.title {
+  position: relative;
+  left: 0;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.info {
+  position: relative;
+  left: 0;
+  font-size: 0.9rem;
+  font-weight: 200;
+}
+</code></pre>
+<h3 class="anchor" id="duration-function-based-parameters">Duration + Function Based Parameters</h3>
+<ul>
+<li>Javascript</li>
+</ul>
+<pre><code class="js">&lt;script class="anime"&gt;
+  anime({
+    targets: '.duration',
+    translateX: '60vw',
+    duration: function(el, i){
+      return (i + 1) * 1000;
+    },
+    loop: true
+  });
+&lt;/script&gt;
+</code></pre>
+<h3 class="anchor" id="delay-function-based-parameters">Delay + Function Based Parameters</h3>
+<ul>
+<li>Javascript</li>
+</ul>
+<pre><code class="js">&lt;script class="anime"&gt;
+  anime({
+    targets: '.delay',
+    translateX: '60vw',
+    delay: function(el, i){
+      return (i + 1) * 1000;
+    },
+    loop: true
+  });
+&lt;/script&gt;
+</code></pre>
+<h3 class="anchor" id="end-delay">End Delay</h3>
+<ul>
+<li>Javascript</li>
+</ul>
+<pre><code class="js">&lt;script class="anime"&gt;
+  animationa = anime({
+    targets: document.querySelector('#enddelaya'),
+    translateX: '60vw',
+    endDelay: 1000,
+    direction: 'alternate',
+    loop: true
+  });
+  animationb = anime({
+    targets: document.querySelector('#enddelayb'),
+    translateX: '60vw',
+    endDelay: 2000,
+    direction: 'alternate',
+    loop: true
+  });
+&lt;/script&gt;
+</code></pre>
+<h3 class="anchor" id="round">Round</h3>
+<ul>
+<li>Javascript</li>
+</ul>
+<pre><code class="js">&lt;script class="anime"&gt;
+  animationa = anime({
+    targets: document.querySelectorAll('#rounda'),
+    innerHTML: [0,100],
+    easing: 'linear',
+    round: 1,
+    loop: true
+  })
+  animationb = anime({
+    targets: document.querySelectorAll('#roundb'),
+    innerHTML: [0,100],
+    easing: 'linear',
+    round: 10,
+    loop: true
+  })
+&lt;/script&gt;
+</code></pre>
+<h3 class="anchor" id="specific-property-parameters">Specific Property Parameters</h3>
+<ul>
+<li>Javascript</li>
+</ul>
+<pre><code class="js">&lt;script class="anime"&gt;
+  anime({
+    targets: '.specific',
+    translateX: {
+      value: '60vw',
+      duration: 800
+    },
+    rotate: {
+      value: 360,
+      duration: 1800,
+      easing: 'easeInOutSine'
+    },
+    scale: {
+      value: 2,
+      duration: 1600,
+      delay: 800,
+      easing: 'easeInOutQuart'
+    },
+    delay: 250,
+    loop: true
+  });
+&lt;/script&gt;
+</code></pre>
+<p>Click to <a href="https://www.zmei.moe/assets/html/anime08-property-parameters.html">ANIME WITH PROPERTY PARAMETERS</a></p>
+<h2 class="anchor" id="practice-svg">Practice - SVG</h2>
+<h3 class="anchor" id="svg-line-drawing">SVG Line Drawing</h3>
+<p><img alt="anime06-svg-linedrawing.gif" src="../../../assets/img/01coding/anime06-svg-linedrawing.gif"/></p>
+<ul>
+<li>HTML</li>
+</ul>
+<pre><code class="html">&lt;div class="main"&gt;
+  &lt;svg id="图层_1" data-name="图层 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="386.32" height="368.69" viewBox="0 0 386.32 368.69"&gt;
+    &lt;defs&gt;
+      &lt;style&gt;.cls-1,.cls-3,.cls-4{fill:none;}.cls-2{clip-path:url(#clip-path);}.cls-3,.cls-4{stroke:#fd746c;}.cls-3{stroke-linecap:round;stroke-linejoin:bevel;stroke-width:2px;}.cls-4{stroke-miterlimit:10;stroke-width:2px;}&lt;/style&gt;
+      &lt;clipPath id="clip-path" transform="translate(-762.28 -336.79)"&gt;
+        &lt;path id="SVGID" class="cls-1" d="M1069.68,470.75a111.5,111.5,0,1,0-217.1,8.35,107.52,107.52,0,0,0,3.91,11.73,111.5,111.5,0,0,0,213.19-20.12Z"/&gt;
+      &lt;/clipPath&gt;
+    &lt;/defs&gt;
+    &lt;title&gt;200207title&lt;/title&gt;
+    &lt;path fill=none stroke="#fd746c" stroke-width="1px" d="M762.28,687.61l61.21-64.34H765.25V604.06h89.21v19.29l-60,62.93h64.82l-2.74,19.2H762.28Z" transform="translate(-762.28 -336.79)"/&gt;
+    &lt;path fill=none stroke="#fd746c" stroke-width="1px" d="M967.89,666.64c0-17.48.13-35.68.7-46.92h-.14c-5,18.74-14.58,48.49-26.52,85.76H920.26c-9.29-32.69-20-66.52-25.33-85.74h-.14c.75,11.79,1.67,31.5,1.67,48.78v37H874.29V604.06h35.57c10.18,31.41,19.54,59,22.56,72.84h.15c4.29-16,13.45-42.64,23.32-72.84h35.72V705.48H967.89Z" transform="translate(-762.28 -336.79)"/&gt;
+    &lt;path fill=none stroke="#fd746c" stroke-width="1px" d="M1099.36,662.69h-56.6v23.09h62.93l-2.83,19.7h-84.71V604.06h84.27v19.71h-59.66V643h56.6Z" transform="translate(-762.28 -336.79)"/&gt;
+    &lt;path fill=none stroke="#fd746c" stroke-width="1px" d="M1148.6,604.06V705.48H1124V604.06Z" transform="translate(-762.28 -336.79)"/&gt;
+    &lt;g id="putline"&gt;
+      &lt;g class="cls-2"&gt;
+        &lt;path class="cls-3" d="M783.66,516.33h0c42.64-14.17,67.57-24.64,104-51" transform="translate(-762.28 -336.79)"/&gt;
+        &lt;path class="cls-3" d="M1018.66,450.33c41,27.92,73.43,39.52,121.36,52.29" transform="translate(-762.28 -336.79)"/&gt;
+        &lt;path class="cls-3" d="M902.94,455.21a437.59,437.59,0,0,0,57.32-49.56" transform="translate(-762.28 -336.79)"/&gt;
+        &lt;line class="cls-3" x1="188.14" y1="142.74" x2="243.38" y2="104.37"/&gt;
+        &lt;line class="cls-3" x1="197.98" y1="68.86" x2="188.14" y2="142.74"/&gt;
+      &lt;/g&gt;
+      &lt;path class="cls-4" d="M1069.68,470.75a111.5,111.5,0,1,0-217.1,8.35,107.52,107.52,0,0,0,3.91,11.73,111.5,111.5,0,0,0,213.19-20.12Z" transform="translate(-762.28 -336.79)"/&gt;
+    &lt;/g&gt;
+  &lt;/svg&gt;
+&lt;/div&gt;
+</code></pre>
+<ul>
+<li>CSS</li>
+</ul>
+<pre><code class="css">.main {
+  position: relative;
+  left: 20vw;
+  top: 5vh;
+  justify-content: center;
+  text-align: left;
+  color: #fd746c;
+}
+
+svg {
+  position: relative;
+  top: 25vh;
+  left: 30vw;
+}
+</code></pre>
+<ul>
+<li>Javascript</li>
+</ul>
+<pre><code class="js">anime({
+  targets: 'div svg path, div svg line',
+  strokeDashoffset: [anime.setDashoffset, 0],
+  easing: 'easeInOutSine',
+  duration: 2000,
+  delay: function(el, i) { return i * 100 },
+  direction: 'alternate',
+  loop: true
+});
+</code></pre>
+<p>Click to <a href="https://www.zmei.moe/assets/html/anime06-svg-linedrawing.html">ANIME WITH SVG LINE DRAWING</a></p>
+<h1 class="anchor" id="img-before-after">IMG Before-After</h1>
+<blockquote>
+<p>For test;</p>
+<p>The layout need refurbishing, as well as the convertor.</p>
+<p>For Valentine's Day 2020.</p>
+</blockquote>
+<p><img alt="valentines2020.gif" src="../../../assets/img/01coding/valentines2020.gif"/></p>
+<p>Click to <a href="https://www.zmei.moe/assets/html/valentines2020.html">IMG BEFORE-AFTER</a></p>
+<h1 class="anchor" id="back-to-top-button">Back-To-Top Button</h1>
+<p><img alt="backtotop.gif" src="../../../assets/img/01coding/backtotop.gif"/></p>
+<ul>
+<li>HTML</li>
+</ul>
+<pre><code class="html">&lt;button onclick="topFunction()" id="myBtn" title="Go to top"&gt;Top&lt;/button&gt;
+</code></pre>
+<ul>
+<li>CSS</li>
+</ul>
+<pre><code class="css">html {
+  scroll-behavior: smooth;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  height: 40px;
+  width: 40px;
+  bottom: 20px;
+  left: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #fd746c;
+  color: #2c3e50;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+#myBtn:hover {
+  background-color: #2c3e50;
+  color: #fd746c;
+  transition-duration: 0.5s;
+}
+</code></pre>
+<ul>
+<li>Javascript</li>
+</ul>
+<pre><code class="js">&lt;script&gt;
+  var mybutton = document.getElementById("myBtn");
+
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop &gt; 20 || document.documentElement.scrollTop &gt; 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+&lt;/script&gt;
+</code></pre>
+<p>Click to <a href="https://www.zmei.moe/assets/html/valentines2020.html">BACK-TO-TOP</a></p></div>
+</div>
+<div id="footer"></div>
+<!-- back to top -->
+<script class="backtotop">
+        var btn = $('#backtotop');
+
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 300) {
+                btn.addClass('show');
+            } else {
+                btn.removeClass('show');
+            }
+        });
+
+        btn.on('click', function (e) {
+            e.preventDefault();
+            $('html, body').animate({ scrollTop: 0 }, '300');
+        });
+    </script>
+<!-- end back to top -->
+<!-- scroll smoothly -->
+<script>
+        $(document).ready(function () {
+            $("a").on('click', function (event) {
+
+                if (this.hash !== "") {
+                    event.preventDefault();
+
+                    var hash = this.hash;
+
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+    </script>
+<!-- end scroll smoothly -->
+<script class="showtocwhensdrolldown">
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 300) {
+                $('#toc').addClass('fix');
+            } else {
+                $('#toc').removeClass('fix');
+            }
+        });
+    </script>
+<!-- <script class="hidetoc">
+        jQuery(document).ready(function ($) {
+            var alterClass = function () {
+                var ww = $(window).width();
+                if (ww > 1400) {
+                    $('#toc').removeClass('res');
+                    $('#toc').addClass('fix');
+                } else if (ww <= 1401) {
+                    $('#toc').addClass('res');
+                    $('#toc').removeClass('fix');
+                };
+            };
+            $(window).resize(function () {
+                alterClass();
+            });
+            //Fire it when the page first loads:
+            alterClass();
+        });
+    </script> -->
+</body>
+</html>

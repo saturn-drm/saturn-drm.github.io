@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<link href="/assets/css/articlecontent.css" rel="stylesheet" type="text/css"/>
+<link href="/assets/css/scrollbar.css" rel="stylesheet" type="text/css"/>
+<link href="/assets/css/selection.css" rel="stylesheet" type="text/css"/>
+<link href="/assets/css/backtotop.css" rel="stylesheet" type="text/css"/>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport"/>
+<title>Enable Jupyter in VSCode</title>
+<meta content="Welcome to My Personal Site!" name="description"/>
+<meta content="Zihan Zephaniah MEI" name="author"/>
+<!-- fonts -->
+<link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,600&amp;display=swap" rel="stylesheet"/>
+<script>
+        (function (d) {
+            var config = {
+                kitId: 'cmi7aqt',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
+<!-- end fonts -->
+<!-- start favicons snippet, use https://realfavicongenerator.net/ -->
+<link href="/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/favicon/site.webmanifest" rel="manifest"/>
+<link color="#2c3e50" href="/favicon/safari-pinned-tab.svg" rel="mask-icon"/>
+<link href="/favicon/favicon.ico" rel="shortcut icon"/>
+<meta content="ZMei.moe" name="apple-mobile-web-app-title"/>
+<meta content="ZMei.moe" name="application-name"/>
+<meta content="#fee3e1" name="msapplication-TileColor"/>
+<meta content="/favicon/browserconfig.xml" name="msapplication-config"/>
+<meta content="#ffffff" name="theme-color"/>
+<!-- end favicons snippet -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-156998560-1"></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-156998560-1');
+    </script>
+<!-- anime-master -->
+<script src="/assets/js/anime-master/lib/anime.min.js"></script>
+<!-- jQuery -->
+<script crossorigin="anonymous" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<!-- fontawesome -->
+<!-- <script src="https://kit.fontawesome.com/d61407055c.js" crossorigin="anonymous"></script> -->
+<script type="text/javascript">
+        $(document).ready(function () {
+            $("#header").load("/components/header.html");
+            $("#footer").load("/components/footer.html");
+        });
+    </script>
+<link href="/assets/js/highlight/atom-one-light-edit.css" rel="stylesheet"/>
+<script src="/assets/js/highlight/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+<div id="header"></div>
+<!-- back to top icon -->
+<a id="backtotop">
+<svg id="layer2" viewbox="0 0 16.85 35.95" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<style>
+                    .cls-1 {
+                        fill: none;
+                        stroke-miterlimit: 10;
+                    }
+                </style>
+</defs>
+<title>backtotop</title>
+<polyline class="cls-1" points="0.43 13.95 8.43 0.95 16.43 13.95"></polyline>
+<line class="cls-1" x1="8.43" x2="8.43" y1="25.95" y2="0.95"></line>
+<line class="cls-1" x1="0.43" x2="16.43" y1="0.95" y2="0.95"></line>
+</svg>
+</a>
+<!-- end back to top icon -->
+<div id="offsetheader">
+<img src="/assets/img/covers/codingcover.jpg"/>
+</div>
+<!-- <a class="tocicon" onclick="toc()">
+        <i class="fa fa-bars"></i>
+    </a> -->
+<div id="toc"><div class="toc">
+<ul>
+<li><a href="#usage">Usage</a><ul>
+<li><a href="#start-jupyter-in-vscode">Start Jupyter in VSCode</a></li>
+<li><a href="#python-interactive">Python Interactive</a></li>
+</ul>
+</li>
+<li><a href="#problem-in-setting">Problem in Setting</a><ul>
+<li><a href="#solution">Solution</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div id="post"><h1 style="color: #fd746c;">Enable Jupyter in VSCode</h1><blockquote>
+<p>Modify date: 2020-02-22</p>
+</blockquote>
+<h1 class="anchor" id="usage">Usage</h1>
+<h2 class="anchor" id="start-jupyter-in-vscode">Start Jupyter in VSCode</h2>
+<p><img alt="jupyter-1" src="../../../assets/img/01coding/jupyter-1.png"/></p>
+<!--more-->
+<p>Add <code>#%%</code> to the first line of py file. The <strong>Run Cell</strong>, <strong>Run Below</strong>, and <strong>Debug Cell</strong> function will be added to VSCode.</p>
+<p><strong>Example</strong></p>
+<pre><code class="python"># %%
+import osmnx
+import pandas
+import matplotlib.pyplot
+import geopandas
+</code></pre>
+<h2 class="anchor" id="python-interactive">Python Interactive</h2>
+<p>Use <strong>Shift + Enter</strong> or command <strong>Run Cell</strong> to start Python Interactive.</p>
+<p><img alt="jupyter-2" src="../../../assets/img/01coding/jupyter-2.png"/></p>
+<hr/>
+<h1 class="anchor" id="problem-in-setting">Problem in Setting</h1>
+<p>Python Interactive shows error of <strong>Jupyter Server: Unconnected</strong>.</p>
+<h2 class="anchor" id="solution">Solution</h2>
+<p>Install module of <strong>notebook</strong></p>
+<pre><code class="python">sudo pip3 install notebook
+</code></pre>
+<hr/></div>
+</div>
+<div id="footer"></div>
+<!-- back to top -->
+<script class="backtotop">
+        var btn = $('#backtotop');
+
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 300) {
+                btn.addClass('show');
+            } else {
+                btn.removeClass('show');
+            }
+        });
+
+        btn.on('click', function (e) {
+            e.preventDefault();
+            $('html, body').animate({ scrollTop: 0 }, '300');
+        });
+    </script>
+<!-- end back to top -->
+<!-- scroll smoothly -->
+<script>
+        $(document).ready(function () {
+            $("a").on('click', function (event) {
+
+                if (this.hash !== "") {
+                    event.preventDefault();
+
+                    var hash = this.hash;
+
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+    </script>
+<!-- end scroll smoothly -->
+<script class="showtocwhensdrolldown">
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 300) {
+                $('#toc').addClass('fix');
+            } else {
+                $('#toc').removeClass('fix');
+            }
+        });
+    </script>
+<!-- <script class="hidetoc">
+        jQuery(document).ready(function ($) {
+            var alterClass = function () {
+                var ww = $(window).width();
+                if (ww > 1400) {
+                    $('#toc').removeClass('res');
+                    $('#toc').addClass('fix');
+                } else if (ww <= 1401) {
+                    $('#toc').addClass('res');
+                    $('#toc').removeClass('fix');
+                };
+            };
+            $(window).resize(function () {
+                alterClass();
+            });
+            //Fire it when the page first loads:
+            alterClass();
+        });
+    </script> -->
+</body>
+</html>

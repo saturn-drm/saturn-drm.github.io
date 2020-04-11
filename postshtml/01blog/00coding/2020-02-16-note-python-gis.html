@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<link href="/assets/css/articlecontent.css" rel="stylesheet" type="text/css"/>
+<link href="/assets/css/scrollbar.css" rel="stylesheet" type="text/css"/>
+<link href="/assets/css/selection.css" rel="stylesheet" type="text/css"/>
+<link href="/assets/css/backtotop.css" rel="stylesheet" type="text/css"/>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport"/>
+<title>Notes in Python GIS</title>
+<meta content="Welcome to My Personal Site!" name="description"/>
+<meta content="Zihan Zephaniah MEI" name="author"/>
+<!-- fonts -->
+<link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,600&amp;display=swap" rel="stylesheet"/>
+<script>
+        (function (d) {
+            var config = {
+                kitId: 'cmi7aqt',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
+<!-- end fonts -->
+<!-- start favicons snippet, use https://realfavicongenerator.net/ -->
+<link href="/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/favicon/site.webmanifest" rel="manifest"/>
+<link color="#2c3e50" href="/favicon/safari-pinned-tab.svg" rel="mask-icon"/>
+<link href="/favicon/favicon.ico" rel="shortcut icon"/>
+<meta content="ZMei.moe" name="apple-mobile-web-app-title"/>
+<meta content="ZMei.moe" name="application-name"/>
+<meta content="#fee3e1" name="msapplication-TileColor"/>
+<meta content="/favicon/browserconfig.xml" name="msapplication-config"/>
+<meta content="#ffffff" name="theme-color"/>
+<!-- end favicons snippet -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-156998560-1"></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-156998560-1');
+    </script>
+<!-- anime-master -->
+<script src="/assets/js/anime-master/lib/anime.min.js"></script>
+<!-- jQuery -->
+<script crossorigin="anonymous" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<!-- fontawesome -->
+<!-- <script src="https://kit.fontawesome.com/d61407055c.js" crossorigin="anonymous"></script> -->
+<script type="text/javascript">
+        $(document).ready(function () {
+            $("#header").load("/components/header.html");
+            $("#footer").load("/components/footer.html");
+        });
+    </script>
+<link href="/assets/js/highlight/atom-one-light-edit.css" rel="stylesheet"/>
+<script src="/assets/js/highlight/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+<div id="header"></div>
+<!-- back to top icon -->
+<a id="backtotop">
+<svg id="layer2" viewbox="0 0 16.85 35.95" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<style>
+                    .cls-1 {
+                        fill: none;
+                        stroke-miterlimit: 10;
+                    }
+                </style>
+</defs>
+<title>backtotop</title>
+<polyline class="cls-1" points="0.43 13.95 8.43 0.95 16.43 13.95"></polyline>
+<line class="cls-1" x1="8.43" x2="8.43" y1="25.95" y2="0.95"></line>
+<line class="cls-1" x1="0.43" x2="16.43" y1="0.95" y2="0.95"></line>
+</svg>
+</a>
+<!-- end back to top icon -->
+<div id="offsetheader">
+<img src="/assets/img/covers/codingcover.jpg"/>
+</div>
+<!-- <a class="tocicon" onclick="toc()">
+        <i class="fa fa-bars"></i>
+    </a> -->
+<div id="toc"><div class="toc">
+<ul>
+<li><a href="#shapely">Shapely</a><ul>
+<li><a href="#methods-to-access-geometry-type">Methods to access Geometry Type</a><ul>
+<li><a href="#shapely-function-type">shapely function - type</a></li>
+<li><a href="#shapely-function-geom_type">shapely function - geom_type</a></li>
+<li><a href="#python-function-type">Python function - type</a></li>
+</ul>
+</li>
+<li><a href="#polygon-with-hole">polygon with hole</a><ul>
+<li><a href="#create-the-polygon-with-a-hole">create the polygon with a hole</a></li>
+<li><a href="#output">output</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#geopandas-pandas">Geopandas / pandas</a><ul>
+<li><a href="#reading-and-plotting-a-shp">Reading and Plotting a SHP</a></li>
+<li><a href="#loop-with-function-iterrows">Loop with Function iterrows()</a><ul>
+<li><a href="#usage">usage</a></li>
+<li><a href="#output_1">output</a></li>
+</ul>
+</li>
+<li><a href="#function-groupby">Function groupby()</a></li>
+<li><a href="#function-value_counts">Function value_counts()</a><ul>
+<li><a href="#value_counts-in-a-column">value_counts() in a column</a></li>
+<li><a href="#output_2">Output</a></li>
+</ul>
+</li>
+<li><a href="#slices-in-pandas">Slices in pandas</a><ul>
+<li><a href="#slice-with-index">slice with index</a></li>
+<li><a href="#slice-with-key">slice with key</a></li>
+<li><a href="#iloc-for-numeric-indices">iloc for numeric indices</a></li>
+<li><a href="#loc-for-explicit-values">loc for explicit values</a></li>
+<li><a href="#slice-with-condition">slice with condition</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#osmnx">OSMnx</a><ul>
+<li><a href="#documententation">Documententation</a><ul>
+<li><a href="#osmnxplotplot_graph">osmnx.plot.plot_graph</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div id="post"><h1 style="color: #fd746c;">Notes in Python GIS</h1><blockquote>
+<p>Modify date: 2020-02-29</p>
+</blockquote>
+<h1 class="anchor" id="shapely">Shapely</h1>
+<h2 class="anchor" id="methods-to-access-geometry-type">Methods to access Geometry Type</h2>
+<h3 class="anchor" id="shapely-function-type">shapely function - type</h3>
+<blockquote>
+<p>string</p>
+</blockquote>
+<pre><code class="python">poly_type1 = poly1.type
+print (poly_type1)
+&gt;&gt; Polygon
+</code></pre>
+<!--more-->
+<h3 class="anchor" id="shapely-function-geom_type">shapely function - geom_type</h3>
+<blockquote>
+<p>string</p>
+</blockquote>
+<pre><code class="python">poly_type2 = poly1.geom_type
+print (poly_type2)
+&gt;&gt; Polygon
+</code></pre>
+<h3 class="anchor" id="python-function-type">Python function - type</h3>
+<blockquote>
+<p>Python class format</p>
+</blockquote>
+<pre><code class="python">poly_type3 = type(poly1)
+print (poly_type3)
+&gt;&gt; &lt;class 'shapely.geometry.polygon.Polygon'&gt;
+</code></pre>
+<h2 class="anchor" id="polygon-with-hole">polygon with hole</h2>
+<p>The output of <code>print (polygon)</code> is <code>POLYGON ((2.2 4.2, 7.2 -25.1, 9.26 -2.456, 2.2 4.2))</code>, which has double parentheses. That's because the polygon can contain holes.</p>
+<h3 class="anchor" id="create-the-polygon-with-a-hole">create the polygon with a hole</h3>
+<pre><code class="python"># the points list of exterior polygon
+points_exterior = [(-180, 90), (-180, -90), (180, -90), (180, 90)]
+
+# the points list of hole polygon
+# there could be multiple holes, thus input a list of holes
+points_hole = [[(-170, 80), (-170, -80), (170, -80), (170, 80)]]
+
+# syntax of the exterior polygon
+polygon_exterior = Polygon(shell=points_exterior)
+
+# syntax of the polygon with hole
+polygon_with_hole = Polygon(shell=points_exterior, holes=points_hole)
+
+print (polygon_exterior)
+print (polygon_with_hole)
+print (type(polygon_with_hole))
+</code></pre>
+<h3 class="anchor" id="output">output</h3>
+<pre><code class="python">POLYGON ((-180 90, -180 -90, 180 -90, 180 90, -180 90))
+POLYGON ((-180 90, -180 -90, 180 -90, 180 90, -180 90), (-170 80, -170 -80, 170 -80, 170 80, -170 80))
+&lt;class 'shapely.geometry.polygon.Polygon'&gt;
+</code></pre>
+<h1 class="anchor" id="geopandas-pandas">Geopandas / pandas</h1>
+<h2 class="anchor" id="reading-and-plotting-a-shp">Reading and Plotting a SHP</h2>
+<pre><code class="python">import geopandas
+import matplotlib.pyplot as plt
+
+data = geopandas.read_file('./DataLesson2/DAMSELFISH_distributions.shp')
+
+data.plot()
+plt.show()
+</code></pre>
+<h2 class="anchor" id="loop-with-function-iterrows">Loop with Function iterrows()</h2>
+<h3 class="anchor" id="usage">usage</h3>
+<p>The function iterrows() returns the index of each row, in addition to an object containing the row itself.</p>
+<pre><code class="python">for index, row in selection1.iterrows():
+    poly_area = row['geometry'].area
+    print('polygon area at index %i is: %.3f' %(index, poly_area))
+</code></pre>
+<h3 class="anchor" id="output_1">output</h3>
+<pre><code class="python">polygon area at index 0 is: 19.396
+polygon area at index 1 is: 6.146
+polygon area at index 2 is: 2.697
+polygon area at index 3 is: 87.461
+polygon area at index 4 is: 0.001
+</code></pre>
+<h2 class="anchor" id="function-groupby">Function groupby()</h2>
+<p>The function gives an object called <code>DataFrameGroupBy</code>, similar to list of keys and values (in a dictionary) that we can iterate over.</p>
+<pre><code class="python">grouped = data.groupby('BINOMIAL')
+for key, values in grouped:
+    individual_fish = values
+</code></pre>
+<h2 class="anchor" id="function-value_counts">Function value_counts()</h2>
+<p><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Index.value_counts.html?highlight=value_counts#pandas.Index.value_counts">Official Documentations</a></p>
+<h3 class="anchor" id="value_counts-in-a-column">value_counts() in a column</h3>
+<pre><code class="python">print(acc['Suitable_area'].value_counts())
+#type(acc) = geodataframe
+</code></pre>
+<h3 class="anchor" id="output_2">Output</h3>
+<pre><code class="python">0    13011
+1        9
+</code></pre>
+<h2 class="anchor" id="slices-in-pandas">Slices in pandas</h2>
+<pre><code class="python">pop2014 = pd.Series([100,99.3,95.5,93.5,92.4,84.8,84.5,78.9,74.3,72.8],
+                    index=['Java','C','C++','Python','C#','PHP','JavaScript','Ruby','R','Matlab'])
+</code></pre>
+<h3 class="anchor" id="slice-with-index">slice with index</h3>
+<pre><code class="python">pop2014[0]
+&gt;&gt;&gt; 100.0
+
+pop2014[0:2]
+&gt;&gt;&gt; Java    100.0
+    C        99.3
+    dtype: float64
+</code></pre>
+<h3 class="anchor" id="slice-with-key">slice with key</h3>
+<pre><code class="python">pop2014['Python]
+&gt;&gt;&gt; 93.5
+
+pop2014['C++':'C#']
+&gt;&gt;&gt; C++       95.5
+    Python    93.5
+    C#        92.4
+    dtype: float64
+</code></pre>
+<h3 class="anchor" id="iloc-for-numeric-indices">iloc for numeric indices</h3>
+<pre><code class="python">pop2014.iloc[0:2]
+&gt;&gt;&gt; Java    100.0
+    C        99.3
+    dtype: float64
+</code></pre>
+<h3 class="anchor" id="loc-for-explicit-values">loc for explicit values</h3>
+<pre><code class="python">pop2014.loc[:'Ruby]
+&gt;&gt;&gt; Java          100.0
+    C              99.3
+    C++            95.5
+    Python         93.5
+    C#             92.4
+    PHP            84.8
+    JavaScript     84.5
+    Ruby           78.9
+    dtype: float64
+</code></pre>
+<h3 class="anchor" id="slice-with-condition">slice with condition</h3>
+<pre><code class="python">pop2014[pop2014 &gt; 90]
+&gt;&gt;&gt; Java      100.0
+    C          99.3
+    C++        95.5
+    Python     93.5
+    C#         92.4
+    dtype: float64
+</code></pre>
+<h1 class="anchor" id="osmnx">OSMnx</h1>
+<h2 class="anchor" id="documententation">Documententation</h2>
+<h3 class="anchor" id="osmnxplotplot_graph">osmnx.plot.plot_graph</h3>
+<pre><code>Parameters:
+G, bbox=None, fig_height=6, fig_width=None, margin=0.02, axis_off=True, equal_aspect=False, bgcolor='w', show=True, save=False, close=True, file_format='png', filename='temp', dpi=300, annotate=False, node_color='#66ccff', node_size=15, node_alpha=1, node_edgecolor='none', node_zorder=1, edge_color='#999999', edge_linewidth=1, edge_alpha=1, use_geom=True
+</code></pre>
+<p><strong>Returns: fig, ax</strong></p>
+<p>Return type: tuple</p>
+<p><a href="https://osmnx.readthedocs.io/en/stable/osmnx.html#osmnx.plot.plot_graph">Documentation page</a></p>
+<hr/></div>
+</div>
+<div id="footer"></div>
+<!-- back to top -->
+<script class="backtotop">
+        var btn = $('#backtotop');
+
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 300) {
+                btn.addClass('show');
+            } else {
+                btn.removeClass('show');
+            }
+        });
+
+        btn.on('click', function (e) {
+            e.preventDefault();
+            $('html, body').animate({ scrollTop: 0 }, '300');
+        });
+    </script>
+<!-- end back to top -->
+<!-- scroll smoothly -->
+<script>
+        $(document).ready(function () {
+            $("a").on('click', function (event) {
+
+                if (this.hash !== "") {
+                    event.preventDefault();
+
+                    var hash = this.hash;
+
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+    </script>
+<!-- end scroll smoothly -->
+<script class="showtocwhensdrolldown">
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 300) {
+                $('#toc').addClass('fix');
+            } else {
+                $('#toc').removeClass('fix');
+            }
+        });
+    </script>
+<!-- <script class="hidetoc">
+        jQuery(document).ready(function ($) {
+            var alterClass = function () {
+                var ww = $(window).width();
+                if (ww > 1400) {
+                    $('#toc').removeClass('res');
+                    $('#toc').addClass('fix');
+                } else if (ww <= 1401) {
+                    $('#toc').addClass('res');
+                    $('#toc').removeClass('fix');
+                };
+            };
+            $(window).resize(function () {
+                alterClass();
+            });
+            //Fire it when the page first loads:
+            alterClass();
+        });
+    </script> -->
+</body>
+</html>

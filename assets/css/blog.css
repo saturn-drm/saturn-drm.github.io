@@ -1,0 +1,128 @@
+body, html {
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+    padding: 0;
+    font-family: Montserrat, source-han-sans-cjk-sc, source-han-sans-cjk-sc, sans-serif;
+    /* height: 100%; */
+}
+
+#offsetheader {
+    background-image: url(/assets/img/covers/codingcover.jpg);
+    background-position: 50%;
+    background-size: cover;
+    position: relative;
+    margin: auto;
+    top: 0;
+    width: 100%;
+    height: 400px;
+    background-color: transparent;
+    z-index: -99;
+}
+
+#content {
+    position: relative;
+    max-width: 900px;
+    min-height: calc(100vh - 300px);
+    height: auto;
+    /* background-color: #000000; */
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+section {
+    position: relative;
+    /* top: -5rem; */
+    width: 100%;
+    margin: 3rem auto 3rem auto;
+    /* background-color: #777777; */
+}
+
+h1.sectiontitle {
+    color: #fd746c;
+    margin-left: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+div.article {
+    width: 90%;
+    margin: auto;
+    padding: .2rem;
+    /* background-color: #ffffff; */
+    color: #2c3e50;
+    overflow: hidden;
+}
+
+div.article h1 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+div.article h2 {
+    margin-top: -1rem;
+    font-size: .8rem;
+    font-weight: 200;
+    color: #888888;
+}
+
+div.article p {
+    /* height: 6rem; */
+    margin-top: -0rem;
+    font-size: 1rem;
+    font-weight: 200;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+}
+
+div.article img {
+    /* display: block; */
+    /* margin-left: auto;
+    margin-right: auto; */
+    /* margin: auto; */
+    /* background-position: center center; */
+    /* background-size: contain; */
+    max-height: 10rem;
+}
+
+strong {
+    font-weight: 400;
+}
+
+div.article a {
+    color: #2c3e50;
+}
+
+div.article a.readmore {
+    /* margin: .2rem; */
+    font-size: 0.8rem;
+    padding: .2rem;
+    background-color: #fee3e1;
+    border-radius: .5rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+div.article a.titlehref:hover {
+    color: #fd746c;
+}
+
+div.article hr {
+    height: 1px;
+    margin-top: 1rem;
+    border-left: none;
+    border-right: none;
+    border-top: #fd746c solid 1px;
+    border-bottom: #fee3e1 solid 1px;
+}
+
+div.article a:hover {
+    background-color: #fd746c;
+    transition: .3s;
+}

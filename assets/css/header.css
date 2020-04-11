@@ -1,0 +1,135 @@
+#navbar {
+    background-color: rgba(254, 227, 225, 1);
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    transition: top 0.3s;
+    z-index: 1000;
+}
+
+#navbar.navori a {
+    float: left;
+    display: block;
+    color: #2c3e50;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom-style: solid;
+    border-bottom-color: transparent;
+    border-bottom-width: 3px;
+    text-decoration: none;
+    transition: 0.3s;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+#navbar.navori a.dropicon {
+    display: none;
+}
+
+#navbar.navori a.homenav {
+    position: relative;
+    width: 40%;
+}
+
+#navbar.navori a.homenav img {
+    position: absolute;
+    height: 1rem;
+    top: 1rem;
+    margin-right: 15px;
+    left: 20%;
+}
+
+#navbar.navori a.homenav p {
+    position: absolute;
+    top: -0.5rem;
+    left: calc(25% + 0.5rem);
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+#navbar.navori div.othernav a {
+    width: 18%;
+    border-left-style: solid;
+    border-left-color: #2c3e50;
+    border-left-width: 1px;
+}
+
+#navbar.navres a {
+    float: left;
+    display: block;
+    color: #2c3e50;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom-style: solid;
+    border-bottom-color: transparent;
+    border-bottom-width: 3px;
+    text-decoration: none;
+    transition: 0.3s;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+#navbar.navres a.homenav {
+    /* background-color: rgba(254, 227, 225, 1); */
+    width: 100%;
+    height: 10px;
+    left: 0;
+    text-align: center;
+    /* background-color: rgba(254, 227, 225, .9); */
+}
+
+#navbar.navres a.homenav img {
+    position: relative;
+    float: left;
+    left: 30%;
+    top: 0rem;
+    height: 1rem;
+}
+
+#navbar.navres a.homenav p {
+    position: absolute;
+    left: calc(40% + 0.5rem);
+    top: 0rem;
+}
+
+#navbar.navres div.othernav a.resdown {
+    position: relative;
+    display: none;
+    height: calc((100vh - 10px - 3rem) / 2.9);
+    line-height: calc((100vh - 10px - 3rem) / 2.9);
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border-left-style: none;
+    border-top-style: solid;
+    border-top-color: #2c3e50;
+    border-top-width: 1px;
+}
+
+#navbar.navres .dropicon {
+    position: absolute;
+    right: 0rem;
+    top: 0rem;
+    padding: 15px;
+    display: inline;
+    z-index: 9999;
+}
+
+#navbar a:hover {
+    /* border-bottom-color: #2c3e50; */
+    color: #fd746c;
+}
+
+#navbar .active {
+    /* color: #fd746c; */
+    background-color: #fd746c;
+}
+
+#navbar .active:hover {
+    color: #fee3e1;
+    /* background-color: #fd746c; */
+}
