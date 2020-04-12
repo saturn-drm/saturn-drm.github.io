@@ -11,6 +11,4 @@ VSCode 插件 Easy Sass
 
 ![200131.png](../../../assets/img/01coding/200131.png)
 
-<!--more-->
-
 ---

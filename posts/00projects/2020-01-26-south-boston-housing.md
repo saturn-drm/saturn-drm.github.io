@@ -13,8 +13,6 @@ head image: /assets/img/00architecture/02MAUD-EX01/01axoncover.jpg
 
 * The project is an extension of the existing grid and transportation system, which overrides the mostly underwater site in the future.
 
-<!--more-->
-
 * It deals with the risks of rising sea level and annual flood by chronological design in the short-medium-long term.
 
 * It contains a mixture of three house types from the local, which are arranged according to the site condition facing the risks of rising sea level and annual flood chronologically.

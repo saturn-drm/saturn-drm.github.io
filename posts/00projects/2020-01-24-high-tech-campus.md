@@ -13,8 +13,6 @@ head image: /assets/img/00architecture/03MAUD-EX02/01cover.jpg
 
 The campus focused on outdoor gear industry, which is one of the largest economic sectors in the states. The site and neighbor form an attractive leisure landscape thanks to the combination of the natural resource and its strong transportation infrastructure.
 
-<!--more-->
-
 The campus acted as a catalyst for reconfiguration of the surrounding suburban landscape by overlaying green infrastructure and concentrated campus core.
 
 There are two frameworks in the suburban environment:

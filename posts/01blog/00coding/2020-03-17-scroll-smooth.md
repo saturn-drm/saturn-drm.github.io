@@ -11,8 +11,6 @@ head image: /assets/img/covers/codingcover.jpg
 
 When editing my website, I wanted to scroll smoothly between sections, and when scrolling to top.
 
-<!--more-->
-
 # Solution 1
 
 Basically, I found the simply way to achieve this with CSS properties:

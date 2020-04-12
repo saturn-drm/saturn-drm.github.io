@@ -10,7 +10,6 @@ head image: /assets/img/covers/codingcover.jpg
 2020-01-26-13:04更新：
 
 中午起来验证成功。
-<!--more-->
 
 ----
 

@@ -21,8 +21,6 @@ print (poly_type1)
 >> Polygon
 ```
 
-<!--more-->
-
 ### shapely function - geom_type
 
 > string

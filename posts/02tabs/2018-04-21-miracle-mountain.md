@@ -9,7 +9,6 @@ head image: /assets/img/covers/literaturecover.jpg
 
 # INFO
 * Orig. 岸部眞明 (Masaaki Kishibe)
-<!--more-->
 * Played by: Zihan Mei
 * Guitar: Yamaha FG830
 * Pickup: Samsung Note 3 Recorder

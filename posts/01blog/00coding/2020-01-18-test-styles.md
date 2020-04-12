@@ -13,8 +13,6 @@ head image: /assets/img/covers/codingcover.jpg
 
 ![style-blend.gif](../../../assets/img/01coding/style-blend.gif)
 
-<!--more-->
-
 Click to [Style Blend](https://www.zmei.moe/assets/html/test-page.html)
 
 # Anime.js

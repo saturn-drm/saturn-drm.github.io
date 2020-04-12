@@ -220,3 +220,10 @@ div#post pre {
 div#post .anchor {
     padding-top: 60px;
 }
+
+div#post li {
+    font-size: 1rem;
+    font-weight: 200;
+    padding-left: 1rem;
+    text-align: justify;
+}

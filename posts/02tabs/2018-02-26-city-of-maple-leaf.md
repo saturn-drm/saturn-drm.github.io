@@ -9,7 +9,6 @@ head image: /assets/img/covers/literaturecover.jpg
 
 # INFO
 * Orig. 杨昊昆
-<!--more-->
 * Played by: Zihan Mei
 * Guitar: Yamaha FG830
 * Pickup: Samsung Note 3 Recorder

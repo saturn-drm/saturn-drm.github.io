@@ -13,8 +13,6 @@ head image: /assets/img/covers/codingcover.jpg
 
 ![jupyter-1](../../../assets/img/01coding/jupyter-1.png)
 
-<!--more-->
-
 Add `#%%` to the first line of py file. The **Run Cell**, **Run Below**, and **Debug Cell** function will be added to VSCode.
 
 **Example**

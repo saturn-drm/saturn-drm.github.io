@@ -19,8 +19,6 @@ The modules are in the list with the command
 
 ![200216.png](../../../assets/img/01coding/200216.png)
 
-<!--more-->
-
 However, when debugged in VSCode
 
 ```python
