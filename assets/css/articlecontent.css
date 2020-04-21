@@ -164,7 +164,9 @@ div#post p em {
 div#post blockquote p {
     margin-left: 0rem;
     padding-left: 1rem;
+    color: #2c3e509c;
     border-left: solid #888888 3px;
+    border-top: solid #888888 1px;
 }
 
 div#post p a, li a {
