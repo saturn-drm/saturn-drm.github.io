@@ -120,7 +120,7 @@ div#toc.fix {
 div#post {
     width: 100%;
     margin: 3rem auto 3rem auto;
-    padding: 1rem;
+    padding: 0rem;
 }
 
 div#post h1 {
@@ -162,11 +162,11 @@ div#post p em {
 }
 
 div#post blockquote p {
-    margin-left: 0rem;
+    margin-left: -1rem;
     padding-left: 1rem;
     color: #2c3e509c;
     border-left: solid #888888 3px;
-    border-top: solid #888888 1px;
+    /* border-top: solid #888888 1px; */
 }
 
 div#post p a, li a {
@@ -220,7 +220,7 @@ div#post pre {
 }
 
 div#post .anchor {
-    padding-top: 60px;
+    padding-top: 0px;
 }
 
 div#post li {
