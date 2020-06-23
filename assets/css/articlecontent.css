@@ -158,8 +158,8 @@ div#post code {
     /* height: 1rem; */
 }
 
-div#post p strong {
-    font-weight: 400;
+div#post strong {
+    /* font-weight: 400; */
 }
 
 div#post p em {
