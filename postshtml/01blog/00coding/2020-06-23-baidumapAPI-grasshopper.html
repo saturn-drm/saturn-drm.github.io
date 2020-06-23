@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<link href="/assets/css/articlecontent.css" rel="stylesheet" type="text/css"/>
+<link href="/assets/css/scrollbar.css" rel="stylesheet" type="text/css"/>
+<link href="/assets/css/selection.css" rel="stylesheet" type="text/css"/>
+<link href="/assets/css/backtotop.css" rel="stylesheet" type="text/css"/>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport"/>
+<title>Python请求百度地图API爬取城市建筑属性并用Grasshopper进一步处理</title>
+<meta content="Welcome to My Personal Site!" name="description"/>
+<meta content="Zihan Zephaniah MEI" name="author"/>
+<!-- fonts -->
+<link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,600&amp;display=swap" rel="stylesheet"/>
+<script>
+        (function (d) {
+            var config = {
+                kitId: 'cmi7aqt',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
+<!-- end fonts -->
+<!-- start favicons snippet, use https://realfavicongenerator.net/ -->
+<link href="/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/favicon/site.webmanifest" rel="manifest"/>
+<link color="#2c3e50" href="/favicon/safari-pinned-tab.svg" rel="mask-icon"/>
+<link href="/favicon/favicon.ico" rel="shortcut icon"/>
+<meta content="ZMei.moe" name="apple-mobile-web-app-title"/>
+<meta content="ZMei.moe" name="application-name"/>
+<meta content="#fee3e1" name="msapplication-TileColor"/>
+<meta content="/favicon/browserconfig.xml" name="msapplication-config"/>
+<meta content="#ffffff" name="theme-color"/>
+<!-- end favicons snippet -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-156998560-1"></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-156998560-1');
+    </script>
+<!-- anime-master -->
+<script src="/assets/js/anime-master/lib/anime.min.js"></script>
+<!-- jQuery -->
+<script crossorigin="anonymous" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<!-- fontawesome -->
+<!-- <script src="https://kit.fontawesome.com/d61407055c.js" crossorigin="anonymous"></script> -->
+<script type="text/javascript">
+        $(document).ready(function () {
+            $("#header").load("/components/header.html");
+            $("#footer").load("/components/footer.html");
+        });
+    </script>
+<link href="/assets/js/highlight/atom-one-light-edit.css" rel="stylesheet"/>
+<script src="/assets/js/highlight/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+<div id="header"></div>
+<!-- back to top icon -->
+<a id="backtotop">
+<svg id="layer2" viewbox="0 0 16.85 35.95" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<style>
+                    .cls-1 {
+                        fill: none;
+                        stroke-miterlimit: 10;
+                    }
+                </style>
+</defs>
+<title>backtotop</title>
+<polyline class="cls-1" points="0.43 13.95 8.43 0.95 16.43 13.95"></polyline>
+<line class="cls-1" x1="8.43" x2="8.43" y1="25.95" y2="0.95"></line>
+<line class="cls-1" x1="0.43" x2="16.43" y1="0.95" y2="0.95"></line>
+</svg>
+</a>
+<!-- end back to top icon -->
+<div id="offsetheader">
+<img src="/assets/img/covers/codingcover.jpg"/>
+</div>
+<!-- <a class="tocicon" onclick="toc()">
+        <i class="fa fa-bars"></i>
+    </a> -->
+<div id="toc"><div class="toc">
+<ul>
+<li><a href="#1">1. 问题提出</a></li>
+<li><a href="#2">2. 数据爬取</a></li>
+<li><a href="#3">3. 模型处理</a></li>
+<li><a href="#4">4. 总结</a><ul>
+<li><a href="#_1">时间进度：</a></li>
+<li><a href="#_2">步骤任务分配：</a></li>
+<li><a href="#_3">未能达成的预期：</a></li>
+<li><a href="#_4">其他：</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div id="post"><h1 style="color: #fd746c;">Python请求百度地图API爬取城市建筑属性并用Grasshopper进一步处理</h1><blockquote>
+<p>Modify Date: 2020-06-23</p>
+</blockquote>
+<h1 class="anchor" id="1">1. 问题提出</h1>
+<p>实习期间接到一项任务：在地图上标出城市范围内的商业、文化、酒店、学校建筑，并挑选重点建筑研究其规模、业态。</p>
+<p>针对第一个要求，在国外的时候我会直接用 <strong>Open Street Map</strong> 导出 <code>osm</code> 文件，拖到 <strong>Grasshopper</strong> 里用 <strong>ELK</strong> 插件鼓捣一下，直接生成。但是在国内使用 <strong>Open Street Map</strong> 我发现了2个问题：</p>
+<ul>
+<li>Open Street Map 上中国的建筑轮廓大量缺失；</li>
+<li>没有缺失轮廓的建筑图形几乎没有任何包括用地性质在内的属性，唯一的属性就是<code>闭合路径/矩形</code>。</li>
+</ul>
+<p>此前无论是 <strong>Google Map</strong> 还是<strong>百度地图</strong>的 API，我都嫌麻烦没有尝试过，这次可以说不得不尝试一下了。同时在阅读百度地图开发者文档的时候我注意到建筑数据还带有价格、评分等属性，部分可作为这次任务第二步的参考。</p>
+<p>思路如下：</p>
+<ol>
+<li><strong>数据爬取：</strong>利用百度地图 API 爬取该城市中某一类别的所有建筑；</li>
+<li><strong>数据整理：</strong>把需要的信息整理成字典，写入<code>csv</code>文件；</li>
+<li><strong>模型生成：</strong>用 <strong>Grasshopper</strong> 读取<code>csv</code>文件，处理数据，生成点；</li>
+<li><strong>模型调整：</strong>把经纬度转换成<strong>地图</strong>或者已有的 <strong>CAD</strong> 采用的坐标系。</li>
+</ol>
+<hr/>
+<h1 class="anchor" id="2">2. 数据爬取</h1>
+<hr/>
+<h1 class="anchor" id="3">3. 模型处理</h1>
+<hr/>
+<h1 class="anchor" id="4">4. 总结</h1>
+<h2 class="anchor" id="_1">时间进度：</h2>
+<ul>
+<li>在公司总有其他任务追着，没有太多时间仔细修代码，而且爬出来的数据只是第一步，最重要的是后面大量的业态规模、产业特点的分析。</li>
+<li>前面爬到数据花了10分钟，得到了看起来非常酷的一系列数据。但是后面修正代码，直到能完成数据整理和写入的步骤，花了较长时间，更不用说在和 <strong>Grasshopper</strong> 交互上用的时间。</li>
+<li>作为整个项目分析的第一步，其实这个数据获取的过程从10分钟之后开始就有一些收支不平衡了。<s>不过谁让我是实习生呢，划一划。</s></li>
+</ul>
+<h2 class="anchor" id="_2">步骤任务分配：</h2>
+<ul>
+<li>写代码的时候纠结的点大多是“用 Python 导出什么程度的数据给 Grasshopper？”一开始直接把原始数据导出了，但是在 Grasshopper 处理过程中我甚至要用到 <strong>GhPython</strong> 编辑数据，后者的语法和正常的 Python 有些许差异，在时间紧张的情况下很难完成。</li>
+<li>最后我选择了在爬取的时候处理好数据，只保存最重要的几项，然后在 <strong>Grasshopper</strong> 里用电池图简单生成一下。</li>
+</ul>
+<h2 class="anchor" id="_3">未能达成的预期：</h2>
+<ul>
+<li>时间紧张，安排不妥。</li>
+<li>短时间内，坐标转换没有完美。</li>
+<li>后面的数据分析没有触及。</li>
+</ul>
+<h2 class="anchor" id="_4">其他：</h2>
+<ul>
+<li>公司的电脑不能安装编译器，我又使用了 <a href="https://repl.it/">repl.it</a> 在线编译，这次顺利导入模块，直接在云端完美运行了。体验甚佳。我记得2年前好像不能导入很多模块来着。</li>
+</ul>
+<hr/></div>
+</div>
+<div id="footer"></div>
+<!-- back to top -->
+<script class="backtotop">
+        var btn = $('#backtotop');
+
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 300) {
+                btn.addClass('show');
+            } else {
+                btn.removeClass('show');
+            }
+        });
+
+        btn.on('click', function (e) {
+            e.preventDefault();
+            $('html, body').animate({ scrollTop: 0 }, '300');
+        });
+    </script>
+<!-- end back to top -->
+<!-- scroll smoothly -->
+<script>
+        $(document).ready(function () {
+            $("a").on('click', function (event) {
+
+                if (this.hash !== "") {
+                    event.preventDefault();
+
+                    var hash = this.hash;
+
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+    </script>
+<!-- end scroll smoothly -->
+<script class="showtocwhensdrolldown">
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 300) {
+                $('#toc').addClass('fix');
+            } else {
+                $('#toc').removeClass('fix');
+            }
+        });
+    </script>
+<!-- <script class="hidetoc">
+        jQuery(document).ready(function ($) {
+            var alterClass = function () {
+                var ww = $(window).width();
+                if (ww > 1400) {
+                    $('#toc').removeClass('res');
+                    $('#toc').addClass('fix');
+                } else if (ww <= 1401) {
+                    $('#toc').addClass('res');
+                    $('#toc').removeClass('fix');
+                };
+            };
+            $(window).resize(function () {
+                alterClass();
+            });
+            //Fire it when the page first loads:
+            alterClass();
+        });
+    </script> -->
+</body>
+</html>

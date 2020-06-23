@@ -146,10 +146,15 @@ div#post p {
     text-align: justify;
 }
 
-div#post p code {
+div#post code {
     background-color: #ececec;
     /* display: inline; */
     white-space: nowrap;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    margin-left: 0.1rem;
+    margin-right: 0.1rem;
+    border-radius: 3px;
     /* height: 1rem; */
 }
 
