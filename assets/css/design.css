@@ -81,6 +81,10 @@ div.coverimg#img5 {
     background-image: url(../img/00architecture/04Maliandao/00covercover.jpg);
 }
 
+div.coverimg#img6 {
+    background-image: url(../img/00architecture/05Wangma/00covercover.jpg);
+}
+
 div.words {
     position: relative;
     height: 5rem;
