@@ -188,7 +188,9 @@ div#post p a:hover, li a:hover {
 
 div#post p img {
     max-width: 100%;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
 }
 
 div#post table {
