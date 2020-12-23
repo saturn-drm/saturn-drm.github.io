@@ -70,10 +70,23 @@
             $("#header").load("components/header-index2.html");
         });
     </script>
+    <!-- snow effect -->
+    <script src="assets/js/snow.js"></script>
+    <script>
+        $(function () {
+            $.fn.snow({
+                minSize: 10,
+                maxSize: 20,
+                newOn: 200
+            });
+        });
+    </script>
+    <!-- end snow effect -->
 </head>
 
 <body>
 
+    <div class="snow-container"></div>
     <!-- loading anime -->
     <div class="loader">
         <div class="main-anime">
