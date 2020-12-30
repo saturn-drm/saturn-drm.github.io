@@ -1,14 +1,23 @@
+:root {
+    --lightred: #ef476f;
+    --mainbg: #fffcf9;
+    --mainfontcolor: #34090f;
+    --mainselection: #fd746c;
+    --mainhighlight: #fd746c;
+    --hoverrow: rgb(254, 227, 225);
+}
+
 ::selection {
-    background: #fd746c;
-    color: #2c3e50;
+    background: var(--mainselection);
+    color: var(--mainbg);
 }
 
 ::-moz-selection {
-    background: #fd746c;
-    color: #2c3e50;
+    background: var(--mainselection);
+    color: var(--mainbg);
 }
 
 ::-webkit-selection {
-    background: #fd746c;
-    color: #2c3e50;
+    background: var(--mainselection);
+    color: var(--mainbg);
 }

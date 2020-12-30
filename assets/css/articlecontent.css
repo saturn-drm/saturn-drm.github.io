@@ -1,3 +1,12 @@
+:root {
+    --lightred: #ef476f;
+    --mainbg: #fffcf9;
+    --mainfontcolor: #34090f;
+    --mainselection: #fd746c;
+    --mainhighlight: #fd746c;
+    --hoverrow: rgb(254, 227, 225);
+}
+
 body, html {
     margin-top: 0;
     margin-right: 0;
@@ -37,7 +46,7 @@ body, html {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    color: #2c3e50;
+    color: var(--mainfontcolor);
 }
 
 div#toc {
@@ -53,21 +62,21 @@ div#toc ul {
 }
 
 div#toc ul a {
-    color: #2c3e50;
+    color: var(--mainfontcolor);
     font-size: 1rem;
     font-weight: 400;
     text-decoration: none;
 }
 
 div#toc ul  ul a {
-    color: #2c3e50;
+    color: var(--mainfontcolor);
     font-size: 1rem;
     font-weight: 200;
     text-decoration: none;
 }
 
 div#toc ul a:hover {
-    color: #fd746c;
+    color: var(--mainhighlight);
     transition: .3s;
 }
 
@@ -169,13 +178,13 @@ div#post p em {
 div#post blockquote p {
     margin-left: -1rem;
     padding-left: 1rem;
-    color: #2c3e509c;
+    color: #34090f9c;
     border-left: solid #888888 3px;
     /* border-top: solid #888888 1px; */
 }
 
 div#post p a, li a {
-    color: #fd746c;
+    color: var(--mainhighlight);
     text-decoration: none;
     /* margin-left: .5rem; */
 }
@@ -218,7 +227,7 @@ div#post hr {
     margin-top: 1rem;
     border-left: none;
     border-right: none;
-    border-top: #fd746c solid 1px;
+    border-top: var(--mainhighlight) solid 1px;
     border-bottom: #fee3e1 solid 1px;
 }
 
