@@ -101,6 +101,10 @@ div.coverimg#img10 {
     background-image: url(../img/00architecture/07citygenerator-6338/00covercover.jpg);
 }
 
+div.coverimg#img11 {
+    background-image: url(../img/00architecture/08rocketcity/00covercover.jpg);
+}
+
 div.words {
     position: relative;
     height: 5rem;
