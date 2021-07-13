@@ -146,14 +146,14 @@
 <p>Markdown文件夹和生成的HTML文件夹拥有相同的目录结构，并且在转换前检查文件并自动跳过之前已转换的文件。</p>
 <h2 class="anchor" id="yaml">YAML</h2>
 <p>检查Markdown文档的YAML，并识别相应的要素名称以便在最后的HTML文件中使用。</p>
-<pre><code class="YAML">title: 其他摘录
+<pre><code class="language-YAML">title: 其他摘录
 modify date: 2020-01-29
 tags: [Digest, Classical Chinese Literature]
 head image: /assets/img/covers/codingcover.jpg
 </code></pre>
 <h2 class="anchor" id="tables-toc-code">tables, toc, code</h2>
 <p>转换Markdown文件时应用tables, toc, code的转换，其中表格部分在后面修改细节，toc部分和正文部分分别插入模板文件的不同位置，code部分配合模板文件引用的highlight.js完成渲染。</p>
-<pre><code class="python">import markdown
+<pre><code class="language-python">import markdown
 
 class convertMDPost():
 
@@ -167,7 +167,7 @@ class convertMDPost():
 </code></pre>
 <h2 class="anchor" id="h">&lt;h&gt;</h2>
 <p>给每个层级的&lt;h&gt;标签加上class="anchor"。因为我的网页有固定标题栏的存在，所以在点击table of contents的各级标题的时候，网页滚动后标题停留的位置被固定标题栏挡住，为此，我的解决方法是对每个h.anchor的标签应用padding-top样式。</p>
-<pre><code class="python">self.headList = self.soup.findAll(re.compile('^h\d'))
+<pre><code class="language-python">self.headList = self.soup.findAll(re.compile('^h\d'))
 </code></pre>
 <h2 class="anchor" id="table">table标题行</h2>
 <p>修改tables标题行。因为在我的文章里出现没有标题行的表格，但是在大多数Markdown编辑器中，没有标题行的表格是不能正确渲染的。为了在编辑的时候更直观，我给没有标题行的表格增加了一个任意字段的标题行。根据需求在转换的时候选择标题行的去留。配合css给table增加empty-cells样式。</p>
@@ -176,18 +176,18 @@ class convertMDPost():
 <blockquote>
 <p>Path in Markdown</p>
 </blockquote>
-<pre><code class="markdown">![02-1L.jpg](../../assets/img/00architecture/03MAUD-EX02/02-1L.jpg)
+<pre><code class="language-markdown">![02-1L.jpg](../../assets/img/00architecture/03MAUD-EX02/02-1L.jpg)
 </code></pre>
 <blockquote>
 <p>Path in HTML</p>
 </blockquote>
-<pre><code class="html">&lt;p&gt;&lt;img alt="02-1L.jpg" src="../../assets/img/00architecture/03MAUD-EX02/02-1L.jpg"/&gt;&lt;/p&gt;
+<pre><code class="language-html">&lt;p&gt;&lt;img alt="02-1L.jpg" src="../../assets/img/00architecture/03MAUD-EX02/02-1L.jpg"/&gt;&lt;/p&gt;
 </code></pre>
 <h2 class="anchor" id="_7">插入模板</h2>
 <p>将转换并修改后的HTML正文插入到模板HTML的post块级元素中，将转换得到的toc插入到模板HTML的toc块级元素中，修改模板HTML的标题和顶端背景图片。</p>
 <h2 class="anchor" id="_8">正文标题</h2>
 <p>为HTML正文添加一个标题。</p>
-<pre><code class="python">def insertTitleInArticle(self, titletxt):
+<pre><code class="language-python">def insertTitleInArticle(self, titletxt):
     titletag = self.soup.new_tag('h1', style="color: #fd746c;")
     titletag.string = titletxt
     addingTag = self.soup.find(id='post')

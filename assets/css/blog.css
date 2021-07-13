@@ -43,7 +43,7 @@ section {
 }
 
 h1.sectiontitle {
-    color: var(--mainfontcolor);
+    color: var(--mainhighlight);
     margin-left: 1.5rem;
     font-size: 1.5rem;
     font-weight: 600;
@@ -120,7 +120,7 @@ div.article hr {
     margin-top: 1rem;
     border-left: none;
     border-right: none;
-    border-top: var(--mainfontcolor) solid 1px;
+    border-top: var(--mainhighlight) solid 1px;
 }
 
 div.article a.readmore:hover {

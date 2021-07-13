@@ -142,12 +142,12 @@
 <ul>
 <li>HTML</li>
 </ul>
-<pre><code class="html">&lt;div class="small-block-1"&gt;&lt;/div&gt;
+<pre><code class="language-html">&lt;div class="small-block-1"&gt;&lt;/div&gt;
 </code></pre>
 <ul>
 <li>CSS</li>
 </ul>
-<pre><code class="css">div.small-block-1{
+<pre><code class="language-css">div.small-block-1{
   position: absolute;
   left: 22.5vw;
   top: calc(50vh - 2.5vw);
@@ -161,7 +161,7 @@
 <ul>
 <li>Javascript</li>
 </ul>
-<pre><code class="js">var animation = anime({
+<pre><code class="language-js">var animation = anime({
   targets: ['.small-block-1'],
   translateX: '50vw',
   loop: true
@@ -173,24 +173,24 @@
 <blockquote>
 <p>DOM Node</p>
 </blockquote>
-<pre><code class="js">targets: el.querySelector('.item')
+<pre><code class="language-js">targets: el.querySelector('.item')
 </code></pre>
 <blockquote>
 <p>Node List</p>
 </blockquote>
-<pre><code class="js">targets: el.querySelectorAll('.item')
+<pre><code class="language-js">targets: el.querySelectorAll('.item')
 </code></pre>
 <ul>
 <li>HTML</li>
 </ul>
-<pre><code class="html">&lt;div class="small-block a"&gt;&lt;/div&gt;
+<pre><code class="language-html">&lt;div class="small-block a"&gt;&lt;/div&gt;
 &lt;div class="small-block b"&gt;&lt;/div&gt;
 &lt;div class="small-block c"&gt;&lt;/div&gt;
 </code></pre>
 <ul>
 <li>CSS</li>
 </ul>
-<pre><code class="css">.small-block{
+<pre><code class="language-css">.small-block{
   position: absolute;
   left: 22.5vw;
   width: 5vw;
@@ -215,7 +215,7 @@
 <ul>
 <li>Javascript</li>
 </ul>
-<pre><code class="js">var elements = document.querySelectorAll('.small-block');
+<pre><code class="language-js">var elements = document.querySelectorAll('.small-block');
 var animation = anime({
   targets: elements,
   translateX: '50vw',
@@ -228,14 +228,14 @@ var animation = anime({
 <ul>
 <li>HTML</li>
 </ul>
-<pre><code class="html">&lt;div class="main"&gt;
+<pre><code class="language-html">&lt;div class="main"&gt;
   &lt;p class="battery-log"&gt;&lt;/p&gt;
 &lt;/div&gt;
 </code></pre>
 <ul>
 <li>CSS</li>
 </ul>
-<pre><code class="css">.main {
+<pre><code class="language-css">.main {
   position: relative;
   justify-content: center;
   width: auto;
@@ -253,7 +253,7 @@ var animation = anime({
 <ul>
 <li>Javascript</li>
 </ul>
-<pre><code class="js">var logEL = document.querySelector('.battery-log');
+<pre><code class="language-js">var logEL = document.querySelector('.battery-log');
 
 var battery = {
   charged: '0%',
@@ -282,12 +282,12 @@ var animation = anime({
 <ul>
 <li>HTML</li>
 </ul>
-<pre><code class="html">&lt;div class="main"&gt;&lt;/div&gt;
+<pre><code class="language-html">&lt;div class="main"&gt;&lt;/div&gt;
 </code></pre>
 <ul>
 <li>CSS</li>
 </ul>
-<pre><code class="css">.main {
+<pre><code class="language-css">.main {
   position: relative;
   justify-content: center;
   text-align: center;
@@ -302,7 +302,7 @@ var animation = anime({
 <ul>
 <li>Javascript</li>
 </ul>
-<pre><code class="js">anime({
+<pre><code class="language-js">anime({
   targets: '.main',
   translateX: ['0', '60vw'],
   // start from the original position to 60vw right of the original
@@ -318,7 +318,7 @@ var animation = anime({
 <ul>
 <li>HTML</li>
 </ul>
-<pre><code class="html">&lt;div class="main"&gt;
+<pre><code class="language-html">&lt;div class="main"&gt;
   &lt;div class="transform" id="translate"&gt;&lt;/div&gt;
   &lt;p&gt;translateX:&amp;nbsp;'60vw'&lt;/p&gt;
   &lt;div class="transform" id="translatescale"&gt;&lt;/div&gt;
@@ -341,7 +341,7 @@ var animation = anime({
 <ul>
 <li>CSS</li>
 </ul>
-<pre><code class="css">.main {
+<pre><code class="language-css">.main {
   position: relative;
   left: 20vw;
   top: 5vh;
@@ -396,7 +396,7 @@ p {
 <ul>
 <li>Javascript</li>
 </ul>
-<pre><code class="js">&lt;script class="anime"&gt;
+<pre><code class="language-js">&lt;script class="anime"&gt;
   anime({
     targets: document.querySelector('#translate'),
     translateX: '60vw',
@@ -468,7 +468,7 @@ p {
 <ul>
 <li>HTML</li>
 </ul>
-<pre><code class="html">&lt;div class="main"&gt;
+<pre><code class="language-html">&lt;div class="main"&gt;
   &lt;p class="title"&gt;Duration&lt;/p&gt;
   &lt;p class="info"&gt;duration:&amp;nbsp;1000&lt;/p&gt;
   &lt;div class="duration"&gt;&lt;/div&gt;
@@ -501,7 +501,7 @@ p {
 <ul>
 <li>CSS</li>
 </ul>
-<pre><code class="css">.main {
+<pre><code class="language-css">.main {
   position: relative;
   left: 20vw;
   top: 5vh;
@@ -548,7 +548,7 @@ p {
 <ul>
 <li>Javascript</li>
 </ul>
-<pre><code class="js">&lt;script class="anime"&gt;
+<pre><code class="language-js">&lt;script class="anime"&gt;
   anime({
     targets: '.duration',
     translateX: '60vw',
@@ -563,7 +563,7 @@ p {
 <ul>
 <li>Javascript</li>
 </ul>
-<pre><code class="js">&lt;script class="anime"&gt;
+<pre><code class="language-js">&lt;script class="anime"&gt;
   anime({
     targets: '.delay',
     translateX: '60vw',
@@ -578,7 +578,7 @@ p {
 <ul>
 <li>Javascript</li>
 </ul>
-<pre><code class="js">&lt;script class="anime"&gt;
+<pre><code class="language-js">&lt;script class="anime"&gt;
   animationa = anime({
     targets: document.querySelector('#enddelaya'),
     translateX: '60vw',
@@ -599,7 +599,7 @@ p {
 <ul>
 <li>Javascript</li>
 </ul>
-<pre><code class="js">&lt;script class="anime"&gt;
+<pre><code class="language-js">&lt;script class="anime"&gt;
   animationa = anime({
     targets: document.querySelectorAll('#rounda'),
     innerHTML: [0,100],
@@ -620,7 +620,7 @@ p {
 <ul>
 <li>Javascript</li>
 </ul>
-<pre><code class="js">&lt;script class="anime"&gt;
+<pre><code class="language-js">&lt;script class="anime"&gt;
   anime({
     targets: '.specific',
     translateX: {
@@ -650,7 +650,7 @@ p {
 <ul>
 <li>HTML</li>
 </ul>
-<pre><code class="html">&lt;div class="main"&gt;
+<pre><code class="language-html">&lt;div class="main"&gt;
   &lt;svg id="图层_1" data-name="图层 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="386.32" height="368.69" viewBox="0 0 386.32 368.69"&gt;
     &lt;defs&gt;
       &lt;style&gt;.cls-1,.cls-3,.cls-4{fill:none;}.cls-2{clip-path:url(#clip-path);}.cls-3,.cls-4{stroke:#fd746c;}.cls-3{stroke-linecap:round;stroke-linejoin:bevel;stroke-width:2px;}.cls-4{stroke-miterlimit:10;stroke-width:2px;}&lt;/style&gt;
@@ -679,7 +679,7 @@ p {
 <ul>
 <li>CSS</li>
 </ul>
-<pre><code class="css">.main {
+<pre><code class="language-css">.main {
   position: relative;
   left: 20vw;
   top: 5vh;
@@ -697,7 +697,7 @@ svg {
 <ul>
 <li>Javascript</li>
 </ul>
-<pre><code class="js">anime({
+<pre><code class="language-js">anime({
   targets: 'div svg path, div svg line',
   strokeDashoffset: [anime.setDashoffset, 0],
   easing: 'easeInOutSine',
@@ -721,12 +721,12 @@ svg {
 <ul>
 <li>HTML</li>
 </ul>
-<pre><code class="html">&lt;button onclick="topFunction()" id="myBtn" title="Go to top"&gt;Top&lt;/button&gt;
+<pre><code class="language-html">&lt;button onclick="topFunction()" id="myBtn" title="Go to top"&gt;Top&lt;/button&gt;
 </code></pre>
 <ul>
 <li>CSS</li>
 </ul>
-<pre><code class="css">html {
+<pre><code class="language-css">html {
   scroll-behavior: smooth;
 }
 
@@ -755,7 +755,7 @@ svg {
 <ul>
 <li>Javascript</li>
 </ul>
-<pre><code class="js">&lt;script&gt;
+<pre><code class="language-js">&lt;script&gt;
   var mybutton = document.getElementById("myBtn");
 
   window.onscroll = function() {scrollFunction()};
