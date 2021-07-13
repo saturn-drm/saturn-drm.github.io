@@ -43,7 +43,7 @@ section {
 }
 
 h1.sectiontitle {
-    color: #fd746c;
+    color: var(--mainfontcolor);
     margin-left: 1.5rem;
     font-size: 1.5rem;
     font-weight: 600;
@@ -54,7 +54,7 @@ div.article {
     margin: auto;
     padding: .2rem;
     /* background-color: #ffffff; */
-    color: #2c3e50;
+    color: var(--mainfontcolor);
     overflow: hidden;
 }
 
@@ -96,7 +96,7 @@ strong {
 }
 
 div.article a {
-    color: #2c3e50;
+    color: var(--mainfontcolor);
 }
 
 div.article a.readmore {
@@ -120,11 +120,11 @@ div.article hr {
     margin-top: 1rem;
     border-left: none;
     border-right: none;
-    border-top: #fd746c solid 1px;
-    border-bottom: #fee3e1 solid 1px;
+    border-top: var(--mainfontcolor) solid 1px;
 }
 
 div.article a.readmore:hover {
     background-color: #fd746c;
     transition: .3s;
+    color: var(--mainbg);
 }

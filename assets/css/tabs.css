@@ -106,7 +106,7 @@ a.column h1, a.column h2, a.column p {
     padding-left: 3px;
     position: relative;
     text-align: left;
-    color: #2c3e50;
+    color: var(--mainfontcolor);
     margin: 3px;
     transition: .3s;
 }
@@ -168,4 +168,13 @@ a.column:hover div.coverimg {
 a.column:hover p {
     display: -webkit-box;
     opacity: 1;
+}
+
+hr {
+    height: 1px;
+    width: 40%;
+    margin-top: 1rem;
+    border-left: none;
+    border-right: none;
+    border-top: var(--mainfontcolor) solid 1px;
 }

@@ -22,7 +22,7 @@
     transition: 0.3s;
     cursor: pointer;
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 200;
 }
 
 #navbar.navori a.dropicon {
@@ -31,7 +31,9 @@
 
 #navbar.navori a.homenav {
     position: relative;
-    width: 40%;
+    width: 18%;
+    margin-left: 11%;
+    margin-right: 11%;
 }
 
 #navbar.navori a.homenav img {
@@ -52,9 +54,9 @@
 
 #navbar.navori div.othernav a {
     width: 18%;
-    /* border-left-style: solid; */
-    /* border-left-color: #2c3e50; */
-    /* border-left-width: 1px; */
+    /* border-left-style: solid;
+    border-left-color: #fffcf9;
+    border-left-width: 1px; */
 }
 
 #navbar.navres a {
