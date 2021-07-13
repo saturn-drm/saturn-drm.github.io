@@ -1,13 +1,23 @@
 ---
 title: Parametric City Generator
-modify date: 2020-12-30
+modify date: 2021-07-13
 tags: [GSD, Computational Design, Urban design]
 head image: /assets/img/00architecture/07citygenerator-6338/01cover.jpg
 ---
 
-> Modify date: 2020-12-30
+> Modify date: 2021-07-13
 
 ![01cover](../../assets/img/00architecture/07citygenerator-6338/01cover.jpg)
+
+# Latest update
+
+The related paper *Cross-Scale and Density-Driven City Generator: Parametric assistance to designers in prototyping stage* is published on [eCAADe 2021](http://www.ecaade2021.ftn.uns.ac.rs/).
+
+View the source codes including `.gh` files and `.cs` files on [Github](https://github.com/saturn-drm/city-generator).
+
+The codes are packed into Grasshopper plugin components and published as [food4Rhino | CITY GENERATOR (by Zihan MEI)](https://www.food4rhino.com/en/app/city-generator).
+
+---
 
 # Basic Info
 
