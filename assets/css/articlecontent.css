@@ -54,6 +54,8 @@ div#toc {
     max-width: 300px;
     top: 500px;
     left: 1200px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.05), 2px 4px 10px 0 rgba(0, 0, 0, 0.1), 0 0 10px 0 rgba(0, 0, 0, 0.2);
 }
 
 div#toc ul {
@@ -83,7 +85,7 @@ div#toc ul a:hover {
 div#toc.fix {
     position: fixed;
     top: 200px;
-    transition: .3s;
+    /* transition: .3s; */
 }
 
 /* a.tocicon {
