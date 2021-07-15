@@ -64,6 +64,7 @@
 <script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body>
+<progress id="content-progress" value="0"></progress>
 <div id="header"></div>
 <!-- back to top icon -->
 <a id="backtotop">
@@ -343,6 +344,22 @@ G, bbox=None, fig_height=6, fig_width=None, margin=0.02, axis_off=True, equal_as
             }
         });
     </script>
+<!-- progress bar -->
+<script class="content-progress-js">
+        document.addEventListener('DOMContentLoaded', function () {
+            var winHeight = window.innerHeight,
+                docHeight = document.documentElement.scrollHeight,
+                progressBar = document.querySelector('#content-progress');
+            progressBar.max = docHeight - winHeight;
+            progressBar.value = window.scrollY;
+
+            document.addEventListener('scroll', function () {
+                progressBar.max = document.documentElement.scrollHeight - window.innerHeight;
+                progressBar.value = window.scrollY;
+            });
+        });
+    </script>
+<!-- end progress bar -->
 <!-- <script class="hidetoc">
         jQuery(document).ready(function ($) {
             var alterClass = function () {
