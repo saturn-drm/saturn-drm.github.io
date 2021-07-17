@@ -1,0 +1,23 @@
+@import url("scrollbar.css");
+@import url("selection.css");
+@import url("backtotop.css");
+
+:root {
+    --lightred: #ef476f;
+    --mainbg: #fffcf9;
+    --mainfontcolor: #34090f;
+    --mainselection: #fd746c;
+    --mainhighlight: #fd746c;
+    --hoverrow: rgb(254, 227, 225);
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: var(--mainbg);
+    font-family: Montserrat, source-han-sans-cjk-sc, source-han-sans-cjk-ja, sans-serif;
+}
+
+body {
+    height: 200vh;
+}
