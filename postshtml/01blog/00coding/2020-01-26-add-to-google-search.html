@@ -3,9 +3,6 @@
 <html>
 <head>
 <link href="/assets/css/articlecontent.css" rel="stylesheet" type="text/css"/>
-<link href="/assets/css/scrollbar.css" rel="stylesheet" type="text/css"/>
-<link href="/assets/css/selection.css" rel="stylesheet" type="text/css"/>
-<link href="/assets/css/backtotop.css" rel="stylesheet" type="text/css"/>
 <meta charset="utf-8"/>
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport"/>
@@ -56,6 +53,7 @@
 <script type="text/javascript">
         $(document).ready(function () {
             $("#header").load("/components/header.html");
+            $("#backtotopicon").load("/components/backtotop.html");
             $("#footer").load("/components/footer.html");
         });
     </script>
@@ -65,25 +63,8 @@
 </head>
 <body>
 <progress id="content-progress" value="0"></progress>
+<div id="backtotopicon"></div>
 <div id="header"></div>
-<!-- back to top icon -->
-<a id="backtotop">
-<svg id="layer2" viewbox="0 0 16.85 35.95" xmlns="http://www.w3.org/2000/svg">
-<defs>
-<style>
-                    .cls-1 {
-                        fill: none;
-                        stroke-miterlimit: 10;
-                    }
-                </style>
-</defs>
-<title>backtotop</title>
-<polyline class="cls-1" points="0.43 13.95 8.43 0.95 16.43 13.95"></polyline>
-<line class="cls-1" x1="8.43" x2="8.43" y1="25.95" y2="0.95"></line>
-<line class="cls-1" x1="0.43" x2="16.43" y1="0.95" y2="0.95"></line>
-</svg>
-</a>
-<!-- end back to top icon -->
 <div id="offsetheader">
 <img src="/assets/img/covers/codingcover.jpg"/>
 </div>
@@ -113,24 +94,6 @@
 <hr/></div>
 </div>
 <div id="footer"></div>
-<!-- back to top -->
-<script class="backtotop">
-        var btn = $('#backtotop');
-
-        $(window).scroll(function () {
-            if ($(window).scrollTop() > 300) {
-                btn.addClass('show');
-            } else {
-                btn.removeClass('show');
-            }
-        });
-
-        btn.on('click', function (e) {
-            e.preventDefault();
-            $('html, body').animate({ scrollTop: 0 }, '300');
-        });
-    </script>
-<!-- end back to top -->
 <!-- scroll smoothly -->
 <script>
         $(document).ready(function () {

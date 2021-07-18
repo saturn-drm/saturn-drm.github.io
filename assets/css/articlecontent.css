@@ -1,3 +1,7 @@
+@import url("scrollbar.css");
+@import url("selection.css");
+@import url("backtotop.css");
+
 :root {
     --lightred: #ef476f;
     --mainbg: #fffcf9;

@@ -1,67 +1,33 @@
-<head>
-    <link rel="stylesheet" type="text/css" href="/assets/css/backtotop.css" />
+<a id="backtotop">
+    <svg id="layer2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.85 35.95">
+        <defs>
+            <style>
+                .cls-1 {
+                    fill: none;
+                    stroke-miterlimit: 10;
+                }
+            </style>
+        </defs>
+        <title>backtotop</title>
+        <polyline class="cls-1" points="0.43 13.95 8.43 0.95 16.43 13.95" />
+        <line class="cls-1" x1="8.43" y1="25.95" x2="8.43" y2="0.95" />
+        <line class="cls-1" x1="0.43" y1="0.95" x2="16.43" y2="0.95" />
+    </svg>
+</a>
 
-    <!-- fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,600&display=swap" rel="stylesheet">
-    <script>
-        (function (d) {
-            var config = {
-                kitId: 'cmi7aqt',
-                scriptTimeout: 3000,
-                async: true
-            },
-                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
-        })(document);
-    </script>
-    <!-- end fonts -->
+<script class="backtotop">
+    var btn = $('#backtotop');
 
-    <!-- anime-master -->
-    <script src="/assets/js/anime-master/lib/anime.min.js"></script>
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 300) {
+            btn.addClass('show');
+        } else {
+            btn.removeClass('show');
+        }
+    });
 
-    <!-- jQuery -->
-    <script src="/assets/js/jquery-3.6.0.min.js"></script>
-
-    <!-- fontawesome -->
-    <script src="https://kit.fontawesome.com/d61407055c.js" crossorigin="anonymous"></script>
-</head>
-
-<body>
-
-    <!-- back to top icon -->
-    <a id="backtotop">
-        <svg id="layer2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.85 35.95">
-            <defs>
-                <style>
-                    .cls-1 {
-                        fill: none;
-                        stroke-miterlimit: 10;
-                    }
-                </style>
-            </defs>
-            <title>backtotop</title>
-            <polyline class="cls-1" points="0.43 13.95 8.43 0.95 16.43 13.95" />
-            <line class="cls-1" x1="8.43" y1="25.95" x2="8.43" y2="0.95" />
-            <line class="cls-1" x1="0.43" y1="0.95" x2="16.43" y2="0.95" />
-        </svg>
-    </a>
-    <!-- end back to top icon -->
-
-    <!-- back to top -->
-    <script class="backtotop">
-        var btn = $('#backtotop');
-
-        $(window).scroll(function () {
-            if ($(window).scrollTop() > 300) {
-                btn.addClass('show');
-            } else {
-                btn.removeClass('show');
-            }
-        });
-
-        btn.on('click', function (e) {
-            e.preventDefault();
-            $('html, body').animate({ scrollTop: 0 }, '300');
-        });
-    </script>
-    <!-- end back to top -->
-</body>
+    btn.on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: 0 }, '300');
+    });
+</script>

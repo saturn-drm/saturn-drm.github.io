@@ -64,6 +64,7 @@
     <script type='text/javascript'>
         $(document).ready(function () {
             $("#header").load("/components/header-index2.html");
+            $("#backtotopicon").load("/components/backtotop.html");
         });
     </script>
     <!-- snow effect -->
@@ -83,26 +84,7 @@
 <body>
     <!-- <div class="snow-container"></div> -->
 
-    <!-- back to top icon -->
-    <a id="backtotop">
-        <div class="backtotoppadding"></div>
-        <svg id="layer2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.85 35.95">
-            <defs>
-                <style>
-                    .cls-1 {
-                        fill: none;
-                        stroke-miterlimit: 10;
-                    }
-                </style>
-            </defs>
-            <title>backtotop</title>
-            <polyline class="cls-1" points="0.43 13.95 8.43 0.95 16.43 13.95" />
-            <line class="cls-1" x1="8.43" y1="25.95" x2="8.43" y2="0.95" />
-            <line class="cls-1" x1="0.43" y1="0.95" x2="16.43" y2="0.95" />
-        </svg>
-    </a>
-    <!-- end back to top icon -->
-
+    <div id="backtotopicon"></div>
     <div id="header"></div>
 
     <!-- scroll smoothly -->
@@ -177,25 +159,6 @@
 
     </script>
     <!-- end scroll smoothly -->
-
-    <!-- back to top -->
-    <script class="backtotop">
-        var btn = $('#backtotop');
-
-        $(window).scroll(function () {
-            if ($(window).scrollTop() > 300) {
-                btn.addClass('show');
-            } else {
-                btn.removeClass('show');
-            }
-        });
-
-        btn.on('click', function (e) {
-            e.preventDefault();
-            $('html, body').animate({ scrollTop: 0 }, '300');
-        });
-    </script>
-    <!-- end back to top -->
 </body>
 
 </html>
