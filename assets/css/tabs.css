@@ -1,6 +1,7 @@
 @import url("scrollbar.css");
 @import url("selection.css");
 @import url("backtotop.css");
+@import url("themecolor.css");
 
 body, html {
     margin-top: 0;

@@ -1,11 +1,4 @@
-:root {
-    --lightred: #ef476f;
-    --mainbg: #fffcf9;
-    --mainfontcolor: #34090f;
-    --mainselection: #fd746c;
-    --mainhighlight: #fd746c;
-    --hoverrow: rgb(254, 227, 225);
-}
+@import url("themecolor.css");
 
 #footer {
     height: 200px;
