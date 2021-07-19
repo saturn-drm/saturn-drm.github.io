@@ -144,7 +144,7 @@
             <div class="socialdecorationline"></div>
         </div>
         <div class="scrolldown section1">
-            <a href="#projects">
+            <a href="#projects" onclick="driveTo(1)">
                 <svg id="layer1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27.14 11.04">
                     <defs>
                         <style>
@@ -236,6 +236,10 @@
             },
             { passive: false }
         );
+
+        function driveTo(num) {
+            currentIndex = num;
+        }
     </script>
     <!-- end scroll smoothly -->
 
