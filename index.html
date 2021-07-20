@@ -441,7 +441,7 @@
 
     <!-- scrollmagic animation and navbar highlight and display myinfo -->
     <script class="scrollmagicanime">
-        window.onload = function () {
+        var allanimefunc = function () {
             anime({
                 targets: 'div.myinfo',
                 translateY: 0,
@@ -493,6 +493,10 @@
                     $('#literaturenav').removeClass('active');
                 }
             })
+        };
+        window.onload = function () {
+            allanimefunc();
+            setTimeout(allanimefunc(), 3000);
         };
     </script>
 
