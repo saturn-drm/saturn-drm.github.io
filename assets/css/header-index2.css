@@ -9,6 +9,7 @@
     width: 100%;
     transition: top 0.3s;
     z-index: 1000;
+    box-shadow: 0 2px 2px 0 rgb(207 216 221 / 70%);
 }
 
 #navbar.navori a {
