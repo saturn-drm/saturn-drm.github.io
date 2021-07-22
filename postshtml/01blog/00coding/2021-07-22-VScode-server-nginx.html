@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<link href="/assets/css/articlecontent.css" rel="stylesheet" type="text/css"/>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport"/>
+<title>Ubuntu + VS Code Server + Nginx 二级域名反向代理打造全平台个人云端代码编辑器</title>
+<meta content="Welcome to My Personal Site!" name="description"/>
+<meta content="Zihan Zephaniah MEI" name="author"/>
+<!-- fonts -->
+<link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,600&amp;display=swap" rel="stylesheet"/>
+<script>
+        (function (d) {
+            var config = {
+                kitId: 'cmi7aqt',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
+<!-- end fonts -->
+<!-- start favicons snippet, use https://realfavicongenerator.net/ -->
+<link href="/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/favicon/site.webmanifest" rel="manifest"/>
+<link color="#2c3e50" href="/favicon/safari-pinned-tab.svg" rel="mask-icon"/>
+<link href="/favicon/favicon.ico" rel="shortcut icon"/>
+<meta content="ZMei.moe" name="apple-mobile-web-app-title"/>
+<meta content="ZMei.moe" name="application-name"/>
+<meta content="#fee3e1" name="msapplication-TileColor"/>
+<meta content="/favicon/browserconfig.xml" name="msapplication-config"/>
+<meta content="#ffffff" name="theme-color"/>
+<!-- end favicons snippet -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-156998560-1"></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-156998560-1');
+    </script>
+<!-- anime-master -->
+<script src="/assets/js/anime-master/lib/anime.min.js"></script>
+<!-- jQuery -->
+<script src="/assets/js/jquery-3.6.0.min.js"></script>
+<!-- fontawesome -->
+<!-- <script src="https://kit.fontawesome.com/d61407055c.js" crossorigin="anonymous"></script> -->
+<script type="text/javascript">
+        $(document).ready(function () {
+            $("#header").load("/components/header.html");
+            $("#backtotopicon").load("/components/backtotop.html");
+            $("#footer").load("/components/footer.html");
+        });
+    </script>
+<link href="/assets/js/highlight/atom-one-light-edit.css" rel="stylesheet"/>
+<script src="/assets/js/highlight/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+<progress id="content-progress" value="0"></progress>
+<div id="backtotopicon"></div>
+<div id="header"></div>
+<div id="offsetheader">
+<img src="/assets/img/covers/codingcover.jpg"/>
+</div>
+<!-- <a class="tocicon" onclick="toc()">
+        <i class="fa fa-bars"></i>
+    </a> -->
+<div id="toc"><div class="toc">
+<ul>
+<li><a href="#_1">问题提出</a></li>
+<li><a href="#_2">操作步骤</a></li>
+<li><a href="#code-server">下载安装 code-server</a></li>
+<li><a href="#_3">试运行并修改配置</a><ul>
+<li><a href="#ip">IP + 端口直接访问</a></li>
+</ul>
+</li>
+<li><a href="#nginx">借助 Nginx 设置反向代理和二级域名</a><ul>
+<li><a href="#code-server_1">更改 code-server 配置</a></li>
+<li><a href="#_4">二级域名指向</a></li>
+<li><a href="#nginx_1">配置 Nginx 反向代理</a></li>
+</ul>
+</li>
+<li><a href="#_5">域名加密</a></li>
+<li><a href="#_6">注意事项和下一步</a></li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div id="post"><h1 style="color: #fd746c;">Ubuntu + VS Code Server + Nginx 二级域名反向代理打造全平台个人云端代码编辑器</h1><blockquote>
+<p>Modify Date: 2021-07-22</p>
+</blockquote>
+<h1 class="anchor" id="_1">问题提出</h1>
+<p>近日某好友在使用 python 实时获取美股信息的时候遇到网络无法连接和上班摸鱼不容易的问题，导致损失惨重。遂想起我有一海外服务器，必然无障碍，提出了让服务器定期跑脚本的设想。在简单研究之后，我提出一点改进意见，抛弃 ssh，直接用 <a href="https://github.com/cdr/code-server">code-server</a> 在网页端搭建一个图形界面的 VS Code，供他在公司电脑上直接实时运行和编辑。</p>
+<hr/>
+<h1 class="anchor" id="_2">操作步骤</h1>
+<p>以下操作均在 <strong>Ubuntu 20.04</strong> Command Line 中进行。</p>
+<ol>
+<li>下载安装 code-server</li>
+<li>试运行并修改配置</li>
+<li>借助 Nginx 设置反向代理和二级域名</li>
+<li>域名加密</li>
+</ol>
+<p><img alt="result" src="../../../assets/img/01coding/2021-07-22-0cover.png"/></p>
+<hr/>
+<h1 class="anchor" id="code-server">下载安装 code-server</h1>
+<p><a href="https://github.com/cdr/code-server">code-server</a> 在 GitHub 上已经发布到 3.11.0。在右侧点击 <a href="https://github.com/cdr/code-server/releases">Releases</a> 找到对应自己系统的版本并拷贝链接地址。</p>
+<p><img alt="allreleases" src="../../../assets/img/01coding/2021-07-22-1allreleases.png"/></p>
+<p>在服务器根目录下执行代码</p>
+<pre><code class="language-sh"># 下载相应的文件，链接地址选择符合自己系统要求的版本
+wget https://github.com/cdr/code-server/releases/download/v3.11.0/code-server-3.11.0-linux-amd64.tar.gz
+# 解压缩，xxx代表下载下来的文件名称
+tar -xzvf [xxx]
+# 查看一下解压出来的内容，xxx代表解压出来的文件夹名称
+cd [xxx]
+ls
+</code></pre>
+<p><img alt="allfiles" src="../../../assets/img/01coding/2021-07-22-2allfiles.png"/></p>
+<hr/>
+<h1 class="anchor" id="_3">试运行并修改配置</h1>
+<p>注意到 <code>code-server</code> 即可执行文件，尝试执行</p>
+<pre><code class="language-sh">./code-server
+# Ctrl + C 停止程序
+</code></pre>
+<p><img alt="testrunning" src="../../../assets/img/01coding/2021-07-22-3testrunning.png"/></p>
+<p>可以看到，程序在监听 http://127.0.0.1:8080 也即本地的8080端口，并且密码等设置存储在 <code>~/.config/code-server/config.yaml</code> 文件内。</p>
+<h2 class="anchor" id="ip">IP + 端口直接访问</h2>
+<p>此时有一种最直接的操作，改变程序监听地址（0.0.0.0代表任何 IP）</p>
+<pre><code class="language-sh"># 使用 --host0.0.0.0 把程序暴露在外网
+./code-server --host 0.0.0.0
+</code></pre>
+<p>此时到浏览器地址栏中输入服务器 IP:8080，可以看到这个界面</p>
+<p><img alt="web1" src="../../../assets/img/01coding/2021-07-22-4web1.png"/></p>
+<p>到 <code>~/.config/code-server/config.yaml</code> 找到密码，即可登录 code-server 服务器。</p>
+<hr/>
+<h1 class="anchor" id="nginx">借助 Nginx 设置反向代理和二级域名</h1>
+<p>输入 IP + 端口的方式很不优雅，希望能改成直接用域名访问，就像正常网站一样。</p>
+<p>由于服务器内有 Nginx 还有绑定域名，考虑给这个服务分配一个二级域名并且用 Nginx 实现端口反代，就能达成这个要求。</p>
+<h2 class="anchor" id="code-server_1">更改 code-server 配置</h2>
+<pre><code class="language-sh">nano ~/.config/code-server/config.yaml
+</code></pre>
+<pre><code class="language-yaml">bind-addr: 127.0.0.1:8080
+auth: password
+password: [xxx] # xxx为可自定义的密码
+cert: false
+</code></pre>
+<p>为了避免后面每次运行都输入 <code>--host</code> 之类的，在配置中可以直接调好。</p>
+<h2 class="anchor" id="_4">二级域名指向</h2>
+<p>在域名提供商的后台添加 A Record 记录</p>
+<p><img alt="host" src="../../../assets/img/01coding/2021-07-22-5host.png"/></p>
+<h2 class="anchor" id="nginx_1">配置 Nginx 反向代理</h2>
+<ul>
+<li>新建一个配置文件</li>
+</ul>
+<pre><code class="language-sh">nano /etc/nginx/sites-available/code-server.conf
+</code></pre>
+<ul>
+<li>输入配置</li>
+</ul>
+<pre><code class="language-nginx">server {
+    listen 80;
+    listen [::]:80;
+
+    server_name [xxx]; # xxx为自己的二级域名
+
+    location / {
+            # 这一句实现端口反向代理
+        proxy_pass http://localhost:8080/; # 更改为自己配置中开放的端口
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection upgrade;
+        proxy_set_header Accept-Encoding gzip;
+    }
+}
+</code></pre>
+<p>Ctrl + O Write out, Ctrl + X Close.</p>
+<ul>
+<li>把配置文件添加到 sites-enabled 文件夹中</li>
+</ul>
+<pre><code class="language-sh">ln -s /etc/nginx/sites-available/code-server.conf /etc/nginx/sites-enabled/code-server.conf
+</code></pre>
+<ul>
+<li>检查并重启 Nginx 服务</li>
+</ul>
+<pre><code class="language-sh">nginx -t
+nginx -s reload
+</code></pre>
+<hr/>
+<h1 class="anchor" id="_5">域名加密</h1>
+<p>域名的加密我用的是 <a href="https://certbot.eff.org/">certbot</a>。根据系统和软件选择相应的组合，傻瓜式一键配置。因为我之前已经配置过其他域名，所以直接执行</p>
+<pre><code class="language-sh">certbot --nginx
+</code></pre>
+<p>此时启动程序</p>
+<pre><code class="language-sh">./code-server # 需要更改为实际的文件路径
+</code></pre>
+<p>在浏览器直接输入前面绑定的二级域名，就可以看到网站已经加密，并且显示密码登录的界面，输入密码，就可以直接进入熟悉的 VS Code 界面，开始编辑。</p>
+<p><img alt="final" src="../../../assets/img/01coding/2021-07-22-6final.gif"/></p>
+<hr/>
+<h1 class="anchor" id="_6">注意事项和下一步</h1>
+<ol>
+<li>这玩意儿挺吃内存的，1G 的内存从 19% 的占用直接到 50+%。</li>
+<li>要配置二级域名的反向代理，前提是顶级域名也指向这台服务器。我之前顶级域名一直指向 GitHub Pages，这次为了配置 code-server，把顶级域名也转移过来了。</li>
+<li>下一步可能考虑把 code-server 绑定到系统进程里，这样可以实现开机自动启动，和手动关闭（现在一旦 ssh 失去连接，很难关闭）。</li>
+</ol>
+<hr/></div>
+</div>
+<div id="footer"></div>
+<!-- scroll smoothly -->
+<script>
+        $(document).ready(function () {
+            $("a").on('click', function (event) {
+
+                if (this.hash !== "") {
+                    event.preventDefault();
+
+                    var hash = this.hash;
+
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+    </script>
+<!-- end scroll smoothly -->
+<script class="showtocwhensdrolldown">
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 300) {
+                $('#toc').addClass('fix');
+            } else {
+                $('#toc').removeClass('fix');
+            }
+        });
+    </script>
+<!-- progress bar -->
+<script class="content-progress-js">
+        document.addEventListener('DOMContentLoaded', function () {
+            var winHeight = window.innerHeight,
+                docHeight = document.documentElement.scrollHeight,
+                progressBar = document.querySelector('#content-progress');
+            progressBar.max = docHeight - winHeight;
+            progressBar.value = window.scrollY;
+
+            document.addEventListener('scroll', function () {
+                progressBar.max = document.documentElement.scrollHeight - window.innerHeight;
+                progressBar.value = window.scrollY;
+            });
+        });
+    </script>
+<!-- end progress bar -->
+<!-- <script class="hidetoc">
+        jQuery(document).ready(function ($) {
+            var alterClass = function () {
+                var ww = $(window).width();
+                if (ww > 1400) {
+                    $('#toc').removeClass('res');
+                    $('#toc').addClass('fix');
+                } else if (ww <= 1401) {
+                    $('#toc').addClass('res');
+                    $('#toc').removeClass('fix');
+                };
+            };
+            $(window).resize(function () {
+                alterClass();
+            });
+            //Fire it when the page first loads:
+            alterClass();
+        });
+    </script> -->
+</body>
+</html>
