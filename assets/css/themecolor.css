@@ -5,4 +5,8 @@
     --mainselection: #fd746c;
     --mainhighlight: #fd746c;
     --hoverrow: rgb(254, 227, 225);
+    --neubg: #ece6d1;
+    --neushadowdark: #c9c4b2;
+    --neushadowlight: #fffff0;
+    --neuborder: #c7c1aa;
 }

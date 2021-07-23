@@ -1,112 +1,33 @@
 @import url("themecolor.css");
 
 html, body {
-    background-color: rgb(235, 223, 222);
+    background-color: var(--neubg);
 }
-
-div.row {
-    /* width: 100vw; */
-    /* height: 100vh; */
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    /* margin-bottom: 20px; */
-}
-
-button {
-    height: 40px;
-    width: 60px;
-    border-radius: 3px;
-    margin: 5px;
-    border: none !important;
-}
-
-.card {
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
-}
-
-img {
-    height: 70px;
-    width: 70px;
-    border-radius: 50px;
-    padding: 15px;
-}
-
-.icon {
-    height: 42px;
-    width: 42px;
-    border-radius: 50%;
-    margin: 10px;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-}
-
-.icon > a {
-    height: 20px;
-    width: 20px;
-    /* margin: 6px; */
-}
-
-div.more {
-    width: 120px;
-    height: 40px;
-    border-radius: 10px;
-}
-
-div.more > a {
-    text-decoration: none;
-    color: black;
-}
-
-div.txt {
-    width: 60%;
-    border-radius: 10px;
-    padding: 1rem;
-    margin: 20px;
-}
-
-div.txt * {
-    text-align: center;
-}
-
-hr {
-    width: 60%;
-    height: 1px;
-    border-left: none;
-    border-right: none;
-    border-top: var(--mainhighlight) solid 1px;
-    border-bottom: #fee3e1 solid 1px;
-}
-
-
 
 .neu-s-inset {
-    border: 1px solid rgb(216, 205, 205);
-    background: rgb(235, 223, 222);
-    box-shadow: inset 2px 2px 5px #c8bebd, inset -3px -3px 7px #ffffff;
+    border: 1px solid var(--neuborder);
+    background: var(--neubg);
+    box-shadow: inset 2px 2px 5px var(--neushadowdark), inset -3px -3px 7px var(--neushadowlight);
 }
 
 .neu-s {
-    border: 1px solid rgb(216, 205, 205);
-    background: rgb(235, 223, 222);
-    box-shadow: 3px 3px 6px #c8bebd, -3px -3px 6px #ffffff;
+    border: 1px solid var(--neuborder);
+    background: var(--neubg);
+    box-shadow: 3px 3px 6px var(--neushadowdark), -3px -3px 6px var(--neushadowlight);
 }
 
 .neu-l-inset {
-    border: 1px solid rgb(216, 205, 205);
-    background: rgb(235, 223, 222);
-    box-shadow: inset 2px 2px 5px #c8bebd, inset -3px -3px 7px #ffffff;
+    border: 1px solid var(--neuborder);
+    background: var(--neubg);
+    box-shadow: inset 2px 2px 5px var(--neushadowdark), inset -3px -3px 7px var(--neushadowlight);
 }
 
 .neu-l {
-    border: 1px solid rgb(216, 205, 205);
-    background: rgb(235, 223, 222);
-    box-shadow: 6px 6px 12px #c8bebd, -6px -6px 12px #ffffff;
+    border: 1px solid var(--neuborder);
+    background: var(--neubg);
+    box-shadow: 6px 6px 12px var(--neushadowdark), -6px -6px 12px var(--neushadowlight);
 }
 
 button.neu-s:hover, div.icon.neu-s:hover, div.more.neu-s:hover {
-    box-shadow: inset 2px 2px 5px #c8bebd, inset -3px -3px 7px #ffffff;
+    box-shadow: inset 2px 2px 5px var(--neushadowdark), inset -3px -3px 7px var(--neushadowlight);
 }

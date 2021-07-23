@@ -1,0 +1,126 @@
+@import url("scrollbar.css");
+@import url("selection.css");
+@import url("backtotop.css");
+@import url("themecolor.css");
+@import url("myneumorphism.css");
+
+html, body {
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+    padding: 0;
+    font-family: Montserrat, source-han-sans-cjk-sc, source-han-sans-cjk-sc, sans-serif;
+}
+
+div.row {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.card {
+    width: 80%;
+    max-width: 400px;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+img {
+    height: 70px;
+    width: 70px;
+    border-radius: 50px;
+    padding: 15px;
+}
+
+.icon {
+    height: 42px;
+    width: 42px;
+    border-radius: 50%;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.icon > a {
+    height: 20px;
+    width: 20px;
+    /* margin: 6px; */
+}
+
+.icon:hover svg {
+    fill: var(--mainhighlight);
+}
+
+div.more {
+    width: 80px;
+    height: 40px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+div.more > a {
+    text-decoration: none;
+    color: var(--mainfontcolor);
+    font-size: 1rem;
+}
+
+div.more:hover > a {
+    color: var(--mainhighlight);
+}
+
+div.txt {
+    width: 80%;
+    max-width: 900px;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 20px;
+}
+
+hr {
+    width: 100%;
+    height: 1px;
+    border-left: none;
+    border-right: none;
+    border-top: var(--mainhighlight) solid 1px;
+    border-bottom: var(--hoverrow) solid 1px;
+}
+
+hr.datedivider {
+    width: 40%;
+    border-top: var(--neuborder) solid 1px;
+    border-bottom: var(--neushadowlight) solid 1px;
+}
+
+h1, h2, h3, p, a, li, ul, ol {
+    color: var(--mainfontcolor);
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+p {
+    font-size: 1rem;
+}
+
+a {
+    font-size: 0.8rem;
+}
