@@ -95,6 +95,18 @@ hr {
     box-shadow: 3px 3px 6px #c8bebd, -3px -3px 6px #ffffff;
 }
 
+.neu-l-inset {
+    border: 1px solid rgb(216, 205, 205);
+    background: rgb(235, 223, 222);
+    box-shadow: inset 2px 2px 5px #c8bebd, inset -3px -3px 7px #ffffff;
+}
+
+.neu-l {
+    border: 1px solid rgb(216, 205, 205);
+    background: rgb(235, 223, 222);
+    box-shadow: 6px 6px 12px #c8bebd, -6px -6px 12px #ffffff;
+}
+
 button.neu-s:hover, div.icon.neu-s:hover, div.more.neu-s:hover {
     box-shadow: inset 2px 2px 5px #c8bebd, inset -3px -3px 7px #ffffff;
 }
