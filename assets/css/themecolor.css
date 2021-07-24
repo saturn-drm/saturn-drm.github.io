@@ -5,8 +5,12 @@
     --mainselection: #fd746c;
     --mainhighlight: #fd746c;
     --hoverrow: rgb(254, 227, 225);
-    --neubg: #ece6d1;
+    --neubg: #ebdfde;
+    --neushadowdark: #c8bebd;
+    --neushadowlight: #ffffff;
+    --neuborder: #bbb1b1;
+    /* --neubg: #ece6d1;
     --neushadowdark: #c9c4b2;
     --neushadowlight: #fffff0;
-    --neuborder: #c7c1aa;
+    --neuborder: #c7c1aa; */
 }
