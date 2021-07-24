@@ -5,25 +5,25 @@ html, body {
 }
 
 .neu-s-inset {
-    border: 1px solid var(--neuborder);
+    /* border: 1px solid var(--neuborder); */
     background: var(--neubg);
     box-shadow: inset 2px 2px 5px var(--neushadowdark), inset -3px -3px 7px var(--neushadowlight);
 }
 
 .neu-s {
-    border: 1px solid var(--neuborder);
+    /* border: 1px solid var(--neuborder); */
     background: var(--neubg);
     box-shadow: 3px 3px 6px var(--neushadowdark), -3px -3px 6px var(--neushadowlight);
 }
 
 .neu-l-inset {
-    border: 1px solid var(--neuborder);
+    /* border: 1px solid var(--neuborder); */
     background: var(--neubg);
     box-shadow: inset 2px 2px 5px var(--neushadowdark), inset -3px -3px 7px var(--neushadowlight);
 }
 
 .neu-l {
-    border: 1px solid var(--neuborder);
+    /* border: 1px solid var(--neuborder); */
     background: var(--neubg);
     box-shadow: 6px 6px 12px var(--neushadowdark), -6px -6px 12px var(--neushadowlight);
 }
