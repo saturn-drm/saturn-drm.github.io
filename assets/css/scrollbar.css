@@ -10,8 +10,8 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--mainbg);
-    border-radius: 5px;
+    background: var(--mainhighlight);
+    /* border-radius: 5px; */
 }
 
 ::-webkit-scrollbar-thumb:hover {
