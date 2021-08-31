@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block style %}
+    {{ super() }}
+    <link rel="stylesheet" type="text/css" href="/assets/css/404.css" />
+{% endblock style %}
+
+{% block title %}
+    404 QAQ
+{% endblock title %}
+
+{% block content %}
+    {{ super() }}
+    <div class="bgimg"></div>
+    <div class="words">
+        <h1>404 Page Not Found</h1>
+        <p><a href="https://www.zmei.moe/">Go to Homepage.</a></p>
+    </div>
+{% endblock content %}
