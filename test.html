@@ -10,12 +10,11 @@
 </head>
 
 <body>
+    {% include 'components/header.html' %}
     <div id="content">
         {{ content }}
     </div>
-    <div id="footer">
-        {{ footer }}
-    </div>
+    {% include 'components/footer.html' %}
 </body>
 
 </html>
