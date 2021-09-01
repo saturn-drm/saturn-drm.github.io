@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block scripts %}
+    <!-- anime-master -->
+    <script src="/assets/js/anime-master/lib/anime.min.js"></script>
+
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/d61407055c.js" crossorigin="anonymous"></script>
+
+    <!-- scrollmagic -->
+    <script src="assets/js/ScrollMagic.min.js"></script>
+    <script src="assets/js/debug.addIndicators.min.js"></script>
+{% endblock scripts %}
+
+{% block body %}
+    {% include "components/header.html" %}
+    {% block content %}{% endblock content %}
+    {% include "components/footer.html" %}
+{% endblock body %}

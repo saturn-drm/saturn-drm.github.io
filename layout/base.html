@@ -45,15 +45,14 @@
         gtag('config', 'UA-156998560-1');
     </script>
 
-    <!-- anime-master -->
-    <script src="/assets/js/anime-master/lib/anime.min.js"></script>
-
     <!-- jQuery -->
     <script src="/assets/js/jquery-3.6.0.min.js"></script>
+
+    {% block scripts %}{% endblock scripts %}
 </head>
 
 <body>
-    {% block content %}{% endblock content %}
+    {% block body %}{% endblock body %}
 </body>
 
 </html>
