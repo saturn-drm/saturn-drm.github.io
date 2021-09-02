@@ -3,6 +3,9 @@
 
 <head>
     
+    
+    <link rel="stylesheet" type="text/css" href="/assets/css/header-index2.css" />
+
     <link rel="stylesheet" type="text/css" href="/assets/css/index.css" />
     <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap-grid.min.css" />
 
@@ -52,6 +55,7 @@
     <!-- jQuery -->
     <script src="/assets/js/jquery-3.6.0.min.js"></script>
     
+    
     <!-- anime-master -->
     <script src="/assets/js/anime-master/lib/anime.min.js"></script>
 
@@ -62,127 +66,434 @@
     <script src="/assets/js/ScrollMagic.min.js"></script>
     <script src="/assets/js/debug.addIndicators.min.js"></script>
 
+    <script type="text/javascript" src="/assets/js/headerres.js"></script>
+    <script type="text/javascript" src="/assets/js/headerhighlightdect.js"></script>
+
+    <script type="text/javascript" src="/assets/js/headerhidescroll.js"></script>
+
 </head>
 
 <body>
     
-    <head>
-    <link rel="stylesheet" type="text/css" href="/assets/css/header-index2.css" />
-
-    <!-- fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,600&display=swap" rel="stylesheet">
-    <script>
-        (function (d) {
-            var config = {
-                kitId: 'cmi7aqt',
-                scriptTimeout: 3000,
-                async: true
-            },
-                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
-        })(document);
-    </script>
-    <!-- end fonts -->
-
-    <!-- anime-master -->
-    <script src="/assets/js/anime-master/lib/anime.min.js"></script>
-
-    <!-- fontawesome -->
-    <script src="https://kit.fontawesome.com/d61407055c.js" crossorigin="anonymous"></script>
-
-    <!-- jQuery -->
-    <script src="/assets/js/jquery-3.6.0.min.js"></script>
-</head>
-
-<body>
-    <!-- top nav, hide when on top -->
     <div class="topnav navori" id="navbar">
-        <a class="homenav" href="/index.html" onclick="closenav()"><img src="/assets/img/logo.svg" />
-            <p>Zihan MEI</p>
-        </a>
-        <div class="othernav">
-            <a class="resdown" id="architecturenav" href="/design.html" onclick="closenav()">Design</a>
-            <a class="resdown" id="codingnav" href="/blog.html" onclick="closenav()">Blog</a>
-            <a class="resdown" id="literaturenav" href="/tabs.html" onclick="closenav()">Tabs</a>
-        </div>
-        <a class="dropicon" onclick="narrownav()">
-            <i class="fa fa-bars"></i>
-        </a>
+    <a class="homenav" href="/index.html" onclick="closenav()"><img src="/assets/img/logo.svg" />
+        <p>Zihan MEI</p>
+    </a>
+    <div class="othernav">
+        <a class="resdown" id="architecturenav" href="/design.html" onclick="closenav()">Design</a>
+        <a class="resdown" id="codingnav" href="/blog.html" onclick="closenav()">Blog</a>
+        <a class="resdown" id="literaturenav" href="/tabs.html" onclick="closenav()">Tabs</a>
     </div>
-    <!-- end top nav -->
-
-    <!-- responsive navbar when width<600 -->
-    <script class="responsivenavbar">
-        jQuery(document).ready(function ($) {
-            var alterClass = function () {
-                var ww = $(window).width();
-                if (ww > 600) {
-                    $('#navbar').removeClass('navres');
-                    $('#navbar').addClass('navori');
-                    $('.cardori').removeClass('rescard');
-                    $('.cardori').addClass('card');
-                } else if (ww <= 601) {
-                    $('#navbar').addClass('navres');
-                    $('#navbar').removeClass('navori');
-                    $('.cardori').addClass('rescard');
-                    $('.cardori').removeClass('card');
-                };
-            };
-            $(window).resize(function () {
-                alterClass();
-            });
-            //Fire it when the page first loads:
-            alterClass();
-        });
-    </script>
-    <script class="opennavres">
-        function narrownav() {
-            if ($('.resdown').css('display') === 'none') {
-                $('.resdown').css('display', 'block');
-                anime({
-                    targets: '.othernav',
-                    opacity: [0, 1],
-                    scale: [0, 1],
-                    loop: false,
-                    easing: 'easeOutBack',
-                    duration: 300
-                })
-            }
-            else {
-                $('.resdown').css('display', 'none');
-                anime({
-                    targets: '.othernav',
-                    opacity: [1, 0],
-                    scale: [1, 0],
-                    loop: false,
-                    easing: 'easeOutBack',
-                    duration: 300
-                })
-            }
-        }
-    </script>
-    <script class="closenav">
-        function closenav() {
-            if ($('#navbar').hasClass('navres')) {
-                $('.resdown').css('display', 'none');
-            }
-        }
-    </script>
-
-    <script>
-        var prevScrollpos = window.pageYOffset;
-        window.onscroll = function () {
-            var currentScrollPos = window.pageYOffset;
-            if (prevScrollpos > currentScrollPos) {
-                document.getElementById("navbar").style.top = "0";
-            } else {
-                document.getElementById("navbar").style.top = "-1000px";
-            }
-            prevScrollpos = currentScrollPos;
-        }
-    </script>
-</body>
+    <a class="dropicon" onclick="narrownav()">
+        <i class="fa fa-bars"></i>
+    </a>
+</div>
     
-    aaa
+    <!-- landing section -->
+    <section class="indexsection" id="home">
+        <div class="myinfo">
+            <div class="infopic">
+                <img src="/assets/img/authorinfo/touxiang.jpeg" alt="Zihan Mei">
+            </div>
+            <h1 class="myname">
+                Zihan Mei
+            </h1>
+            <h2 class="mytitles">Architecture & Planning</h2>
+            <h2 class="mytitles">Coding & Fingerstyle</h2>
+            <h3 class="mydegrees">Bachelor of Architecture, Tsinghua University, 2014-2019</h3>
+            <h3 class="mydegrees seconddegree">Master of Architecture in Urban Design, Harvard Graduate School of
+                Design, 2019-2021</h3>
+            <div class="socialdecorationline"></div>
+            <div class="mysocial">
+                <a href="https://www.facebook.com/zmzihanmei" target="_blank">
+                    <svg class="social facebook" fill="#34090f" viewBox="0 0 1024 1024" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M767.428571 6.857143l0 150.857143-89.714286 0q-49.142857 0-66.285714 20.571429t-17.142857 61.714286l0 108 167.428571 0-22.285714 169.142857-145.142857 0 0 433.714286-174.857143 0 0-433.714286-145.714286 0 0-169.142857 145.714286 0 0-124.571429q0-106.285714 59.428571-164.857143t158.285714-58.571429q84 0 130.285714 6.857143z" />
+                    </svg>
+                </a>
+
+                <a href="https://github.com/saturn-drm" target="_blank">
+                    <svg class="social github" fill="#34090f" viewBox="0 0 1024 1024" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path class="svgpath" data-index="path_0"
+                            d="M0 525.2c0 223.6 143.3 413.7 343 483.5 26.9 6.8 22.8-12.4 22.8-25.4l0-88.7c-155.3 18.2-161.5-84.6-172-101.7-21.1-36-70.8-45.2-56-62.3 35.4-18.2 71.4 4.6 113.1 66.3 30.2 44.7 89.1 37.2 119 29.7 6.5-26.9 20.5-50.9 39.7-69.6C248.8 728.2 181.7 630 181.7 513.2c0-56.6 18.7-108.7 55.3-150.7-23.3-69.3 2.2-128.5 5.6-137.3 66.5-6 135.5 47.6 140.9 51.8 37.8-10.2 80.9-15.6 129.1-15.6 48.5 0 91.8 5.6 129.8 15.9 12.9-9.8 77-55.8 138.8-50.2 3.3 8.8 28.2 66.7 6.3 135 37.1 42.1 56 94.6 56 151.4 0 117-67.5 215.3-228.8 243.7 26.9 26.6 43.6 63.4 43.6 104.2l0 128.8c0.9 10.3 0 20.5 17.2 20.5C878.1 942.4 1024 750.9 1024 525.3c0-282.9-229.3-512-512-512C229.1 13.2 0 242.3 0 525.2L0 525.2z" />
+                    </svg>
+                </a>
+
+                <a href="https://www.linkedin.com/in/zihan-mei-616b8b162/" target="_blank">
+                    <svg class="social linkedin" fill="#34090f" viewBox="0 0 1024 1024" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M260.096 155.648c0 27.307008-9.899008 50.516992-29.696 69.632-19.796992 19.115008-45.396992 28.672-76.8 28.672-30.036992 0-54.612992-9.556992-73.728-28.672-19.115008-19.115008-28.672-42.324992-28.672-69.632 0-28.672 9.556992-52.224 28.672-70.656 19.115008-18.432 44.372992-27.648 75.776-27.648 31.403008 0 56.32 9.216 74.752 27.648 18.432 18.432 28.331008 41.984 29.696 70.656 0 0 0 0 0 0m-202.752 808.96c0 0 0-632.832 0-632.832 0 0 196.608 0 196.608 0 0 0 0 632.832 0 632.832 0 0-196.608 0-196.608 0 0 0 0 0 0 0m313.344-430.08c0-58.708992-1.364992-126.292992-4.096-202.752 0 0 169.984 0 169.984 0 0 0 10.24 88.064 10.24 88.064 0 0 4.096 0 4.096 0 40.96-68.267008 105.812992-102.4 194.56-102.4 68.267008 0 123.220992 22.868992 164.864 68.608 41.643008 45.739008 62.464 113.664 62.464 203.776 0 0 0 374.784 0 374.784 0 0-196.608 0-196.608 0 0 0 0-350.208 0-350.208 0-91.476992-33.451008-137.216-100.352-137.216-47.787008 0-81.236992 24.576-100.352 73.728-4.096 8.192-6.144 24.576-6.144 49.152 0 0 0 364.544 0 364.544 0 0-198.656 0-198.656 0 0 0 0-430.08 0-430.08 0 0 0 0 0 0" />
+                    </svg>
+                </a>
+
+                <a href="mailto:meizihanyx@gmail.com" target="_blank">
+                    <svg class="social mail" fill="#34090f" viewBox="0 0 1024 1024" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M512.091 166.946c116.242 0 232.484-0.014 348.727 0.007 41.522 0.008 76.321 12.188 94.842 53.167 8.25 18.251 6.5 30.831-13.43 43.256-137.452 85.695-274.125 172.655-410.534 260.014-14.762 9.456-24.638 9.569-39.498 0.041C354.353 435.041 216.033 347.399 77.465 260.14c-12.701-8.002-16.368-15.572-12.01-29.962 9.882-32.627 30.845-52.873 63.868-59.66 13.656-2.806 27.953-3.4 41.966-3.431C284.888 166.83 398.492 166.943 512.091 166.946z" />
+                        <path
+                            d="M510.888 856.021c-117.998 0-235.996 0.134-353.993-0.067-47.671-0.083-79.295-22.331-91.17-61.206-4.28-14.027-2.127-22.232 10.858-30.356 108.193-67.725 215.807-136.366 324.233-203.713 7.275-4.519 21.51-4.25 29.378-0.171 22.589 11.713 44.026 25.859 64.999 40.383 11.823 8.191 21.091 8.623 33.117 0.325 20.993-14.484 43.689-26.52 64.549-41.176 12.159-8.539 20.73-7.176 32.785 0.537 106.04 67.844 212.318 135.315 319.158 201.894 16.481 10.272 18.065 21.564 12.577 37.407-12.35 35.666-45.183 55.999-92.491 56.081C746.889 856.149 628.886 856.021 510.888 856.021z" />
+                        <path
+                            d="M64.376 326.925c97.051 61.769 192.332 122.409 290.508 184.898-97.877 62.309-192.719 122.68-290.508 184.932C64.376 572.674 64.376 451.511 64.376 326.925z" />
+                        <path
+                            d="M959.665 327.168c0 124.369 0 244.164 0 369.253-97.913-62.322-192.914-122.792-290.001-184.589C766.993 449.854 861.628 389.595 959.665 327.168z" />
+                    </svg>
+                </a>
+            </div>
+            <div class="socialdecorationline"></div>
+        </div>
+        <div class="scrolldown section1">
+            <a href="#projects" onclick="driveTo(1)">
+                <svg id="layer1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27.14 11.04">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                fill: transparent;
+                                stroke-miterlimit: 10;
+                                stroke-width: 2px;
+                            }
+                        </style>
+                    </defs>
+                    <title>scrolldown</title>
+                    <polyline class="cls-1" points="0.57 0.82 13.57 9.82 26.57 0.82" />
+                </svg>
+            </a>
+        </div>
+    </section>
+    <!-- end of landing section -->
+
+    <!-- project section -->
+    <section class="samples" id="projects">
+        <!-- architecture -->
+        <div class="container" id="architecture">
+            <div class="row">
+                <div class="col-6 offset-3">
+                    <h2>Architecture & Urban Planning</h2>
+                </div>
+            </div>
+
+            <div class="row proj">
+                <div class="col-md-9 col-sm-12 align-self-center archtxt archanime">
+                    <h3>Study On The Development Of TOD</h3>
+                    <blockquote>
+                        <p>Boston, Urban Design, GIS</p>
+                    </blockquote>
+                    <ul class="lg">
+                        <li>A comparison on the activities and building functions around two metro station in Boston.
+                        </li>
+                        <li>A study on the potential TOD metro stations based on economic conditions around.</li>
+                        <li>Used ArcGIS, Rhino, Grasshopper & Python.</li>
+                    </ul>
+                    <a href="postshtml/00projects/2020-01-28-study-on-tod.html" class="readmore">Read
+                        More</a>
+                    <p class="lg"><br></p>
+                </div>
+                <div class="col-md-3 col-sm-8 align-self-center text-center archimg archanime">
+                    <img src="assets/img/00architecture/00preterm/00covercover.jpg" alt="arch1">
+                </div>
+            </div>
+
+            <div class="row proj">
+                <div class="col-md-9 col-sm-12 align-self-center archtxt archanime">
+                    <h3>Urban Intensification</h3>
+                    <blockquote>
+                        <p>Beijing, Urban Design</p>
+                    </blockquote>
+                    <p class="lg">The project is located on the void space between the entrance and administrative
+                        building at
+                        Tsinghua, aimed to intensify the functions here and to explore the relationships among each
+                        building, activating the space, inviting people onto the site, and offering daily service for
+                        students, tourists, and professors.</p>
+                    <a href="postshtml/00projects/2020-01-22-urban-intensification.html" class="readmore">Read
+                        More</a>
+                    <p class="lg"><br></p>
+                </div>
+                <div class="col-md-3 col-sm-8 align-self-center text-center archimg archanime">
+                    <img src="assets/img/00architecture/01dashiban/01cover.jpg" alt="arch2">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-8 offset-2">
+                    <h3 class="more">For more selected works (2014-2021) both in Architecture and Urban Design, go to my
+                    </h3>
+                    <h3 class="more"><a href="design.html">Design Page</a></h3>
+                </div>
+            </div>
+
+            <hr>
+        </div>
+        <!-- end of architecture -->
+
+        <!-- coding -->
+        <div class="container" id="coding">
+            <div class="row">
+                <div class="col-6 offset-3">
+                    <h2>Code & Notes</h2>
+                </div>
+            </div>
+
+            <div class="row proj">
+                <div class="col-md-9 col-sm-12 align-self-center codetxt codeanime">
+                    <h3>Some Demo on CSS Style</h3>
+                    <blockquote>
+                        <p>Updated On: 2020-02-04</p>
+                    </blockquote>
+                    <p class="detail">Several practice demo while I was learning CSS properties.<br>Include some
+                        practice piece in <a href="https://animejs.com/"><b>Anime.js</b></a>.
+                    </p>
+                    <a href="postshtml/01blog/00coding/2020-01-18-test-styles.html" class="readmore">Read
+                        More</a>
+                    <p class="lg"><br></p>
+                </div>
+                <div class="col-md-3 col-sm-8 align-self-center text-center codeimg codeanime">
+                    <img src="assets/img/01coding/00cardcover1.gif" alt="code1">
+                </div>
+            </div>
+
+            <div class="row proj">
+                <div class="col-md-9 col-sm-12 align-self-center codetxt codeanime">
+                    <h3>Convert Markdown to HTML with Python</h3>
+                    <blockquote>
+                        <p>Updated On: 2020-04-12</p>
+                    </blockquote>
+                    <p class="detail">This wheel enables me to write the blog posts in <b>Markdown</b>, and
+                        automatically
+                        convert all the
+                        text into html with tags and attributes that fits the <b>article.css</b> in my website.<br>The
+                        Python script deals with the general converting, the <b>YAML</b> heads for my
+                        format <b>Markdown</b> files, and also add additional class attributes to the tags for format
+                        stylize.<br>View the <a href="https://github.com/saturn-drm/PythonMDtoHTML">source code</a>.
+                    </p>
+                    <a href="postshtml/01blog/00coding/2020-04-12-MD-to-HTML.html" class="readmore">Read
+                        More</a>
+                    <p class="lg"><br></p>
+                </div>
+                <div class="col-md-3 col-sm-8 align-self-center text-center codeimg codeanime">
+                    <img src="assets/img/01coding/00cardcover2.jpg" alt="code2">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-8 offset-2">
+                    <h3 class="more">For all the posts in Grasshopper & C#, big data & Python, front-end tips, go to my
+                    </h3>
+                    <h3 class="more"><a href="blog.html">Blog Page</a></h3>
+                </div>
+            </div>
+
+            <hr>
+        </div>
+        <!-- end of coding -->
+
+        <!-- tabs -->
+        <div class="container" id="literature">
+            <div class="row">
+                <div class="col-6 offset-3">
+                    <h2>Fingerstyle</h2>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 align-self-start tabtxt tabanime proj">
+                    <iframe class="sound"
+                        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/741229780&color=%23fd746c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                    <h3>The End of the World</h3>
+                    <p>Orig. 岸部眞明 (Masaaki Kishibe)<br>Played by: Zihan Mei<br>Guitar: Yamaha FG830<br>Pickup:
+                        Samsung Note 3 Recorder<br>Date recorded: 2018-11-11</p>
+                    <a href="postshtml/02tabs/2018-11-11-the-end-of-the-world.html" class="readmore">Detail</a>
+                    <p class="lg"><br></p>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 align-self-start tabtxt tabanime proj">
+                    <iframe class="sound"
+                        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/741231544&color=%23fd746c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                    <h3>奇跡の山 Miracle Mountain</h3>
+                    <p>Orig. 岸部眞明 (Masaaki Kishibe)<br>Played by: Zihan Mei<br>Guitar: Yamaha FG830<br>Pickup: Meizu
+                        16th Recorder<br>Date recorded: 2019-07-18</p>
+                    <a href="postshtml/02tabs/2019-07-18-miracle-mountain.html" class="readmore">Detail</a>
+                    <p class="lg"><br></p>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 align-self-start tabimg tabanime proj">
+                    <iframe class="sound"
+                        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/741232939&color=%23fd746c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                    <h3>少年の梦 Childhood Dream</h3>
+                    <p>Orig. 岸部眞明 (Masaaki Kishibe)<br>Played by: Zihan Mei<br>Guitar: Yamaha FG830<br>Pickup: Meizu
+                        16th Recorder<br>Date recorded: 2019-08-06</p>
+                    <a href="postshtml/02tabs/2019-08-06-childhood-dream.html" class="readmore">Detail</a>
+                    <p class="lg"><br></p>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 align-self-start tabimg tabanime proj">
+                    <iframe class="sound"
+                        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/746912935&color=%23fd746c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                    <h3>昭和ロマンス</h3>
+                    <p>Orig. 岸部眞明 (Masaaki Kishibe)<br>Played by: Zihan Mei<br>Guitar: Yamaha FG830<br>Pickup: Meizu
+                        16th Recorder<br>Date recorded: 2020-01-19</p>
+                    <a href="postshtml/02tabs/2020-01-19-showa-romannsu.html" class="readmore">Detail</a>
+                    <p class="lg"><br></p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-8 offset-2">
+                    <h3 class="more">For all the records and guitar tabs, go to my</h3>
+                    <h3 class="more"><a href="tabs.html">Tab Page</a></h3>
+                </div>
+            </div>
+
+            <hr>
+        </div>
+        <!-- end of tabs -->
+    </section>
+    <!-- end of project section -->
+    <!-- scroll smoothly -->
+    <script class="smooth">
+        $(document).ready(function () {
+            $("a").on('click', function (event) {
+
+                if (this.hash !== "") {
+                    event.preventDefault();
+
+                    var hash = this.hash;
+
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+
+        var $sections = $("section");
+        var currentIndex = 0;
+        var isAnimating = false;
+
+        var stopAnimation = function () {
+            setTimeout(function () {
+                isAnimating = false;
+            }, 200);
+        };
+
+        var bottomIsReached = function ($elem) {
+            var rect = $elem[0].getBoundingClientRect();
+            return rect.bottom <= $(window).height();
+        };
+
+        var topIsReached = function ($elem) {
+            var rect = $elem[0].getBoundingClientRect();
+            return rect.top >= 0;
+        };
+
+        document.addEventListener(
+            "wheel",
+            function (event) {
+                if (isAnimating) {
+                    event.preventDefault();
+                    return;
+                }
+                // if (window.innerWidth < 992) return;
+
+                var $currentSection = $($sections[currentIndex]);
+
+                if (event.deltaY > 0) {
+                    if (currentIndex + 1 >= $sections.length) return;
+                    if (!bottomIsReached($currentSection)) return;
+                    currentIndex++;
+                    event.preventDefault();
+                    isAnimating = true;
+                    $("html, body").animate({ scrollTop: $($sections[currentIndex]).offset().top }, 1000, stopAnimation);
+                } else {
+                    if (currentIndex - 1 < 0) return;
+                    if (!topIsReached($currentSection)) return;
+                    currentIndex--;
+                    event.preventDefault();
+                    isAnimating = true;
+                    $("html, body").animate({ scrollTop: $($sections[currentIndex]).offset().top }, 1000, stopAnimation);
+                }
+            },
+            { passive: false }
+        );
+
+        function driveTo(num) {
+            currentIndex = num;
+        }
+    </script>
+    <!-- end scroll smoothly -->
+
+    <!-- the moving icon of scrolling down -->
+    <script class="scrolldownanime">
+        anime({
+            targets: 'div.scrolldown svg',
+            translateY: 25,
+            loop: true,
+            easing: 'easeInOutSine',
+            duration: 1000,
+            opacity: [0, 1]
+            // stroke: ['rgba(255, 255, 255, 0)', 'rgba(255, 255, 255, 1)']
+        })
+    </script>
+
+    <!-- scrollmagic animation and navbar highlight and display myinfo -->
+    <script class="scrollmagicanime">
+        $(document).ready(function () {
+            anime({
+                targets: 'div.myinfo',
+                translateY: 0,
+                loop: false,
+                delay: 300,
+                easing: 'easeInOutSine',
+                duration: 1000,
+                opacity: [0, 1]
+            })
+
+            var archheight = document.getElementById("architecture").offsetHeight;
+            var codeheight = document.getElementById("coding").offsetHeight;
+            var litheight = document.getElementById("literature").offsetHeight;
+            var totalheight = archheight + codeheight + litheight;
+
+            var controller = new ScrollMagic.Controller();
+
+            new ScrollMagic.Scene({ triggerElement: "#architecture", duration: totalheight })
+                .setClassToggle(".archanime", "magicshow")
+                //.addIndicators({ name: "background" })
+                .addTo(controller);
+            new ScrollMagic.Scene({ triggerElement: "#coding", duration: totalheight })
+                .setClassToggle(".codeanime", "magicshow")
+                //.addIndicators({ name: "economy" })
+                .addTo(controller);
+            new ScrollMagic.Scene({ triggerElement: "#literature", duration: totalheight })
+                .setClassToggle(".tabanime", "magicshow")
+                //.addIndicators({ name: "start-up" })
+                .addTo(controller);
+
+            var archtop = document.getElementById("architecture").offsetTop;
+            var codetop = document.getElementById("coding").offsetTop;
+            var littop = document.getElementById("literature").offsetTop;
+
+            $(window).scroll(function () {
+                if ($(window).scrollTop() > archtop && $(window).scrollTop() < codetop * 0.8) {
+                    $('#architecturenav').addClass('active');
+                } else {
+                    $('#architecturenav').removeClass('active');
+                }
+                if ($(window).scrollTop() > codetop * 0.8 && $(window).scrollTop() < littop * 0.8) {
+                    $('#codingnav').addClass('active');
+                } else {
+                    $('#codingnav').removeClass('active');
+                }
+                if ($(window).scrollTop() > littop * 0.8) {
+                    $('#literaturenav').addClass('active');
+                } else {
+                    $('#literaturenav').removeClass('active');
+                }
+            })
+        })
+    </script>
+
 
     <html lang="en">
 

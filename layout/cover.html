@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
+{% block style %}
+    <link rel="stylesheet" type="text/css" href="/assets/css/header-index2.css" />
+{% endblock style %}
+
 {% block scripts %}
     <!-- anime-master -->
     <script src="/assets/js/anime-master/lib/anime.min.js"></script>
@@ -10,10 +14,13 @@
     <!-- scrollmagic -->
     <script src="/assets/js/ScrollMagic.min.js"></script>
     <script src="/assets/js/debug.addIndicators.min.js"></script>
+
+    <script type="text/javascript" src="/assets/js/headerres.js"></script>
+    <script type="text/javascript" src="/assets/js/headerhighlightdect.js"></script>
 {% endblock scripts %}
 
 {% block body %}
-    {% include "/components/header.html" %}
+    {% include "/components/header-dev.html" %}
     {% block content %}{% endblock content %}
     {% include "/components/footer.html" %}
 {% endblock body %}
