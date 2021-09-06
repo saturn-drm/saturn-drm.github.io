@@ -71,6 +71,18 @@
     <script type="text/javascript" src="/assets/js/headerhighlightdect.js"></script>
 
     <script type="text/javascript" src="/assets/js/headerhidescroll.js"></script>
+    <!-- snow effect -->
+    <!-- <script src="assets/js/snow.js"></script>
+    <script>
+        $(function () {
+            $.fn.snow({
+                minSize: 10,
+                maxSize: 20,
+                newOn: 200
+            });
+        });
+    </script> -->
+    <!-- end snow effect -->
 
 </head>
 
@@ -89,7 +101,41 @@
         <i class="fa fa-bars"></i>
     </a>
 </div>
+    <a id="backtotop" onclick="driveTo(0)">
+    <svg id="layer2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.85 35.95">
+        <defs>
+            <style>
+                .cls-1 {
+                    fill: none;
+                    stroke-miterlimit: 10;
+                }
+            </style>
+        </defs>
+        <title>backtotop</title>
+        <polyline class="cls-1" points="0.43 13.95 8.43 0.95 16.43 13.95" />
+        <line class="cls-1" x1="8.43" y1="25.95" x2="8.43" y2="0.95" />
+        <line class="cls-1" x1="0.43" y1="0.95" x2="16.43" y2="0.95" />
+    </svg>
+</a>
+
+<script class="backtotop">
+    var btn = $('#backtotop');
+
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 300) {
+            btn.addClass('show');
+        } else {
+            btn.removeClass('show');
+        }
+    });
+
+    btn.on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: 0 }, '300');
+    });
+</script>
     
+    <!-- <div class="snow-container"></div> -->
     <!-- landing section -->
     <section class="indexsection" id="home">
         <div class="myinfo">
