@@ -8,6 +8,7 @@
 
 {% block scripts %}
     {{ super() }}
+    <script type="text/javascript" src="/assets/js/toconscroll.js"></script>
     <script type="text/javascript" src="/assets/js/headerhidescroll.js"></script>
     <script type="text/javascript" src="/assets/js/progressbar.js"></script>
     <script src="/assets/js/highlight/highlight.min.js"></script>
@@ -25,38 +26,9 @@
     </div>
     <div id="toc">{{ tochtml }}</div>
     <div id="content">
-        <div id="post">{{ posthtml }}</div>
+        <div id="post">
+            <h1 style="color:#fd746c;">{{ posttitle }}</h1>
+            {{ posthtml }}
+        </div>
     </div>
-
-    <!-- scroll smoothly -->
-    <script>
-        $(document).ready(function () {
-            $("a").on('click', function (event) {
-
-                if (this.hash !== "") {
-                    event.preventDefault();
-
-                    var hash = this.hash;
-
-                    $('html, body').animate({
-                        scrollTop: $(hash).offset().top
-                    }, 800, function () {
-
-                        window.location.hash = hash;
-                    });
-                }
-            });
-        });
-    </script>
-    <!-- end scroll smoothly -->
-
-    <script class="showtocwhensdrolldown">
-        $(window).scroll(function () {
-            if ($(window).scrollTop() > 300) {
-                $('#toc').addClass('fix');
-            } else {
-                $('#toc').removeClass('fix');
-            }
-        });
-    </script>
 {% endblock content %}

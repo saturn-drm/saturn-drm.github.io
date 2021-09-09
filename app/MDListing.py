@@ -31,22 +31,35 @@ class MDPath():
         Convert to paths to the html posts under the destination path
         make directories in those locations
         """
-        pathdict = {}
+        mdlist = []
         for root, dirs, files in os.walk(self.orip):
             for filename in files:
                 if filename == '.DS_Store':
                     continue
                 mdpath = os.path.join(root, filename)
-                pathls = mdpath.split(os.path.sep)
-                pathls[0] = self.desp
-                htmlpath = os.path.splitext(os.path.join(*pathls))[0] + '.html'
-                pathdict[mdpath] = htmlpath
-                os.makedirs(os.path.dirname(htmlpath), exist_ok=True)
-        self.pathdict = pathdict
+                mdlist.append(mdpath)
+        self.mdlist = mdlist
+    
+    @staticmethod
+    def convertPath(path, desp):
+        """
+        Input:
+            path, str, path to md post
+            desp, str, path to the destination folder
+        Return:
+            path for html post
+            and makedir
+        """
+        pathls = path.split(os.path.sep)
+        pathls[0] = desp
+        htmlpath = os.path.splitext(os.path.join(*pathls))[0] + '.html'
+        os.makedirs(os.path.dirname(htmlpath), exist_ok=True)
+        return htmlpath
+
 
 if __name__ == '__main__':
     orip = 'posts'
     desp = 'articles'
     MDPathInstance = MDPath(orip, desp)
     MDPathInstance.getFiles()
-    print(MDPathInstance.pathdict)
+    print(MDPath.convertPath(MDPathInstance.mdlist[0], desp))

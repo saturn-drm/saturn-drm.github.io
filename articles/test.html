@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/assets/js/highlight/atom-one-light-edit.css">
 
     <title>
-    
+    THEATER DESIGN AT WUDAOKOU
 </title>
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -65,7 +65,9 @@
 
     <script type="text/javascript" src="/assets/js/headerres.js"></script>
     <script type="text/javascript" src="/assets/js/headerhighlightdect.js"></script>
+    <script type="text/javascript" src="/assets/js/smoothscroll.js"></script>
 
+    <script type="text/javascript" src="/assets/js/toconscroll.js"></script>
     <script type="text/javascript" src="/assets/js/headerhidescroll.js"></script>
     <script type="text/javascript" src="/assets/js/progressbar.js"></script>
     <script src="/assets/js/highlight/highlight.min.js"></script>
@@ -124,11 +126,36 @@
     
     <progress id="content-progress" value="0"></progress>
     <div id="offsetheader">
-        <img src="/assets/img/covers/codingcover.jpg"/>
+        <img src="/assets/img/00architecture/06theaterdesign/01per.jpg"/>
     </div>
-    <div id="toc"></div>
+    <div id="toc"><div class="toc">
+<ul>
+<li><a href="#abstract">Abstract</a></li>
+<li><a href="#basic-info">Basic Info</a></li>
+<li><a href="#conceptual">Conceptual</a><ul>
+<li><a href="#expansion-of-peoples-timelines-activities">Expansion of people's timelines &amp; activities</a></li>
+<li><a href="#developing-open-space">Developing open space</a></li>
+</ul>
+</li>
+<li><a href="#technical-delivery">Technical Delivery</a><ul>
+<li><a href="#ground-floor-plan">Ground floor plan</a></li>
+<li><a href="#other-plans">Other plans</a></li>
+<li><a href="#sections">Sections</a></li>
+<li><a href="#sectional-model">Sectional model</a></li>
+<li><a href="#technical-analysis">Technical analysis</a></li>
+</ul>
+</li>
+<li><a href="#renders">Renders</a><ul>
+<li><a href="#the-mirrored-stage-for-citizens">The mirrored stage for citizens</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
     <div id="content">
-        <div id="post"><blockquote>
+        <div id="post">
+            <h1 style="color:#fd746c;">THEATER DESIGN AT WUDAOKOU</h1>
+            <blockquote>
 <p>Modify date: 2020-11-10</p>
 </blockquote>
 <p><img alt="01per" src="/assets/img/00architecture/06theaterdesign/01per.jpg"/></p>
@@ -231,40 +258,9 @@
 <h2 class="anchor" id="the-mirrored-stage-for-citizens">The mirrored stage for citizens</h2>
 <p>The glass wall acts both as the background of the experimental theater and the square. People can perform their own activities on the square while being framed into the scene inside. At the same time, the night sky is contained in the scene on both sides.</p>
 <p><img alt="10renders" src="/assets/img/00architecture/06theaterdesign/10renders.jpg"/></p>
-<hr/></div>
+<hr/>
+        </div>
     </div>
-
-    <!-- scroll smoothly -->
-    <script>
-        $(document).ready(function () {
-            $("a").on('click', function (event) {
-
-                if (this.hash !== "") {
-                    event.preventDefault();
-
-                    var hash = this.hash;
-
-                    $('html, body').animate({
-                        scrollTop: $(hash).offset().top
-                    }, 800, function () {
-
-                        window.location.hash = hash;
-                    });
-                }
-            });
-        });
-    </script>
-    <!-- end scroll smoothly -->
-
-    <script class="showtocwhensdrolldown">
-        $(window).scroll(function () {
-            if ($(window).scrollTop() > 300) {
-                $('#toc').addClass('fix');
-            } else {
-                $('#toc').removeClass('fix');
-            }
-        });
-    </script>
 
     <section id="footer">
     <div class="footercontainer">

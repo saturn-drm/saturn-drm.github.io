@@ -84,4 +84,4 @@ if __name__ == '__main__':
     MDPostInstance.modifyHTagAnchor()
     MDPostInstance.modifyIMGPath()
     MDPostInstance.modifyTableHead()
-    print(MDPostInstance.soup)
+    print(MDPostInstance.YAMLDict)
