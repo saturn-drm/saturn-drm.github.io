@@ -45,3 +45,7 @@ pass to articles:
     a dictionary with 2 keys, section name and list of post dictionaries
     a list of those dictionaries
 """
+
+# TODO: integrate 2 layouts in articles.html, with different class name and id name
+# TODO: integrate js and css
+# TODO: audit tag info for each card, make them clickable
