@@ -1,0 +1,47 @@
+{% extends "cover.html" %}
+
+{% block style %}
+    {{ super() }}
+    <link rel="stylesheet" type="text/css" href="/assets/css/{{ style|lower }}.css" />
+{% endblock style %}
+
+{% block title %}
+    {{ titlename|capitalize }} - Zihan MEI's Site
+{% endblock title %}
+
+{% block scripts %}
+    {{ super() }}
+    {% if cards %}
+        <script type="text/javascript" src="/assets/js/card.js"></script>
+    {% endif %}
+{% endblock scripts %}
+
+{% block content %}
+    <div id="offsetheader">
+        <img src="{{ headerimg }}"/>
+    </div>
+    <div id="content">
+        {% for section in sections %}
+            <h1 class="sectionhead">{{ section['sectionname'] }}</h1>
+            {% for post in section['posts'] %}
+                <a class="column" href="{{ post['html'] }}">
+                    <div class="coverimg">
+                        <img src="{{ post['head image'] }}"/>
+                    </div>
+                    <div class="words">
+                        <div class="projtitle">
+                            <h1>{{ post['title'] }}</h1>
+                        </div>
+                        <div class="projclass">
+                            <h2>{{ post['tags']|join(', ') }}</h2>
+                        </div>
+                        <div class="projdescription">
+                            <p>{{ post['abstract'] }}</p>
+                        </div>
+                    </div>
+                </a>
+            {% endfor %}
+            <hr>
+        {% endfor %}
+    </div>
+{% endblock content %}
