@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    
+    <link rel="stylesheet" type="text/css" href="/assets/css/header-index2.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/footer.css" />
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/articlecontent-dev.css" />
+    <link rel="stylesheet" href="/assets/js/highlight/atom-one-light-edit.css">
+
+    <title>
+    Notes in Python GIS
+</title>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="description" content="Welcome to My Personal Site!">
+<meta name="author" content="Zihan Zephaniah MEI">
+    <!-- fonts -->
+<link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,600&display=swap" rel="stylesheet">
+<script>
+    (function (d) {
+        var config = {
+            kitId: 'cmi7aqt',
+            scriptTimeout: 3000,
+            async: true
+        },
+            h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+    })(document);
+</script>
+<!-- end fonts -->
+    <!-- start favicons snippet, use https://realfavicongenerator.net/ -->
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#2c3e50">
+<link rel="shortcut icon" href="/favicon/favicon.ico">
+<meta name="apple-mobile-web-app-title" content="ZMei.moe">
+<meta name="application-name" content="ZMei.moe">
+<meta name="msapplication-TileColor" content="#fee3e1">
+<meta name="msapplication-config" content="/favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<!-- end favicons snippet -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-156998560-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-156998560-1');
+</script>
+    <!-- jQuery -->
+    <script src="/assets/js/jquery-3.6.0.min.js"></script>
+    
+    
+    <!-- anime-master -->
+    <script src="/assets/js/anime-master/lib/anime.min.js"></script>
+
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/d61407055c.js" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="/assets/js/headerres.js"></script>
+    <script type="text/javascript" src="/assets/js/headerhighlightdect.js"></script>
+    <script type="text/javascript" src="/assets/js/smoothscroll.js"></script>
+
+    <script type="text/javascript" src="/assets/js/toconscroll.js"></script>
+    <script type="text/javascript" src="/assets/js/headerhidescroll.js"></script>
+    <script type="text/javascript" src="/assets/js/progressbar.js"></script>
+    <script src="/assets/js/highlight/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body>
+    
+    <div class="topnav navori" id="navbar">
+    <a class="homenav" href="/index.html" onclick="closenav()"><img src="/assets/img/logo.svg" />
+        <p>Zihan MEI</p>
+    </a>
+    <div class="othernav">
+        <a class="resdown" id="architecturenav" href="/design.html" onclick="closenav()">Design</a>
+        <a class="resdown" id="codingnav" href="/blog.html" onclick="closenav()">Blog</a>
+        <a class="resdown" id="literaturenav" href="/tabs.html" onclick="closenav()">Tabs</a>
+    </div>
+    <a class="dropicon" onclick="narrownav()">
+        <i class="fa fa-bars"></i>
+    </a>
+</div>
+    <a id="backtotop" onclick="driveTo(0)">
+    <svg id="layer2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.85 35.95">
+        <defs>
+            <style>
+                .cls-1 {
+                    fill: none;
+                    stroke-miterlimit: 10;
+                }
+            </style>
+        </defs>
+        <title>backtotop</title>
+        <polyline class="cls-1" points="0.43 13.95 8.43 0.95 16.43 13.95" />
+        <line class="cls-1" x1="8.43" y1="25.95" x2="8.43" y2="0.95" />
+        <line class="cls-1" x1="0.43" y1="0.95" x2="16.43" y2="0.95" />
+    </svg>
+</a>
+
+<script class="backtotop">
+    var btn = $('#backtotop');
+
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 300) {
+            btn.addClass('show');
+        } else {
+            btn.removeClass('show');
+        }
+    });
+
+    btn.on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: 0 }, '300');
+    });
+</script>
+    
+    <progress id="content-progress" value="0"></progress>
+    <div id="offsetheader">
+        <img src="/assets/img/covers/codingcover.jpg"/>
+    </div>
+    <div id="toc"><div class="toc">
+<ul>
+<li><a href="#shapely">Shapely</a><ul>
+<li><a href="#methods-to-access-geometry-type">Methods to access Geometry Type</a><ul>
+<li><a href="#shapely-function-type">shapely function - type</a></li>
+<li><a href="#shapely-function-geom_type">shapely function - geom_type</a></li>
+<li><a href="#python-function-type">Python function - type</a></li>
+</ul>
+</li>
+<li><a href="#polygon-with-hole">polygon with hole</a><ul>
+<li><a href="#create-the-polygon-with-a-hole">create the polygon with a hole</a></li>
+<li><a href="#output">output</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#geopandas-pandas">Geopandas / pandas</a><ul>
+<li><a href="#reading-and-plotting-a-shp">Reading and Plotting a SHP</a></li>
+<li><a href="#loop-with-function-iterrows">Loop with Function iterrows()</a><ul>
+<li><a href="#usage">usage</a></li>
+<li><a href="#output_1">output</a></li>
+</ul>
+</li>
+<li><a href="#function-groupby">Function groupby()</a></li>
+<li><a href="#function-value_counts">Function value_counts()</a><ul>
+<li><a href="#value_counts-in-a-column">value_counts() in a column</a></li>
+<li><a href="#output_2">Output</a></li>
+</ul>
+</li>
+<li><a href="#slices-in-pandas">Slices in pandas</a><ul>
+<li><a href="#slice-with-index">slice with index</a></li>
+<li><a href="#slice-with-key">slice with key</a></li>
+<li><a href="#iloc-for-numeric-indices">iloc for numeric indices</a></li>
+<li><a href="#loc-for-explicit-values">loc for explicit values</a></li>
+<li><a href="#slice-with-condition">slice with condition</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#osmnx">OSMnx</a><ul>
+<li><a href="#documententation">Documententation</a><ul>
+<li><a href="#osmnxplotplot_graph">osmnx.plot.plot_graph</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+    <div id="content">
+        <div id="post">
+            <h1 style="color:#fd746c;">Notes in Python GIS</h1>
+            <blockquote>
+<p>Modify date: 2020-02-29</p>
+</blockquote>
+<h1 class="anchor" id="shapely">Shapely</h1>
+<h2 class="anchor" id="methods-to-access-geometry-type">Methods to access Geometry Type</h2>
+<h3 class="anchor" id="shapely-function-type">shapely function - type</h3>
+<blockquote>
+<p>string</p>
+</blockquote>
+<pre><code class="language-python">poly_type1 = poly1.type
+print (poly_type1)
+&gt;&gt; Polygon
+</code></pre>
+<h3 class="anchor" id="shapely-function-geom_type">shapely function - geom_type</h3>
+<blockquote>
+<p>string</p>
+</blockquote>
+<pre><code class="language-python">poly_type2 = poly1.geom_type
+print (poly_type2)
+&gt;&gt; Polygon
+</code></pre>
+<h3 class="anchor" id="python-function-type">Python function - type</h3>
+<blockquote>
+<p>Python class format</p>
+</blockquote>
+<pre><code class="language-python">poly_type3 = type(poly1)
+print (poly_type3)
+&gt;&gt; &lt;class 'shapely.geometry.polygon.Polygon'&gt;
+</code></pre>
+<h2 class="anchor" id="polygon-with-hole">polygon with hole</h2>
+<p>The output of <code>print (polygon)</code> is <code>POLYGON ((2.2 4.2, 7.2 -25.1, 9.26 -2.456, 2.2 4.2))</code>, which has double parentheses. That's because the polygon can contain holes.</p>
+<h3 class="anchor" id="create-the-polygon-with-a-hole">create the polygon with a hole</h3>
+<pre><code class="language-python"># the points list of exterior polygon
+points_exterior = [(-180, 90), (-180, -90), (180, -90), (180, 90)]
+
+# the points list of hole polygon
+# there could be multiple holes, thus input a list of holes
+points_hole = [[(-170, 80), (-170, -80), (170, -80), (170, 80)]]
+
+# syntax of the exterior polygon
+polygon_exterior = Polygon(shell=points_exterior)
+
+# syntax of the polygon with hole
+polygon_with_hole = Polygon(shell=points_exterior, holes=points_hole)
+
+print (polygon_exterior)
+print (polygon_with_hole)
+print (type(polygon_with_hole))
+</code></pre>
+<h3 class="anchor" id="output">output</h3>
+<pre><code class="language-python">POLYGON ((-180 90, -180 -90, 180 -90, 180 90, -180 90))
+POLYGON ((-180 90, -180 -90, 180 -90, 180 90, -180 90), (-170 80, -170 -80, 170 -80, 170 80, -170 80))
+&lt;class 'shapely.geometry.polygon.Polygon'&gt;
+</code></pre>
+<h1 class="anchor" id="geopandas-pandas">Geopandas / pandas</h1>
+<h2 class="anchor" id="reading-and-plotting-a-shp">Reading and Plotting a SHP</h2>
+<pre><code class="language-python">import geopandas
+import matplotlib.pyplot as plt
+
+data = geopandas.read_file('./DataLesson2/DAMSELFISH_distributions.shp')
+
+data.plot()
+plt.show()
+</code></pre>
+<h2 class="anchor" id="loop-with-function-iterrows">Loop with Function iterrows()</h2>
+<h3 class="anchor" id="usage">usage</h3>
+<p>The function iterrows() returns the index of each row, in addition to an object containing the row itself.</p>
+<pre><code class="language-python">for index, row in selection1.iterrows():
+    poly_area = row['geometry'].area
+    print('polygon area at index %i is: %.3f' %(index, poly_area))
+</code></pre>
+<h3 class="anchor" id="output_1">output</h3>
+<pre><code class="language-python">polygon area at index 0 is: 19.396
+polygon area at index 1 is: 6.146
+polygon area at index 2 is: 2.697
+polygon area at index 3 is: 87.461
+polygon area at index 4 is: 0.001
+</code></pre>
+<h2 class="anchor" id="function-groupby">Function groupby()</h2>
+<p>The function gives an object called <code>DataFrameGroupBy</code>, similar to list of keys and values (in a dictionary) that we can iterate over.</p>
+<pre><code class="language-python">grouped = data.groupby('BINOMIAL')
+for key, values in grouped:
+    individual_fish = values
+</code></pre>
+<h2 class="anchor" id="function-value_counts">Function value_counts()</h2>
+<p><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Index.value_counts.html?highlight=value_counts#pandas.Index.value_counts">Official Documentations</a></p>
+<h3 class="anchor" id="value_counts-in-a-column">value_counts() in a column</h3>
+<pre><code class="language-python">print(acc['Suitable_area'].value_counts())
+#type(acc) = geodataframe
+</code></pre>
+<h3 class="anchor" id="output_2">Output</h3>
+<pre><code class="language-python">0    13011
+1        9
+</code></pre>
+<h2 class="anchor" id="slices-in-pandas">Slices in pandas</h2>
+<pre><code class="language-python">pop2014 = pd.Series([100,99.3,95.5,93.5,92.4,84.8,84.5,78.9,74.3,72.8],
+                    index=['Java','C','C++','Python','C#','PHP','JavaScript','Ruby','R','Matlab'])
+</code></pre>
+<h3 class="anchor" id="slice-with-index">slice with index</h3>
+<pre><code class="language-python">pop2014[0]
+&gt;&gt;&gt; 100.0
+
+pop2014[0:2]
+&gt;&gt;&gt; Java    100.0
+    C        99.3
+    dtype: float64
+</code></pre>
+<h3 class="anchor" id="slice-with-key">slice with key</h3>
+<pre><code class="language-python">pop2014['Python]
+&gt;&gt;&gt; 93.5
+
+pop2014['C++':'C#']
+&gt;&gt;&gt; C++       95.5
+    Python    93.5
+    C#        92.4
+    dtype: float64
+</code></pre>
+<h3 class="anchor" id="iloc-for-numeric-indices">iloc for numeric indices</h3>
+<pre><code class="language-python">pop2014.iloc[0:2]
+&gt;&gt;&gt; Java    100.0
+    C        99.3
+    dtype: float64
+</code></pre>
+<h3 class="anchor" id="loc-for-explicit-values">loc for explicit values</h3>
+<pre><code class="language-python">pop2014.loc[:'Ruby]
+&gt;&gt;&gt; Java          100.0
+    C              99.3
+    C++            95.5
+    Python         93.5
+    C#             92.4
+    PHP            84.8
+    JavaScript     84.5
+    Ruby           78.9
+    dtype: float64
+</code></pre>
+<h3 class="anchor" id="slice-with-condition">slice with condition</h3>
+<pre><code class="language-python">pop2014[pop2014 &gt; 90]
+&gt;&gt;&gt; Java      100.0
+    C          99.3
+    C++        95.5
+    Python     93.5
+    C#         92.4
+    dtype: float64
+</code></pre>
+<h1 class="anchor" id="osmnx">OSMnx</h1>
+<h2 class="anchor" id="documententation">Documententation</h2>
+<h3 class="anchor" id="osmnxplotplot_graph">osmnx.plot.plot_graph</h3>
+<pre><code>Parameters:
+G, bbox=None, fig_height=6, fig_width=None, margin=0.02, axis_off=True, equal_aspect=False, bgcolor='w', show=True, save=False, close=True, file_format='png', filename='temp', dpi=300, annotate=False, node_color='#66ccff', node_size=15, node_alpha=1, node_edgecolor='none', node_zorder=1, edge_color='#999999', edge_linewidth=1, edge_alpha=1, use_geom=True
+</code></pre>
+<p><strong>Returns: fig, ax</strong></p>
+<p>Return type: tuple</p>
+<p><a href="https://osmnx.readthedocs.io/en/stable/osmnx.html#osmnx.plot.plot_graph">Documentation page</a></p>
+<hr/>
+        </div>
+    </div>
+
+    <section id="footer">
+    <div class="footercontainer">
+        <p>
+            <span>
+                <a href="https://www.facebook.com/zmzihanmei" target="_blank">
+                    <svg width="24" height="24" class="social facebook" fill="#34090f" viewBox="0 0 1024 1024"
+                        version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M767.428571 6.857143l0 150.857143-89.714286 0q-49.142857 0-66.285714 20.571429t-17.142857 61.714286l0 108 167.428571 0-22.285714 169.142857-145.142857 0 0 433.714286-174.857143 0 0-433.714286-145.714286 0 0-169.142857 145.714286 0 0-124.571429q0-106.285714 59.428571-164.857143t158.285714-58.571429q84 0 130.285714 6.857143z" />
+                    </svg>
+                </a></span>
+            <span>
+                <a href="https://github.com/saturn-drm" target="_blank">
+                    <svg width="24" height="24" class="social github" fill="#34090f" viewBox="0 0 1024 1024"
+                        version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <path class="svgpath" data-index="path_0"
+                            d="M0 525.2c0 223.6 143.3 413.7 343 483.5 26.9 6.8 22.8-12.4 22.8-25.4l0-88.7c-155.3 18.2-161.5-84.6-172-101.7-21.1-36-70.8-45.2-56-62.3 35.4-18.2 71.4 4.6 113.1 66.3 30.2 44.7 89.1 37.2 119 29.7 6.5-26.9 20.5-50.9 39.7-69.6C248.8 728.2 181.7 630 181.7 513.2c0-56.6 18.7-108.7 55.3-150.7-23.3-69.3 2.2-128.5 5.6-137.3 66.5-6 135.5 47.6 140.9 51.8 37.8-10.2 80.9-15.6 129.1-15.6 48.5 0 91.8 5.6 129.8 15.9 12.9-9.8 77-55.8 138.8-50.2 3.3 8.8 28.2 66.7 6.3 135 37.1 42.1 56 94.6 56 151.4 0 117-67.5 215.3-228.8 243.7 26.9 26.6 43.6 63.4 43.6 104.2l0 128.8c0.9 10.3 0 20.5 17.2 20.5C878.1 942.4 1024 750.9 1024 525.3c0-282.9-229.3-512-512-512C229.1 13.2 0 242.3 0 525.2L0 525.2z" />
+                    </svg>
+                </a></span>
+            <span>
+                <a href="https://www.linkedin.com/in/zihan-mei-616b8b162/" target="_blank">
+                    <svg width="24" height="24" class="social linkedin" fill="#34090f" viewBox="0 0 1024 1024"
+                        version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M260.096 155.648c0 27.307008-9.899008 50.516992-29.696 69.632-19.796992 19.115008-45.396992 28.672-76.8 28.672-30.036992 0-54.612992-9.556992-73.728-28.672-19.115008-19.115008-28.672-42.324992-28.672-69.632 0-28.672 9.556992-52.224 28.672-70.656 19.115008-18.432 44.372992-27.648 75.776-27.648 31.403008 0 56.32 9.216 74.752 27.648 18.432 18.432 28.331008 41.984 29.696 70.656 0 0 0 0 0 0m-202.752 808.96c0 0 0-632.832 0-632.832 0 0 196.608 0 196.608 0 0 0 0 632.832 0 632.832 0 0-196.608 0-196.608 0 0 0 0 0 0 0m313.344-430.08c0-58.708992-1.364992-126.292992-4.096-202.752 0 0 169.984 0 169.984 0 0 0 10.24 88.064 10.24 88.064 0 0 4.096 0 4.096 0 40.96-68.267008 105.812992-102.4 194.56-102.4 68.267008 0 123.220992 22.868992 164.864 68.608 41.643008 45.739008 62.464 113.664 62.464 203.776 0 0 0 374.784 0 374.784 0 0-196.608 0-196.608 0 0 0 0-350.208 0-350.208 0-91.476992-33.451008-137.216-100.352-137.216-47.787008 0-81.236992 24.576-100.352 73.728-4.096 8.192-6.144 24.576-6.144 49.152 0 0 0 364.544 0 364.544 0 0-198.656 0-198.656 0 0 0 0-430.08 0-430.08 0 0 0 0 0 0" />
+                    </svg>
+                </a></span>
+            <span>
+                <a href="mailto:meizihanyx@gmail.com" target="_blank">
+                    <svg width="24" height="24" class="social mail" fill="#34090f" viewBox="0 0 1024 1024" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M512.091 166.946c116.242 0 232.484-0.014 348.727 0.007 41.522 0.008 76.321 12.188 94.842 53.167 8.25 18.251 6.5 30.831-13.43 43.256-137.452 85.695-274.125 172.655-410.534 260.014-14.762 9.456-24.638 9.569-39.498 0.041C354.353 435.041 216.033 347.399 77.465 260.14c-12.701-8.002-16.368-15.572-12.01-29.962 9.882-32.627 30.845-52.873 63.868-59.66 13.656-2.806 27.953-3.4 41.966-3.431C284.888 166.83 398.492 166.943 512.091 166.946z" />
+                        <path
+                            d="M510.888 856.021c-117.998 0-235.996 0.134-353.993-0.067-47.671-0.083-79.295-22.331-91.17-61.206-4.28-14.027-2.127-22.232 10.858-30.356 108.193-67.725 215.807-136.366 324.233-203.713 7.275-4.519 21.51-4.25 29.378-0.171 22.589 11.713 44.026 25.859 64.999 40.383 11.823 8.191 21.091 8.623 33.117 0.325 20.993-14.484 43.689-26.52 64.549-41.176 12.159-8.539 20.73-7.176 32.785 0.537 106.04 67.844 212.318 135.315 319.158 201.894 16.481 10.272 18.065 21.564 12.577 37.407-12.35 35.666-45.183 55.999-92.491 56.081C746.889 856.149 628.886 856.021 510.888 856.021z" />
+                        <path
+                            d="M64.376 326.925c97.051 61.769 192.332 122.409 290.508 184.898-97.877 62.309-192.719 122.68-290.508 184.932C64.376 572.674 64.376 451.511 64.376 326.925z" />
+                        <path
+                            d="M959.665 327.168c0 124.369 0 244.164 0 369.253-97.913-62.322-192.914-122.792-290.001-184.589C766.993 449.854 861.628 389.595 959.665 327.168z" />
+                    </svg>
+                </a></span>
+        </p>
+        <p>Bachelor of Architecture, Tsinghua University</p>
+        <p>Master of Architecture in Urban Design, Harvard Graduate School of Design</p>
+        <p>2019 - 2021 &#169; Zihan MEI's Personal Site.</p>
+    </div>
+</section>
+
+</body>
+
+</html>

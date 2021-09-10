@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    
+    <link rel="stylesheet" type="text/css" href="/assets/css/header-index2.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/footer.css" />
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/articlecontent-dev.css" />
+    <link rel="stylesheet" href="/assets/js/highlight/atom-one-light-edit.css">
+
+    <title>
+    Python请求百度地图API爬取城市建筑属性并用Grasshopper进一步处理
+</title>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="description" content="Welcome to My Personal Site!">
+<meta name="author" content="Zihan Zephaniah MEI">
+    <!-- fonts -->
+<link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,600&display=swap" rel="stylesheet">
+<script>
+    (function (d) {
+        var config = {
+            kitId: 'cmi7aqt',
+            scriptTimeout: 3000,
+            async: true
+        },
+            h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+    })(document);
+</script>
+<!-- end fonts -->
+    <!-- start favicons snippet, use https://realfavicongenerator.net/ -->
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#2c3e50">
+<link rel="shortcut icon" href="/favicon/favicon.ico">
+<meta name="apple-mobile-web-app-title" content="ZMei.moe">
+<meta name="application-name" content="ZMei.moe">
+<meta name="msapplication-TileColor" content="#fee3e1">
+<meta name="msapplication-config" content="/favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<!-- end favicons snippet -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-156998560-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-156998560-1');
+</script>
+    <!-- jQuery -->
+    <script src="/assets/js/jquery-3.6.0.min.js"></script>
+    
+    
+    <!-- anime-master -->
+    <script src="/assets/js/anime-master/lib/anime.min.js"></script>
+
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/d61407055c.js" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="/assets/js/headerres.js"></script>
+    <script type="text/javascript" src="/assets/js/headerhighlightdect.js"></script>
+    <script type="text/javascript" src="/assets/js/smoothscroll.js"></script>
+
+    <script type="text/javascript" src="/assets/js/toconscroll.js"></script>
+    <script type="text/javascript" src="/assets/js/headerhidescroll.js"></script>
+    <script type="text/javascript" src="/assets/js/progressbar.js"></script>
+    <script src="/assets/js/highlight/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body>
+    
+    <div class="topnav navori" id="navbar">
+    <a class="homenav" href="/index.html" onclick="closenav()"><img src="/assets/img/logo.svg" />
+        <p>Zihan MEI</p>
+    </a>
+    <div class="othernav">
+        <a class="resdown" id="architecturenav" href="/design.html" onclick="closenav()">Design</a>
+        <a class="resdown" id="codingnav" href="/blog.html" onclick="closenav()">Blog</a>
+        <a class="resdown" id="literaturenav" href="/tabs.html" onclick="closenav()">Tabs</a>
+    </div>
+    <a class="dropicon" onclick="narrownav()">
+        <i class="fa fa-bars"></i>
+    </a>
+</div>
+    <a id="backtotop" onclick="driveTo(0)">
+    <svg id="layer2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.85 35.95">
+        <defs>
+            <style>
+                .cls-1 {
+                    fill: none;
+                    stroke-miterlimit: 10;
+                }
+            </style>
+        </defs>
+        <title>backtotop</title>
+        <polyline class="cls-1" points="0.43 13.95 8.43 0.95 16.43 13.95" />
+        <line class="cls-1" x1="8.43" y1="25.95" x2="8.43" y2="0.95" />
+        <line class="cls-1" x1="0.43" y1="0.95" x2="16.43" y2="0.95" />
+    </svg>
+</a>
+
+<script class="backtotop">
+    var btn = $('#backtotop');
+
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 300) {
+            btn.addClass('show');
+        } else {
+            btn.removeClass('show');
+        }
+    });
+
+    btn.on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: 0 }, '300');
+    });
+</script>
+    
+    <progress id="content-progress" value="0"></progress>
+    <div id="offsetheader">
+        <img src="/assets/img/covers/codingcover.jpg"/>
+    </div>
+    <div id="toc"><div class="toc">
+<ul>
+<li><a href="#1">1. 问题提出</a></li>
+<li><a href="#2">2. 数据爬取</a><ul>
+<li><a href="#a-api">a. 百度地图 API</a><ul>
+<li><a href="#ak">应用 AK 获取</a></li>
+<li><a href="#_1">地点检索请求参数文档</a></li>
+<li><a href="#_2">坐标转换服务</a></li>
+</ul>
+</li>
+<li><a href="#b-python">b. Python 代码部分</a></li>
+<li><a href="#c">c. 运行结果</a><ul>
+<li><a href="#console">console</a></li>
+<li><a href="#_3">文件目录</a></li>
+<li><a href="#csv">csv 文件内容</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#3">3. 模型处理</a><ul>
+<li><a href="#a-grasshopper">a. Grasshopper 电池图</a><ul>
+<li><a href="#_4">整体电池图</a></li>
+<li><a href="#_5">处理思路</a></li>
+<li><a href="#_6">运行结果</a></li>
+</ul>
+</li>
+<li><a href="#b-rhino">b. Rhino 模型调整</a><ul>
+<li><a href="#convertdots">ConvertDots</a></li>
+<li><a href="#_7">坐标调整</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#4">4. 总结</a><ul>
+<li><a href="#a">a. 时间进度</a></li>
+<li><a href="#b">b. 步骤任务分配</a></li>
+<li><a href="#c_1">c. 未能达成的预期</a></li>
+<li><a href="#d">d. 其他</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+    <div id="content">
+        <div id="post">
+            <h1 style="color:#fd746c;">Python请求百度地图API爬取城市建筑属性并用Grasshopper进一步处理</h1>
+            <blockquote>
+<p>Modify Date: 2020-06-23</p>
+</blockquote>
+<h1 class="anchor" id="1">1. 问题提出</h1>
+<p>实习期间接到一项任务：在地图上标出城市范围内的商业、文化、酒店、学校建筑，并挑选重点建筑研究其规模、业态。</p>
+<p>针对第一个要求，在国外的时候我会直接用 <strong>Open Street Map</strong> 导出 <code>osm</code> 文件，拖到 <strong>Grasshopper</strong> 里用 <strong>ELK</strong> 插件鼓捣一下，直接生成。但是在国内使用 <strong>Open Street Map</strong> 我发现了2个问题：</p>
+<ul>
+<li>Open Street Map 上中国的建筑轮廓大量缺失；</li>
+<li>没有缺失轮廓的建筑图形几乎没有任何包括用地性质在内的属性，唯一的属性就是<code>闭合路径/矩形</code>。</li>
+</ul>
+<p>在此情况下我不得不考虑用 <strong>Python</strong> 结合百度地图的接口爬取相应属性的建筑位置信息。</p>
+<p>此前无论是 <strong>Google Map</strong> 还是<strong>百度地图</strong>的 API，我都嫌麻烦没有尝试过，这次可以说不得不尝试一下了。同时在阅读百度地图开发者文档的时候我注意到建筑数据还带有价格、评分等属性，部分可作为这次任务第二步的参考。</p>
+<p>思路如下：</p>
+<ol>
+<li><strong>数据爬取：</strong>利用百度地图 API 爬取该城市中某一类别的所有建筑；</li>
+<li><strong>数据整理：</strong>把需要的信息整理成字典，写入<code>csv</code>文件；</li>
+<li><strong>模型生成：</strong>用 <strong>Grasshopper</strong> 读取<code>csv</code>文件，处理数据，生成点；</li>
+<li><strong>模型调整：</strong>把经纬度转换成<strong>地图</strong>或者已有的 <strong>CAD</strong> 采用的坐标系。</li>
+</ol>
+<hr/>
+<h1 class="anchor" id="2">2. 数据爬取</h1>
+<h2 class="anchor" id="a-api">a. 百度地图 API</h2>
+<h3 class="anchor" id="ak">应用 AK 获取</h3>
+<p>前往 <strong><a href="https://lbsyun.baidu.com/">百度地图开放平台</a></strong> 申请 API 权限。创建应用并记住 ak 代码。</p>
+<h3 class="anchor" id="_1">地点检索请求参数文档</h3>
+<p>前往 <strong><a href="https://lbsyun.baidu.com/index.php?title=webapi/guide/webservice-placeapi">百度地图 API SDK 地点检索部分</a></strong> 页面查询请求参数。</p>
+<p><img alt="2020-06-23-api-searchdoc" src="/assets/img/01coding/2020-06-23-api-searchdoc.png"/></p>
+<h3 class="anchor" id="_2">坐标转换服务</h3>
+<p>前往 <strong><a href="https://lbsyun.baidu.com/index.php?title=webapi/guide/changeposition">百度地图 API SDK 坐标转换</a></strong> 部分查询转换参数。本来预计要用，由于时间紧张，最后没用上。</p>
+<h2 class="anchor" id="b-python">b. Python 代码部分</h2>
+<pre><code class="language-python">import requests
+import csv
+import time
+import codecs
+
+
+# 搜索某地区某种属性（商业/文化/酒店/学校）建筑的数据，返回一个处理后的字典列表
+def searchBaidumap(keyword, region, pageIndex):
+    url = 'http://api.map.baidu.com/place/v2/search'
+    ak = '*****************'# 自己创建的项目 ak 参数
+
+    finalData = []
+
+    params = {
+        "query": keyword,# 建筑属性
+        "output": "json",
+        "ak": ak,
+        "region": region,
+        "page_size": 20,# 检索每页结果数（最大20）
+        "page_num": pageIndex,# 检索页码编号
+        "scope": 2,
+        "coord_type": 4# 目标的CAD坐标不明，尝试了多种坐标系均不符合
+    }
+
+    response = requests.get(url, params)
+    result = response.json()
+    status = result.get("status")
+    message = result.get("message")# 服务状态码见 SDK 文档
+
+    if status != 0 and status != 2:
+        raise Exception(message)
+
+    data = result['results']
+
+    # 我只需要经纬度、名称、地址
+    for adr in data:
+        singleDict = {'name': '', 'lng': '', 'lat': '', 'address': ''}
+        singleDict['name'] = adr['name']
+        location = adr['location']
+        singleDict['lng'] = float(location['lng'])
+        singleDict['lat'] = float(location['lat'])
+        singleDict['address'] = adr['address']
+        finalData.append(singleDict)
+
+    return finalData
+
+
+# 将结果输出为以相应属性命名的本地 csv 文件
+def saveCSV(data, fileName):
+    csv_columns = data[0].keys()
+    csv_file = '%s.csv' % fileName
+    try:
+        with codecs.open(csv_file, 'w', 'utf_8_sig') as csvfileopened:# codecs 模块防止保存到本地的文件显示乱码
+            writer = csv.DictWriter(csvfileopened, fieldnames=csv_columns)# csv 模块直接写入 csv 表头和之后的每一行
+            writer.writeheader()
+            for singleDataSet in data:
+                writer.writerow(singleDataSet)
+    except IOError:
+        print('I/O error')
+    print('%s抓取结果已保存到%s' % (fileName, csv_file))
+
+
+data = []
+pageIndex = 0
+keyword = '文化'# 依次为商业/文化/酒店/学校
+
+# 爬取每一页的20个结果，直到最后一页结果数小于20
+while (True):
+    singlePageData = searchBaidumap(keyword, '**', pageIndex)# 相关城市名称
+    data.extend(singlePageData)# list.append() 和 list.extend() 的区别
+    print('第%d页已抓取' % (pageIndex + 1))
+    if (len(singlePageData) &lt; 20):
+        break
+    pageIndex += 1
+    time.sleep(0.5)
+
+print('%s类别下共抓取到%d条信息' % (keyword, len(data)))
+
+saveCSV(data, keyword)
+
+</code></pre>
+<h2 class="anchor" id="c">c. 运行结果</h2>
+<h3 class="anchor" id="console">console</h3>
+<pre><code class="language-python">第1页已抓取
+第2页已抓取
+第3页已抓取
+文化类别下共抓取到56条信息
+文化抓取结果已保存到文化.csv
+</code></pre>
+<h3 class="anchor" id="_3">文件目录</h3>
+<p><img alt="2020-06-23-filetree" src="/assets/img/01coding/2020-06-23-filetree.png"/></p>
+<h3 class="anchor" id="csv">csv 文件内容</h3>
+<pre><code>name,lng,lat,address
+中国烹饪文化博物馆,114.665989,35.185874,博爱路与新长北线交叉口
+拉菲文化传媒,114.662922,35.192147,河南省新乡市长垣市欧洲小镇131
+文化路,114.802848,35.346359,河南省新乡市长垣县
+......
+</code></pre>
+<hr/>
+<h1 class="anchor" id="3">3. 模型处理</h1>
+<h2 class="anchor" id="a-grasshopper">a. Grasshopper 电池图</h2>
+<h3 class="anchor" id="_4">整体电池图</h3>
+<p><img alt="2020-06-23-grasshopper" src="/assets/img/01coding/2020-06-23-grasshopper.jpg"/></p>
+<h3 class="anchor" id="_5">处理思路</h3>
+<ol>
+<li>直接把 csv 文件丢给电池<code>read file</code>，文件每一行的所有数据会变成一整个<code>string</code>，得到一个列表。</li>
+<li>去头后，用<code>text split</code>电池截取一下，得到树形数据。</li>
+<li>将这些数据的第1，2项取出来作为 x, y 坐标，加上0作为 z 坐标，创建点并 bake 到相应图层；取这些数据的第0项，用<code>text tag</code>电池显示并作为<code>text dot</code>对象 bake 到相应图层和相应的点上。</li>
+<li>最后每个点生成一个<code>circle</code>是为了方便后续与 CAD 和 Ai 交互，在 Rhino 内处理数据时非必须。</li>
+</ol>
+<p><img alt="2020-06-23-grasshopper-individual" src="/assets/img/01coding/2020-06-23-grasshopper-individual.png"/></p>
+<h3 class="anchor" id="_6">运行结果</h3>
+<p><img alt="2020-06-23-ghoutput" src="/assets/img/01coding/2020-06-23-ghoutput.jpg"/></p>
+<h2 class="anchor" id="b-rhino">b. Rhino 模型调整</h2>
+<h3 class="anchor" id="convertdots">ConvertDots</h3>
+<p><code>text dot</code>对象导出到 dwg 或 ai 文件都不显示，因此在 Rhino 中用<code>ConvertDots</code>指令转换成<code>text</code>对象。</p>
+<h3 class="anchor" id="_7">坐标调整</h3>
+<p>没时间了，直接找了4个较远的点，把 Google Map 截图插入，拉伸一下就完事儿了。没有精确转换。</p>
+<hr/>
+<h1 class="anchor" id="4">4. 总结</h1>
+<h2 class="anchor" id="a">a. 时间进度</h2>
+<ul>
+<li>在公司总有其他任务追着，没有太多时间仔细修代码，而且爬出来的数据只是第一步，最重要的是后面大量的业态规模、产业特点的分析。</li>
+<li>前面爬到数据花了10分钟，得到了看起来非常酷的一系列数据。但是后面修正代码，直到能完成数据整理和写入的步骤，花了较长时间，更不用说在和 <strong>Grasshopper</strong> 交互上用的时间。</li>
+<li>作为整个项目分析的第一步，其实这个数据获取的过程从10分钟之后开始就有一些收支不平衡了。<s>不过谁让我是实习生呢，划一划。</s></li>
+</ul>
+<h2 class="anchor" id="b">b. 步骤任务分配</h2>
+<ul>
+<li>写代码的时候纠结的点大多是“用 Python 导出什么程度的数据给 Grasshopper？”一开始直接把原始数据导出了，但是在 Grasshopper 处理过程中我甚至要用到 <strong>GhPython</strong> 编辑数据，后者的语法和正常的 Python 有些许差异，在时间紧张的情况下很难完成。</li>
+<li>最后我选择了在爬取的时候处理好数据，只保存最重要的几项，然后在 <strong>Grasshopper</strong> 里用电池图简单生成一下。</li>
+</ul>
+<h2 class="anchor" id="c_1">c. 未能达成的预期</h2>
+<ul>
+<li>时间紧张，安排不妥。</li>
+<li>短时间内，坐标转换没有完美。</li>
+<li>后面的数据分析没有触及。</li>
+</ul>
+<h2 class="anchor" id="d">d. 其他</h2>
+<ul>
+<li>公司的电脑不能安装编译器，我又使用了 <a href="https://repl.it/">repl.it</a> 在线编译，这次顺利导入模块，直接在云端完美运行了。体验甚佳。我记得2年前好像不能导入很多模块来着。</li>
+</ul>
+<hr/>
+        </div>
+    </div>
+
+    <section id="footer">
+    <div class="footercontainer">
+        <p>
+            <span>
+                <a href="https://www.facebook.com/zmzihanmei" target="_blank">
+                    <svg width="24" height="24" class="social facebook" fill="#34090f" viewBox="0 0 1024 1024"
+                        version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M767.428571 6.857143l0 150.857143-89.714286 0q-49.142857 0-66.285714 20.571429t-17.142857 61.714286l0 108 167.428571 0-22.285714 169.142857-145.142857 0 0 433.714286-174.857143 0 0-433.714286-145.714286 0 0-169.142857 145.714286 0 0-124.571429q0-106.285714 59.428571-164.857143t158.285714-58.571429q84 0 130.285714 6.857143z" />
+                    </svg>
+                </a></span>
+            <span>
+                <a href="https://github.com/saturn-drm" target="_blank">
+                    <svg width="24" height="24" class="social github" fill="#34090f" viewBox="0 0 1024 1024"
+                        version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <path class="svgpath" data-index="path_0"
+                            d="M0 525.2c0 223.6 143.3 413.7 343 483.5 26.9 6.8 22.8-12.4 22.8-25.4l0-88.7c-155.3 18.2-161.5-84.6-172-101.7-21.1-36-70.8-45.2-56-62.3 35.4-18.2 71.4 4.6 113.1 66.3 30.2 44.7 89.1 37.2 119 29.7 6.5-26.9 20.5-50.9 39.7-69.6C248.8 728.2 181.7 630 181.7 513.2c0-56.6 18.7-108.7 55.3-150.7-23.3-69.3 2.2-128.5 5.6-137.3 66.5-6 135.5 47.6 140.9 51.8 37.8-10.2 80.9-15.6 129.1-15.6 48.5 0 91.8 5.6 129.8 15.9 12.9-9.8 77-55.8 138.8-50.2 3.3 8.8 28.2 66.7 6.3 135 37.1 42.1 56 94.6 56 151.4 0 117-67.5 215.3-228.8 243.7 26.9 26.6 43.6 63.4 43.6 104.2l0 128.8c0.9 10.3 0 20.5 17.2 20.5C878.1 942.4 1024 750.9 1024 525.3c0-282.9-229.3-512-512-512C229.1 13.2 0 242.3 0 525.2L0 525.2z" />
+                    </svg>
+                </a></span>
+            <span>
+                <a href="https://www.linkedin.com/in/zihan-mei-616b8b162/" target="_blank">
+                    <svg width="24" height="24" class="social linkedin" fill="#34090f" viewBox="0 0 1024 1024"
+                        version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M260.096 155.648c0 27.307008-9.899008 50.516992-29.696 69.632-19.796992 19.115008-45.396992 28.672-76.8 28.672-30.036992 0-54.612992-9.556992-73.728-28.672-19.115008-19.115008-28.672-42.324992-28.672-69.632 0-28.672 9.556992-52.224 28.672-70.656 19.115008-18.432 44.372992-27.648 75.776-27.648 31.403008 0 56.32 9.216 74.752 27.648 18.432 18.432 28.331008 41.984 29.696 70.656 0 0 0 0 0 0m-202.752 808.96c0 0 0-632.832 0-632.832 0 0 196.608 0 196.608 0 0 0 0 632.832 0 632.832 0 0-196.608 0-196.608 0 0 0 0 0 0 0m313.344-430.08c0-58.708992-1.364992-126.292992-4.096-202.752 0 0 169.984 0 169.984 0 0 0 10.24 88.064 10.24 88.064 0 0 4.096 0 4.096 0 40.96-68.267008 105.812992-102.4 194.56-102.4 68.267008 0 123.220992 22.868992 164.864 68.608 41.643008 45.739008 62.464 113.664 62.464 203.776 0 0 0 374.784 0 374.784 0 0-196.608 0-196.608 0 0 0 0-350.208 0-350.208 0-91.476992-33.451008-137.216-100.352-137.216-47.787008 0-81.236992 24.576-100.352 73.728-4.096 8.192-6.144 24.576-6.144 49.152 0 0 0 364.544 0 364.544 0 0-198.656 0-198.656 0 0 0 0-430.08 0-430.08 0 0 0 0 0 0" />
+                    </svg>
+                </a></span>
+            <span>
+                <a href="mailto:meizihanyx@gmail.com" target="_blank">
+                    <svg width="24" height="24" class="social mail" fill="#34090f" viewBox="0 0 1024 1024" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M512.091 166.946c116.242 0 232.484-0.014 348.727 0.007 41.522 0.008 76.321 12.188 94.842 53.167 8.25 18.251 6.5 30.831-13.43 43.256-137.452 85.695-274.125 172.655-410.534 260.014-14.762 9.456-24.638 9.569-39.498 0.041C354.353 435.041 216.033 347.399 77.465 260.14c-12.701-8.002-16.368-15.572-12.01-29.962 9.882-32.627 30.845-52.873 63.868-59.66 13.656-2.806 27.953-3.4 41.966-3.431C284.888 166.83 398.492 166.943 512.091 166.946z" />
+                        <path
+                            d="M510.888 856.021c-117.998 0-235.996 0.134-353.993-0.067-47.671-0.083-79.295-22.331-91.17-61.206-4.28-14.027-2.127-22.232 10.858-30.356 108.193-67.725 215.807-136.366 324.233-203.713 7.275-4.519 21.51-4.25 29.378-0.171 22.589 11.713 44.026 25.859 64.999 40.383 11.823 8.191 21.091 8.623 33.117 0.325 20.993-14.484 43.689-26.52 64.549-41.176 12.159-8.539 20.73-7.176 32.785 0.537 106.04 67.844 212.318 135.315 319.158 201.894 16.481 10.272 18.065 21.564 12.577 37.407-12.35 35.666-45.183 55.999-92.491 56.081C746.889 856.149 628.886 856.021 510.888 856.021z" />
+                        <path
+                            d="M64.376 326.925c97.051 61.769 192.332 122.409 290.508 184.898-97.877 62.309-192.719 122.68-290.508 184.932C64.376 572.674 64.376 451.511 64.376 326.925z" />
+                        <path
+                            d="M959.665 327.168c0 124.369 0 244.164 0 369.253-97.913-62.322-192.914-122.792-290.001-184.589C766.993 449.854 861.628 389.595 959.665 327.168z" />
+                    </svg>
+                </a></span>
+        </p>
+        <p>Bachelor of Architecture, Tsinghua University</p>
+        <p>Master of Architecture in Urban Design, Harvard Graduate School of Design</p>
+        <p>2019 - 2021 &#169; Zihan MEI's Personal Site.</p>
+    </div>
+</section>
+
+</body>
+
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    
+    <link rel="stylesheet" type="text/css" href="/assets/css/header-index2.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/footer.css" />
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/articlecontent-dev.css" />
+    <link rel="stylesheet" href="/assets/js/highlight/atom-one-light-edit.css">
+
+    <title>
+    Convert Markdown to HTML with Python 用Python从Markdown生成HTML网页
+</title>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="description" content="Welcome to My Personal Site!">
+<meta name="author" content="Zihan Zephaniah MEI">
+    <!-- fonts -->
+<link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,600&display=swap" rel="stylesheet">
+<script>
+    (function (d) {
+        var config = {
+            kitId: 'cmi7aqt',
+            scriptTimeout: 3000,
+            async: true
+        },
+            h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+    })(document);
+</script>
+<!-- end fonts -->
+    <!-- start favicons snippet, use https://realfavicongenerator.net/ -->
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#2c3e50">
+<link rel="shortcut icon" href="/favicon/favicon.ico">
+<meta name="apple-mobile-web-app-title" content="ZMei.moe">
+<meta name="application-name" content="ZMei.moe">
+<meta name="msapplication-TileColor" content="#fee3e1">
+<meta name="msapplication-config" content="/favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<!-- end favicons snippet -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-156998560-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-156998560-1');
+</script>
+    <!-- jQuery -->
+    <script src="/assets/js/jquery-3.6.0.min.js"></script>
+    
+    
+    <!-- anime-master -->
+    <script src="/assets/js/anime-master/lib/anime.min.js"></script>
+
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/d61407055c.js" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="/assets/js/headerres.js"></script>
+    <script type="text/javascript" src="/assets/js/headerhighlightdect.js"></script>
+    <script type="text/javascript" src="/assets/js/smoothscroll.js"></script>
+
+    <script type="text/javascript" src="/assets/js/toconscroll.js"></script>
+    <script type="text/javascript" src="/assets/js/headerhidescroll.js"></script>
+    <script type="text/javascript" src="/assets/js/progressbar.js"></script>
+    <script src="/assets/js/highlight/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body>
+    
+    <div class="topnav navori" id="navbar">
+    <a class="homenav" href="/index.html" onclick="closenav()"><img src="/assets/img/logo.svg" />
+        <p>Zihan MEI</p>
+    </a>
+    <div class="othernav">
+        <a class="resdown" id="architecturenav" href="/design.html" onclick="closenav()">Design</a>
+        <a class="resdown" id="codingnav" href="/blog.html" onclick="closenav()">Blog</a>
+        <a class="resdown" id="literaturenav" href="/tabs.html" onclick="closenav()">Tabs</a>
+    </div>
+    <a class="dropicon" onclick="narrownav()">
+        <i class="fa fa-bars"></i>
+    </a>
+</div>
+    <a id="backtotop" onclick="driveTo(0)">
+    <svg id="layer2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.85 35.95">
+        <defs>
+            <style>
+                .cls-1 {
+                    fill: none;
+                    stroke-miterlimit: 10;
+                }
+            </style>
+        </defs>
+        <title>backtotop</title>
+        <polyline class="cls-1" points="0.43 13.95 8.43 0.95 16.43 13.95" />
+        <line class="cls-1" x1="8.43" y1="25.95" x2="8.43" y2="0.95" />
+        <line class="cls-1" x1="0.43" y1="0.95" x2="16.43" y2="0.95" />
+    </svg>
+</a>
+
+<script class="backtotop">
+    var btn = $('#backtotop');
+
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 300) {
+            btn.addClass('show');
+        } else {
+            btn.removeClass('show');
+        }
+    });
+
+    btn.on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: 0 }, '300');
+    });
+</script>
+    
+    <progress id="content-progress" value="0"></progress>
+    <div id="offsetheader">
+        <img src="/assets/img/covers/codingcover.jpg"/>
+    </div>
+    <div id="toc"><div class="toc">
+<ul>
+<li><a href="#_1">目标</a></li>
+<li><a href="#_2">使用的模块</a></li>
+<li><a href="#_3">转换的源文件和目标文件</a><ul>
+<li><a href="#md">****.md</a></li>
+<li><a href="#layouthtml">layout.html</a></li>
+<li><a href="#contenthtml">content.html</a></li>
+</ul>
+</li>
+<li><a href="#_4">要点</a><ul>
+<li><a href="#_5">目录结构</a></li>
+<li><a href="#yaml">YAML</a></li>
+<li><a href="#tables-toc-code">tables, toc, code</a></li>
+<li><a href="#h">&lt;h&gt;</a></li>
+<li><a href="#table">table标题行</a></li>
+<li><a href="#_6">图片路径</a></li>
+<li><a href="#_7">插入模板</a></li>
+<li><a href="#_8">正文标题</a></li>
+</ul>
+</li>
+<li><a href="#_9">效果预览</a><ul>
+<li><a href="#htmlmarkdown">HTML与Markdown</a></li>
+<li><a href="#_10">网页效果</a></li>
+</ul>
+</li>
+<li><a href="#_11">下一步</a></li>
+</ul>
+</div>
+</div>
+    <div id="content">
+        <div id="post">
+            <h1 style="color:#fd746c;">Convert Markdown to HTML with Python 用Python从Markdown生成HTML网页</h1>
+            <blockquote>
+<p>Modify date: 2020-04-12</p>
+</blockquote>
+<p>我的网站文章是用markdown写的，我原始的构想是用markdown自动生成HTML页面并插入到模板HTML中，同时把文章标题、时间等信息自动加入到导航页中。但是由于没有使用jekyll之类的框架，在试图转换的时候发现这是一个后端到前端的问题，用简单的JavaScript不太好解决。查询之下，发现基本要使用PHP或者Node.js来实现。本着不到万不得已不消耗过多学习成本的原则，既然是后端的自动化，为什么不用Python来实现呢？</p>
+<h1 class="anchor" id="_1">目标</h1>
+<p>将markdown转化为HTML，并置入到相应的模板HTML文件中。在转换时处理YAML并且修改一些不兼容的细节。</p>
+<hr/>
+<h1 class="anchor" id="_2">使用的模块</h1>
+<ul>
+<li>转换相关：markdown, bs4, frontmatter</li>
+<li>其他：os, re</li>
+</ul>
+<hr/>
+<h1 class="anchor" id="_3">转换的源文件和目标文件</h1>
+<h2 class="anchor" id="md">****.md</h2>
+<p>源文件，识别YAML信息，转换成HTML并修改相应的细节；</p>
+<h2 class="anchor" id="layouthtml">layout.html</h2>
+<p>模板文件，将转换并修改后的HTML代码插入其中，并修改标题等信息；</p>
+<h2 class="anchor" id="contenthtml">content.html</h2>
+<p>目录页面，完成转换后将生成页面的基本信息组合成一个块级元素并插入目录顶端。</p>
+<hr/>
+<h1 class="anchor" id="_4">要点</h1>
+<h2 class="anchor" id="_5">目录结构</h2>
+<p>Markdown文件夹和生成的HTML文件夹拥有相同的目录结构，并且在转换前检查文件并自动跳过之前已转换的文件。</p>
+<h2 class="anchor" id="yaml">YAML</h2>
+<p>检查Markdown文档的YAML，并识别相应的要素名称以便在最后的HTML文件中使用。</p>
+<pre><code class="language-YAML">title: 其他摘录
+modify date: 2020-01-29
+tags: [Digest, Classical Chinese Literature]
+head image: /assets/img/covers/codingcover.jpg
+</code></pre>
+<h2 class="anchor" id="tables-toc-code">tables, toc, code</h2>
+<p>转换Markdown文件时应用tables, toc, code的转换，其中表格部分在后面修改细节，toc部分和正文部分分别插入模板文件的不同位置，code部分配合模板文件引用的highlight.js完成渲染。</p>
+<pre><code class="language-python">import markdown
+
+class convertMDPost():
+
+    def __init__(self, mdstr):
+        self.mdstr = mdstr
+
+    def convertALL(self, extensions=['toc', 'tables','fenced_code']):
+        MDMethod = markdown.Markdown(extensions=extensions)
+        self.bodyHTML = MDMethod.convert(self.mdstr)
+        self.bodyTOC = MDMethod.toc
+</code></pre>
+<h2 class="anchor" id="h">&lt;h&gt;</h2>
+<p>给每个层级的&lt;h&gt;标签加上class="anchor"。因为我的网页有固定标题栏的存在，所以在点击table of contents的各级标题的时候，网页滚动后标题停留的位置被固定标题栏挡住，为此，我的解决方法是对每个h.anchor的标签应用padding-top样式。</p>
+<pre><code class="language-python">self.headList = self.soup.findAll(re.compile('^h\d'))
+</code></pre>
+<h2 class="anchor" id="table">table标题行</h2>
+<p>修改tables标题行。因为在我的文章里出现没有标题行的表格，但是在大多数Markdown编辑器中，没有标题行的表格是不能正确渲染的。为了在编辑的时候更直观，我给没有标题行的表格增加了一个任意字段的标题行。根据需求在转换的时候选择标题行的去留。配合css给table增加empty-cells样式。</p>
+<h2 class="anchor" id="_6">图片路径</h2>
+<p>注意到Markdown文件和HTML文件中图片的相对路径可能不同。可以在Markdown编辑的时候直接使用HTML文件中的图片路径，但是存在编辑时无法预览的问题，因此选择在转换时修改img标签的相对路径。</p>
+<blockquote>
+<p>Path in Markdown</p>
+</blockquote>
+<pre><code class="language-markdown">![02-1L.jpg](../../assets/img/00architecture/03MAUD-EX02/02-1L.jpg)
+</code></pre>
+<blockquote>
+<p>Path in HTML</p>
+</blockquote>
+<pre><code class="language-html">&lt;p&gt;&lt;img alt="02-1L.jpg" src="../../assets/img/00architecture/03MAUD-EX02/02-1L.jpg"/&gt;&lt;/p&gt;
+</code></pre>
+<h2 class="anchor" id="_7">插入模板</h2>
+<p>将转换并修改后的HTML正文插入到模板HTML的post块级元素中，将转换得到的toc插入到模板HTML的toc块级元素中，修改模板HTML的标题和顶端背景图片。</p>
+<h2 class="anchor" id="_8">正文标题</h2>
+<p>为HTML正文添加一个标题。</p>
+<pre><code class="language-python">def insertTitleInArticle(self, titletxt):
+    titletag = self.soup.new_tag('h1', style="color: #fd746c;")
+    titletag.string = titletxt
+    addingTag = self.soup.find(id='post')
+    addingTag.insert(0, titletag)
+</code></pre>
+<hr/>
+<h1 class="anchor" id="_9">效果预览</h1>
+<h2 class="anchor" id="htmlmarkdown">HTML与Markdown</h2>
+<p><img alt="2020-04-12-1" src="/assets/img/01coding/2020-04-12-1.png"/></p>
+<h2 class="anchor" id="_10">网页效果</h2>
+<p><img alt="2020-04-12-2" src="/assets/img/01coding/2020-04-12-2.png"/></p>
+<hr/>
+<h1 class="anchor" id="_11">下一步</h1>
+<ul>
+<li>YAML信息抓取时的容错能力，例如"title"和"Title"，以及不存在的要素名称。</li>
+<li>根据YAML信息要素生成块级元素插入到目录页面中，其中的重点是摘要文字的生成。</li>
+</ul>
+<hr/>
+        </div>
+    </div>
+
+    <section id="footer">
+    <div class="footercontainer">
+        <p>
+            <span>
+                <a href="https://www.facebook.com/zmzihanmei" target="_blank">
+                    <svg width="24" height="24" class="social facebook" fill="#34090f" viewBox="0 0 1024 1024"
+                        version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M767.428571 6.857143l0 150.857143-89.714286 0q-49.142857 0-66.285714 20.571429t-17.142857 61.714286l0 108 167.428571 0-22.285714 169.142857-145.142857 0 0 433.714286-174.857143 0 0-433.714286-145.714286 0 0-169.142857 145.714286 0 0-124.571429q0-106.285714 59.428571-164.857143t158.285714-58.571429q84 0 130.285714 6.857143z" />
+                    </svg>
+                </a></span>
+            <span>
+                <a href="https://github.com/saturn-drm" target="_blank">
+                    <svg width="24" height="24" class="social github" fill="#34090f" viewBox="0 0 1024 1024"
+                        version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <path class="svgpath" data-index="path_0"
+                            d="M0 525.2c0 223.6 143.3 413.7 343 483.5 26.9 6.8 22.8-12.4 22.8-25.4l0-88.7c-155.3 18.2-161.5-84.6-172-101.7-21.1-36-70.8-45.2-56-62.3 35.4-18.2 71.4 4.6 113.1 66.3 30.2 44.7 89.1 37.2 119 29.7 6.5-26.9 20.5-50.9 39.7-69.6C248.8 728.2 181.7 630 181.7 513.2c0-56.6 18.7-108.7 55.3-150.7-23.3-69.3 2.2-128.5 5.6-137.3 66.5-6 135.5 47.6 140.9 51.8 37.8-10.2 80.9-15.6 129.1-15.6 48.5 0 91.8 5.6 129.8 15.9 12.9-9.8 77-55.8 138.8-50.2 3.3 8.8 28.2 66.7 6.3 135 37.1 42.1 56 94.6 56 151.4 0 117-67.5 215.3-228.8 243.7 26.9 26.6 43.6 63.4 43.6 104.2l0 128.8c0.9 10.3 0 20.5 17.2 20.5C878.1 942.4 1024 750.9 1024 525.3c0-282.9-229.3-512-512-512C229.1 13.2 0 242.3 0 525.2L0 525.2z" />
+                    </svg>
+                </a></span>
+            <span>
+                <a href="https://www.linkedin.com/in/zihan-mei-616b8b162/" target="_blank">
+                    <svg width="24" height="24" class="social linkedin" fill="#34090f" viewBox="0 0 1024 1024"
+                        version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M260.096 155.648c0 27.307008-9.899008 50.516992-29.696 69.632-19.796992 19.115008-45.396992 28.672-76.8 28.672-30.036992 0-54.612992-9.556992-73.728-28.672-19.115008-19.115008-28.672-42.324992-28.672-69.632 0-28.672 9.556992-52.224 28.672-70.656 19.115008-18.432 44.372992-27.648 75.776-27.648 31.403008 0 56.32 9.216 74.752 27.648 18.432 18.432 28.331008 41.984 29.696 70.656 0 0 0 0 0 0m-202.752 808.96c0 0 0-632.832 0-632.832 0 0 196.608 0 196.608 0 0 0 0 632.832 0 632.832 0 0-196.608 0-196.608 0 0 0 0 0 0 0m313.344-430.08c0-58.708992-1.364992-126.292992-4.096-202.752 0 0 169.984 0 169.984 0 0 0 10.24 88.064 10.24 88.064 0 0 4.096 0 4.096 0 40.96-68.267008 105.812992-102.4 194.56-102.4 68.267008 0 123.220992 22.868992 164.864 68.608 41.643008 45.739008 62.464 113.664 62.464 203.776 0 0 0 374.784 0 374.784 0 0-196.608 0-196.608 0 0 0 0-350.208 0-350.208 0-91.476992-33.451008-137.216-100.352-137.216-47.787008 0-81.236992 24.576-100.352 73.728-4.096 8.192-6.144 24.576-6.144 49.152 0 0 0 364.544 0 364.544 0 0-198.656 0-198.656 0 0 0 0-430.08 0-430.08 0 0 0 0 0 0" />
+                    </svg>
+                </a></span>
+            <span>
+                <a href="mailto:meizihanyx@gmail.com" target="_blank">
+                    <svg width="24" height="24" class="social mail" fill="#34090f" viewBox="0 0 1024 1024" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M512.091 166.946c116.242 0 232.484-0.014 348.727 0.007 41.522 0.008 76.321 12.188 94.842 53.167 8.25 18.251 6.5 30.831-13.43 43.256-137.452 85.695-274.125 172.655-410.534 260.014-14.762 9.456-24.638 9.569-39.498 0.041C354.353 435.041 216.033 347.399 77.465 260.14c-12.701-8.002-16.368-15.572-12.01-29.962 9.882-32.627 30.845-52.873 63.868-59.66 13.656-2.806 27.953-3.4 41.966-3.431C284.888 166.83 398.492 166.943 512.091 166.946z" />
+                        <path
+                            d="M510.888 856.021c-117.998 0-235.996 0.134-353.993-0.067-47.671-0.083-79.295-22.331-91.17-61.206-4.28-14.027-2.127-22.232 10.858-30.356 108.193-67.725 215.807-136.366 324.233-203.713 7.275-4.519 21.51-4.25 29.378-0.171 22.589 11.713 44.026 25.859 64.999 40.383 11.823 8.191 21.091 8.623 33.117 0.325 20.993-14.484 43.689-26.52 64.549-41.176 12.159-8.539 20.73-7.176 32.785 0.537 106.04 67.844 212.318 135.315 319.158 201.894 16.481 10.272 18.065 21.564 12.577 37.407-12.35 35.666-45.183 55.999-92.491 56.081C746.889 856.149 628.886 856.021 510.888 856.021z" />
+                        <path
+                            d="M64.376 326.925c97.051 61.769 192.332 122.409 290.508 184.898-97.877 62.309-192.719 122.68-290.508 184.932C64.376 572.674 64.376 451.511 64.376 326.925z" />
+                        <path
+                            d="M959.665 327.168c0 124.369 0 244.164 0 369.253-97.913-62.322-192.914-122.792-290.001-184.589C766.993 449.854 861.628 389.595 959.665 327.168z" />
+                    </svg>
+                </a></span>
+        </p>
+        <p>Bachelor of Architecture, Tsinghua University</p>
+        <p>Master of Architecture in Urban Design, Harvard Graduate School of Design</p>
+        <p>2019 - 2021 &#169; Zihan MEI's Personal Site.</p>
+    </div>
+</section>
+
+</body>
+
+</html>

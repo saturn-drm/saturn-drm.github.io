@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    
+    <link rel="stylesheet" type="text/css" href="/assets/css/header-index2.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/footer.css" />
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/articlecontent-dev.css" />
+    <link rel="stylesheet" href="/assets/js/highlight/atom-one-light-edit.css">
+
+    <title>
+    Ubuntu + VS Code Server + Nginx 二级域名反向代理打造全平台个人云端代码编辑器
+</title>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="description" content="Welcome to My Personal Site!">
+<meta name="author" content="Zihan Zephaniah MEI">
+    <!-- fonts -->
+<link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,600&display=swap" rel="stylesheet">
+<script>
+    (function (d) {
+        var config = {
+            kitId: 'cmi7aqt',
+            scriptTimeout: 3000,
+            async: true
+        },
+            h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+    })(document);
+</script>
+<!-- end fonts -->
+    <!-- start favicons snippet, use https://realfavicongenerator.net/ -->
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#2c3e50">
+<link rel="shortcut icon" href="/favicon/favicon.ico">
+<meta name="apple-mobile-web-app-title" content="ZMei.moe">
+<meta name="application-name" content="ZMei.moe">
+<meta name="msapplication-TileColor" content="#fee3e1">
+<meta name="msapplication-config" content="/favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<!-- end favicons snippet -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-156998560-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-156998560-1');
+</script>
+    <!-- jQuery -->
+    <script src="/assets/js/jquery-3.6.0.min.js"></script>
+    
+    
+    <!-- anime-master -->
+    <script src="/assets/js/anime-master/lib/anime.min.js"></script>
+
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/d61407055c.js" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="/assets/js/headerres.js"></script>
+    <script type="text/javascript" src="/assets/js/headerhighlightdect.js"></script>
+    <script type="text/javascript" src="/assets/js/smoothscroll.js"></script>
+
+    <script type="text/javascript" src="/assets/js/toconscroll.js"></script>
+    <script type="text/javascript" src="/assets/js/headerhidescroll.js"></script>
+    <script type="text/javascript" src="/assets/js/progressbar.js"></script>
+    <script src="/assets/js/highlight/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body>
+    
+    <div class="topnav navori" id="navbar">
+    <a class="homenav" href="/index.html" onclick="closenav()"><img src="/assets/img/logo.svg" />
+        <p>Zihan MEI</p>
+    </a>
+    <div class="othernav">
+        <a class="resdown" id="architecturenav" href="/design.html" onclick="closenav()">Design</a>
+        <a class="resdown" id="codingnav" href="/blog.html" onclick="closenav()">Blog</a>
+        <a class="resdown" id="literaturenav" href="/tabs.html" onclick="closenav()">Tabs</a>
+    </div>
+    <a class="dropicon" onclick="narrownav()">
+        <i class="fa fa-bars"></i>
+    </a>
+</div>
+    <a id="backtotop" onclick="driveTo(0)">
+    <svg id="layer2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.85 35.95">
+        <defs>
+            <style>
+                .cls-1 {
+                    fill: none;
+                    stroke-miterlimit: 10;
+                }
+            </style>
+        </defs>
+        <title>backtotop</title>
+        <polyline class="cls-1" points="0.43 13.95 8.43 0.95 16.43 13.95" />
+        <line class="cls-1" x1="8.43" y1="25.95" x2="8.43" y2="0.95" />
+        <line class="cls-1" x1="0.43" y1="0.95" x2="16.43" y2="0.95" />
+    </svg>
+</a>
+
+<script class="backtotop">
+    var btn = $('#backtotop');
+
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 300) {
+            btn.addClass('show');
+        } else {
+            btn.removeClass('show');
+        }
+    });
+
+    btn.on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: 0 }, '300');
+    });
+</script>
+    
+    <progress id="content-progress" value="0"></progress>
+    <div id="offsetheader">
+        <img src="/assets/img/covers/codingcover.jpg"/>
+    </div>
+    <div id="toc"><div class="toc">
+<ul>
+<li><a href="#_1">问题提出</a></li>
+<li><a href="#_2">操作步骤</a></li>
+<li><a href="#code-server">下载安装 code-server</a></li>
+<li><a href="#_3">试运行并修改配置</a><ul>
+<li><a href="#ip">IP + 端口直接访问</a></li>
+</ul>
+</li>
+<li><a href="#nginx">借助 Nginx 设置反向代理和二级域名</a><ul>
+<li><a href="#code-server_1">更改 code-server 配置</a></li>
+<li><a href="#_4">二级域名指向</a></li>
+<li><a href="#nginx_1">配置 Nginx 反向代理</a></li>
+</ul>
+</li>
+<li><a href="#_5">域名加密</a></li>
+<li><a href="#_6">注意事项和下一步</a></li>
+</ul>
+</div>
+</div>
+    <div id="content">
+        <div id="post">
+            <h1 style="color:#fd746c;">Ubuntu + VS Code Server + Nginx 二级域名反向代理打造全平台个人云端代码编辑器</h1>
+            <blockquote>
+<p>Modify Date: 2021-07-22</p>
+</blockquote>
+<h1 class="anchor" id="_1">问题提出</h1>
+<p>近日某好友在使用 python 实时获取美股信息的时候遇到网络无法连接和上班摸鱼不容易的问题，导致损失惨重。遂想起我有一海外服务器，必然无障碍，提出了让服务器定期跑脚本的设想。在简单研究之后，我提出一点改进意见，抛弃 ssh，直接用 <a href="https://github.com/cdr/code-server">code-server</a> 在网页端搭建一个图形界面的 VS Code，供他在公司电脑上直接实时运行和编辑。</p>
+<hr/>
+<h1 class="anchor" id="_2">操作步骤</h1>
+<p>以下操作均在 <strong>Ubuntu 20.04</strong> Command Line 中进行。</p>
+<ol>
+<li>下载安装 code-server</li>
+<li>试运行并修改配置</li>
+<li>借助 Nginx 设置反向代理和二级域名</li>
+<li>域名加密</li>
+</ol>
+<p><img alt="result" src="/assets/img/01coding/2021-07-22-0cover.png"/></p>
+<hr/>
+<h1 class="anchor" id="code-server">下载安装 code-server</h1>
+<p><a href="https://github.com/cdr/code-server">code-server</a> 在 GitHub 上已经发布到 3.11.0。在右侧点击 <a href="https://github.com/cdr/code-server/releases">Releases</a> 找到对应自己系统的版本并拷贝链接地址。</p>
+<p><img alt="allreleases" src="/assets/img/01coding/2021-07-22-1allreleases.png"/></p>
+<p>在服务器根目录下执行代码</p>
+<pre><code class="language-sh"># 下载相应的文件，链接地址选择符合自己系统要求的版本
+wget https://github.com/cdr/code-server/releases/download/v3.11.0/code-server-3.11.0-linux-amd64.tar.gz
+# 解压缩，xxx代表下载下来的文件名称
+tar -xzvf [xxx]
+# 查看一下解压出来的内容，xxx代表解压出来的文件夹名称
+cd [xxx]
+ls
+</code></pre>
+<p><img alt="allfiles" src="/assets/img/01coding/2021-07-22-2allfiles.png"/></p>
+<hr/>
+<h1 class="anchor" id="_3">试运行并修改配置</h1>
+<p>注意到 <code>code-server</code> 即可执行文件，尝试执行</p>
+<pre><code class="language-sh">./code-server
+# Ctrl + C 停止程序
+</code></pre>
+<p><img alt="testrunning" src="/assets/img/01coding/2021-07-22-3testrunning.png"/></p>
+<p>可以看到，程序在监听 http://127.0.0.1:8080 也即本地的8080端口，并且密码等设置存储在 <code>~/.config/code-server/config.yaml</code> 文件内。</p>
+<h2 class="anchor" id="ip">IP + 端口直接访问</h2>
+<p>此时有一种最直接的操作，改变程序监听地址（0.0.0.0代表任何 IP）</p>
+<pre><code class="language-sh"># 使用 --host0.0.0.0 把程序暴露在外网
+./code-server --host 0.0.0.0
+</code></pre>
+<p>此时到浏览器地址栏中输入服务器 IP:8080，可以看到这个界面</p>
+<p><img alt="web1" src="/assets/img/01coding/2021-07-22-4web1.png"/></p>
+<p>到 <code>~/.config/code-server/config.yaml</code> 找到密码，即可登录 code-server 服务器。</p>
+<hr/>
+<h1 class="anchor" id="nginx">借助 Nginx 设置反向代理和二级域名</h1>
+<p>输入 IP + 端口的方式很不优雅，希望能改成直接用域名访问，就像正常网站一样。</p>
+<p>由于服务器内有 Nginx 还有绑定域名，考虑给这个服务分配一个二级域名并且用 Nginx 实现端口反代，就能达成这个要求。</p>
+<h2 class="anchor" id="code-server_1">更改 code-server 配置</h2>
+<pre><code class="language-sh">nano ~/.config/code-server/config.yaml
+</code></pre>
+<pre><code class="language-yaml">bind-addr: 127.0.0.1:8080
+auth: password
+password: [xxx] # xxx为可自定义的密码
+cert: false
+</code></pre>
+<p>为了避免后面每次运行都输入 <code>--host</code> 之类的，在配置中可以直接调好。</p>
+<h2 class="anchor" id="_4">二级域名指向</h2>
+<p>在域名提供商的后台添加 A Record 记录</p>
+<p><img alt="host" src="/assets/img/01coding/2021-07-22-5host.png"/></p>
+<h2 class="anchor" id="nginx_1">配置 Nginx 反向代理</h2>
+<ul>
+<li>新建一个配置文件</li>
+</ul>
+<pre><code class="language-sh">nano /etc/nginx/sites-available/code-server.conf
+</code></pre>
+<ul>
+<li>输入配置</li>
+</ul>
+<pre><code class="language-nginx">server {
+    listen 80;
+    listen [::]:80;
+
+    server_name [xxx]; # xxx为自己的二级域名
+
+    location / {
+            # 这一句实现端口反向代理
+        proxy_pass http://localhost:8080/; # 更改为自己配置中开放的端口
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection upgrade;
+        proxy_set_header Accept-Encoding gzip;
+    }
+}
+</code></pre>
+<p>Ctrl + O Write out, Ctrl + X Close.</p>
+<ul>
+<li>把配置文件添加到 sites-enabled 文件夹中</li>
+</ul>
+<pre><code class="language-sh">ln -s /etc/nginx/sites-available/code-server.conf /etc/nginx/sites-enabled/code-server.conf
+</code></pre>
+<ul>
+<li>检查并重启 Nginx 服务</li>
+</ul>
+<pre><code class="language-sh">nginx -t
+nginx -s reload
+</code></pre>
+<hr/>
+<h1 class="anchor" id="_5">域名加密</h1>
+<p>域名的加密我用的是 <a href="https://certbot.eff.org/">certbot</a>。根据系统和软件选择相应的组合，傻瓜式一键配置。因为我之前已经配置过其他域名，所以直接执行</p>
+<pre><code class="language-sh">certbot --nginx
+</code></pre>
+<p>此时启动程序</p>
+<pre><code class="language-sh">./code-server # 需要更改为实际的文件路径
+</code></pre>
+<p>在浏览器直接输入前面绑定的二级域名，就可以看到网站已经加密，并且显示密码登录的界面，输入密码，就可以直接进入熟悉的 VS Code 界面，开始编辑。</p>
+<p><img alt="final" src="/assets/img/01coding/2021-07-22-6final.gif"/></p>
+<hr/>
+<h1 class="anchor" id="_6">注意事项和下一步</h1>
+<ol>
+<li>这玩意儿挺吃内存的，1G 的内存从 19% 的占用直接到 50+%。</li>
+<li>要配置二级域名的反向代理，前提是顶级域名也指向这台服务器。我之前顶级域名一直指向 GitHub Pages，这次为了配置 code-server，把顶级域名也转移过来了。</li>
+<li>下一步可能考虑把 code-server 绑定到系统进程里，这样可以实现开机自动启动，和手动关闭（现在一旦 ssh 失去连接，很难关闭）。</li>
+</ol>
+<hr/>
+        </div>
+    </div>
+
+    <section id="footer">
+    <div class="footercontainer">
+        <p>
+            <span>
+                <a href="https://www.facebook.com/zmzihanmei" target="_blank">
+                    <svg width="24" height="24" class="social facebook" fill="#34090f" viewBox="0 0 1024 1024"
+                        version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M767.428571 6.857143l0 150.857143-89.714286 0q-49.142857 0-66.285714 20.571429t-17.142857 61.714286l0 108 167.428571 0-22.285714 169.142857-145.142857 0 0 433.714286-174.857143 0 0-433.714286-145.714286 0 0-169.142857 145.714286 0 0-124.571429q0-106.285714 59.428571-164.857143t158.285714-58.571429q84 0 130.285714 6.857143z" />
+                    </svg>
+                </a></span>
+            <span>
+                <a href="https://github.com/saturn-drm" target="_blank">
+                    <svg width="24" height="24" class="social github" fill="#34090f" viewBox="0 0 1024 1024"
+                        version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <path class="svgpath" data-index="path_0"
+                            d="M0 525.2c0 223.6 143.3 413.7 343 483.5 26.9 6.8 22.8-12.4 22.8-25.4l0-88.7c-155.3 18.2-161.5-84.6-172-101.7-21.1-36-70.8-45.2-56-62.3 35.4-18.2 71.4 4.6 113.1 66.3 30.2 44.7 89.1 37.2 119 29.7 6.5-26.9 20.5-50.9 39.7-69.6C248.8 728.2 181.7 630 181.7 513.2c0-56.6 18.7-108.7 55.3-150.7-23.3-69.3 2.2-128.5 5.6-137.3 66.5-6 135.5 47.6 140.9 51.8 37.8-10.2 80.9-15.6 129.1-15.6 48.5 0 91.8 5.6 129.8 15.9 12.9-9.8 77-55.8 138.8-50.2 3.3 8.8 28.2 66.7 6.3 135 37.1 42.1 56 94.6 56 151.4 0 117-67.5 215.3-228.8 243.7 26.9 26.6 43.6 63.4 43.6 104.2l0 128.8c0.9 10.3 0 20.5 17.2 20.5C878.1 942.4 1024 750.9 1024 525.3c0-282.9-229.3-512-512-512C229.1 13.2 0 242.3 0 525.2L0 525.2z" />
+                    </svg>
+                </a></span>
+            <span>
+                <a href="https://www.linkedin.com/in/zihan-mei-616b8b162/" target="_blank">
+                    <svg width="24" height="24" class="social linkedin" fill="#34090f" viewBox="0 0 1024 1024"
+                        version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M260.096 155.648c0 27.307008-9.899008 50.516992-29.696 69.632-19.796992 19.115008-45.396992 28.672-76.8 28.672-30.036992 0-54.612992-9.556992-73.728-28.672-19.115008-19.115008-28.672-42.324992-28.672-69.632 0-28.672 9.556992-52.224 28.672-70.656 19.115008-18.432 44.372992-27.648 75.776-27.648 31.403008 0 56.32 9.216 74.752 27.648 18.432 18.432 28.331008 41.984 29.696 70.656 0 0 0 0 0 0m-202.752 808.96c0 0 0-632.832 0-632.832 0 0 196.608 0 196.608 0 0 0 0 632.832 0 632.832 0 0-196.608 0-196.608 0 0 0 0 0 0 0m313.344-430.08c0-58.708992-1.364992-126.292992-4.096-202.752 0 0 169.984 0 169.984 0 0 0 10.24 88.064 10.24 88.064 0 0 4.096 0 4.096 0 40.96-68.267008 105.812992-102.4 194.56-102.4 68.267008 0 123.220992 22.868992 164.864 68.608 41.643008 45.739008 62.464 113.664 62.464 203.776 0 0 0 374.784 0 374.784 0 0-196.608 0-196.608 0 0 0 0-350.208 0-350.208 0-91.476992-33.451008-137.216-100.352-137.216-47.787008 0-81.236992 24.576-100.352 73.728-4.096 8.192-6.144 24.576-6.144 49.152 0 0 0 364.544 0 364.544 0 0-198.656 0-198.656 0 0 0 0-430.08 0-430.08 0 0 0 0 0 0" />
+                    </svg>
+                </a></span>
+            <span>
+                <a href="mailto:meizihanyx@gmail.com" target="_blank">
+                    <svg width="24" height="24" class="social mail" fill="#34090f" viewBox="0 0 1024 1024" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M512.091 166.946c116.242 0 232.484-0.014 348.727 0.007 41.522 0.008 76.321 12.188 94.842 53.167 8.25 18.251 6.5 30.831-13.43 43.256-137.452 85.695-274.125 172.655-410.534 260.014-14.762 9.456-24.638 9.569-39.498 0.041C354.353 435.041 216.033 347.399 77.465 260.14c-12.701-8.002-16.368-15.572-12.01-29.962 9.882-32.627 30.845-52.873 63.868-59.66 13.656-2.806 27.953-3.4 41.966-3.431C284.888 166.83 398.492 166.943 512.091 166.946z" />
+                        <path
+                            d="M510.888 856.021c-117.998 0-235.996 0.134-353.993-0.067-47.671-0.083-79.295-22.331-91.17-61.206-4.28-14.027-2.127-22.232 10.858-30.356 108.193-67.725 215.807-136.366 324.233-203.713 7.275-4.519 21.51-4.25 29.378-0.171 22.589 11.713 44.026 25.859 64.999 40.383 11.823 8.191 21.091 8.623 33.117 0.325 20.993-14.484 43.689-26.52 64.549-41.176 12.159-8.539 20.73-7.176 32.785 0.537 106.04 67.844 212.318 135.315 319.158 201.894 16.481 10.272 18.065 21.564 12.577 37.407-12.35 35.666-45.183 55.999-92.491 56.081C746.889 856.149 628.886 856.021 510.888 856.021z" />
+                        <path
+                            d="M64.376 326.925c97.051 61.769 192.332 122.409 290.508 184.898-97.877 62.309-192.719 122.68-290.508 184.932C64.376 572.674 64.376 451.511 64.376 326.925z" />
+                        <path
+                            d="M959.665 327.168c0 124.369 0 244.164 0 369.253-97.913-62.322-192.914-122.792-290.001-184.589C766.993 449.854 861.628 389.595 959.665 327.168z" />
+                    </svg>
+                </a></span>
+        </p>
+        <p>Bachelor of Architecture, Tsinghua University</p>
+        <p>Master of Architecture in Urban Design, Harvard Graduate School of Design</p>
+        <p>2019 - 2021 &#169; Zihan MEI's Personal Site.</p>
+    </div>
+</section>
+
+</body>
+
+</html>

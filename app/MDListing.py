@@ -15,7 +15,7 @@ class MDPath():
         Dictionary of the original path with destination path.
     """
 
-    def __init__(self, orip, desp):
+    def __init__(self, orip):
         """
         Input:
             orip, str, Original path to the folder for all MD posts
@@ -23,7 +23,6 @@ class MDPath():
         Set the values for the path
         """
         self.orip = orip
-        self.desp = desp
     
     def getFiles(self):
         """
@@ -60,6 +59,6 @@ class MDPath():
 if __name__ == '__main__':
     orip = 'posts'
     desp = 'articles'
-    MDPathInstance = MDPath(orip, desp)
+    MDPathInstance = MDPath(orip)
     MDPathInstance.getFiles()
     print(MDPath.convertPath(MDPathInstance.mdlist[0], desp))
