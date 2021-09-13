@@ -42,7 +42,7 @@ for post in MDPathInstance.mdlist:
 pass to articles:
     a dictionary for a post;
     a list of dictionaries for all the posts in the same folder;
-    a dictionary with 2 keys, section name and list of post dictionaries
+    a dictionary with 3 keys, section name, cards (boolean) and list of post dictionaries
     a list of those dictionaries
 """
 
