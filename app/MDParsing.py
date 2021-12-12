@@ -75,6 +75,10 @@ class MDPost():
         tableHeadList = self.soup.findAll("th")
         for tableHead in tableHeadList:
             tableHead.string = ''
+    
+    def setYAMLDictAttr(self, key: str, val: str) -> None:
+        """set attribute manually"""
+        self.YAMLDict[key] = val
 
 if __name__ == '__main__':
     fp = 'posts/00projects/2020-01-16-theater-design-wudaokou.md'
@@ -85,3 +89,4 @@ if __name__ == '__main__':
     MDPostInstance.modifyIMGPath()
     MDPostInstance.modifyTableHead()
     print(MDPostInstance.YAMLDict)
+    print(MDPostInstance.__dict__.keys())

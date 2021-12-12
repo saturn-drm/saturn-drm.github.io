@@ -1,8 +1,12 @@
-{% extends "cover.html" %}
+{% extends 'cover.html' %}
 
 {% block style %}
     {{ super() }}
-    <link rel="stylesheet" type="text/css" href="/assets/css/articles.css" />
+    {% if sections[0]['cards'] %}
+        <link rel="stylesheet" type="text/css" href="/assets/css/articles-cards.css" />
+    {% else %}
+        <link rel="stylesheet" type="text/css" href="/assets/css/articles-lists.css" />
+    {% endif %}
 {% endblock style %}
 
 {% block title %}
@@ -11,23 +15,21 @@
 
 {% block scripts %}
     {{ super() }}
-    <script type="text/javascript" src="/assets/js/card.js"></script>
+    {% if sections[0]['cards'] %}
+        <script type="text/javascript" src="/assets/js/card.js"></script>
+    {% endif %}
 {% endblock scripts %}
 
 {% block content %}
-    <div id="offsetheader">
-        <img src="{{ headerimg }}"/>
-    </div>
+    <div id="offsetheader" style="background-image: url({{ headerimg }});"></div>
     <div id="content">
         {% for section in sections %}
             {% if section['cards'] %}
                 <div class="row">
                     <h1 class="sectionhead">{{ section['sectionname'] }}</h1>
                     {% for post in section['posts'] %}
-                        <a class="column" href="{{ post['html'] }}">
-                            <div class="coverimg">
-                                <img src="{{ post['head image'] }}"/>
-                            </div>
+                        <a class="column" href="{{ post['url'] }}">
+                            <div class="coverimg" style="background-image: url({{ post['head image'] }});"></div>
                             <div class="words">
                                 <div class="projtitle">
                                     <h1>{{ post['title'] }}</h1>
@@ -48,14 +50,14 @@
                     <h1 class="sectiontitle">{{ section['sectionname'] }}</h1>
                     {% for post in section['posts'] %}
                         <div class="article">
-                            <a href="{{ post['html'] }}" class="titlehref">
+                            <a href="{{ post['url'] }}" class="titlehref">
                                 <h1>{{ post['title'] }}</h1>
                             </a>
                             <h2>Updated On: {{ post['modify date'] }}</h2>
                             <p>{{ post['abstract'] }}<br>
                                 <img src="{{ post['head image'] }}" alt="{{ post['title'] }}"><br>
                             </p>
-                            <a href="{{ post['html'] }}" class="readmore"></a>
+                            <a href="{{ post['url'] }}" class="readmore"></a>
                             <hr>
                         </div>
                     {% endfor %}
