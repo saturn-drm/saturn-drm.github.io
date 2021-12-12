@@ -1,8 +1,10 @@
 ---
 title: 旅行的意义 Travel is Meaningful
-modify date: 2020-01-12
+modify date: 2020-01-09
 tags: [Guitar]
 head image: /assets/img/covers/literaturecover.jpg
+cover image: /assets/img/02literature/00guitar/2017-08-20旅行的意义/travelismeaningfulcover.jpg
+abstract: "Orig. 陳綺貞 Cheer Chen<br>Played by: Zihan Mei<br>Guitar: Yamaha FG830<br>Pickup: Samsung Note 3 Recorder<br>Date recorded: 2017-08-20"
 ---
 
 ![TravelIsMeaningfulCover](../../assets/img/02literature/00guitar/2017-08-20旅行的意义/travelismeaningfulcover.jpg)

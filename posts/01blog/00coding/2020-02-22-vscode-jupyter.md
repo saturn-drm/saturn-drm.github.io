@@ -3,6 +3,8 @@ title: Enable Jupyter in VSCode
 modify date: 2020-02-22
 tags: [Python]
 head image: /assets/img/covers/codingcover.jpg
+cover image: /assets/img/01coding/jupyter-1.png
+abstract: <strong>Usage</strong><br>Start Jupyter in VSCode<br>Add <code>#%%</code> to the first line of py file. The Run Cell, Run Below, and Debug Cell function will be added to VSCode.
 ---
 
 > Modify date: 2020-02-22

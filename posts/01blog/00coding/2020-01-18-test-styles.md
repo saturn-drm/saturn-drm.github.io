@@ -1,11 +1,12 @@
 ---
-title: Test Style
-modify date: 2020-02-04
+title: Some Demo on CSS Style
+modify date: 2020-01-28
 tags: [Website]
 head image: /assets/img/covers/codingcover.jpg
+cover image: /assets/img/01coding/anime08-property-parameters.gif
 ---
 
-> Modify date: 2020-02-04
+> Modify date: 2020-01-28
 
 # Pure CSS Styles
 

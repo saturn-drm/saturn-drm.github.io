@@ -3,6 +3,7 @@ title: Notes in Python GIS
 modify date: 2020-02-29
 tags: [Python, GIS]
 head image: /assets/img/covers/codingcover.jpg
+abstract: <strong>Python Module:</strong><br>Shapely<br>Geopandas / pandas<br>OSMnx<br>
 ---
 
 > Modify date: 2020-02-29

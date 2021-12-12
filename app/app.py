@@ -71,7 +71,7 @@ architcture['posts'].insert(2, {'title': 'Equity in the Access to Medical Resour
                                 'url': '/equity-during-covid/',
                                 'tags': ['Big Data', 'Visualization', 'New York City', 'D3', 'Python'],
                                 'cover image': '/assets/img/00architecture/10-mitbiddata/00covercover.jpg',
-                                'abstract': """The project is aimed at telling a story to the public on what’s happening in the communities’ access to medical resources during the past period, and revealing some possible blind spots
+                                'abstract': """The project is aimed at telling a story to the public on what's happening in the communities’ access to medical resources during the past period, and revealing some possible blind spots
                                             based on the social and economic context of NYC.<br>The project starts with some background
                                             reports on case and death rate by race during COVID-19. It dealt with data on informational
                                             and physical accessibility by ZCTA codes and visualized the data in the scale of the city.
@@ -82,8 +82,6 @@ architcture['posts'].insert(2, {'title': 'Equity in the Access to Medical Resour
                                             interaction."""})
 
 
-# TODO: integrate 2 layouts in articles.html, with different class name and id name
-# TODO: integrate js and css
 # TODO: audit tag info for each card, make them clickable
 
 # render design page
@@ -99,3 +97,10 @@ with open('blog-dev.html', 'w') as f:
     f.write(template.render(sections=[code, digest],
                             titlename='Blog',
                             headerimg='/assets/img/covers/codingcover.jpg'))
+
+# render tabs page
+template = env.get_template('articles.html')
+with open('tabs-dev.html', 'w') as f:
+    f.write(template.render(sections=[tabs],
+                            titlename='Tabs',
+                            headerimg='/assets/img/covers/literaturecover.jpg'))

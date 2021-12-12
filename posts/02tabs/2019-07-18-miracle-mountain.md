@@ -1,8 +1,10 @@
 ---
 title: 奇跡の山 Miracle Mountain
-modify date: 2020-01-12
+modify date: 2020-01-14
 tags: [Guitar, Masaaki Kishibe]
 head image: /assets/img/covers/literaturecover.jpg
+cover image: /assets/img/02literature/00guitar/2019-07-18奇跡の山/heirinjidcover.jpg
+abstract: "Orig. 岸部眞明 (Masaaki Kishibe)<br>Played by: Zihan Mei<br>Guitar: Yamaha FG830<br>Pickup: Meizu 16th Recorder<br>Date recorded: 2019-07-18"
 ---
 
 ![MiracleMountainNewCover](../../assets/img/02literature/00guitar/2019-07-18%E5%A5%87%E8%B7%A1%E3%81%AE%E5%B1%B1/heirinjidcover.jpg)

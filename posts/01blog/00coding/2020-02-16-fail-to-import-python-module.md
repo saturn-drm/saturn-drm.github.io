@@ -3,6 +3,7 @@ title: Failed to Import Module Installed through PIP
 modify date: 2020-02-16
 tags: [Python]
 head image: /assets/img/covers/codingcover.jpg
+abstract: I installed pandas and IPython with the command<br><code>sudo pip3 install pandas / IPython</code><br>The modules are in the list with the command<br><code>pip3 list</code>
 ---
 
 > Modify date: 2020-02-16

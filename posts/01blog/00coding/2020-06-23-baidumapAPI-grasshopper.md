@@ -3,6 +3,8 @@ title: Python请求百度地图API爬取城市建筑属性并用Grasshopper进�
 modify date: 2020-06-23
 tags: [Python, Rhino, GIS]
 head image: /assets/img/covers/codingcover.jpg
+cover image: /assets/img/01coding/2020-06-23-ghoutput.jpg
+abstract: 使用 Python 请求百度地图 API 接口，获取某城市范围内所有某属性建筑的位置等信息，保存为本地 csv 文件并用 Grasshopper 处理生成 Rhino 模型。
 ---
 
 > Modify Date: 2020-06-23

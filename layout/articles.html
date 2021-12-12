@@ -51,8 +51,11 @@
                                 <h1>{{ post['title'] }}</h1>
                             </a>
                             <h2>Updated On: {{ post['modify date'] }}</h2>
-                            <p>{{ post['abstract'] }}<br>
-                                <img src="{{ post['head image'] }}" alt="{{ post['title'] }}"><br>
+                            <p>{{ post['abstract'] }}</p>
+                            <p>
+                                {% if post['cover image'] %}
+                                    <img src="{{ post['cover image'] }}" alt="{{ post['title'] }}">
+                                {% endif %}
                             </p>
                             <a href="{{ post['url'] }}" class="readmore">Read More</a>
                             <hr>

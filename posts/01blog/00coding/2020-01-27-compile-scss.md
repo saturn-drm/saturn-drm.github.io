@@ -3,6 +3,7 @@ title: Compile scss/sass File to css
 modify date: 2020-01-31
 tags: [Website]
 head image: /assets/img/covers/codingcover.jpg
+cover image: /assets/img/01coding/200131.png
 ---
 
 > Modify date: 2020-01-31

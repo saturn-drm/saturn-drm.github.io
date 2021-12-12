@@ -3,6 +3,7 @@ title: Scroll Smooth in Safari
 modify date: 2020-03-17
 tags: [Website]
 head image: /assets/img/covers/codingcover.jpg
+abstract: "<strong>Question</strong><br>When editing my website, I wanted to scroll smoothly between sections, and when scrolling to top.<br><strong>Solution 1</strong><br>Basically, I found the simply way to achieve this with CSS properties:<br>&emsp;scroll-behavior: smooth;<br>However, I noticed that Safari didn’t support the CSS property “scroll-behavior”. So I need a special way to achieve this.<br><br><strong>Solution 2</strong><br>I found the jQuery script to achieve such design."
 ---
 
 > Modify date: 2020-03-17

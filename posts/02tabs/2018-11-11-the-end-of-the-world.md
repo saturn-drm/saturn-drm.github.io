@@ -4,6 +4,8 @@ title: The End of the World
 modify date: 2020-01-12
 tags: [Guitar, Masaaki Kishibe]
 head image: /assets/img/covers/literaturecover.jpg
+cover image: /assets/img/02literature/00guitar/2018-11-11theendoftheworld/theendoftheworldcover.png
+abstract: "Orig. 岸部眞明 (Masaaki Kishibe)<br>Played by: Zihan Mei<br>Guitar: Yamaha FG830<br>Pickup: Samsung Note 3 Recorder<br>Date recorded: 2018-11-11"
 ---
 
 ![TheEndOfTheWorldCover](../../assets/img/02literature/00guitar/2018-11-11theendoftheworld/theendoftheworldcover.png)

@@ -1,8 +1,10 @@
 ---
 title: 少年の梦 Childhood Dream
-modify date: 2020-01-13
+modify date: 2020-01-15
 tags: [Guitar, Masaaki Kishibe]
 head image: /assets/img/covers/literaturecover.jpg
+cover image: /assets/img/02literature/00guitar/2019-08-06少年の梦/Lis-butterfly2cover.jpg
+abstract: "Orig. 岸部眞明 (Masaaki Kishibe)<br>Played by: Zihan Mei<br>Guitar: Yamaha FG830<br>Pickup: Meizu 16th Recorder<br>Date recorded: 2019-08-06"
 ---
 
 ![ChildhoodDreamCover](../../assets/img/02literature/00guitar/2019-08-06%E5%B0%91%E5%B9%B4%E3%81%AE%E6%A2%A6/Lis-butterfly2cover.jpg)

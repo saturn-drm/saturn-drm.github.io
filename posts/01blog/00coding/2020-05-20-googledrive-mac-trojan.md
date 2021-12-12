@@ -3,6 +3,8 @@ title: 解决 Google 备份与同步 Mac版 在大陆网络环境下无法连接
 modify date: 2020-05-20
 tags: [APP]
 head image: /assets/img/covers/codingcover.jpg
+cover image: /assets/img/01coding/2020-05-20-1.png
+abstract: 暑假回国，发现使用<s>某种方式</s>上网的过程中，Mac的Google备份与同步应用无法登录并完成同步。<br>如图所示，在Google等网站连接正常的情况下，Mac的Google备份与同步应用显示“未登录”或“无法连接”。目前我用了另一种<s>某种上网方式</s>客户端，之前使用的是$$，解决方法一样。
 ---
 
 > Modify Date: 2020-05-20

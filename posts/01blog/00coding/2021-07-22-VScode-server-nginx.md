@@ -3,6 +3,8 @@ title: Ubuntu + VS Code Server + Nginx 二级域名反向代理打造全平台�
 modify date: 2021-07-22
 tags: [Ubuntu, Web, Server]
 head image: /assets/img/covers/codingcover.jpg
+cover image: /assets/img/01coding/2021-07-22-0cover.png
+abstract: code-server + Nginx 配置网页端 VS Code，在手机/iPad/电脑的浏览器上直接使用网页编辑代码并实时同步。
 ---
 
 > Modify Date: 2021-07-22

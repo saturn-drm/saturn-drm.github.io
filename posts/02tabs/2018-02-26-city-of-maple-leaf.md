@@ -3,6 +3,8 @@ title: 枫叶城 City of Maple Leaf
 modify date: 2020-01-10
 tags: [Guitar]
 head image: /assets/img/covers/literaturecover.jpg
+cover image: /assets/img/02literature/00guitar/2018-02-26枫叶城/Autumn\ Leaf\ Fred\ Bartelsori.png
+abstract: "Orig. 杨昊昆<br>Played by: Zihan Mei<br>Guitar: Yamaha FG830<br>Pickup: Samsung Note 3 Recorder<br>Date recorded: 2018-02-26"
 ---
 
 ![CityOfMapleLeafCover](../../assets/img/02literature/00guitar/2018-02-26枫叶城/Autumn%20Leaf%20Fred%20Bartelsori.png)

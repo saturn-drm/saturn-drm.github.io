@@ -3,6 +3,8 @@ title: 昭和ロマンス
 modify date: 2020-01-22
 tags: [Guitar, Masaaki Kishibe]
 head image: /assets/img/covers/literaturecover.jpg
+cover image: /assets/img/02literature/00guitar/2020-01-19昭和ロマンス/昭和ロマンスcover.jpg
+abstract: "Orig. 岸部眞明 (Masaaki Kishibe)<br>Played by: Zihan Mei<br>Guitar: Yamaha FG830<br>Pickup: Meizu 16th Recorder<br>Date recorded: 2020-01-19"
 ---
 
 ![ShowaRomannsuCover](../../assets/img/02literature/00guitar/2020-01-19%E6%98%AD%E5%92%8C%E3%83%AD%E3%83%9E%E3%83%B3%E3%82%B9/%E6%98%AD%E5%92%8C%E3%83%AD%E3%83%9E%E3%83%B3%E3%82%B9cover.jpg)
