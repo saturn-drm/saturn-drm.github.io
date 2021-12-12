@@ -15,9 +15,6 @@
 
 {% block scripts %}
     {{ super() }}
-    {% if sections[0]['cards'] %}
-        <script type="text/javascript" src="/assets/js/card.js"></script>
-    {% endif %}
 {% endblock scripts %}
 
 {% block content %}
@@ -65,4 +62,8 @@
             {% endif %}
         {% endfor %}
     </div>
+    <!-- important to put this at the end -->
+    {% if sections[0]['cards'] %}
+        <script type="text/javascript" class="cards" src="/assets/js/card.js"></script>
+    {% endif %}
 {% endblock content %}

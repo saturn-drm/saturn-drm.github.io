@@ -41,6 +41,7 @@ for post in MDPathInstance.mdlist:
     MDPostInstance.modifyTableHead()
     destpth = MDListing.MDPath.convertPath(post, desp)
     MDPostInstance.setYAMLDictAttr('url', destpth)
+    MDPostInstance.setYAMLDictAttr('abstract', 'This is an urban design project for envisioning the future of the U.S. Space & Rocket Center at Huntsville, AL.<br>The entry point of the project is the hydrological characteristics of the site. The site is modified as a dynamic plan for both flooding and dry seasons. The master plan integrates the site as part of Singing River Trail of the city, and expands the campus along four parallel corridors - mountain bike trail, riverfront walk, central boulevard and service drive. Each corridor addresses various modes of travel and forms part of the phasing plan for the future.')
     pthls = destpth.split(os.path.sep)
     if pthls[1] == '00projects':
         if pthls[2] == 'workpieces':
@@ -70,7 +71,7 @@ tabs['posts'] = sorted(tabs['posts'], key=lambda x: x['modify date'], reverse=Tr
 architcture['posts'].insert(2, {'title': 'Equity in the Access to Medical Resources During COVID-19',
                                 'url': '/equity-during-covid/',
                                 'tags': ['Big Data', 'Visualization', 'New York City', 'D3', 'Python'],
-                                'head image': '../img/00architecture/10-mitbiddata/00covercover.jpg'})
+                                'head image': '/assets/img/00architecture/10-mitbiddata/00covercover.jpg'})
 
 
 # TODO: integrate 2 layouts in articles.html, with different class name and id name
