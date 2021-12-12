@@ -1,11 +1,13 @@
 ---
 title: URBAN INTENSIFICATION
-modify date: 2020-02-13
+modify date: 2020-11-13
 tags: [Beijing, Urban design]
 head image: /assets/img/00architecture/01dashiban/02headpic.jpg
+cover image: /assets/img/00architecture/01dashiban/01cover.jpg
+abstract: The project is located on the void space between the entrance and administrative building at Tsinghua, aimed to intensify the functions here and to explore the relationships among each building, activating the space, inviting people onto the site, and offering daily service for students, tourists, and professors.<br>Parking Intensification - Solve the parking problems. Professors can park right underground the teaching buildings.<br>Circulation Intensification - Allow cars and people into the site, which used to be separated for landscapes. More space experiencing with denser circulations.<br>Functional Intensification - Introduce daily service on the first floor. Add space for class, hotel, and recreation.<br>The Relationships Intensification - Connect the new buildings with the existing ones with roof gardens and ground yards.
 ---
 
-> Modify date: 2020-02-13
+> Modify date: 2020-11-13
 
 ![02headpic](../../assets/img/00architecture/01dashiban/02headpic.jpg)
 

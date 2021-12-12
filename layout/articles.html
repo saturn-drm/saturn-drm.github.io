@@ -26,7 +26,7 @@
                     <h1 class="sectionhead">{{ section['sectionname'] }}</h1>
                     {% for post in section['posts'] %}
                         <a class="column" href="{{ post['url'] }}">
-                            <div class="coverimg" style="background-image: url({{ post['head image'] }});"></div>
+                            <div class="coverimg" style="background-image: url({{ post['cover image'] }});"></div>
                             <div class="words">
                                 <div class="projtitle">
                                     <h1>{{ post['title'] }}</h1>
@@ -54,7 +54,7 @@
                             <p>{{ post['abstract'] }}<br>
                                 <img src="{{ post['head image'] }}" alt="{{ post['title'] }}"><br>
                             </p>
-                            <a href="{{ post['url'] }}" class="readmore"></a>
+                            <a href="{{ post['url'] }}" class="readmore">Read More</a>
                             <hr>
                         </div>
                     {% endfor %}

@@ -81,12 +81,12 @@ class MDPost():
         self.YAMLDict[key] = val
 
 if __name__ == '__main__':
-    fp = 'posts/00projects/2020-01-16-theater-design-wudaokou.md'
+    fp = 'posts/01blog/01digest/2020-05-05-左传.md'
     MDPostInstance = MDPost(fp)
     MDPostInstance.htmlParsing()
     MDPostInstance.soupParsing()
     MDPostInstance.modifyHTagAnchor()
     MDPostInstance.modifyIMGPath()
     MDPostInstance.modifyTableHead()
-    print(MDPostInstance.YAMLDict)
+    print(MDPostInstance.YAMLDict['abstract'])
     print(MDPostInstance.__dict__.keys())

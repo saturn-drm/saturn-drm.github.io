@@ -3,6 +3,8 @@ title: Parametric City Generator
 modify date: 2021-07-13
 tags: [GSD, Computational Design, Urban design]
 head image: /assets/img/00architecture/07citygenerator-6338/01cover.jpg
+cover image: /assets/img/00architecture/07citygenerator-6338/00covercover.jpg
+abstract: The project is written in C# in Grasshopper.<br>The tool takes in the urban boundary and primary roads and generates the network of roads in 3 classes as well as buildings in various density. It simulates the density variation by scaling blocks and controlling building type and height according to the location block by block.
 ---
 
 > Modify date: 2021-07-13

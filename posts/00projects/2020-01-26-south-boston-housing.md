@@ -1,11 +1,13 @@
 ---
 title: HOUSING IN URBAN CORES
-modify date: 2020-01-26
+modify date: 2021-01-26
 tags: [Housing, Boston, GSD, Urban design]
 head image: /assets/img/00architecture/02MAUD-EX01/01axoncover.jpg
+cover image: /assets/img/00architecture/02MAUD-EX01/01axoncover.jpg
+abstract: The project is an extension of the existing grid and transportation system, which overrides the mostly underwater site in the future.<br>It deals with the risks of rising sea level and annual flood by chronological design in the short-medium-long term.<br>It contains a mixture of three house types from the local, which are arranged according to the site condition facing the risks of rising sea level and annual flood chronologically.<br>The housing buildings show a transition in demography from the South Boston neighborhood to downtown Boston.<br>Public buildings are proposed and reserved according to the distribution of existing brownfields, which also contains the progressive design with the brownfields being treated gradually.
 ---
 
-> Modify date: 2020-01-26
+> Modify date: 2021-01-26
 
 ![02axon](../../assets/img/00architecture/02MAUD-EX01/02axon.jpg)
 

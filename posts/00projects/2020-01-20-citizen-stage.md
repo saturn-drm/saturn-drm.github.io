@@ -1,11 +1,13 @@
 ---
 title: STAGE FOR CITIZEN - MALIANDAO RD RENOVATION
-modify date: 2020-11-02
+modify date: 2020-11-12
 tags: [Beijing, Urban design]
 head image: /assets/img/00architecture/04Maliandao/01per.jpg
+cover image: /assets/img/00architecture/04Maliandao/00covercover.jpg
+abstrat: Up to the scale of the city of Beijing, a city greenbelt is designed to connect the vestige of the capital of Jin Dynasty.<br>The newly constructed buildings serve as the stage for citizen, compensating the shortcoming of the life online.
 ---
 
-> Modify date: 2020-11-02
+> Modify date: 2020-11-12
 
 ![01per](../../assets/img/00architecture/04Maliandao/01per.jpg)
 

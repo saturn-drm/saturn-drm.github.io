@@ -1,11 +1,13 @@
 ---
 title: Riverfront Trails - Rocket City
-modify date: 2021-01-01
+modify date: 2021-01-30
 tags: [GSD, Huntsville, Urban design]
 head image: /assets/img/00architecture/08rocketcity/01cover1.jpg
+cover image: /assets/img/00architecture/08rocketcity/00covercover.jpg
+abstract: This is an urban design project for envisioning the future of the U.S. Space & Rocket Center at Huntsville, AL.<br>The entry point of the project is the hydrological characteristics of the site. The site is modified as a dynamic plan for both flooding and dry seasons. The master plan integrates the site as part of Singing River Trail of the city, and expands the campus along four parallel corridors - mountain bike trail, riverfront walk, central boulevard and service drive. Each corridor addresses various modes of travel and forms part of the phasing plan for the future.
 ---
 
-> Modify date: 2021-01-01
+> Modify date: 2021-01-30
 
 ![01cover2](../../assets/img/00architecture/08rocketcity/01cover2.jpg)
 

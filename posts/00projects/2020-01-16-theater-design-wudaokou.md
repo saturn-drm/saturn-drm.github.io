@@ -3,6 +3,8 @@ title: THEATER DESIGN AT WUDAOKOU
 modify date: 2020-11-10
 tags: [Beijing, Architecture]
 head image: /assets/img/00architecture/06theaterdesign/01per.jpg
+cover image: /assets/img/00architecture/06theaterdesign/00covercover.jpg
+abstract: The project located in Wudaokou with several schools, IT centers, government offices and malls around. People here only went out of the office at meal and were squeezed onto the road by the massive pedestrians.<br>In the compact urban space, the project aimed to offer not only a traditional theater, but a system of the open space for everyone's experiecing, exhibition, communication and performing. The activities expand the timeline in which the workers, students and residents use the space.
 ---
 
 > Modify date: 2020-11-10

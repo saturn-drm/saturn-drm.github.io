@@ -1,11 +1,13 @@
 ---
 title: HIGH-TECH CAMPUS IN SUBURBAN
-modify date: 2020-01-28
+modify date: 2021-01-28
 tags: [Campus, Boston, GSD, Urban design]
 head image: /assets/img/00architecture/03MAUD-EX02/01cover.jpg
+cover image: /assets/img/00architecture/03MAUD-EX02/01covercover.jpg
+abstract: The campus focused on outdoor gear industry, which is one of the largest economic sectors in the states. The site and neighbor form an attractive leisure landscape thanks to the combination of the natural resource and its strong transportation infrastructure.<br>The campus acted as a catalyst for reconfiguration of the surrounding suburban landscape by overlaying green infrastructure and concentrated campus core.
 ---
 
-> Modify date: 2020-01-28
+> Modify date: 2021-01-28
 
 ![01cover](../../assets/img/00architecture/03MAUD-EX02/01cover.jpg)
 

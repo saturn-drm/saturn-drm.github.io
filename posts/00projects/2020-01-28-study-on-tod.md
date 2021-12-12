@@ -3,6 +3,8 @@ title: Study On The Development Of TOD
 modify date: 2021-01-03
 tags: [Boston, GSD, Urban design, GIS]
 head image: /assets/img/00architecture/00preterm/01cover.jpg
+cover image: /assets/img/00architecture/00preterm/00covercover.jpg
+abstract: "Intented for studying what makes the development around a station transit-oriented, and how such development shapes some part of Boston, the project is part of the GIS workshop. It’s consist of two parts, both through comparison and data visualization: Overall status quo of TOD in Boston; Key elements of TOD when zoom in to neighborhood scale."
 ---
 
 > Modify date: 2021-01-03

@@ -1,11 +1,13 @@
 ---
 title: PARLOR OF VIL. WANGMA
-modify date: 2020-11-02
+modify date: 2020-11-11
 tags: [Shanxi, Architecture, Completed]
 head image: /assets/img/00architecture/05Wangma/01per.jpg
+cover image: /assets/img/00architecture/05Wangma/00covercover.jpg
+abstract: The building is used for wedding, meeting and everyday activities for villagers.<br>The project mainly considered 3 aspects if input conditions.<br>The mountain-water axis - The north-south leg of the T-shaped site is used as a corridor through the center, ending with a small stage in the south. Plus, there are viewing platforms on each floor facing south or north.<br>The historical conditions - Old tiles, bricks and beams are used to recall the villagers' memories of the live before relocating.<br>The open space - There is open space on each floor for both activities and sightseeing.
 ---
 
-> Modify date: 2020-11-02
+> Modify date: 2020-11-11
 
 ![01per](../../assets/img/00architecture/05Wangma/01per.jpg)
 

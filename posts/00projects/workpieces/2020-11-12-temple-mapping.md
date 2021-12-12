@@ -3,6 +3,8 @@ title: CHINESE ANCIENT TEMPLE MAPPING
 modify date: 2020-11-12
 tags: [Mapping, Architecture]
 head image: /assets/img/covers/architecturecover.jpg
+cover image: /assets/img/00architecture/workpieces/01templemapping-0cover.jpg
+abstract: Yan Emperor Temple lies in Gaoping, Shanxi Province. It was repaired as early as Yuan Dynasty according to textual research, while the year it was build is not clear.<br>The group of temples are typical Chinese traditional sacrificial buildings.<br>I was required to finish the measruement with a partner and draw detailed evelations by myself. Here is some pieces of my entire work.
 ---
 
 > Modify date: 2020-11-12

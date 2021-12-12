@@ -1,11 +1,13 @@
 ---
 title: PrismBot - Bio-Inspired Robotics
-modify date: 2021-01-02
+modify date: 2021-01-29
 tags: [GSD, Fabrication]
 head image: /assets/img/00architecture/09informalrobotics/01cover.jpg
+cover image: /assets/img/00architecture/09informalrobotics/00covercover.jpg
+abstract: This is the final project of the course SCI-6478, meant to be a synthesis of work in kinematics, fabrication, controls and application.<br>In the early stage, the concept was developed through the mimic of millipede with modular segments. The concept was carried on by several rounds of fabrication tests. In the later stage, due to the remote-learning policy, the project was tested via Autodesk Fusion 360. In the finishing stage, the robotic was consist of two pairs of legs. The direction of rotation determined its direction of motion, and the speed of rotation determined its steering system.
 ---
 
-> Modify date: 2021-01-02
+> Modify date: 2021-01-29
 
 ![02render](../../assets/img/00architecture/09informalrobotics/02render.jpg)
 
