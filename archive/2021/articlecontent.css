@@ -2,7 +2,6 @@
 @import url("selection.css");
 @import url("backtotop.css");
 @import url("themecolor.css");
-@import url("progressbar.css");
 
 body, html {
     margin-top: 0;
@@ -251,4 +250,30 @@ div#post li {
     font-weight: 200;
     padding-left: 1rem;
     text-align: justify;
+}
+
+#content-progress {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 3px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    background-color: transparent;
+}
+
+#content-progress::-webkit-progress-bar {
+    background-color: transparent;
+}
+
+#content-progress::-webkit-progress-value {
+    background-color: var(--mainhighlight);
+}
+
+#content-progress::-moz-progress-bar {
+    background-color: var(--mainhighlight);
 }

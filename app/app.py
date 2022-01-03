@@ -14,7 +14,7 @@ with open('404.html', 'w') as f:
 # render home-test.html
 ## TODO: some js, and maybe use for statement in the main page
 template = env.get_template('home.html')
-with open('home.html', 'w') as f:
+with open('index.html', 'w') as f:
     f.write(template.render())
 
 # retrieve all the markdown posts
@@ -31,7 +31,7 @@ code = {'sectionname': 'Coding', 'cards': False, 'posts':[]}
 digest = {'sectionname': 'Digest', 'cards': False, 'posts':[]}
 tabs = {'sectionname': '', 'cards': True, 'posts':[]}
 
-template_article = env.get_template('article-dev.html')
+template_article = env.get_template('article.html')
 for post in MDPathInstance.mdlist:
     MDPostInstance = MDParsing.MDPost(post)
     MDPostInstance.htmlParsing()
@@ -86,21 +86,21 @@ architcture['posts'].insert(2, {'title': 'Equity in the Access to Medical Resour
 
 # render design page
 template = env.get_template('articles.html')
-with open('design-dev.html', 'w') as f:
+with open('design.html', 'w') as f:
     f.write(template.render(sections=[architcture, workpieces],
                             titlename='Design',
                             headerimg='/assets/img/covers/architecturecover.jpg'))
 
 # render blog page
 template = env.get_template('articles.html')
-with open('blog-dev.html', 'w') as f:
+with open('blog.html', 'w') as f:
     f.write(template.render(sections=[code, digest],
                             titlename='Blog',
                             headerimg='/assets/img/covers/codingcover.jpg'))
 
 # render tabs page
 template = env.get_template('articles.html')
-with open('tabs-dev.html', 'w') as f:
+with open('tabs.html', 'w') as f:
     f.write(template.render(sections=[tabs],
                             titlename='Tabs',
                             headerimg='/assets/img/covers/literaturecover.jpg'))

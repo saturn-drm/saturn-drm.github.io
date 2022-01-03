@@ -1,47 +1,13 @@
-<head>
-    <link rel="stylesheet" type="text/css" href="/assets/css/header-index2.css" />
-
-    <!-- fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,600&display=swap" rel="stylesheet">
-    <script>
-        (function (d) {
-            var config = {
-                kitId: 'cmi7aqt',
-                scriptTimeout: 3000,
-                async: true
-            },
-                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
-        })(document);
-    </script>
-    <!-- end fonts -->
-
-    <!-- anime-master -->
-    <script src="/assets/js/anime-master/lib/anime.min.js"></script>
-
-    <!-- fontawesome -->
-    <script src="https://kit.fontawesome.com/d61407055c.js" crossorigin="anonymous"></script>
-
-    <!-- jQuery -->
-    <script src="/assets/js/jquery-3.6.0.min.js"></script>
-
-    <script type="text/javascript" src="/assets/js/headerres.js"></script>
-    <script type="text/javascript" src="/assets/js/headerhidescroll.js"></script>
-</head>
-
-<body>
-    <!-- top nav, hide when on top -->
-    <div class="topnav navori" id="navbar">
-        <a class="homenav" href="/index.html" onclick="closenav()"><img src="/assets/img/logo.svg" />
-            <p>Zihan MEI</p>
-        </a>
-        <div class="othernav">
-            <a class="resdown" id="architecturenav" href="/design.html" onclick="closenav()">Design</a>
-            <a class="resdown" id="codingnav" href="/blog.html" onclick="closenav()">Blog</a>
-            <a class="resdown" id="literaturenav" href="/tabs.html" onclick="closenav()">Tabs</a>
-        </div>
-        <a class="dropicon" onclick="narrownav()">
-            <i class="fa fa-bars"></i>
-        </a>
+<div class="topnav navori" id="navbar">
+    <a class="homenav" href="/index.html" onclick="closenav()"><img src="/assets/img/logo.svg" />
+        <p>Zihan MEI</p>
+    </a>
+    <div class="othernav">
+        <a class="resdown" id="architecturenav" href="/design.html" onclick="closenav()">Design</a>
+        <a class="resdown" id="codingnav" href="/blog.html" onclick="closenav()">Blog</a>
+        <a class="resdown" id="literaturenav" href="/tabs.html" onclick="closenav()">Tabs</a>
     </div>
-    <!-- end top nav -->
-</body>
+    <a class="dropicon" onclick="narrownav()">
+        <i class="fa fa-bars"></i>
+    </a>
+</div>
